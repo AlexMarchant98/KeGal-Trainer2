@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006451217FAF9F0077765D /* AppDelegate.swift */; };
+		D4006454217FAF9F0077765D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006453217FAF9F0077765D /* FirstViewController.swift */; };
+		D4006456217FAF9F0077765D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006455217FAF9F0077765D /* SecondViewController.swift */; };
+		D4006459217FAF9F0077765D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4006457217FAF9F0077765D /* Main.storyboard */; };
+		D400645B217FAFA30077765D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D400645A217FAFA30077765D /* Assets.xcassets */; };
+		D400645E217FAFA30077765D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D400645C217FAFA30077765D /* LaunchScreen.storyboard */; };
+		D4006469217FAFA30077765D /* Kegal_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006468217FAFA30077765D /* Kegal_TimerTests.swift */; };
+		D4006474217FAFA30077765D /* Kegal_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006473217FAFA30077765D /* Kegal_TimerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4006465217FAFA30077765D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4006446217FAF9F0077765D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D400644D217FAF9F0077765D;
+			remoteInfo = "Kegal Timer";
+		};
+		D4006470217FAFA30077765D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4006446217FAF9F0077765D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D400644D217FAF9F0077765D;
+			remoteInfo = "Kegal Timer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D400644E217FAF9F0077765D /* Kegal Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kegal Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4006451217FAF9F0077765D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4006453217FAF9F0077765D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		D4006455217FAF9F0077765D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D4006458217FAF9F0077765D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D400645A217FAFA30077765D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D400645D217FAFA30077765D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D400645F217FAFA30077765D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4006464217FAFA30077765D /* Kegal TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kegal TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4006468217FAFA30077765D /* Kegal_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kegal_TimerTests.swift; sourceTree = "<group>"; };
+		D400646A217FAFA30077765D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D400646F217FAFA30077765D /* Kegal TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kegal TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4006473217FAFA30077765D /* Kegal_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kegal_TimerUITests.swift; sourceTree = "<group>"; };
+		D4006475217FAFA30077765D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D400644B217FAF9F0077765D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4006461217FAFA30077765D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D400646C217FAFA30077765D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4006445217FAF9F0077765D = {
+			isa = PBXGroup;
+			children = (
+				D4006450217FAF9F0077765D /* Kegal Timer */,
+				D4006467217FAFA30077765D /* Kegal TimerTests */,
+				D4006472217FAFA30077765D /* Kegal TimerUITests */,
+				D400644F217FAF9F0077765D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D400644F217FAF9F0077765D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D400644E217FAF9F0077765D /* Kegal Timer.app */,
+				D4006464217FAFA30077765D /* Kegal TimerTests.xctest */,
+				D400646F217FAFA30077765D /* Kegal TimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4006450217FAF9F0077765D /* Kegal Timer */ = {
+			isa = PBXGroup;
+			children = (
+				D4006451217FAF9F0077765D /* AppDelegate.swift */,
+				D4006453217FAF9F0077765D /* FirstViewController.swift */,
+				D4006455217FAF9F0077765D /* SecondViewController.swift */,
+				D4006457217FAF9F0077765D /* Main.storyboard */,
+				D400645A217FAFA30077765D /* Assets.xcassets */,
+				D400645C217FAFA30077765D /* LaunchScreen.storyboard */,
+				D400645F217FAFA30077765D /* Info.plist */,
+			);
+			path = "Kegal Timer";
+			sourceTree = "<group>";
+		};
+		D4006467217FAFA30077765D /* Kegal TimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4006468217FAFA30077765D /* Kegal_TimerTests.swift */,
+				D400646A217FAFA30077765D /* Info.plist */,
+			);
+			path = "Kegal TimerTests";
+			sourceTree = "<group>";
+		};
+		D4006472217FAFA30077765D /* Kegal TimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4006473217FAFA30077765D /* Kegal_TimerUITests.swift */,
+				D4006475217FAFA30077765D /* Info.plist */,
+			);
+			path = "Kegal TimerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D400644D217FAF9F0077765D /* Kegal Timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4006478217FAFA30077765D /* Build configuration list for PBXNativeTarget "Kegal Timer" */;
+			buildPhases = (
+				D400644A217FAF9F0077765D /* Sources */,
+				D400644B217FAF9F0077765D /* Frameworks */,
+				D400644C217FAF9F0077765D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kegal Timer";
+			productName = "Kegal Timer";
+			productReference = D400644E217FAF9F0077765D /* Kegal Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4006463217FAFA30077765D /* Kegal TimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D400647B217FAFA30077765D /* Build configuration list for PBXNativeTarget "Kegal TimerTests" */;
+			buildPhases = (
+				D4006460217FAFA30077765D /* Sources */,
+				D4006461217FAFA30077765D /* Frameworks */,
+				D4006462217FAFA30077765D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4006466217FAFA30077765D /* PBXTargetDependency */,
+			);
+			name = "Kegal TimerTests";
+			productName = "Kegal TimerTests";
+			productReference = D4006464217FAFA30077765D /* Kegal TimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D400646E217FAFA30077765D /* Kegal TimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D400647E217FAFA30077765D /* Build configuration list for PBXNativeTarget "Kegal TimerUITests" */;
+			buildPhases = (
+				D400646B217FAFA30077765D /* Sources */,
+				D400646C217FAFA30077765D /* Frameworks */,
+				D400646D217FAFA30077765D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4006471217FAFA30077765D /* PBXTargetDependency */,
+			);
+			name = "Kegal TimerUITests";
+			productName = "Kegal TimerUITests";
+			productReference = D400646F217FAFA30077765D /* Kegal TimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4006446217FAF9F0077765D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Alex Marchant";
+				TargetAttributes = {
+					D400644D217FAF9F0077765D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					D4006463217FAFA30077765D = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = D400644D217FAF9F0077765D;
+					};
+					D400646E217FAFA30077765D = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = D400644D217FAF9F0077765D;
+					};
+				};
+			};
+			buildConfigurationList = D4006449217FAF9F0077765D /* Build configuration list for PBXProject "Kegal Timer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4006445217FAF9F0077765D;
+			productRefGroup = D400644F217FAF9F0077765D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D400644D217FAF9F0077765D /* Kegal Timer */,
+				D4006463217FAFA30077765D /* Kegal TimerTests */,
+				D400646E217FAFA30077765D /* Kegal TimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D400644C217FAF9F0077765D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D400645E217FAFA30077765D /* LaunchScreen.storyboard in Resources */,
+				D400645B217FAFA30077765D /* Assets.xcassets in Resources */,
+				D4006459217FAF9F0077765D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4006462217FAFA30077765D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D400646D217FAFA30077765D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D400644A217FAF9F0077765D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4006456217FAF9F0077765D /* SecondViewController.swift in Sources */,
+				D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */,
+				D4006454217FAF9F0077765D /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4006460217FAFA30077765D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4006469217FAFA30077765D /* Kegal_TimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D400646B217FAFA30077765D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4006474217FAFA30077765D /* Kegal_TimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4006466217FAFA30077765D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D400644D217FAF9F0077765D /* Kegal Timer */;
+			targetProxy = D4006465217FAFA30077765D /* PBXContainerItemProxy */;
+		};
+		D4006471217FAFA30077765D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D400644D217FAF9F0077765D /* Kegal Timer */;
+			targetProxy = D4006470217FAFA30077765D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4006457217FAF9F0077765D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4006458217FAF9F0077765D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D400645C217FAFA30077765D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D400645D217FAFA30077765D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4006476217FAFA30077765D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4006477217FAFA30077765D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4006479217FAFA30077765D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D6D89YR6P;
+				INFOPLIST_FILE = "Kegal Timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D400647A217FAFA30077765D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D6D89YR6P;
+				INFOPLIST_FILE = "Kegal Timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D400647C217FAFA30077765D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D6D89YR6P;
+				INFOPLIST_FILE = "Kegal TimerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-TimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kegal Timer.app/Kegal Timer";
+			};
+			name = Debug;
+		};
+		D400647D217FAFA30077765D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D6D89YR6P;
+				INFOPLIST_FILE = "Kegal TimerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-TimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kegal Timer.app/Kegal Timer";
+			};
+			name = Release;
+		};
+		D400647F217FAFA30077765D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D6D89YR6P;
+				INFOPLIST_FILE = "Kegal TimerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-TimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kegal Timer";
+			};
+			name = Debug;
+		};
+		D4006480217FAFA30077765D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D6D89YR6P;
+				INFOPLIST_FILE = "Kegal TimerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-TimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kegal Timer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4006449217FAF9F0077765D /* Build configuration list for PBXProject "Kegal Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4006476217FAFA30077765D /* Debug */,
+				D4006477217FAFA30077765D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4006478217FAFA30077765D /* Build configuration list for PBXNativeTarget "Kegal Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4006479217FAFA30077765D /* Debug */,
+				D400647A217FAFA30077765D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D400647B217FAFA30077765D /* Build configuration list for PBXNativeTarget "Kegal TimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D400647C217FAFA30077765D /* Debug */,
+				D400647D217FAFA30077765D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D400647E217FAFA30077765D /* Build configuration list for PBXNativeTarget "Kegal TimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D400647F217FAFA30077765D /* Debug */,
+				D4006480217FAFA30077765D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4006446217FAF9F0077765D /* Project object */;
+}
