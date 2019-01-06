@@ -1,0 +1,359 @@
+//
+//  SecondViewController.swift
+//  Kegal Timer
+//
+//  Created by Alex Marchant on 23/10/2018.
+//  Copyright © 2018 Alex Marchant. All rights reserved.
+//
+
+import UIKit
+
+@IBDesignable
+class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+    @IBOutlet weak var timerButton: TimerButton!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var currentRepLabel: UILabel!
+    @IBOutlet weak var currentRepUICollectionView: UICollectionView!
+    
+    @IBAction func backButton(_ sender: Any) {
+        restartRep()
+    }
+    
+    @IBAction func beginWorkoutButton(_ sender: Any) {
+        if isTimerRunning == false
+        {
+            if(isWorkoutComplete)
+            {
+                resetViewUI()
+            } else {
+                isTimerRunning = true
+                UIApplication.shared.isIdleTimerDisabled = true
+                if (isRestState) {
+                    timerButton.resumeLayer()
+                    queueTimer.resume()
+                    queueItems(delayTime: .now() + .seconds(Int(queueTimer.timeRemaining)))
+                } else {
+                    runTimer()
+                    soundBite.playBeginSoundBite()
+                }
+            }
+        }
+        else
+        {
+            timer.invalidate()
+            isTimerRunning = false
+            
+            if (isRestState) {
+                timerButton.pauseLayer()
+                dispatchWorkItem.cancel()
+                queueTimer.pause()
+            } else {
+                UIApplication.shared.isIdleTimerDisabled = true
+            }
+        }
+    }
+    @IBAction func stopWorkoutButton(_ sender: Any) {
+        resetViewUI()
+    }
+    
+    let userPreferences = UserDefaults.standard
+    let dispatchQueue = DispatchQueue(label: "resumeWorkout")
+    let soundBite = SoundBite()
+    let queueTimer = QueueTimer()
+    
+    let FONT_NAME = "Avenir Next Condensed"
+    let FONT_SIZE = 25.0
+    
+    private var reps: [Int]!
+    
+    lazy var _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
+    lazy var _repLength = userPreferences.integer(forKey: "RepLength")
+    lazy var _restLength = userPreferences.integer(forKey: "RestLength")
+    lazy var secondsRemaining = _repLength - 1
+    
+    var miliseconds = 100
+    var currentRep = 1
+    
+    var dispatchWorkItem = DispatchWorkItem(block: {})
+    var timer = Timer()
+    
+    var isTimerRunning = false
+    var isWorkoutComplete = false
+    var isRestState = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
+        _repLength = userPreferences.integer(forKey: "RepLength")
+        _restLength = userPreferences.integer(forKey: "RestLength")
+        
+        if(_repsPerSet > 1) {
+            reps = Array(1...userPreferences.integer(forKey: "RepsPerSet"))
+        }
+        else
+        {
+            reps = Array(1...1)
+        }
+        currentRep = 1
+        
+        secondsRemaining = _repLength - 1
+        
+        currentRepUICollectionView.contentInset.left = currentRepUICollectionView.frame.width / 2 - 28.1
+        currentRepUICollectionView.contentInset.right = currentRepUICollectionView.frame.width / 2 - 28.1
+        
+        focusCollectionView()
+    }
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self,   selector: (#selector(TimerViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    func timeString(time: TimeInterval, miliseconds: Int) -> String
+    {
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        
+        return String(format:"%02i:%02i:%02i", minutes, seconds, miliseconds)
+    }
+    
+    @objc func updateTimer() {
+        miliseconds -= 1
+        if(miliseconds == 0)
+        {
+            secondsRemaining -= 1
+            miliseconds = 99
+        }
+        if(secondsRemaining == -1)
+        {
+            timer.invalidate()
+            soundBite.playRestSoundBite()
+            self.timeLabel.text = self.timeString(time: TimeInterval(0), miliseconds: 0)
+            if(currentRep < _repsPerSet) {
+                self.view.backgroundColor = UIColor.restBackgroundColor
+                
+                isRestState = true
+                
+                timerButton.animateCircle()
+                
+                queueItems()
+                queueTimer.configAndStart(delayTime: TimeInterval(_restLength))
+                
+                self.currentRep += 1
+                
+                focusCollectionView()
+            } else {
+                timerButton.isWorkoutComplete = true
+                soundBite.playWorkoutCompleteSoundBite()
+                timerButton.checkMarkShapeLayer()
+                self.view.backgroundColor = UIColor.workoutCompleteBackgroundColor
+                isTimerRunning = false
+                isWorkoutComplete = true
+                miliseconds = 100
+            }
+        } else {
+            timeLabel.text = timeString(time: TimeInterval(secondsRemaining), miliseconds: miliseconds)
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        collectionView.backgroundColor = UIColor.clear
+        return reps.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        switch reps[indexPath.row] {
+        case currentRep + 3:
+            return CGSize(width: 56.2 / 4, height: 56.2)
+        case currentRep + 2:
+            return CGSize(width: 56.2 / 3, height: 56.2)
+        case currentRep + 1:
+            return CGSize(width: 56.2 / 2, height: 56.2)
+        case currentRep:
+            return CGSize(width: 56.2, height: 56.2)
+        case currentRep - 1:
+            return CGSize(width: 56.2 / 2, height: 56.2)
+        case currentRep - 2:
+            return CGSize(width: 56.2 / 3, height: 56.2)
+        case currentRep - 3:
+            return CGSize(width: 56.2 / 4, height: 56.2)
+        default:
+            return CGSize(width: 56.2 / 4, height: 56.2)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RepCollectionViewCell", for: indexPath) as! RepCollectionViewCell
+        
+        let mask = CAShapeLayer()
+        let path = UIBezierPath(arcCenter: CGPoint(x: cell.bounds.midX, y: cell.bounds.midY),
+                                radius: cell.bounds.width / 2, startAngle: -CGFloat.pi / 2, endAngle: 2 * .pi, clockwise: true)
+        
+        path.close()
+        
+        mask.frame = cell.bounds
+        mask.path = path.cgPath
+        
+        var alpha = 1.0
+        var color = UIColor.white
+        var size = 0.0
+        
+        switch reps[indexPath.row] {
+        case currentRep + 3:
+            size = FONT_SIZE / 4
+        case currentRep + 2:
+            size = FONT_SIZE / 3
+        case currentRep + 1:
+            size = FONT_SIZE / 2
+        case currentRep:
+            color = .green
+            size = FONT_SIZE
+        case currentRep - 1:
+            size = FONT_SIZE / 2
+            alpha = 0.75
+        case currentRep - 2:
+            size = FONT_SIZE / 3
+            alpha = 0.50
+        case currentRep - 3:
+            size = FONT_SIZE / 4
+            alpha = 0.25
+        default:
+            color = .clear
+            alpha = 0
+        }
+        
+        cell.layer.mask = mask
+        cell.repCount.text = String(reps[indexPath.row])
+        cell.backgroundColor = color
+        cell.repCount.font = UIFont(name: FONT_NAME, size: CGFloat(size))
+        cell.alpha = CGFloat(alpha)
+        
+        return cell
+    }
+    
+    private func queueItems() {
+        queueItems(delayTime: .now() + .seconds(_restLength))
+    }
+    
+    private func queueItems(animationBeginTime : CFTimeInterval) {
+        queueItems(delayTime: .now() + .seconds(_restLength - Int(animationBeginTime)))
+    }
+    
+    private func queueItems(delayTime: DispatchTime) {
+        dispatchWorkItem = DispatchWorkItem(qos: .userInteractive, block: {
+            self.secondsRemaining = self._repLength - 1
+            self.view.backgroundColor = UIColor.workoutBackgroundColor
+            self.runTimer()
+            self.timerButton.animateableTrackLayer.removeAnimation(forKey: "strokeEndAnimation")
+            self.soundBite.playBeginSoundBite()
+            self.isRestState = false
+        })
+        
+        DispatchQueue.main.asyncAfter(deadline: delayTime, execute: self.dispatchWorkItem)
+    }
+    
+    private func restartRep()
+    {
+        timer.invalidate()
+        isTimerRunning = false
+        
+        if(isRestState)
+        {
+            currentRep -= 1
+        }
+        isRestState = false
+        
+        secondsRemaining = _repLength - 1
+        
+        dispatchWorkItem.cancel()
+        
+        view.backgroundColor = UIColor.workoutBackgroundColor
+        
+        timeLabel.text! = timeString(time: TimeInterval(_repLength), miliseconds: 0)
+        
+        timerButton.startTriangleShapeLayer()
+        timerButton.animateableTrackLayer.removeAllAnimations()
+        
+        focusCollectionView()
+    }
+    
+    private func resetViewUI()
+    {
+        timer.invalidate()
+        isTimerRunning = false
+        isWorkoutComplete = false
+        isRestState = false
+        
+        dispatchWorkItem.cancel()
+        
+        view.backgroundColor = UIColor.workoutBackgroundColor
+        
+        timeLabel.text! = timeString(time: TimeInterval(0), miliseconds: 0)
+        
+        timerButton.startTriangleShapeLayer()
+        timerButton.animateableTrackLayer.removeAllAnimations()
+        
+        _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
+        secondsRemaining = _repLength - 1
+        
+        currentRep = 1
+        
+        focusCollectionView()
+    }
+    
+    private func focusCollectionView()
+    {
+        //self.currentRepUICollectionView.reloadItems(at: generateIndexPaths())
+        self.currentRepUICollectionView.reloadData()
+        self.currentRepUICollectionView.scrollToItem(at: IndexPath(item: currentRep - 1, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+    }
+    
+    private func generateIndexPaths() -> [IndexPath]
+    {
+        var indexPaths = [IndexPath]()
+        
+        if(currentRep - 4 >= 0)
+        {
+            indexPaths.append(IndexPath(row: currentRep - 4, section: 0))
+        }
+        if(currentRep - 3 >= 0)
+        {
+            indexPaths.append(IndexPath(row: currentRep - 3, section: 0))
+        }
+        if(currentRep - 2 >= 0)
+        {
+            indexPaths.append(IndexPath(row: currentRep - 2, section: 0))
+        }
+        if(currentRep - 1 >= 0)
+        {
+            indexPaths.append(IndexPath(row: currentRep - 1, section: 0))
+        }
+        
+        indexPaths.append(IndexPath(row: currentRep, section: 0))
+        
+        if(currentRep + 1 < _repsPerSet)
+        {
+            indexPaths.append(IndexPath(row: currentRep + 1, section: 0))
+        }
+        if(currentRep + 2 < _repsPerSet)
+        {
+            indexPaths.append(IndexPath(row: currentRep + 2, section: 0))
+        }
+        if(currentRep + 3 < _repsPerSet)
+        {
+            indexPaths.append(IndexPath(row: currentRep + 3, section: 0))
+        }
+        
+        return indexPaths
+    }
+    
+    internal override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        resetViewUI()
+    }
+}
+
