@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006451217FAF9F0077765D /* AppDelegate.swift */; };
-		D4006454217FAF9F0077765D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006453217FAF9F0077765D /* FirstViewController.swift */; };
+		D4006454217FAF9F0077765D /* TrackWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006453217FAF9F0077765D /* TrackWorkoutsViewController.swift */; };
 		D4006456217FAF9F0077765D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006455217FAF9F0077765D /* TimerViewController.swift */; };
 		D4006459217FAF9F0077765D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4006457217FAF9F0077765D /* Main.storyboard */; };
 		D400645B217FAFA30077765D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D400645A217FAFA30077765D /* Assets.xcassets */; };
@@ -16,6 +16,8 @@
 		D4006469217FAFA30077765D /* Kegal_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006468217FAFA30077765D /* Kegal_TimerTests.swift */; };
 		D4006474217FAFA30077765D /* Kegal_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006473217FAFA30077765D /* Kegal_TimerUITests.swift */; };
 		D40780E721E12C6600C3D2D1 /* KegalTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40780E521E12C6600C3D2D1 /* KegalTimer.xcdatamodeld */; };
+		D40780F421E2502500C3D2D1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40780F321E2502500C3D2D1 /* Workout.swift */; };
+		D40780F621E2504500C3D2D1 /* WorkoutDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40780F521E2504500C3D2D1 /* WorkoutDate.swift */; };
 		D410601521922DDC00089961 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410601421922DDC00089961 /* StopButton.swift */; };
 		D4106017219B6DEB00089961 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106016219B6DEB00089961 /* BaseTabBarController.swift */; };
 		D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */; };
@@ -50,7 +52,7 @@
 /* Begin PBXFileReference section */
 		D400644E217FAF9F0077765D /* Kegal Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kegal Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4006451217FAF9F0077765D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4006453217FAF9F0077765D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		D4006453217FAF9F0077765D /* TrackWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackWorkoutsViewController.swift; sourceTree = "<group>"; };
 		D4006455217FAF9F0077765D /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		D4006458217FAF9F0077765D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D400645A217FAFA30077765D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		D4006473217FAFA30077765D /* Kegal_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kegal_TimerUITests.swift; sourceTree = "<group>"; };
 		D4006475217FAFA30077765D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D40780E621E12C6600C3D2D1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D40780F321E2502500C3D2D1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		D40780F521E2504500C3D2D1 /* WorkoutDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDate.swift; sourceTree = "<group>"; };
 		D410601421922DDC00089961 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 		D4106016219B6DEB00089961 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewTableViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 			children = (
 				D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */,
 				D40780E521E12C6600C3D2D1 /* KegalTimer.xcdatamodeld */,
+				D40780F321E2502500C3D2D1 /* Workout.swift */,
+				D40780F521E2504500C3D2D1 /* WorkoutDate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,7 +185,7 @@
 			children = (
 				D4106016219B6DEB00089961 /* BaseTabBarController.swift */,
 				D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */,
-				D4006453217FAF9F0077765D /* FirstViewController.swift */,
+				D4006453217FAF9F0077765D /* TrackWorkoutsViewController.swift */,
 				D4006455217FAF9F0077765D /* TimerViewController.swift */,
 			);
 			path = "View Controllers";
@@ -349,12 +355,14 @@
 				D48CFC6321B70CBF00AD6179 /* QueueTimer.swift in Sources */,
 				D410601521922DDC00089961 /* StopButton.swift in Sources */,
 				D4006456217FAF9F0077765D /* TimerViewController.swift in Sources */,
+				D40780F621E2504500C3D2D1 /* WorkoutDate.swift in Sources */,
 				D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */,
 				D48CFC6121AC80E900AD6179 /* Extensions.swift in Sources */,
 				D4E48D5621921960006366A7 /* TimerButton.swift in Sources */,
 				D48CFC4A21A744B500AD6179 /* SoundBite.swift in Sources */,
+				D40780F421E2502500C3D2D1 /* Workout.swift in Sources */,
 				D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */,
-				D4006454217FAF9F0077765D /* FirstViewController.swift in Sources */,
+				D4006454217FAF9F0077765D /* TrackWorkoutsViewController.swift in Sources */,
 				D40780E721E12C6600C3D2D1 /* KegalTimer.xcdatamodeld in Sources */,
 				D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */,
 			);

@@ -153,6 +153,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 isTimerRunning = false
                 isWorkoutComplete = true
                 miliseconds = 100
+                
             }
         } else {
             timeLabel.text = timeString(time: TimeInterval(secondsRemaining), miliseconds: miliseconds)
