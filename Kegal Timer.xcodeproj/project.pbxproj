@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11F7C3413620A6C13D69A6E4 /* Pods_Kegal_TimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288F3543FC7A375C0FBEDD1D /* Pods_Kegal_TimerUITests.framework */; };
+		391262BB834D2BD6F8D02508 /* Pods_Kegal_Timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4E6D9728982A20ED600BA8 /* Pods_Kegal_Timer.framework */; };
 		D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006451217FAF9F0077765D /* AppDelegate.swift */; };
 		D4006454217FAF9F0077765D /* TrackWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006453217FAF9F0077765D /* TrackWorkoutsViewController.swift */; };
 		D4006456217FAF9F0077765D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006455217FAF9F0077765D /* TimerViewController.swift */; };
@@ -30,6 +32,8 @@
 		D48CFC6321B70CBF00AD6179 /* QueueTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */; };
 		D4E48D4F2190CFB9006366A7 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48D4E2190CFB9006366A7 /* BackButton.swift */; };
 		D4E48D5621921960006366A7 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48D5521921960006366A7 /* TimerButton.swift */; };
+		D4F98EF421E26FBF00BB7DC6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F98EF321E26FBF00BB7DC6 /* CustomCell.swift */; };
+		E3AA8CBDAAB1280BB45DB5C5 /* Pods_Kegal_TimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7AE1A3101195C0FF3431F1 /* Pods_Kegal_TimerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		288F3543FC7A375C0FBEDD1D /* Pods_Kegal_TimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kegal_TimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C321D50A6028B9570520AD /* Pods-Kegal TimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal TimerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal TimerTests/Pods-Kegal TimerTests.release.xcconfig"; sourceTree = "<group>"; };
+		7897C7E7C5FBC928F91F5576 /* Pods-Kegal TimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal TimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal TimerTests/Pods-Kegal TimerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		84691D794396FAC5FE5BC551 /* Pods-Kegal Timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal Timer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer.debug.xcconfig"; sourceTree = "<group>"; };
+		8F84EEE5DFC3223C100933EC /* Pods-Kegal TimerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal TimerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal TimerUITests/Pods-Kegal TimerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A92AD1CB0491F0BA0F14109F /* Pods-Kegal TimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal TimerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal TimerUITests/Pods-Kegal TimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF4E6D9728982A20ED600BA8 /* Pods_Kegal_Timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kegal_Timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D400644E217FAF9F0077765D /* Kegal Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kegal Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4006451217FAF9F0077765D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4006453217FAF9F0077765D /* TrackWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackWorkoutsViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +90,9 @@
 		D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTimer.swift; sourceTree = "<group>"; };
 		D4E48D4E2190CFB9006366A7 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackButton.swift; path = "Kegal Timer/Infrastructure/Button Graphics/BackButton.swift"; sourceTree = SOURCE_ROOT; };
 		D4E48D5521921960006366A7 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
+		D4F98EF321E26FBF00BB7DC6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		E63BEE54ED79D2F743DDB8E3 /* Pods-Kegal Timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal Timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer.release.xcconfig"; sourceTree = "<group>"; };
+		FC7AE1A3101195C0FF3431F1 /* Pods_Kegal_TimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kegal_TimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391262BB834D2BD6F8D02508 /* Pods_Kegal_Timer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3AA8CBDAAB1280BB45DB5C5 /* Pods_Kegal_TimerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +116,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F7C3413620A6C13D69A6E4 /* Pods_Kegal_TimerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3190652BC2EEBFDC845BDD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF4E6D9728982A20ED600BA8 /* Pods_Kegal_Timer.framework */,
+				FC7AE1A3101195C0FF3431F1 /* Pods_Kegal_TimerTests.framework */,
+				288F3543FC7A375C0FBEDD1D /* Pods_Kegal_TimerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4006445217FAF9F0077765D = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +140,8 @@
 				D4006467217FAFA30077765D /* Kegal TimerTests */,
 				D4006472217FAFA30077765D /* Kegal TimerUITests */,
 				D400644F217FAF9F0077765D /* Products */,
+				E9E24F452FE526CD8EFD2623 /* Pods */,
+				A3190652BC2EEBFDC845BDD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +228,7 @@
 				D48CFC4921A744B500AD6179 /* SoundBite.swift */,
 				D48CFC6021AC80E900AD6179 /* Extensions.swift */,
 				D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */,
+				D4F98EF321E26FBF00BB7DC6 /* CustomCell.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -213,6 +243,19 @@
 			path = "Button Graphics";
 			sourceTree = "<group>";
 		};
+		E9E24F452FE526CD8EFD2623 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84691D794396FAC5FE5BC551 /* Pods-Kegal Timer.debug.xcconfig */,
+				E63BEE54ED79D2F743DDB8E3 /* Pods-Kegal Timer.release.xcconfig */,
+				7897C7E7C5FBC928F91F5576 /* Pods-Kegal TimerTests.debug.xcconfig */,
+				50C321D50A6028B9570520AD /* Pods-Kegal TimerTests.release.xcconfig */,
+				A92AD1CB0491F0BA0F14109F /* Pods-Kegal TimerUITests.debug.xcconfig */,
+				8F84EEE5DFC3223C100933EC /* Pods-Kegal TimerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4006478217FAFA30077765D /* Build configuration list for PBXNativeTarget "Kegal Timer" */;
 			buildPhases = (
+				D8528556FD0FD28B947FEC38 /* [CP] Check Pods Manifest.lock */,
 				D400644A217FAF9F0077765D /* Sources */,
 				D400644B217FAF9F0077765D /* Frameworks */,
 				D400644C217FAF9F0077765D /* Resources */,
+				A127E091B127017E6E7CF1EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +282,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D400647B217FAFA30077765D /* Build configuration list for PBXNativeTarget "Kegal TimerTests" */;
 			buildPhases = (
+				7EB6A9288A5C22B692CABC81 /* [CP] Check Pods Manifest.lock */,
 				D4006460217FAFA30077765D /* Sources */,
 				D4006461217FAFA30077765D /* Frameworks */,
 				D4006462217FAFA30077765D /* Resources */,
@@ -255,6 +301,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D400647E217FAFA30077765D /* Build configuration list for PBXNativeTarget "Kegal TimerUITests" */;
 			buildPhases = (
+				76D0355CBEE2C4613A8692D2 /* [CP] Check Pods Manifest.lock */,
 				D400646B217FAFA30077765D /* Sources */,
 				D400646C217FAFA30077765D /* Frameworks */,
 				D400646D217FAFA30077765D /* Resources */,
@@ -345,6 +392,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76D0355CBEE2C4613A8692D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kegal TimerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EB6A9288A5C22B692CABC81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kegal TimerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A127E091B127017E6E7CF1EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8528556FD0FD28B947FEC38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kegal Timer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D400644A217FAF9F0077765D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -356,6 +494,7 @@
 				D410601521922DDC00089961 /* StopButton.swift in Sources */,
 				D4006456217FAF9F0077765D /* TimerViewController.swift in Sources */,
 				D40780F621E2504500C3D2D1 /* WorkoutDate.swift in Sources */,
+				D4F98EF421E26FBF00BB7DC6 /* CustomCell.swift in Sources */,
 				D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */,
 				D48CFC6121AC80E900AD6179 /* Extensions.swift in Sources */,
 				D4E48D5621921960006366A7 /* TimerButton.swift in Sources */,
@@ -535,6 +674,7 @@
 		};
 		D4006479217FAFA30077765D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84691D794396FAC5FE5BC551 /* Pods-Kegal Timer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -553,6 +693,7 @@
 		};
 		D400647A217FAFA30077765D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E63BEE54ED79D2F743DDB8E3 /* Pods-Kegal Timer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -571,6 +712,7 @@
 		};
 		D400647C217FAFA30077765D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7897C7E7C5FBC928F91F5576 /* Pods-Kegal TimerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -592,6 +734,7 @@
 		};
 		D400647D217FAFA30077765D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50C321D50A6028B9570520AD /* Pods-Kegal TimerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -613,6 +756,7 @@
 		};
 		D400647F217FAFA30077765D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A92AD1CB0491F0BA0F14109F /* Pods-Kegal TimerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -633,6 +777,7 @@
 		};
 		D4006480217FAFA30077765D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F84EEE5DFC3223C100933EC /* Pods-Kegal TimerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
