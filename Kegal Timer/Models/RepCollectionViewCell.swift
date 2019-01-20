@@ -11,4 +11,15 @@ import UIKit
 public class RepCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var repCount: UILabel!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = .clear
+        self.contentView.addSubview(self.repCount)
+        self.repCount.textAlignment = .center
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 }

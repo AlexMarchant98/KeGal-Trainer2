@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @IBDesignable
 class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -73,10 +74,14 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     lazy var secondsRemaining = _repLength - 1
     
     var miliseconds = 100
-    var currentRep = 1
+    var currentRep = 0
     
     var dispatchWorkItem = DispatchWorkItem(block: {})
     var timer = Timer()
+    
+    var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+    var _workoutDate: WorkoutDate?
+    var _workout: Workout?
     
     var isTimerRunning = false
     var isWorkoutComplete = false
@@ -98,12 +103,14 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         {
             reps = Array(1...1)
         }
-        currentRep = 1
+        currentRep = 0
         
         secondsRemaining = _repLength - 1
         
         currentRepUICollectionView.contentInset.left = currentRepUICollectionView.frame.width / 2 - 28.1
         currentRepUICollectionView.contentInset.right = currentRepUICollectionView.frame.width / 2 - 28.1
+        
+        self.currentRepUICollectionView.reloadData()
         
         focusCollectionView()
     }
@@ -132,7 +139,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
             timer.invalidate()
             soundBite.playRestSoundBite()
             self.timeLabel.text = self.timeString(time: TimeInterval(0), miliseconds: 0)
-            if(currentRep < _repsPerSet) {
+            if(currentRep < _repsPerSet - 1) {
                 self.view.backgroundColor = UIColor.restBackgroundColor
                 
                 isRestState = true
@@ -150,6 +157,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 soundBite.playWorkoutCompleteSoundBite()
                 timerButton.checkMarkShapeLayer()
                 self.view.backgroundColor = UIColor.workoutCompleteBackgroundColor
+                addWorkout(Date(), Int32(_repsPerSet), Int32(_repLength), Int32(_restLength))
                 isTimerRunning = false
                 isWorkoutComplete = true
                 miliseconds = 100
@@ -166,7 +174,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        switch reps[indexPath.row] {
+        switch reps[indexPath.row] - 1 {
         case currentRep + 3:
             return CGSize(width: 56.2 / 4, height: 56.2)
         case currentRep + 2:
@@ -203,7 +211,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         var color = UIColor.white
         var size = 0.0
         
-        switch reps[indexPath.row] {
+        switch reps[indexPath.row] - 1 {
         case currentRep + 3:
             size = FONT_SIZE / 4
         case currentRep + 2:
@@ -229,11 +237,35 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         cell.layer.mask = mask
         cell.repCount.text = String(reps[indexPath.row])
-        cell.backgroundColor = color
         cell.repCount.font = UIFont(name: FONT_NAME, size: CGFloat(size))
-        cell.alpha = CGFloat(alpha)
+        cell.contentView.backgroundColor = color
+        cell.contentView.alpha = CGFloat(alpha)
+        cell.backgroundColor = UIColor.clear
+        cell.alpha = cell.contentView.alpha
         
         return cell
+    }
+    
+    func addWorkout(_ date: Date, _ repCount: Int32, _ repLength: Int32, _ restLength: Int32) {
+        if let context = container?.viewContext {
+            do
+            {
+                if let existingWorkoutDate = try WorkoutDate.getWorkoutDate(context, date)
+                {
+                    Workout.addWorkout(context, existingWorkoutDate, repCount, repLength, restLength)
+                } else {
+                    WorkoutDate.addWorkoutDate(context, date)
+                    if let addedWorkoutDate = try WorkoutDate.getWorkoutDate(context, date)
+                    {
+                        Workout.addWorkout(context, addedWorkoutDate, repCount, repLength, restLength)
+                    } else {
+                        print("Could not create a new workout date, please close the app and try again.")
+                    }
+                }
+            } catch {
+                print("Something has gone wrong whilst adding a new workout entry.")
+            }
+        }
     }
     
     private func queueItems() {
@@ -301,22 +333,25 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
         secondsRemaining = _repLength - 1
         
-        currentRep = 1
+        currentRep = 0
         
         focusCollectionView()
     }
     
     private func focusCollectionView()
     {
-        //self.currentRepUICollectionView.reloadItems(at: generateIndexPaths())
-        self.currentRepUICollectionView.reloadData()
-        self.currentRepUICollectionView.scrollToItem(at: IndexPath(item: currentRep - 1, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        self.currentRepUICollectionView.reloadItems(at: generateIndexPaths())
+        self.currentRepUICollectionView.scrollToItem(at: IndexPath(item: currentRep, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
     }
     
     private func generateIndexPaths() -> [IndexPath]
     {
         var indexPaths = [IndexPath]()
         
+        if(currentRep - 5 >= 0)
+        {
+            indexPaths.append(IndexPath(row: currentRep - 5, section: 0))
+        }
         if(currentRep - 4 >= 0)
         {
             indexPaths.append(IndexPath(row: currentRep - 4, section: 0))
@@ -357,4 +392,3 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         resetViewUI()
     }
 }
-

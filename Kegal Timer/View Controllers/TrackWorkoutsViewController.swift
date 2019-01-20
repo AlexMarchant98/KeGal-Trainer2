@@ -13,6 +13,8 @@ import JTAppleCalendar
 class TrackWorkoutsViewController: UIViewController {
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
+    @IBOutlet weak var year: UILabel!
+    @IBOutlet weak var month: UILabel!
     
     let formatter = DateFormatter()
     
@@ -25,15 +27,22 @@ class TrackWorkoutsViewController: UIViewController {
     }
     
     func setupCalendarView() {
+        // Setup calendar spacing
         calendarView.minimumLineSpacing = 0
         calendarView.minimumInteritemSpacing = 0
+        
+        // Setup labels
+        calendarView.visibleDates { (visibleDates) in
+            self.setupViewFromCalendar(from: visibleDates)
+        }
+        
     }
     
     func handleCellTextColor(view: JTAppleCell?, cellState: CellState) {
         guard let myCustomCell = view as? CustomCell else { return }
         
         if cellState.isSelected {
-            myCustomCell.dateLabel.textColor = .black
+            myCustomCell.dateLabel.textColor = .green
         } else {
             if cellState.dateBelongsTo == .thisMonth {
                 myCustomCell.dateLabel.textColor = .white
@@ -43,49 +52,16 @@ class TrackWorkoutsViewController: UIViewController {
         }
     }
     
-    func getContext() -> NSManagedObjectContext {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
-    }
-    
-    func getWorkoutDate(date: Date) throws  -> WorkoutDate
+    func setupViewFromCalendar(from visibleDates: DateSegmentInfo)
     {
-        let context: NSManagedObjectContext = getContext()
-        let request: NSFetchRequest<WorkoutDate> = WorkoutDate.fetchRequest()
-        request.predicate = NSPredicate(format: "date = %@", date as CVarArg)
-        do {
-            return try (context.fetch(request).first)!
-        } catch {
-            throw error
-        }
+        let date = visibleDates.monthDates.first!.date
+        
+        formatter.dateFormat = "yyyy"
+        year.text = formatter.string(from: date)
+        
+        formatter.dateFormat = "MMMM"
+        month.text = formatter.string(from: date)
     }
-    
-    func addWorkoutDate(_ date: Date)
-    {
-        let context: NSManagedObjectContext = getContext()
-        let workoutDate = WorkoutDate(context: context)
-        workoutDate.date = date
-        try! context.save()
-    }
-    
-    func addWorkout(_ date: Date, _ repCount: Int32, _ repLength: Int32, _ restLength: Int32)
-    {
-        var workoutDate: WorkoutDate!
-        do {
-            workoutDate = try getWorkoutDate(date: date)
-        } catch {
-            addWorkoutDate(date)
-            workoutDate = try! getWorkoutDate(date: date)
-        }
-        let context: NSManagedObjectContext = getContext()
-        let workout = Workout(context: context)
-        workout.repCount = repCount
-        workout.repLength = repLength
-        workout.restLength = restLength
-        workout.workoutDate = workoutDate
-        try! context.save()
-    }
-
 
 }
 
@@ -127,5 +103,35 @@ extension TrackWorkoutsViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellTextColor(view: cell, cellState: cellState)
+        
+        var alertMessage: String?
+        if let context = container?.viewContext {
+            do {
+                if let workoutDate = try WorkoutDate.getWorkoutDate(context, date)
+                {
+                    alertMessage = String(format: "Workouts on this day \n\n Workout Count: %@", String(workoutDate.workouts!.count))
+                } else {
+                    alertMessage = "You performed no workouts on this day"
+                }
+            } catch {
+                print("An error has occured when trying to access the WorkoutDate for \(date.description)")
+            }
+        }
+        
+        let presetName = "Workouts"
+        
+        let selectPresetAlert = UIAlertController(title: presetName, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+        
+        selectPresetAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in selectPresetAlert.dismiss(animated: true, completion: nil)}))
+        
+        self.present(selectPresetAlert, animated: true, completion: nil)
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        handleCellTextColor(view: cell, cellState: cellState)
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        setupViewFromCalendar(from: visibleDates)
     }
 }

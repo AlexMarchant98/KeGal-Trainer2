@@ -33,3 +33,13 @@ extension UIColor {
     static let workoutCompleteBackgroundColor = UIColor.rgb(r: 58, g: 208, b: 1)
     static let pauseColor = UIColor.rgb(r: 229, g: 228, b: 230)
 }
+
+extension Date {
+    
+    func stripTime() -> Date {
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: self)
+        let date = Calendar.current.date(from: components)
+        return date!
+    }
+    
+}

@@ -155,6 +155,8 @@
                     <tabBarItem key="tabBarItem" title="Track" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="calendarView" destination="Uix-FL-1Xd" id="i9e-ax-4ic"/>
+                        <outlet property="month" destination="FfP-zG-cj8" id="oYs-CW-gn5"/>
+                        <outlet property="year" destination="1fo-9C-n1g" id="sNQ-oY-g3f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
