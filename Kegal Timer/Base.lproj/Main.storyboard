@@ -152,7 +152,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Exe-Qr-sfl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Track" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Track" image="Calendar" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="calendarView" destination="Uix-FL-1Xd" id="i9e-ax-4ic"/>
                         <outlet property="month" destination="FfP-zG-cj8" id="oYs-CW-gn5"/>
@@ -551,6 +551,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Calendar" width="50" height="50"/>
         <image name="Settings" width="50" height="50"/>
         <image name="Timer" width="50" height="50"/>
     </resources>
