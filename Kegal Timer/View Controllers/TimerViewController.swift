@@ -92,6 +92,8 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        print(paths[0])
         _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
         _repLength = userPreferences.integer(forKey: "RepLength")
         _restLength = userPreferences.integer(forKey: "RestLength")

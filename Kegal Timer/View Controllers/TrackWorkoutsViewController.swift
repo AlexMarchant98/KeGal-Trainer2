@@ -26,6 +26,12 @@ class TrackWorkoutsViewController: UIViewController {
         setupCalendarView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        calendarView.reloadData()
+    }
+    
     func setupCalendarView() {
         // Setup calendar spacing
         calendarView.minimumLineSpacing = 0
@@ -38,18 +44,19 @@ class TrackWorkoutsViewController: UIViewController {
         
     }
     
-    func handleCellTextColor(view: JTAppleCell?, cellState: CellState) {
+    func handleCellTextColor(view: JTAppleCell?, cellState: CellState, _ workoutCount: Int = 0) {
         guard let myCustomCell = view as? CustomCell else { return }
         
-        if cellState.isSelected {
-            myCustomCell.dateLabel.textColor = .green
-        } else {
             if cellState.dateBelongsTo == .thisMonth {
-                myCustomCell.dateLabel.textColor = .white
+                switch (workoutCount) {
+                case 0:
+                    myCustomCell.dateLabel.textColor = .white
+                default:
+                    myCustomCell.dateLabel.textColor = .black
+                }
             } else {
                 myCustomCell.dateLabel.textColor = .gray
             }
-        }
     }
     
     func setupViewFromCalendar(from visibleDates: DateSegmentInfo)
@@ -94,9 +101,35 @@ extension TrackWorkoutsViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         
-        cell.dateLabel.text = cellState.text
+        var workoutCount: Int = 0
+        var backgroundColour: UIColor!
         
-        handleCellTextColor(view: cell, cellState: cellState)
+        if let context = container?.viewContext {
+            do {
+                if let workoutDate = try WorkoutDate.getWorkoutDate(context, date)
+                {
+                    workoutCount = (workoutDate.workouts?.count)!
+                }
+            } catch {
+                print("An error has occured when trying to access the WorkoutDate for \(date.description)")
+            }
+        }
+        
+        switch (workoutCount) {
+        case 0:
+            backgroundColour = .clear
+        case 1:
+            backgroundColour = .red
+        case 2:
+            backgroundColour = .orange
+        default:
+            backgroundColour = .green
+        }
+        
+        cell.dateLabel.text = cellState.text
+        cell.workoutCountPreviewView.backgroundColor = backgroundColour
+        
+        handleCellTextColor(view: cell, cellState: cellState, workoutCount)
         
         return cell
     }

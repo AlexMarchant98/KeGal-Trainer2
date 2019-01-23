@@ -109,17 +109,32 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcl-0t-CS2">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cx8-gO-2Ds">
+                                                            <rect key="frame" x="12.5" y="13" width="40" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="8ii-jj-G0R"/>
+                                                                <constraint firstAttribute="width" constant="40" id="XCp-qf-yUe"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcl-0t-CS2">
                                                             <rect key="frame" x="11.5" y="22.5" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.97659188509999995" green="0.98015063999999996" blue="0.99215918780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </view>
                                                 <constraints>
-                                                    <constraint firstItem="jcl-0t-CS2" firstAttribute="centerY" secondItem="Ube-Lg-hDT" secondAttribute="centerY" id="MMp-vR-niv"/>
-                                                    <constraint firstItem="jcl-0t-CS2" firstAttribute="centerX" secondItem="Ube-Lg-hDT" secondAttribute="centerX" id="QQi-UY-wvR"/>
+                                                    <constraint firstItem="Cx8-gO-2Ds" firstAttribute="centerX" secondItem="Ube-Lg-hDT" secondAttribute="centerX" id="MJI-Gv-vL9"/>
+                                                    <constraint firstItem="Cx8-gO-2Ds" firstAttribute="centerY" secondItem="Ube-Lg-hDT" secondAttribute="centerY" id="arW-kY-A0Z"/>
+                                                    <constraint firstItem="jcl-0t-CS2" firstAttribute="centerX" secondItem="Ube-Lg-hDT" secondAttribute="centerX" id="cJL-o7-jZ3"/>
+                                                    <constraint firstItem="jcl-0t-CS2" firstAttribute="centerY" secondItem="Ube-Lg-hDT" secondAttribute="centerY" id="j4D-v1-t1l"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -128,6 +143,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="jcl-0t-CS2" id="n5l-IW-XxH"/>
+                                                    <outlet property="workoutCountPreviewView" destination="Cx8-gO-2Ds" id="qyP-S6-lbi"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -144,7 +160,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.13295130080000001" green="0.13295130080000001" blue="0.13295130080000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.070648171007633209" green="0.070429481565952301" blue="0.078432478010654449" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="HZL-1p-qGc" firstAttribute="top" secondItem="Exe-Qr-sfl" secondAttribute="top" id="ANy-pP-NPZ"/>
                             <constraint firstItem="HZL-1p-qGc" firstAttribute="trailing" secondItem="Exe-Qr-sfl" secondAttribute="trailing" id="awl-2s-uzT"/>

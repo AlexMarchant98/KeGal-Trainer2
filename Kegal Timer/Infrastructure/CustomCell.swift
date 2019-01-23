@@ -11,4 +11,5 @@ import JTAppleCalendar
 
 class CustomCell: JTAppleCell {
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet weak var workoutCountPreviewView: UIView!
 }
