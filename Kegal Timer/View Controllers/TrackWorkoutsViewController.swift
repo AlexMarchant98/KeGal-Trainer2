@@ -13,8 +13,10 @@ import JTAppleCalendar
 class TrackWorkoutsViewController: UIViewController {
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
-    @IBOutlet weak var year: UILabel!
-    @IBOutlet weak var month: UILabel!
+    @IBOutlet weak var year: TopAlignedLabel!
+    @IBOutlet weak var lastMonth: UILabel!
+    @IBOutlet weak var currentMonth: UILabel!
+    @IBOutlet weak var nextMonth: UILabel!
     
     let formatter = DateFormatter()
     
@@ -30,6 +32,8 @@ class TrackWorkoutsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         calendarView.reloadData()
+        
+        calendarView.scrollToDate(Date())
     }
     
     func setupCalendarView() {
@@ -67,7 +71,10 @@ class TrackWorkoutsViewController: UIViewController {
         year.text = formatter.string(from: date)
         
         formatter.dateFormat = "MMMM"
-        month.text = formatter.string(from: date)
+        
+        lastMonth.text = formatter.string(from: Calendar.current.date(byAdding: .month, value: -1, to: date)!)
+        currentMonth.text = formatter.string(from: date)
+        nextMonth.text = formatter.string(from: Calendar.current.date(byAdding: .month, value: 1, to: date)!)
     }
 
 }
@@ -78,8 +85,12 @@ extension TrackWorkoutsViewController: JTAppleCalendarViewDataSource {
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
         
-        let startDate = formatter.date(from: "2019 01 01")!
-        let endDate = formatter.date(from: "2019 12 31")!
+        let currentYear = Calendar.current.component(.year, from: Date())
+        let calendarStartYear = currentYear - 1
+        let calendarEndYear = currentYear + 1
+        
+        let startDate = formatter.date(from: "\(calendarStartYear) 01 01")!
+        let endDate = formatter.date(from: "\(calendarEndYear) 12 31")!
         
         
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
@@ -119,11 +130,11 @@ extension TrackWorkoutsViewController: JTAppleCalendarViewDelegate {
         case 0:
             backgroundColour = .clear
         case 1:
-            backgroundColour = .red
+            backgroundColour = UIColor.rgb(r: 255, g: 38, b: 73)
         case 2:
-            backgroundColour = .orange
+            backgroundColour = UIColor.restBackgroundColor
         default:
-            backgroundColour = .green
+            backgroundColour = UIColor.rgb(r: 0, g: 255, b: 75)
         }
         
         cell.dateLabel.text = cellState.text
@@ -135,14 +146,16 @@ extension TrackWorkoutsViewController: JTAppleCalendarViewDelegate {
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        handleCellTextColor(view: cell, cellState: cellState)
-        
         var alertMessage: String?
         if let context = container?.viewContext {
             do {
                 if let workoutDate = try WorkoutDate.getWorkoutDate(context, date)
                 {
-                    alertMessage = String(format: "Workouts on this day \n\n Workout Count: %@", String(workoutDate.workouts!.count))
+                    if(workoutDate.workouts!.count == 1) {
+                        alertMessage = String(format: "You performed %@ workout on this day", String(workoutDate.workouts!.count))
+                    } else {
+                        alertMessage = String(format: "You performed %@ workouts on this day", String(workoutDate.workouts!.count))
+                    }
                 } else {
                     alertMessage = "You performed no workouts on this day"
                 }
@@ -158,10 +171,6 @@ extension TrackWorkoutsViewController: JTAppleCalendarViewDelegate {
         selectPresetAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in selectPresetAlert.dismiss(animated: true, completion: nil)}))
         
         self.present(selectPresetAlert, animated: true, completion: nil)
-    }
-    
-    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        handleCellTextColor(view: cell, cellState: cellState)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {

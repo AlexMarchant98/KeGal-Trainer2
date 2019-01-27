@@ -37,6 +37,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 } else {
                     runTimer()
                     soundBite.playBeginSoundBite()
+                    soundBite.vibrateDevice()
                 }
             }
         }
@@ -140,6 +141,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         {
             timer.invalidate()
             soundBite.playRestSoundBite()
+            soundBite.vibrateDevice()
             self.timeLabel.text = self.timeString(time: TimeInterval(0), miliseconds: 0)
             if(currentRep < _repsPerSet - 1) {
                 self.view.backgroundColor = UIColor.restBackgroundColor
@@ -285,6 +287,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
             self.runTimer()
             self.timerButton.animateableTrackLayer.removeAnimation(forKey: "strokeEndAnimation")
             self.soundBite.playBeginSoundBite()
+            self.soundBite.vibrateDevice()
             self.isRestState = false
         })
         
@@ -337,7 +340,8 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         currentRep = 0
         
-        focusCollectionView()
+        currentRepUICollectionView.reloadData()
+        currentRepUICollectionView.scrollToItem(at: IndexPath(item: currentRep, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
     }
     
     private func focusCollectionView()

@@ -17,6 +17,8 @@
 		D400645E217FAFA30077765D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D400645C217FAFA30077765D /* LaunchScreen.storyboard */; };
 		D4006469217FAFA30077765D /* Kegal_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006468217FAFA30077765D /* Kegal_TimerTests.swift */; };
 		D4006474217FAFA30077765D /* Kegal_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006473217FAFA30077765D /* Kegal_TimerUITests.swift */; };
+		D406FCE921FC7B7500B993B6 /* TopAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406FCE821FC7B7500B993B6 /* TopAlignedLabel.swift */; };
+		D406FCF521FC80BE00B993B6 /* BottomAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406FCF421FC80BE00B993B6 /* BottomAlignedLabel.swift */; };
 		D40780E721E12C6600C3D2D1 /* KegalTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40780E521E12C6600C3D2D1 /* KegalTimer.xcdatamodeld */; };
 		D40780F421E2502500C3D2D1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40780F321E2502500C3D2D1 /* Workout.swift */; };
 		D40780F621E2504500C3D2D1 /* WorkoutDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40780F521E2504500C3D2D1 /* WorkoutDate.swift */; };
@@ -75,6 +77,8 @@
 		D400646F217FAFA30077765D /* Kegal TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kegal TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4006473217FAFA30077765D /* Kegal_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kegal_TimerUITests.swift; sourceTree = "<group>"; };
 		D4006475217FAFA30077765D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D406FCE821FC7B7500B993B6 /* TopAlignedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlignedLabel.swift; sourceTree = "<group>"; };
+		D406FCF421FC80BE00B993B6 /* BottomAlignedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomAlignedLabel.swift; sourceTree = "<group>"; };
 		D40780E621E12C6600C3D2D1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D40780F321E2502500C3D2D1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		D40780F521E2504500C3D2D1 /* WorkoutDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDate.swift; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				D48CFC6021AC80E900AD6179 /* Extensions.swift */,
 				D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */,
 				D4F98EF321E26FBF00BB7DC6 /* CustomCell.swift */,
+				D406FCE821FC7B7500B993B6 /* TopAlignedLabel.swift */,
+				D406FCF421FC80BE00B993B6 /* BottomAlignedLabel.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -492,8 +498,10 @@
 				D4E48D4F2190CFB9006366A7 /* BackButton.swift in Sources */,
 				D48CFC6321B70CBF00AD6179 /* QueueTimer.swift in Sources */,
 				D410601521922DDC00089961 /* StopButton.swift in Sources */,
+				D406FCF521FC80BE00B993B6 /* BottomAlignedLabel.swift in Sources */,
 				D4006456217FAF9F0077765D /* TimerViewController.swift in Sources */,
 				D40780F621E2504500C3D2D1 /* WorkoutDate.swift in Sources */,
+				D406FCE921FC7B7500B993B6 /* TopAlignedLabel.swift in Sources */,
 				D4F98EF421E26FBF00BB7DC6 /* CustomCell.swift in Sources */,
 				D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */,
 				D48CFC6121AC80E900AD6179 /* Extensions.swift in Sources */,

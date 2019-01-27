@@ -17,6 +17,7 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
     @IBOutlet weak var repLengthTextBox: UITextField!
     @IBOutlet weak var restLengthTextBox: UITextField!
     @IBOutlet weak var muteSwitch: UISwitch!
+    @IBOutlet weak var vibrateSwitch: UISwitch!
     
     @IBAction func saveChangeButton(_ sender: Any) {
         if ((repsPerSetTextBox.text!.isEmpty || repsPerSetTextBox.text!.first == "0") ||
@@ -35,6 +36,7 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
             userPreferences.set(Int(repLengthTextBox.text!), forKey: "RepLength")
             userPreferences.set(Int(restLengthTextBox.text!), forKey: "RestLength")
             userPreferences.set(muteSwitch.isOn, forKey: "SoundMuted")
+            userPreferences.set(vibrateSwitch.isOn, forKey: "VibrationOn")
             
             let saveSuccessfulAlert = UIAlertController(title: "Save Successful", message: "", preferredStyle: UIAlertController.Style.alert)
             
@@ -51,6 +53,7 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         repLengthTextBox.text = String(userPreferences.integer(forKey: "RepLength"))
         restLengthTextBox.text = String(userPreferences.integer(forKey: "RestLength"))
         muteSwitch.isOn = userPreferences.bool(forKey: "SoundMuted")
+        vibrateSwitch.isOn = userPreferences.bool(forKey: "VibrationOn")
     }
     
     override func viewDidLoad() {
@@ -62,6 +65,7 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         self.tabBarController?.delegate = self
         
         muteSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
+        vibrateSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
         
         self.hideKeyboardWhenTappedAround()
     }
