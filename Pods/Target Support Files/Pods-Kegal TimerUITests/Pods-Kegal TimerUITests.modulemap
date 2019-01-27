@@ -1,0 +1,6 @@
+framework module Pods_Kegal_TimerUITests {
+  umbrella header "Pods-Kegal TimerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -62,4 +62,11 @@ class SoundBite {
             }
         }
     }
+    
+    func vibrateDevice() {
+        if(_userPreferences.bool(forKey: "VibrationOn") == true)
+        {
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        }
+    }
 }
