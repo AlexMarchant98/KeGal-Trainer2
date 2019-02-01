@@ -90,11 +90,32 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
+        _repLength = userPreferences.integer(forKey: "RepLength")
+        _restLength = userPreferences.integer(forKey: "RestLength")
+        
+        if(_repsPerSet > 1) {
+            reps = Array(1...userPreferences.integer(forKey: "RepsPerSet"))
+        }
+        else
+        {
+            reps = Array(1...1)
+        }
+        currentRep = 0
+        
+        secondsRemaining = _repLength - 1
+        
+        currentRepUICollectionView.contentInset.left = currentRepUICollectionView.frame.width / 2 - 28.1
+        currentRepUICollectionView.contentInset.right = currentRepUICollectionView.frame.width / 2 - 28.1
+        
+        self.currentRepUICollectionView.reloadData()
+        
+        focusCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-        print(paths[0])
+        super.viewWillAppear(animated)
+        
         _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
         _repLength = userPreferences.integer(forKey: "RepLength")
         _restLength = userPreferences.integer(forKey: "RestLength")

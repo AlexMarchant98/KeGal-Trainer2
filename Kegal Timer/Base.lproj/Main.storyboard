@@ -236,23 +236,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKv-Et-3BY" userLabel="Back Button" customClass="BackButton" customModule="Kegal_Timer" customModuleProvider="target">
-                                <rect key="frame" x="43" y="467" width="25" height="25"/>
+                                <rect key="frame" x="55.5" y="466.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="5nd-Ha-Efg"/>
                                     <constraint firstAttribute="width" constant="25" id="WXI-t8-yzw"/>
                                 </constraints>
                                 <connections>
                                     <action selector="backButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hOI-CB-gBY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myh-uR-7Ff" userLabel="Stop Button" customClass="StopButton" customModule="Kegal_Timer" customModuleProvider="target">
-                                <rect key="frame" x="307" y="467" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="TJv-Wj-3Rs"/>
-                                    <constraint firstAttribute="height" constant="25" id="zkF-lj-2X6"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="stopWorkoutButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="jKB-2Z-lnC"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-54-BF2">
@@ -297,24 +287,72 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="CsT-77-ZXr"/>
                                 </connections>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOP-Fi-a6F">
+                                <rect key="frame" x="0.0" y="474" width="32.5" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="s7v-is-HVl"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXg-XN-RIN">
+                                <rect key="frame" x="105.5" y="474" width="32" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="gGD-Op-su4"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUI-xq-2mn">
+                                <rect key="frame" x="237.5" y="474" width="32" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="na4-RN-KQa"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmn-AD-Vji">
+                                <rect key="frame" x="343" y="474" width="32" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="LYw-PC-04l"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myh-uR-7Ff" userLabel="Stop Button" customClass="StopButton" customModule="Kegal_Timer" customModuleProvider="target">
+                                <rect key="frame" x="294" y="466.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="TJv-Wj-3Rs"/>
+                                    <constraint firstAttribute="height" constant="25" id="zkF-lj-2X6"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="stopWorkoutButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="jKB-2Z-lnC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="M6o-Ps-2RQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FKv-Et-3BY" secondAttribute="trailing" constant="69.5" id="3YY-iG-VMV"/>
+                            <constraint firstItem="rXg-XN-RIN" firstAttribute="centerY" secondItem="M6o-Ps-2RQ" secondAttribute="centerY" id="1Ja-EG-a0s"/>
+                            <constraint firstItem="bmn-AD-Vji" firstAttribute="leading" secondItem="Myh-uR-7Ff" secondAttribute="trailing" constant="24" id="1Pc-Db-QCA"/>
+                            <constraint firstItem="bmn-AD-Vji" firstAttribute="width" secondItem="cUI-xq-2mn" secondAttribute="width" id="4m3-rv-hZ9"/>
+                            <constraint firstItem="cUI-xq-2mn" firstAttribute="leading" secondItem="M6o-Ps-2RQ" secondAttribute="trailing" id="4xW-jo-5AK"/>
+                            <constraint firstItem="Myh-uR-7Ff" firstAttribute="centerY" secondItem="M6o-Ps-2RQ" secondAttribute="centerY" id="9Sd-lV-PnG"/>
                             <constraint firstItem="ZOl-A9-5xy" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="41" id="CTd-xw-FvL"/>
+                            <constraint firstItem="FKv-Et-3BY" firstAttribute="leading" secondItem="iOP-Fi-a6F" secondAttribute="trailing" constant="23" id="CbQ-pd-ZYl"/>
                             <constraint firstItem="M6o-Ps-2RQ" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="Ct8-S7-MzW"/>
-                            <constraint firstItem="Myh-uR-7Ff" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M6o-Ps-2RQ" secondAttribute="trailing" constant="69.5" id="LQs-8G-cRR"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Myh-uR-7Ff" secondAttribute="trailing" constant="43" id="OrE-wW-YyI"/>
+                            <constraint firstItem="bmn-AD-Vji" firstAttribute="centerY" secondItem="M6o-Ps-2RQ" secondAttribute="centerY" id="DVg-g6-yUT"/>
+                            <constraint firstItem="Myh-uR-7Ff" firstAttribute="leading" secondItem="cUI-xq-2mn" secondAttribute="trailing" constant="24.5" id="Nei-vG-UPO"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="bmn-AD-Vji" secondAttribute="trailing" id="NzQ-hb-2av"/>
                             <constraint firstItem="SQ5-mc-3zh" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="TMu-rX-0e6"/>
                             <constraint firstItem="SQ5-mc-3zh" firstAttribute="top" secondItem="ZOl-A9-5xy" secondAttribute="bottom" constant="26" id="UDz-a7-Bxo"/>
                             <constraint firstItem="ZOl-A9-5xy" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="VlO-nK-8RU"/>
                             <constraint firstItem="2kh-54-BF2" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="X83-vf-4v6"/>
-                            <constraint firstItem="FKv-Et-3BY" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="43" id="ihi-IT-Rp8"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Myh-uR-7Ff" secondAttribute="bottom" constant="126" id="j47-Zr-5fS"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="FKv-Et-3BY" secondAttribute="bottom" constant="126" id="kDA-7w-35H"/>
+                            <constraint firstItem="cUI-xq-2mn" firstAttribute="centerY" secondItem="M6o-Ps-2RQ" secondAttribute="centerY" id="XAI-s7-j5J"/>
+                            <constraint firstItem="M6o-Ps-2RQ" firstAttribute="leading" secondItem="rXg-XN-RIN" secondAttribute="trailing" id="jjJ-1M-rct"/>
+                            <constraint firstItem="iOP-Fi-a6F" firstAttribute="width" secondItem="rXg-XN-RIN" secondAttribute="width" id="mKk-gz-ssg"/>
                             <constraint firstItem="2kh-54-BF2" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="16" id="nBv-nT-RTV"/>
                             <constraint firstItem="2kh-54-BF2" firstAttribute="top" secondItem="SQ5-mc-3zh" secondAttribute="bottom" constant="-2.5" id="p5O-oS-RzD"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="2kh-54-BF2" secondAttribute="trailing" constant="16" id="qIy-9U-fSw"/>
+                            <constraint firstItem="rXg-XN-RIN" firstAttribute="leading" secondItem="FKv-Et-3BY" secondAttribute="trailing" constant="25" id="rwV-nx-IGN"/>
+                            <constraint firstItem="iOP-Fi-a6F" firstAttribute="centerY" secondItem="M6o-Ps-2RQ" secondAttribute="centerY" id="uJa-QY-QLz"/>
+                            <constraint firstItem="FKv-Et-3BY" firstAttribute="centerY" secondItem="M6o-Ps-2RQ" secondAttribute="centerY" id="wWz-qx-gds"/>
+                            <constraint firstItem="iOP-Fi-a6F" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="yvA-P7-FP7"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="M6o-Ps-2RQ" secondAttribute="bottom" constant="89" id="z0F-RV-lEe"/>
                             <constraint firstItem="M6o-Ps-2RQ" firstAttribute="top" secondItem="2kh-54-BF2" secondAttribute="bottom" priority="250" constant="110" id="zm7-f8-JhU"/>
                         </constraints>

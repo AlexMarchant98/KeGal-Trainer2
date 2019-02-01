@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kegal Timer/View Controllers/TimerViewController.swift"
-            timestampString = "570295638.159891"
+            timestampString = "570747007.513085"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kegal Timer/View Controllers/TimerViewController.swift"
-            timestampString = "570295638.159976"
+            timestampString = "570747007.513195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "updateTimer()"
             landmarkType = "7">
          </BreakpointContent>

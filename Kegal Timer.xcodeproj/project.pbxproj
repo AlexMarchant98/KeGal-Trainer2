@@ -86,6 +86,7 @@
 		D4106016219B6DEB00089961 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewTableViewController.swift; sourceTree = "<group>"; };
 		D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCollectionViewCell.swift; sourceTree = "<group>"; };
+		D47C865D2204E85B0070476F /* Kegal Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kegal Timer.entitlements"; sourceTree = "<group>"; };
 		D48CFC4921A744B500AD6179 /* SoundBite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundBite.swift; sourceTree = "<group>"; };
 		D48CFC5A21A74F6300AD6179 /* Rest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Rest.wav; path = "../../../../../../../Downloads/Kegal App Sound Bites/Rest.wav"; sourceTree = "<group>"; };
 		D48CFC5B21A74F6300AD6179 /* Begin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Begin.wav; path = "../../../../../../../Downloads/Kegal App Sound Bites/Begin.wav"; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 		D4006450217FAF9F0077765D /* Kegal Timer */ = {
 			isa = PBXGroup;
 			children = (
+				D47C865D2204E85B0070476F /* Kegal Timer.entitlements */,
 				D40780E821E12D5D00C3D2D1 /* Models */,
 				D48CFC5721A747E500AD6179 /* Infrastructure */,
 				D48CFC5621A747CF00AD6179 /* View Controllers */,
@@ -335,6 +337,11 @@
 					D400644D217FAF9F0077765D = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					D4006463217FAFA30077765D = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -685,6 +692,7 @@
 			baseConfigurationReference = 84691D794396FAC5FE5BC551 /* Pods-Kegal Timer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
@@ -704,6 +712,7 @@
 			baseConfigurationReference = E63BEE54ED79D2F743DDB8E3 /* Pods-Kegal Timer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
