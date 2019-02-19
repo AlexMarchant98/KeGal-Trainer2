@@ -25,8 +25,6 @@ extension UIColor {
         return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
     
-    //static let workoutBackgroundColor = UIColor.rgb(r: 9, g: 31, b: 165) - Blue
-    //static let trackStrokeColour = UIColor.rgb(r: 9, g: 31, b: 165) - Blue
     static let workoutBackgroundColor = UIColor.rgb(r: 18, g: 18, b: 20)
     static let trackStrokeColour = UIColor.rgb(r: 18, g: 18, b: 20)
     static let restBackgroundColor = UIColor.rgb(r: 255, g: 141, b: 10)
@@ -38,6 +36,12 @@ extension Date {
     
     func stripTime() -> Date {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: self)
+        let date = Calendar.current.date(from: components)
+        return date!
+    }
+    
+    func stripDate() -> Date {
+        let components = Calendar.current.dateComponents([.hour, .minute], from: self)
         let date = Calendar.current.date(from: components)
         return date!
     }

@@ -36,8 +36,8 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                     queueItems(delayTime: .now() + .seconds(Int(queueTimer.timeRemaining)))
                 } else {
                     runTimer()
-                    soundBite.playBeginSoundBite()
-                    soundBite.vibrateDevice()
+                    workoutCue.playBeginSoundBite()
+                    workoutCue.vibrateDevice()
                 }
             }
         }
@@ -60,18 +60,15 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     let userPreferences = UserDefaults.standard
-    let dispatchQueue = DispatchQueue(label: "resumeWorkout")
-    let soundBite = SoundBite()
+    let dispatchQueue = DispatchQueue(label: Constants.dispatchQueueLabel)
+    let workoutCue = WorkoutCue()
     let queueTimer = QueueTimer()
-    
-    let FONT_NAME = "Avenir Next Condensed"
-    let FONT_SIZE = 25.0
     
     private var reps: [Int]!
     
-    lazy var _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
-    lazy var _repLength = userPreferences.integer(forKey: "RepLength")
-    lazy var _restLength = userPreferences.integer(forKey: "RestLength")
+    lazy var _repsPerSet = userPreferences.integer(forKey: Constants.repsPerSet)
+    lazy var _repLength = userPreferences.integer(forKey: Constants.repLength)
+    lazy var _restLength = userPreferences.integer(forKey: Constants.restLength)
     lazy var secondsRemaining = _repLength - 1
     
     var miliseconds = 100
@@ -90,38 +87,17 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
-        _repLength = userPreferences.integer(forKey: "RepLength")
-        _restLength = userPreferences.integer(forKey: "RestLength")
-        
-        if(_repsPerSet > 1) {
-            reps = Array(1...userPreferences.integer(forKey: "RepsPerSet"))
-        }
-        else
-        {
-            reps = Array(1...1)
-        }
-        currentRep = 0
-        
-        secondsRemaining = _repLength - 1
-        
-        currentRepUICollectionView.contentInset.left = currentRepUICollectionView.frame.width / 2 - 28.1
-        currentRepUICollectionView.contentInset.right = currentRepUICollectionView.frame.width / 2 - 28.1
-        
-        self.currentRepUICollectionView.reloadData()
-        
-        focusCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
-        _repLength = userPreferences.integer(forKey: "RepLength")
-        _restLength = userPreferences.integer(forKey: "RestLength")
+        _repsPerSet = userPreferences.integer(forKey: Constants.repsPerSet)
+        _repLength = userPreferences.integer(forKey: Constants.repLength)
+        _restLength = userPreferences.integer(forKey: Constants.restLength)
         
         if(_repsPerSet > 1) {
-            reps = Array(1...userPreferences.integer(forKey: "RepsPerSet"))
+            reps = Array(1..._repsPerSet)
         }
         else
         {
@@ -130,11 +106,6 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         currentRep = 0
         
         secondsRemaining = _repLength - 1
-        
-        currentRepUICollectionView.contentInset.left = currentRepUICollectionView.frame.width / 2 - 28.1
-        currentRepUICollectionView.contentInset.right = currentRepUICollectionView.frame.width / 2 - 28.1
-        
-        self.currentRepUICollectionView.reloadData()
         
         focusCollectionView()
     }
@@ -161,11 +132,14 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         if(secondsRemaining == -1)
         {
             timer.invalidate()
-            soundBite.playRestSoundBite()
-            soundBite.vibrateDevice()
+            workoutCue.playRestSoundBite()
+            workoutCue.vibrateDevice()
             self.timeLabel.text = self.timeString(time: TimeInterval(0), miliseconds: 0)
             if(currentRep < _repsPerSet - 1) {
-                self.view.backgroundColor = UIColor.restBackgroundColor
+                if(workoutCue.displayVisualCue() == true)
+                {
+                    self.view.backgroundColor = UIColor.restBackgroundColor
+                }
                 
                 isRestState = true
                 
@@ -179,13 +153,18 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 focusCollectionView()
             } else {
                 timerButton.isWorkoutComplete = true
-                soundBite.playWorkoutCompleteSoundBite()
                 timerButton.checkMarkShapeLayer()
-                self.view.backgroundColor = UIColor.workoutCompleteBackgroundColor
-                addWorkout(Date(), Int32(_repsPerSet), Int32(_repLength), Int32(_restLength))
                 isTimerRunning = false
                 isWorkoutComplete = true
                 miliseconds = 100
+                
+                workoutCue.playWorkoutCompleteSoundBite()
+                if(workoutCue.displayVisualCue())
+                {
+                    self.view.backgroundColor = UIColor.workoutCompleteBackgroundColor
+                }
+                
+                addWorkout(Date(), Int32(_repsPerSet), Int32(_repLength), Int32(_restLength))
                 
             }
         } else {
@@ -238,22 +217,22 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         switch reps[indexPath.row] - 1 {
         case currentRep + 3:
-            size = FONT_SIZE / 4
+            size = Constants.fontSize / 4
         case currentRep + 2:
-            size = FONT_SIZE / 3
+            size = Constants.fontSize / 3
         case currentRep + 1:
-            size = FONT_SIZE / 2
+            size = Constants.fontSize / 2
         case currentRep:
             color = .green
-            size = FONT_SIZE
+            size = Constants.fontSize
         case currentRep - 1:
-            size = FONT_SIZE / 2
+            size = Constants.fontSize / 2
             alpha = 0.75
         case currentRep - 2:
-            size = FONT_SIZE / 3
+            size = Constants.fontSize / 3
             alpha = 0.50
         case currentRep - 3:
-            size = FONT_SIZE / 4
+            size = Constants.fontSize / 4
             alpha = 0.25
         default:
             color = .clear
@@ -262,7 +241,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         cell.layer.mask = mask
         cell.repCount.text = String(reps[indexPath.row])
-        cell.repCount.font = UIFont(name: FONT_NAME, size: CGFloat(size))
+        cell.repCount.font = UIFont(name: Constants.fontName, size: CGFloat(size))
         cell.contentView.backgroundColor = color
         cell.contentView.alpha = CGFloat(alpha)
         cell.backgroundColor = UIColor.clear
@@ -306,9 +285,9 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
             self.secondsRemaining = self._repLength - 1
             self.view.backgroundColor = UIColor.workoutBackgroundColor
             self.runTimer()
-            self.timerButton.animateableTrackLayer.removeAnimation(forKey: "strokeEndAnimation")
-            self.soundBite.playBeginSoundBite()
-            self.soundBite.vibrateDevice()
+            self.timerButton.animateableTrackLayer.removeAnimation(forKey: Constants.strokeEndAnimation)
+            self.workoutCue.playBeginSoundBite()
+            self.workoutCue.vibrateDevice()
             self.isRestState = false
         })
         
@@ -356,7 +335,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         timerButton.startTriangleShapeLayer()
         timerButton.animateableTrackLayer.removeAllAnimations()
         
-        _repsPerSet = userPreferences.integer(forKey: "RepsPerSet")
+        _repsPerSet = userPreferences.integer(forKey: Constants.repsPerSet)
         secondsRemaining = _repLength - 1
         
         currentRep = 0
@@ -367,6 +346,9 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     private func focusCollectionView()
     {
+        self.currentRepUICollectionView.contentInset.left = self.currentRepUICollectionView.frame.width / 2 - 28.1
+        self.currentRepUICollectionView.contentInset.right = self.currentRepUICollectionView.frame.width / 2 - 28.1
+        
         self.currentRepUICollectionView.reloadItems(at: generateIndexPaths())
         self.currentRepUICollectionView.scrollToItem(at: IndexPath(item: currentRep, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
     }

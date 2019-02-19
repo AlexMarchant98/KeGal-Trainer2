@@ -16,8 +16,11 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
     @IBOutlet weak var repsPerSetTextBox: UITextField!
     @IBOutlet weak var repLengthTextBox: UITextField!
     @IBOutlet weak var restLengthTextBox: UITextField!
-    @IBOutlet weak var muteSwitch: UISwitch!
-    @IBOutlet weak var vibrateSwitch: UISwitch!
+    
+    @IBOutlet weak var vibrateCueSwitch: UISwitch!
+    @IBOutlet weak var visualCueSwitch: UISwitch!
+    @IBOutlet weak var soundCueSwitch: UISwitch!
+    
     
     @IBAction func saveChangeButton(_ sender: Any) {
         if ((repsPerSetTextBox.text!.isEmpty || repsPerSetTextBox.text!.first == "0") ||
@@ -32,11 +35,13 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         } else {
             dirtyInput = false
             
-            userPreferences.set(Int(repsPerSetTextBox.text!), forKey: "RepsPerSet")
-            userPreferences.set(Int(repLengthTextBox.text!), forKey: "RepLength")
-            userPreferences.set(Int(restLengthTextBox.text!), forKey: "RestLength")
-            userPreferences.set(muteSwitch.isOn, forKey: "SoundMuted")
-            userPreferences.set(vibrateSwitch.isOn, forKey: "VibrationOn")
+            userPreferences.set(Int(repsPerSetTextBox.text!), forKey: Constants.repsPerSet)
+            userPreferences.set(Int(repLengthTextBox.text!), forKey: Constants.repLength)
+            userPreferences.set(Int(restLengthTextBox.text!), forKey: Constants.restLength)
+            
+            userPreferences.set(vibrateCueSwitch.isOn, forKey: Constants.vibrationCue)
+            userPreferences.set(visualCueSwitch.isOn, forKey: Constants.visualCue)
+            userPreferences.set(soundCueSwitch.isOn, forKey: Constants.soundCue)
             
             let saveSuccessfulAlert = UIAlertController(title: "Save Successful", message: "", preferredStyle: UIAlertController.Style.alert)
             
@@ -49,23 +54,27 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        repsPerSetTextBox.text = String(userPreferences.integer(forKey: "RepsPerSet"))
-        repLengthTextBox.text = String(userPreferences.integer(forKey: "RepLength"))
-        restLengthTextBox.text = String(userPreferences.integer(forKey: "RestLength"))
-        muteSwitch.isOn = userPreferences.bool(forKey: "SoundMuted")
-        vibrateSwitch.isOn = userPreferences.bool(forKey: "VibrationOn")
+        repsPerSetTextBox.text = String(userPreferences.integer(forKey: Constants.repsPerSet))
+        repLengthTextBox.text = String(userPreferences.integer(forKey: Constants.repLength))
+        restLengthTextBox.text = String(userPreferences.integer(forKey: Constants.restLength))
+        
+        vibrateCueSwitch.isOn = userPreferences.bool(forKey: Constants.vibrationCue)
+        visualCueSwitch.isOn = userPreferences.bool(forKey: Constants.visualCue)
+        soundCueSwitch.isOn = userPreferences.bool(forKey: Constants.soundCue)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController?.delegate = self
+        
         repsPerSetTextBox.delegate = self
         repLengthTextBox.delegate = self
         restLengthTextBox.delegate = self
-        self.tabBarController?.delegate = self
         
-        muteSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
-        vibrateSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
+        vibrateCueSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
+        visualCueSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
+        soundCueSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
         
         self.hideKeyboardWhenTappedAround()
     }

@@ -18,7 +18,7 @@ class TimerButton: UIButton {
     let userPreferences = UserDefaults.standard
     let startTriangleColor = UIColor.green
     
-    lazy var _restLength = userPreferences.integer(forKey: "RestLength")
+    lazy var _restLength = userPreferences.integer(forKey: Constants.restLength)
     
     var isTimerOn = false
     var isWorkoutComplete = false
@@ -233,7 +233,13 @@ class TimerButton: UIButton {
         strokeEndAnimation.toValue = 1
         strokeEndAnimation.isRemovedOnCompletion = true
         
-        animateableTrackLayer.add(strokeEndAnimation, forKey: "strokeEndAnimation")
+        if(userPreferences.bool(forKey: Constants.visualCue) == true) {
+            animateableTrackLayer.strokeColor = UIColor.workoutBackgroundColor.cgColor
+        } else {
+            animateableTrackLayer.strokeColor = UIColor.restBackgroundColor.cgColor
+        }
+        
+        animateableTrackLayer.add(strokeEndAnimation, forKey: Constants.strokeEndAnimation)
     }
     
     public func pauseLayer() {
