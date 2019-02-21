@@ -19,11 +19,11 @@ class UpdateReminderTableViewController: UITableViewController {
     
     @IBAction func updateReminderButton(_ sender: Any) {
         rescheduleNotification()
-        performSegue(withIdentifier: "unwindSegueToReminders", sender: self)
+        performSegue(withIdentifier: Constants.unwindSegueToReminders, sender: self)
     }
     
     @IBAction func cancelButton(_ sender: Any) {
-        performSegue(withIdentifier: "unwindSegueToReminders", sender: self)
+        performSegue(withIdentifier: Constants.unwindSegueToReminders, sender: self)
     }
     
     override func viewDidLoad() {

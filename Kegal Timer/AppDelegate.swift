@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         { (granted, error) in
             
         }
-        
+        RequestReview.incrementLaunchCount()
         return true
     }
 

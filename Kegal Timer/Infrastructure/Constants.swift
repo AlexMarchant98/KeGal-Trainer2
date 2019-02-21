@@ -17,6 +17,9 @@ struct Constants {
     static let visualCue = "VisualCueOn"
     static let soundCue = "SoundCueOn"
     
+    //  User Default Keys
+    static let appLaunchCount = "AppLaunchCount"
+    
     //  Font Styling
     static let fontName = "Avenir Next Condensed"
     static let fontSize = 25.0
@@ -24,6 +27,17 @@ struct Constants {
     //  Animation Keys
     static let strokeEndAnimation = "strokeEndAnimation"
     
+    //  Cell Identifier
+    static let repCollectionViewCellReuseIdentifier = "RepCollectionViewCell"
+    static let remindersTableViewCellReuseIdentifier = "Reminder"
+    static let trackWorkoutsCalendarViewCellReuseIdentifier = "CustomCell"
+    
     //  Dispatch Queue
     static let dispatchQueueLabel = "resumeWorkout"
+    
+    //  Segue Identifiers
+    static let addReminderSegue = "AddReminderSegue"
+    static let updateReminderSegue = "UpdateReminderSegue"
+    
+    static let unwindSegueToReminders = "unwindSegueToReminders"
 }

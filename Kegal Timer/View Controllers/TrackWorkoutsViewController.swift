@@ -110,7 +110,7 @@ extension TrackWorkoutsViewController: JTAppleCalendarViewDelegate {
     
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: Constants.trackWorkoutsCalendarViewCellReuseIdentifier, for: indexPath) as! CustomCell
         
         var workoutCount: Int = 0
         var backgroundColour: UIColor!

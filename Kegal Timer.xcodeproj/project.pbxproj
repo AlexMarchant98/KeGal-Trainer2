@@ -27,6 +27,7 @@
 		D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */; };
 		D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF022177AA700CCC697 /* CustomCell.swift */; };
 		D4406DF322177D3B00CCC697 /* MoreInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF222177D3B00CCC697 /* MoreInformationViewController.swift */; };
+		D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4505815221F23B7004CEEEF /* RequestReview.swift */; };
 		D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */; };
 		D467598122060B8000341027 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D467598022060B8000341027 /* Reminder.swift */; };
 		D47C86652206050A0070476F /* AddReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C86642206050A0070476F /* AddReminderTableViewController.swift */; };
@@ -93,6 +94,7 @@
 		D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewTableViewController.swift; sourceTree = "<group>"; };
 		D4406DF022177AA700CCC697 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D4406DF222177D3B00CCC697 /* MoreInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationViewController.swift; sourceTree = "<group>"; };
+		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCollectionViewCell.swift; sourceTree = "<group>"; };
 		D467598022060B8000341027 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		D47C865D2204E85B0070476F /* Kegal Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kegal Timer.entitlements"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				D406FCE821FC7B7500B993B6 /* TopAlignedLabel.swift */,
 				D406FCF421FC80BE00B993B6 /* BottomAlignedLabel.swift */,
 				D485DEDA220A1FF9002E9DB1 /* Constants.swift */,
+				D4505815221F23B7004CEEEF /* RequestReview.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */,
 				D4006454217FAF9F0077765D /* TrackWorkoutsViewController.swift in Sources */,
 				D40780E721E12C6600C3D2D1 /* KegalTimer.xcdatamodeld in Sources */,
+				D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */,
 				D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */,
 				D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */,
 			);

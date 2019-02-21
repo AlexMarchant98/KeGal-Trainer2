@@ -107,6 +107,11 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         secondsRemaining = _repLength - 1
         
+        
+        let contentInset = (self.view.frame.width / 2) - 28.1
+        
+        currentRepUICollectionView.contentInset = UIEdgeInsets(top: 0, left: contentInset, bottom: 0, right: contentInset)
+        
         focusCollectionView()
     }
     
@@ -166,6 +171,13 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 
                 addWorkout(Date(), Int32(_repsPerSet), Int32(_repLength), Int32(_restLength))
                 
+                if #available(iOS 10.3, *) {
+                    RequestReview.requestReview()
+                }
+                else {
+                    // Review View is unvailable for lower versions. Please use your custom view.
+                }
+                
             }
         } else {
             timeLabel.text = timeString(time: TimeInterval(secondsRemaining), miliseconds: miliseconds)
@@ -200,7 +212,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RepCollectionViewCell", for: indexPath) as! RepCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.repCollectionViewCellReuseIdentifier, for: indexPath) as! RepCollectionViewCell
         
         let mask = CAShapeLayer()
         let path = UIBezierPath(arcCenter: CGPoint(x: cell.bounds.midX, y: cell.bounds.midY),
@@ -346,9 +358,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     private func focusCollectionView()
     {
-        self.currentRepUICollectionView.contentInset.left = self.currentRepUICollectionView.frame.width / 2 - 28.1
-        self.currentRepUICollectionView.contentInset.right = self.currentRepUICollectionView.frame.width / 2 - 28.1
-        
+        self.currentRepUICollectionView.reloadData()
         self.currentRepUICollectionView.reloadItems(at: generateIndexPaths())
         self.currentRepUICollectionView.scrollToItem(at: IndexPath(item: currentRep, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
     }

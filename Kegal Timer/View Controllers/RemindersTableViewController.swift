@@ -19,7 +19,7 @@ class RemindersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Reminder")
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.remindersTableViewCellReuseIdentifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +53,7 @@ class RemindersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Reminder", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.remindersTableViewCellReuseIdentifier, for: indexPath)
         var text = ""
         var detailText = ""
         
@@ -84,13 +84,13 @@ class RemindersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row < reminders.count) {
             selectedReminder = reminders[indexPath.row]
-            self.performSegue(withIdentifier: "UpdateReminderSegue", sender: self)
+            self.performSegue(withIdentifier: Constants.updateReminderSegue, sender: self)
         }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        if (identifier == "AddReminderSegue" && tableView.numberOfRows(inSection: 0) == 24) {
+        if (identifier == Constants.addReminderSegue && tableView.numberOfRows(inSection: 0) == 24) {
             let maxRemindersAlert = UIAlertController(title: "Reminder Limit Reached", message: "You can create a maximum of 24 reminders, please delete one before attempting to add another", preferredStyle: UIAlertController.Style.alert)
             
             maxRemindersAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in maxRemindersAlert.dismiss(animated: true, completion: nil)}))
@@ -104,7 +104,7 @@ class RemindersTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "UpdateReminderSegue" {
+        if segue.identifier == Constants.updateReminderSegue {
             let destination = segue.destination as! UpdateReminderTableViewController
             if let reminder = selectedReminder {
                 destination.reminder = reminder

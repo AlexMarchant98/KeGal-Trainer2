@@ -16,22 +16,16 @@ class AddReminderTableViewController: UITableViewController {
     @IBOutlet weak var reminderSoundSwitch: UISwitch!
     
     @IBAction func cancelReminderButton(_ sender: Any) {
-        performSegue(withIdentifier: "unwindSegueToReminders", sender: self)
+        performSegue(withIdentifier: Constants.unwindSegueToReminders, sender: self)
     }
     
     @IBAction func createReminderButton(_ sender: Any) {
         scheduleNotification()
-        performSegue(withIdentifier: "unwindSegueToReminders", sender: self)
+        performSegue(withIdentifier: Constants.unwindSegueToReminders, sender: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     func scheduleNotification() {
