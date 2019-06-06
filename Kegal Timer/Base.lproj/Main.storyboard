@@ -1,21 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Levels-->
+        <scene sceneID="nXo-AH-P0D">
+            <objects>
+                <tableViewController storyboardIdentifier="StageTableViewController" id="6pz-xX-xEg" customClass="StageTableViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aQL-xb-Onq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="level" id="VkI-05-vUB" customClass="LevelTableViewCell" customModule="Kegal_Timer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VkI-05-vUB" id="FpA-li-gkh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6pz-xX-xEg" id="GyL-uu-B3M"/>
+                            <outlet property="delegate" destination="6pz-xX-xEg" id="ifx-MM-twZ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Levels" id="wIA-m1-aK9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHw-r5-LBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="-683"/>
+        </scene>
         <!--Ib Calendar Data Source-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="TrackWorkoutsViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrackWorkoutsViewController" id="9pv-A4-QxB" customClass="TrackWorkoutsViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n8O-A3-veC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="HZL-1p-qGc">
@@ -314,14 +343,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-690.40479760119945"/>
+            <point key="canvasLocation" x="752" y="-1388"/>
         </scene>
         <!--Timer-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8rJ-Kc-sve" customClass="TimerViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimerViewController" automaticallyAdjustsScrollViewInsets="NO" id="8rJ-Kc-sve" customClass="TimerViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOl-A9-5xy">
@@ -343,7 +372,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6o-Ps-2RQ" customClass="TimerButton" customModule="Kegal_Timer" customModuleProvider="target">
-                                <rect key="frame" x="157" y="498" width="100" height="100"/>
+                                <rect key="frame" x="157" y="547" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="rrX-u9-Xdm"/>
                                     <constraint firstAttribute="width" constant="100" id="zLi-Eg-Vn8"/>
@@ -353,7 +382,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKv-Et-3BY" userLabel="Back Button" customClass="BackButton" customModule="Kegal_Timer" customModuleProvider="target">
-                                <rect key="frame" x="65" y="535.66666666666663" width="25" height="25"/>
+                                <rect key="frame" x="65" y="584.66666666666663" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="5nd-Ha-Efg"/>
                                     <constraint firstAttribute="width" constant="25" id="WXI-t8-yzw"/>
@@ -405,35 +434,35 @@
                                 </connections>
                             </collectionView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOP-Fi-a6F">
-                                <rect key="frame" x="0.0" y="543" width="42" height="10"/>
+                                <rect key="frame" x="0.0" y="592" width="42" height="10"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="s7v-is-HVl"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXg-XN-RIN">
-                                <rect key="frame" x="115" y="543" width="42" height="10"/>
+                                <rect key="frame" x="115" y="592" width="42" height="10"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="gGD-Op-su4"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUI-xq-2mn">
-                                <rect key="frame" x="257" y="543" width="41.666666666666686" height="10"/>
+                                <rect key="frame" x="257" y="592" width="41.666666666666686" height="10"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="na4-RN-KQa"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmn-AD-Vji">
-                                <rect key="frame" x="372.33333333333331" y="543" width="41.666666666666686" height="10"/>
+                                <rect key="frame" x="372.33333333333331" y="592" width="41.666666666666686" height="10"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="LYw-PC-04l"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myh-uR-7Ff" userLabel="Stop Button" customClass="StopButton" customModule="Kegal_Timer" customModuleProvider="target">
-                                <rect key="frame" x="323.33333333333331" y="535.66666666666663" width="25" height="25"/>
+                                <rect key="frame" x="323.33333333333331" y="584.66666666666663" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="TJv-Wj-3Rs"/>
                                     <constraint firstAttribute="height" constant="25" id="zkF-lj-2X6"/>
@@ -489,9 +518,9 @@
         <!--Reminders-->
         <scene sceneID="prT-Zq-qQk">
             <objects>
-                <tableViewController id="vX7-TZ-eqc" customClass="RemindersTableViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RemindersTableViewController" id="vX7-TZ-eqc" customClass="RemindersTableViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pfs-v9-Ohc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="ni4-mm-xOR">
@@ -849,7 +878,7 @@
         <!--Add Reminder Table View Controller-->
         <scene sceneID="pBS-X1-bnD">
             <objects>
-                <tableViewController id="sLE-2E-Wwe" customClass="AddReminderTableViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddReminderTableViewController" id="sLE-2E-Wwe" customClass="AddReminderTableViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="yG4-Ol-cKx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -976,35 +1005,12 @@
             </objects>
             <point key="canvasLocation" x="1687" y="242"/>
         </scene>
-        <!--Base Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="BaseTabBarController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" itemPositioning="centered" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0351247638463974" green="0.12017934769392014" blue="0.64709782600402832" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" red="0.97647058823529409" green="0.98039215686274506" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="selectedImageTintColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="cPr-xs-74F" kind="relationship" relationship="viewControllers" id="c51-28-oQ9"/>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="I1i-29-IHo"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="qui-aZ-gc2"/>
-                        <segue destination="vX7-TZ-eqc" kind="relationship" relationship="viewControllers" id="9rw-Nn-sVa"/>
-                        <segue destination="M4f-op-FnD" kind="relationship" relationship="viewControllers" id="HlN-G1-QTr"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-244" y="11"/>
-        </scene>
         <!--Settings-->
         <scene sceneID="gHh-Ne-w4m">
             <objects>
-                <tableViewController title="Settings" id="M4f-op-FnD" customClass="SettingsTableViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsTableViewController" title="Settings" id="M4f-op-FnD" customClass="SettingsTableViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="9eB-VE-BPY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="a3B-hG-tMn">
@@ -1031,8 +1037,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps Per Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh5-uK-3Y4">
-                                                    <rect key="frame" x="16.000000000000007" y="11.333333333333336" width="118.66666666666669" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="16.000000000000007" y="12" width="118.66666666666669" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1292,80 +1298,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9l-wx-75b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="753" y="1388"/>
-        </scene>
-        <!--More Information View Controller-->
-        <scene sceneID="08d-u6-HMj">
-            <objects>
-                <viewController id="cPr-xs-74F" customClass="MoreInformationViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ru0-A3-9LC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to find out more information?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfC-tW-JJO">
-                                <rect key="frame" x="16" y="54.999999999999993" width="382" height="79.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="29"/>
-                                <color key="textColor" red="0.96079081300000002" green="0.96077281240000001" blue="0.96078497169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="50"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dv-hN-Xob">
-                                <rect key="frame" x="69" y="486" width="276" height="43"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
-                                <state key="normal" title="https://www.nafc.org/kegel">
-                                    <color key="titleColor" red="0.62110036094831478" green="0.48929417471251346" blue="0.93817609548568726" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="40"/>
-                                </variation>
-                                <connections>
-                                    <action selector="nafcWebsiteButton:" destination="cPr-xs-74F" eventType="touchUpInside" id="yhg-99-QMI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-Hm-soO">
-                                <rect key="frame" x="65.666666666666686" y="560" width="283" height="43"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
-                                <state key="normal" title="https://www.mayoclinic.org/">
-                                    <color key="titleColor" red="0.62110036094831478" green="0.48929417471251346" blue="0.93817609548568726" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="40"/>
-                                </variation>
-                                <connections>
-                                    <action selector="mayoclinicWebsitebutton:" destination="cPr-xs-74F" eventType="touchUpInside" id="Ar0-f0-7nI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Here are some excellent websites that explain everything you need to know about kegels, much better than we can!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEI-CN-0oC">
-                                <rect key="frame" x="16" y="302" width="798" height="264"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.96079081300000002" green="0.96077281240000001" blue="0.96078497169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="40"/>
-                                </variation>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.070648171007633209" green="0.070429481565952301" blue="0.078432478010654449" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="8dv-hN-Xob" firstAttribute="centerX" secondItem="YeB-Ke-djj" secondAttribute="centerX" id="5Ig-1i-Bcr"/>
-                            <constraint firstItem="bpP-Hm-soO" firstAttribute="centerX" secondItem="YeB-Ke-djj" secondAttribute="centerX" id="A6n-M1-K5S"/>
-                            <constraint firstItem="YeB-Ke-djj" firstAttribute="bottom" secondItem="bpP-Hm-soO" secondAttribute="bottom" constant="84" id="HNj-Qx-fzc"/>
-                            <constraint firstItem="YeB-Ke-djj" firstAttribute="trailing" secondItem="iEI-CN-0oC" secondAttribute="trailing" constant="16" id="HVr-aQ-L3K"/>
-                            <constraint firstItem="mfC-tW-JJO" firstAttribute="top" secondItem="YeB-Ke-djj" secondAttribute="top" constant="35" id="ISz-t3-PTc"/>
-                            <constraint firstItem="iEI-CN-0oC" firstAttribute="top" secondItem="mfC-tW-JJO" secondAttribute="bottom" constant="79.5" id="J7z-a9-y2L"/>
-                            <constraint firstItem="mfC-tW-JJO" firstAttribute="leading" secondItem="YeB-Ke-djj" secondAttribute="leading" constant="16" id="YsB-jQ-eCt"/>
-                            <constraint firstItem="YeB-Ke-djj" firstAttribute="trailing" secondItem="mfC-tW-JJO" secondAttribute="trailing" constant="16" id="i1r-ks-Z2d"/>
-                            <constraint firstItem="bpP-Hm-soO" firstAttribute="top" secondItem="8dv-hN-Xob" secondAttribute="bottom" constant="31" id="p1b-DH-ano"/>
-                            <constraint firstItem="iEI-CN-0oC" firstAttribute="leading" secondItem="YeB-Ke-djj" secondAttribute="leading" constant="16" id="yYN-s8-ABy"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="YeB-Ke-djj"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="X99-Az-sAT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WWo-wR-dbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="747.48201438848923" y="-1413.6690647482014"/>
         </scene>
     </scenes>
     <resources>

@@ -18,7 +18,7 @@ struct RequestReview {
     }
     
     static func requestReview() {
-        let minimumLaunchCount = 7
+        let minimumLaunchCount = 3
         let launchCount = UserDefaults.standard.integer(forKey: Constants.appLaunchCount)
         
         if launchCount >= minimumLaunchCount {

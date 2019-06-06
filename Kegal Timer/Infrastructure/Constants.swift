@@ -16,9 +16,13 @@ struct Constants {
     static let vibrationCue = "VibrationCueOn"
     static let visualCue = "VisualCueOn"
     static let soundCue = "SoundCueOn"
+    static let stage = "Stage"
+    static let level = "Level"
+    static let levelOrder = "LevelOrder"
     
     //  User Default Keys
     static let appLaunchCount = "AppLaunchCount"
+    static let launchedBefore = "LaunchedBefore"
     
     //  Font Styling
     static let fontName = "Avenir Next Condensed"

@@ -10,7 +10,9 @@ import UIKit
 import CoreData
 import JTAppleCalendar
 
-class TrackWorkoutsViewController: UIViewController {
+class TrackWorkoutsViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: TrackWorkoutsCoordinator?
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: TopAlignedLabel!

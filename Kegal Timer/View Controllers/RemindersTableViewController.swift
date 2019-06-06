@@ -9,7 +9,9 @@
 import UIKit
 import UserNotifications
 
-class RemindersTableViewController: UITableViewController {
+class RemindersTableViewController: UITableViewController, Storyboarded {
+    
+    weak var coordinator: RemindersCoordinator?
     
     @IBAction func unwindToRemindersTableViewController(segue: UIStoryboardSegue) {
     }
@@ -24,6 +26,7 @@ class RemindersTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        coordinator?.checkNotificationSettings()
         generateReminders()
     }
     

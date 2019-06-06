@@ -48,6 +48,16 @@
                ReferencedContainer = "container:Kegal Timer.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4CB02472263A9BA0014F723"
+               BuildableName = "KeGal Trainer Unit Tests.xctest"
+               BlueprintName = "KeGal Trainer Unit Tests"
+               ReferencedContainer = "container:Kegal Timer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

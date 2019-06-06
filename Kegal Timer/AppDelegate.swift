@@ -12,7 +12,6 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
 
@@ -22,6 +21,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         { (granted, error) in
             
         }
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = MainTabBarCoordinator()
+        window?.makeKeyAndVisible()
+        
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        print(paths[0])
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
+        if !launchedBefore  {
+            let dataSeeder:IDataSeeder = DataSeeder(context: self.persistentContainer.viewContext)
+
+            dataSeeder.seedData()
+
+            UserDefaults.standard.set(true, forKey: Constants.launchedBefore)
+        }
+
         RequestReview.incrementLaunchCount()
         return true
     }

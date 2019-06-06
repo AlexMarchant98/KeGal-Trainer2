@@ -8,7 +8,9 @@
 
 import UIKit
 
-class SettingsTableViewController : UITableViewController, UITextFieldDelegate, UITabBarControllerDelegate {
+class SettingsTableViewController : UITableViewController, UITextFieldDelegate, UITabBarControllerDelegate, Storyboarded {
+    
+    weak var coordinator: SettingsCoordinator?
     
     let userPreferences = UserDefaults.standard
     private var dirtyInput = false
@@ -38,6 +40,9 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
             userPreferences.set(Int(repsPerSetTextBox.text!), forKey: Constants.repsPerSet)
             userPreferences.set(Int(repLengthTextBox.text!), forKey: Constants.repLength)
             userPreferences.set(Int(restLengthTextBox.text!), forKey: Constants.restLength)
+            userPreferences.set(0, forKey: Constants.stage)
+            userPreferences.set("", forKey: Constants.level)
+            userPreferences.set(0, forKey: Constants.levelOrder)
             
             userPreferences.set(vibrateCueSwitch.isOn, forKey: Constants.vibrationCue)
             userPreferences.set(visualCueSwitch.isOn, forKey: Constants.visualCue)

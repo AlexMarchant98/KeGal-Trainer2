@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-class AddReminderTableViewController: UITableViewController {
+class AddReminderTableViewController: UITableViewController, Storyboarded {
     
     @IBOutlet weak var reminderDatePicker: UIDatePicker!
     @IBOutlet weak var reminderMessageTextField: UITextField!

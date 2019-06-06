@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreInformationViewController: UIViewController {
+class MoreInformationViewController: UIViewController, Storyboarded {
 
     @IBAction func nafcWebsiteButton(_ sender: Any) {
         guard let url = URL(string: "https://www.nafc.org/kegel") else { return }

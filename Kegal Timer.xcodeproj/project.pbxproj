@@ -15,7 +15,6 @@
 		D4006459217FAF9F0077765D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4006457217FAF9F0077765D /* Main.storyboard */; };
 		D400645B217FAFA30077765D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D400645A217FAFA30077765D /* Assets.xcassets */; };
 		D400645E217FAFA30077765D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D400645C217FAFA30077765D /* LaunchScreen.storyboard */; };
-		D4006469217FAFA30077765D /* Kegal_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006468217FAFA30077765D /* Kegal_TimerTests.swift */; };
 		D4006474217FAFA30077765D /* Kegal_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4006473217FAFA30077765D /* Kegal_TimerUITests.swift */; };
 		D406FCE921FC7B7500B993B6 /* TopAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406FCE821FC7B7500B993B6 /* TopAlignedLabel.swift */; };
 		D406FCF521FC80BE00B993B6 /* BottomAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406FCF421FC80BE00B993B6 /* BottomAlignedLabel.swift */; };
@@ -23,7 +22,6 @@
 		D40780F421E2502500C3D2D1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40780F321E2502500C3D2D1 /* Workout.swift */; };
 		D40780F621E2504500C3D2D1 /* WorkoutDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40780F521E2504500C3D2D1 /* WorkoutDate.swift */; };
 		D410601521922DDC00089961 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410601421922DDC00089961 /* StopButton.swift */; };
-		D4106017219B6DEB00089961 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106016219B6DEB00089961 /* BaseTabBarController.swift */; };
 		D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */; };
 		D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF022177AA700CCC697 /* CustomCell.swift */; };
 		D4406DF322177D3B00CCC697 /* MoreInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF222177D3B00CCC697 /* MoreInformationViewController.swift */; };
@@ -31,6 +29,11 @@
 		D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */; };
 		D467598122060B8000341027 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D467598022060B8000341027 /* Reminder.swift */; };
 		D47C86652206050A0070476F /* AddReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C86642206050A0070476F /* AddReminderTableViewController.swift */; };
+		D484CF1E22A98BAB0042802C /* TrackWorkoutsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484CF1D22A98BAB0042802C /* TrackWorkoutsCoordinator.swift */; };
+		D484CF2022A993600042802C /* StagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484CF1F22A993600042802C /* StagesCoordinator.swift */; };
+		D484CF2222A9960E0042802C /* TimerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484CF2122A9960E0042802C /* TimerCoordinator.swift */; };
+		D484CF2422A998390042802C /* RemindersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484CF2322A998390042802C /* RemindersCoordinator.swift */; };
+		D484CF2622A998820042802C /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484CF2522A998820042802C /* SettingsCoordinator.swift */; };
 		D485DED922071AF7002E9DB1 /* RemindersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485DED822071AF7002E9DB1 /* RemindersTableViewController.swift */; };
 		D485DEDB220A1FF9002E9DB1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485DEDA220A1FF9002E9DB1 /* Constants.swift */; };
 		D485DEDD220A28B2002E9DB1 /* UpdateReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485DEDC220A28B2002E9DB1 /* UpdateReminderTableViewController.swift */; };
@@ -40,6 +43,15 @@
 		D48CFC5F21A74F6300AD6179 /* Workout Complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = D48CFC5C21A74F6300AD6179 /* Workout Complete.wav */; };
 		D48CFC6121AC80E900AD6179 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CFC6021AC80E900AD6179 /* Extensions.swift */; };
 		D48CFC6321B70CBF00AD6179 /* QueueTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */; };
+		D49C41FF229EF8A7005F8FA1 /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C41FE229EF8A7005F8FA1 /* LevelTableViewCell.swift */; };
+		D4C3263F22A6FB3B001F9BEA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3263E22A6FB3B001F9BEA /* Coordinator.swift */; };
+		D4C3264122A6FB93001F9BEA /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3264022A6FB93001F9BEA /* Storyboarded.swift */; };
+		D4C3264522A83A2A001F9BEA /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3264422A83A2A001F9BEA /* MainTabBarCoordinator.swift */; };
+		D4CB023F22637EF50014F723 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB023E22637EF50014F723 /* Level.swift */; };
+		D4CB024122637F020014F723 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB024022637F020014F723 /* Stage.swift */; };
+		D4CB024B2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB024A2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift */; };
+		D4CF42C4229A63A800505A28 /* StageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF42C3229A63A800505A28 /* StageTableViewController.swift */; };
+		D4CF42C6229A68A700505A28 /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF42C5229A68A700505A28 /* DataSeeder.swift */; };
 		D4E48D4F2190CFB9006366A7 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48D4E2190CFB9006366A7 /* BackButton.swift */; };
 		D4E48D5621921960006366A7 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48D5521921960006366A7 /* TimerButton.swift */; };
 		E3AA8CBDAAB1280BB45DB5C5 /* Pods_Kegal_TimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7AE1A3101195C0FF3431F1 /* Pods_Kegal_TimerTests.framework */; };
@@ -54,6 +66,13 @@
 			remoteInfo = "Kegal Timer";
 		};
 		D4006470217FAFA30077765D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4006446217FAF9F0077765D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D400644D217FAF9F0077765D;
+			remoteInfo = "Kegal Timer";
+		};
+		D4CB024D2263A9BA0014F723 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4006446217FAF9F0077765D /* Project object */;
 			proxyType = 1;
@@ -79,8 +98,6 @@
 		D400645D217FAFA30077765D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D400645F217FAFA30077765D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4006464217FAFA30077765D /* Kegal TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kegal TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4006468217FAFA30077765D /* Kegal_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kegal_TimerTests.swift; sourceTree = "<group>"; };
-		D400646A217FAFA30077765D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D400646F217FAFA30077765D /* Kegal TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kegal TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4006473217FAFA30077765D /* Kegal_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kegal_TimerUITests.swift; sourceTree = "<group>"; };
 		D4006475217FAFA30077765D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +107,6 @@
 		D40780F321E2502500C3D2D1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		D40780F521E2504500C3D2D1 /* WorkoutDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDate.swift; sourceTree = "<group>"; };
 		D410601421922DDC00089961 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
-		D4106016219B6DEB00089961 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewTableViewController.swift; sourceTree = "<group>"; };
 		D4406DF022177AA700CCC697 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D4406DF222177D3B00CCC697 /* MoreInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +115,11 @@
 		D467598022060B8000341027 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		D47C865D2204E85B0070476F /* Kegal Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kegal Timer.entitlements"; sourceTree = "<group>"; };
 		D47C86642206050A0070476F /* AddReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderTableViewController.swift; sourceTree = "<group>"; };
+		D484CF1D22A98BAB0042802C /* TrackWorkoutsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackWorkoutsCoordinator.swift; sourceTree = "<group>"; };
+		D484CF1F22A993600042802C /* StagesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagesCoordinator.swift; sourceTree = "<group>"; };
+		D484CF2122A9960E0042802C /* TimerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCoordinator.swift; sourceTree = "<group>"; };
+		D484CF2322A998390042802C /* RemindersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCoordinator.swift; sourceTree = "<group>"; };
+		D484CF2522A998820042802C /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		D485DED822071AF7002E9DB1 /* RemindersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTableViewController.swift; sourceTree = "<group>"; };
 		D485DEDA220A1FF9002E9DB1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D485DEDC220A28B2002E9DB1 /* UpdateReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateReminderTableViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +129,17 @@
 		D48CFC5C21A74F6300AD6179 /* Workout Complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Workout Complete.wav"; sourceTree = "<group>"; };
 		D48CFC6021AC80E900AD6179 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "Kegal Timer/Infrastructure/Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTimer.swift; sourceTree = "<group>"; };
+		D49C41FE229EF8A7005F8FA1 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
+		D4C3263E22A6FB3B001F9BEA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D4C3264022A6FB93001F9BEA /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		D4C3264422A83A2A001F9BEA /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		D4CB023E22637EF50014F723 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		D4CB024022637F020014F723 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		D4CB02482263A9BA0014F723 /* KeGal Trainer Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KeGal Trainer Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4CB024A2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeGal_Trainer_Unit_Tests.swift; sourceTree = "<group>"; };
+		D4CB024C2263A9BA0014F723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4CF42C3229A63A800505A28 /* StageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageTableViewController.swift; sourceTree = "<group>"; };
+		D4CF42C5229A68A700505A28 /* DataSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
 		D4E48D4E2190CFB9006366A7 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackButton.swift; path = "Kegal Timer/Infrastructure/Button Graphics/BackButton.swift"; sourceTree = SOURCE_ROOT; };
 		D4E48D5521921960006366A7 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
 		E63BEE54ED79D2F743DDB8E3 /* Pods-Kegal Timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal Timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +171,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4CB02452263A9BA0014F723 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -156,8 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				D4006450217FAF9F0077765D /* Kegal Timer */,
-				D4006467217FAFA30077765D /* Kegal TimerTests */,
 				D4006472217FAFA30077765D /* Kegal TimerUITests */,
+				D4CB02492263A9BA0014F723 /* KeGal Trainer Unit Tests */,
 				D400644F217FAF9F0077765D /* Products */,
 				E9E24F452FE526CD8EFD2623 /* Pods */,
 				A3190652BC2EEBFDC845BDD6 /* Frameworks */,
@@ -170,6 +209,7 @@
 				D400644E217FAF9F0077765D /* Kegal Timer.app */,
 				D4006464217FAFA30077765D /* Kegal TimerTests.xctest */,
 				D400646F217FAFA30077765D /* Kegal TimerUITests.xctest */,
+				D4CB02482263A9BA0014F723 /* KeGal Trainer Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +217,7 @@
 		D4006450217FAF9F0077765D /* Kegal Timer */ = {
 			isa = PBXGroup;
 			children = (
+				D4C3263B22A6FADD001F9BEA /* Coordinators */,
 				D47C865D2204E85B0070476F /* Kegal Timer.entitlements */,
 				D40780E821E12D5D00C3D2D1 /* Models */,
 				D48CFC5721A747E500AD6179 /* Infrastructure */,
@@ -188,15 +229,6 @@
 				D400645F217FAFA30077765D /* Info.plist */,
 			);
 			path = "Kegal Timer";
-			sourceTree = "<group>";
-		};
-		D4006467217FAFA30077765D /* Kegal TimerTests */ = {
-			isa = PBXGroup;
-			children = (
-				D4006468217FAFA30077765D /* Kegal_TimerTests.swift */,
-				D400646A217FAFA30077765D /* Info.plist */,
-			);
-			path = "Kegal TimerTests";
 			sourceTree = "<group>";
 		};
 		D4006472217FAFA30077765D /* Kegal TimerUITests */ = {
@@ -219,6 +251,10 @@
 				D40780F321E2502500C3D2D1 /* Workout.swift */,
 				D40780F521E2504500C3D2D1 /* WorkoutDate.swift */,
 				D467598022060B8000341027 /* Reminder.swift */,
+				D4CB023E22637EF50014F723 /* Level.swift */,
+				D4CB024022637F020014F723 /* Stage.swift */,
+				D4CF42C5229A68A700505A28 /* DataSeeder.swift */,
+				D49C41FE229EF8A7005F8FA1 /* LevelTableViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,7 +272,6 @@
 		D48CFC5621A747CF00AD6179 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D4106016219B6DEB00089961 /* BaseTabBarController.swift */,
 				D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */,
 				D4006453217FAF9F0077765D /* TrackWorkoutsViewController.swift */,
 				D4006455217FAF9F0077765D /* TimerViewController.swift */,
@@ -244,6 +279,7 @@
 				D485DED822071AF7002E9DB1 /* RemindersTableViewController.swift */,
 				D485DEDC220A28B2002E9DB1 /* UpdateReminderTableViewController.swift */,
 				D4406DF222177D3B00CCC697 /* MoreInformationViewController.swift */,
+				D4CF42C3229A63A800505A28 /* StageTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -260,6 +296,30 @@
 				D4505815221F23B7004CEEEF /* RequestReview.swift */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		D4C3263B22A6FADD001F9BEA /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D4C3263E22A6FB3B001F9BEA /* Coordinator.swift */,
+				D4C3264022A6FB93001F9BEA /* Storyboarded.swift */,
+				D4C3264422A83A2A001F9BEA /* MainTabBarCoordinator.swift */,
+				D484CF1D22A98BAB0042802C /* TrackWorkoutsCoordinator.swift */,
+				D484CF1F22A993600042802C /* StagesCoordinator.swift */,
+				D484CF2122A9960E0042802C /* TimerCoordinator.swift */,
+				D484CF2322A998390042802C /* RemindersCoordinator.swift */,
+				D484CF2522A998820042802C /* SettingsCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D4CB02492263A9BA0014F723 /* KeGal Trainer Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D4CB024A2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift */,
+				D4CB024C2263A9BA0014F723 /* Info.plist */,
+			);
+			path = "KeGal Trainer Unit Tests";
 			sourceTree = "<group>";
 		};
 		D4E48D502190CFD4006366A7 /* Button Graphics */ = {
@@ -345,13 +405,31 @@
 			productReference = D400646F217FAFA30077765D /* Kegal TimerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D4CB02472263A9BA0014F723 /* KeGal Trainer Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4CB024F2263A9BA0014F723 /* Build configuration list for PBXNativeTarget "KeGal Trainer Unit Tests" */;
+			buildPhases = (
+				D4CB02442263A9BA0014F723 /* Sources */,
+				D4CB02452263A9BA0014F723 /* Frameworks */,
+				D4CB02462263A9BA0014F723 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4CB024E2263A9BA0014F723 /* PBXTargetDependency */,
+			);
+			name = "KeGal Trainer Unit Tests";
+			productName = "KeGal Trainer Unit Tests";
+			productReference = D4CB02482263A9BA0014F723 /* KeGal Trainer Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D4006446217FAF9F0077765D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Alex Marchant";
 				TargetAttributes = {
@@ -374,6 +452,10 @@
 						LastSwiftMigration = 1010;
 						TestTargetID = D400644D217FAF9F0077765D;
 					};
+					D4CB02472263A9BA0014F723 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = D400644D217FAF9F0077765D;
+					};
 				};
 			};
 			buildConfigurationList = D4006449217FAF9F0077765D /* Build configuration list for PBXProject "Kegal Timer" */;
@@ -392,6 +474,7 @@
 				D400644D217FAF9F0077765D /* Kegal Timer */,
 				D4006463217FAFA30077765D /* Kegal TimerTests */,
 				D400646E217FAFA30077765D /* Kegal TimerUITests */,
+				D4CB02472263A9BA0014F723 /* KeGal Trainer Unit Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,6 +501,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D400646D217FAFA30077765D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4CB02462263A9BA0014F723 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -522,9 +612,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CB023F22637EF50014F723 /* Level.swift in Sources */,
 				D467598122060B8000341027 /* Reminder.swift in Sources */,
 				D485DEDB220A1FF9002E9DB1 /* Constants.swift in Sources */,
-				D4106017219B6DEB00089961 /* BaseTabBarController.swift in Sources */,
+				D4CB024122637F020014F723 /* Stage.swift in Sources */,
 				D4E48D4F2190CFB9006366A7 /* BackButton.swift in Sources */,
 				D48CFC6321B70CBF00AD6179 /* QueueTimer.swift in Sources */,
 				D485DED922071AF7002E9DB1 /* RemindersTableViewController.swift in Sources */,
@@ -533,20 +624,31 @@
 				D406FCF521FC80BE00B993B6 /* BottomAlignedLabel.swift in Sources */,
 				D4006456217FAF9F0077765D /* TimerViewController.swift in Sources */,
 				D40780F621E2504500C3D2D1 /* WorkoutDate.swift in Sources */,
+				D4CF42C4229A63A800505A28 /* StageTableViewController.swift in Sources */,
+				D49C41FF229EF8A7005F8FA1 /* LevelTableViewCell.swift in Sources */,
 				D406FCE921FC7B7500B993B6 /* TopAlignedLabel.swift in Sources */,
+				D484CF2222A9960E0042802C /* TimerCoordinator.swift in Sources */,
+				D484CF1E22A98BAB0042802C /* TrackWorkoutsCoordinator.swift in Sources */,
 				D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */,
 				D48CFC6121AC80E900AD6179 /* Extensions.swift in Sources */,
 				D485DEDD220A28B2002E9DB1 /* UpdateReminderTableViewController.swift in Sources */,
+				D484CF2022A993600042802C /* StagesCoordinator.swift in Sources */,
 				D4E48D5621921960006366A7 /* TimerButton.swift in Sources */,
 				D48CFC4A21A744B500AD6179 /* WorkoutCue.swift in Sources */,
+				D484CF2622A998820042802C /* SettingsCoordinator.swift in Sources */,
+				D4C3264522A83A2A001F9BEA /* MainTabBarCoordinator.swift in Sources */,
 				D47C86652206050A0070476F /* AddReminderTableViewController.swift in Sources */,
 				D40780F421E2502500C3D2D1 /* Workout.swift in Sources */,
+				D4CF42C6229A68A700505A28 /* DataSeeder.swift in Sources */,
+				D4C3263F22A6FB3B001F9BEA /* Coordinator.swift in Sources */,
 				D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */,
 				D4006454217FAF9F0077765D /* TrackWorkoutsViewController.swift in Sources */,
+				D484CF2422A998390042802C /* RemindersCoordinator.swift in Sources */,
 				D40780E721E12C6600C3D2D1 /* KegalTimer.xcdatamodeld in Sources */,
 				D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */,
 				D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */,
 				D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */,
+				D4C3264122A6FB93001F9BEA /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +656,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4006469217FAFA30077765D /* Kegal_TimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +664,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4006474217FAFA30077765D /* Kegal_TimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4CB02442263A9BA0014F723 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4CB024B2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +687,11 @@
 			isa = PBXTargetDependency;
 			target = D400644D217FAF9F0077765D /* Kegal Timer */;
 			targetProxy = D4006470217FAFA30077765D /* PBXContainerItemProxy */;
+		};
+		D4CB024E2263A9BA0014F723 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D400644D217FAF9F0077765D /* Kegal Timer */;
+			targetProxy = D4CB024D2263A9BA0014F723 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -843,6 +957,51 @@
 			};
 			name = Release;
 		};
+		D4CB02502263A9BA0014F723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D6D89YR6P;
+				INFOPLIST_FILE = "KeGal Trainer Unit Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.KeGal-Trainer-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kegal Timer.app/Kegal Timer";
+			};
+			name = Debug;
+		};
+		D4CB02512263A9BA0014F723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D6D89YR6P;
+				INFOPLIST_FILE = "KeGal Trainer Unit Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.KeGal-Trainer-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kegal Timer.app/Kegal Timer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -878,6 +1037,15 @@
 			buildConfigurations = (
 				D400647F217FAFA30077765D /* Debug */,
 				D4006480217FAFA30077765D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4CB024F2263A9BA0014F723 /* Build configuration list for PBXNativeTarget "KeGal Trainer Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4CB02502263A9BA0014F723 /* Debug */,
+				D4CB02512263A9BA0014F723 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

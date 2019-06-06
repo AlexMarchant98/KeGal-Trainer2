@@ -47,3 +47,9 @@ extension Date {
     }
     
 }
+
+extension String {
+    var stage: Int {
+        return Int(String(format: "%.0f", Double(self) ?? 0.1))!
+    }
+}

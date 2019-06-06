@@ -10,8 +10,10 @@ import UIKit
 import CoreData
 
 @IBDesignable
-class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, Storyboarded {
 
+    weak var coordinator: TimerCoordinator?
+    
     @IBOutlet weak var timerButton: TimerButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var currentRepLabel: UILabel!
@@ -69,6 +71,9 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     lazy var _repsPerSet = userPreferences.integer(forKey: Constants.repsPerSet)
     lazy var _repLength = userPreferences.integer(forKey: Constants.repLength)
     lazy var _restLength = userPreferences.integer(forKey: Constants.restLength)
+    lazy var _stage = userPreferences.integer(forKey: Constants.stage)
+    lazy var _level = userPreferences.string(forKey: Constants.level)
+    lazy var _levelOrder = userPreferences.integer(forKey: Constants.levelOrder)
     lazy var secondsRemaining = _repLength - 1
     
     var miliseconds = 100
@@ -95,6 +100,9 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         _repsPerSet = userPreferences.integer(forKey: Constants.repsPerSet)
         _repLength = userPreferences.integer(forKey: Constants.repLength)
         _restLength = userPreferences.integer(forKey: Constants.restLength)
+        _stage = userPreferences.integer(forKey: Constants.stage)
+        _level = userPreferences.string(forKey: Constants.level) ?? ""
+        _levelOrder = userPreferences.integer(forKey: Constants.levelOrder)
         
         if(_repsPerSet > 1) {
             reps = Array(1..._repsPerSet)
@@ -170,6 +178,8 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 }
                 
                 addWorkout(Date(), Int32(_repsPerSet), Int32(_repLength), Int32(_restLength))
+                
+                completeLevel()
                 
                 if #available(iOS 10.3, *) {
                     RequestReview.requestReview()
@@ -280,6 +290,27 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 }
             } catch {
                 print("Something has gone wrong whilst adding a new workout entry.")
+            }
+        }
+    }
+    
+    func completeLevel()
+    {
+        if(!_level!.isEmpty)
+        {
+            if let context = container?.viewContext {
+                Level.completeLevel(context, _level!)
+                
+                if(Level.unlockNextLevel(context, Int32(_stage), currentLevelOrder: Int32(_levelOrder)) == nil)
+                {
+                    let stage = Stage.unlockNextStage(context, Int32(_stage))
+                    
+                    do {
+                        try Level.unlockFirstLevelOfStage(context, stage!.stage)
+                    } catch {
+                        
+                    }
+                }
             }
         }
     }
