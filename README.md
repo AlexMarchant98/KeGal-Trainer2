@@ -1,5 +1,17 @@
-# Kegal-Timer
+# KeGal-Trainer
 
-This repository stores a backup of my kegal timer swift application; as updates occur they will be pushed to this repo.
+This repository is used to edit and maintain a working backup of my iOS app KeGal Trainer. 
 
-The intention of this repo is to maintain a working copy of the application; changes are made by myself.
+You can find the live app [here](https://itunes.apple.com/gb/app/kegal-trainer/id1451350209).
+
+## Built With
+
+- Swift
+- Core Data
+- [JTAppleCalendar](https://github.com/patchthecode/JTAppleCalendar)
+
+## Authors
+Alex Marchant
+
+## Privacy Policy
+You can find our privacy policy [here](/PrivacyPolicy.md)
