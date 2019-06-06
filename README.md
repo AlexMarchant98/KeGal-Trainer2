@@ -1,4 +1,4 @@
-# KeGal-Trainer
+# KeGal Trainer
 
 This repository is used to edit and maintain a working backup of my iOS app KeGal Trainer. 
 
