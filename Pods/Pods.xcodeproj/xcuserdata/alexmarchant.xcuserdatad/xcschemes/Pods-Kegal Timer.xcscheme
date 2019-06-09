@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "60D95C0449DA2400D77F26137418D07A"
+               BlueprintIdentifier = "920BA394687E47CB123639F7EEF81058"
                BuildableName = "Pods_Kegal_Timer.framework"
                BlueprintName = "Pods-Kegal Timer"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "60D95C0449DA2400D77F26137418D07A"
+            BlueprintIdentifier = "920BA394687E47CB123639F7EEF81058"
             BuildableName = "Pods_Kegal_Timer.framework"
             BlueprintName = "Pods-Kegal Timer"
             ReferencedContainer = "container:Pods.xcodeproj">

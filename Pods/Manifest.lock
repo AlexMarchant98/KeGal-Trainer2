@@ -1,16 +1,24 @@
 PODS:
   - JTAppleCalendar (7.1.6)
+  - QuickLayout (3.0.0)
+  - SwiftEntryKit (1.0.1):
+    - QuickLayout (= 3.0.0)
 
 DEPENDENCIES:
   - JTAppleCalendar
+  - SwiftEntryKit (= 1.0.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - JTAppleCalendar
+    - QuickLayout
+    - SwiftEntryKit
 
 SPEC CHECKSUMS:
   JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  SwiftEntryKit: 3f55c0b8e676afe24a3703237bcac68372891c56
 
-PODFILE CHECKSUM: 3da9de5bbd1ed430458d2ba86b1f19c3ef4899d6
+PODFILE CHECKSUM: 95ab0eac6e4a269861f336784a94f55bb14f9510
 
 COCOAPODS: 1.5.3

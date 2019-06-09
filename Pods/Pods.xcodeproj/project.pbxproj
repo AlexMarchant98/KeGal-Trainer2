@@ -7,52 +7,146 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DB1C3A3161086BB2126BC509026AF20 /* Pods-Kegal Timer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 855F1AA4050901DC418BC2A57FB07DDD /* Pods-Kegal Timer-dummy.m */; };
-		0F08C0922AFF8660DDC6B33F5973AD53 /* JTAppleCalendarVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F192D3521916B02D21EC6B3A2ACAA2 /* JTAppleCalendarVariables.swift */; };
-		12A2AD300F65E773885B5B69FB1D9AB8 /* JTAppleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF845A69455A4A94C673E3BD05B2C5 /* JTAppleCollectionReusableView.swift */; };
-		1D27793D021DEF5B1BAF2C35194E1753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		31A0A90FE6645E6548B15E771DFBFD50 /* JTAppleCalendarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB9B2CC3F9DB7F5724CC988C9543DEC /* JTAppleCalendarDelegateProtocol.swift */; };
-		42023B129903ACB04DD76CE54BEDD02C /* CalendarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11553AB698B72E93630850DC395D94C5 /* CalendarStructs.swift */; };
-		4611B82085E887F9215E0115AF30F99D /* CalendarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3426D14FB5C08BBD6272ABC8CBD01AB /* CalendarEnums.swift */; };
-		4A8C82118DF95DA82582ACCEA6EA3660 /* JTAppleCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A21E7CCE8AFB3A84072E5F8B65D7A3D0 /* JTAppleCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F95E758840175C2194AF43CE326AD58 /* JTCalendarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5364F77524433BC5C19E10FC745E8E /* JTCalendarProtocols.swift */; };
-		642DF1CED8793FAC6589694F0A01A202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		70CF2F8D6488362C0CFF5E4242FF01B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		819873CF8DBFAD45590AAC8945DC1B5C /* GlobalFunctionsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF3F9A2BDEA400B6B86E1F3FB87D141 /* GlobalFunctionsAndExtensions.swift */; };
-		8394230B7C1D50A0FA996E134955E23F /* JTAppleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E412E686DD5D5C62D90F609F198EB /* JTAppleCell.swift */; };
+		01ADC7E5DBE1263291361EC776AB2947 /* EKPopUpMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CCC60A8395BAFD3670E2920F39EAA4 /* EKPopUpMessage.swift */; };
+		0F08C0922AFF8660DDC6B33F5973AD53 /* JTAppleCalendarVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1EE19ECA4268F54E791D9F07A4556 /* JTAppleCalendarVariables.swift */; };
+		11CE7539CD8265DD0957D7AB917F4990 /* EKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13A3AD0D215DEAFEED823797EF65AB /* EKTextField.swift */; };
+		12A2AD300F65E773885B5B69FB1D9AB8 /* JTAppleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4CA5A374BABE39E4A8555124C2DD5 /* JTAppleCollectionReusableView.swift */; };
+		1624339040AB69266E577C26E805A12F /* EKAttributes+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11672466D889F04B8FB887BDF611512 /* EKAttributes+Presets.swift */; };
+		1D27793D021DEF5B1BAF2C35194E1753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91381F6EBD0EF4B70557285F22C461 /* Foundation.framework */; };
+		27C1BFFACB9FB7D453CCBCD035AB301A /* EKMessageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584E14C0296A5E4757D8A6BE0B6AB4A6 /* EKMessageContentView.swift */; };
+		2ED055D9C57629BFD7F74FD0966B789C /* EKBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41121882264C2DFE56D1D1A91FA53FB2 /* EKBackgroundView.swift */; };
+		314BFD8B3ECC6D5848291CB6CB790B17 /* SwiftEntryKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15EB73362B2DD4303B1F69EAD2BF54AA /* SwiftEntryKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31A0A90FE6645E6548B15E771DFBFD50 /* JTAppleCalendarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C61DDDF7CB9C488B053D23B558E24D /* JTAppleCalendarDelegateProtocol.swift */; };
+		343FD2A887C7DA045904F6CBC7B8BF0B /* EKAccessoryNoteMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE38108A57AC001AD71B5F17A576DB31 /* EKAccessoryNoteMessageView.swift */; };
+		35B1ADE9B95994372681834AD8043DC2 /* QLCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5453A272E80D1F864382C09272EFB9 /* QLCompatibility.swift */; };
+		35F49BCAFF0DB6AB49F69D9108935637 /* EKAttributes+Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C781AE9ADEFAAD57EAE237A5AB964631 /* EKAttributes+Duration.swift */; };
+		38E54357424E90BF552A371FCCEFDE5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91381F6EBD0EF4B70557285F22C461 /* Foundation.framework */; };
+		40D83B8BA84B8B6DAB11A715E26E1368 /* QuickLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85D9794F0FED261DF1464D7AE27C4C93 /* QuickLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42023B129903ACB04DD76CE54BEDD02C /* CalendarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AACFA28FD23ACA918D708F073DFDCDE /* CalendarStructs.swift */; };
+		4611B82085E887F9215E0115AF30F99D /* CalendarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6090A780C04F9FCD13320833C94ADF0A /* CalendarEnums.swift */; };
+		46420A75A9D1AE886BFB5B223466DC65 /* EKWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D301DF91A9AA71D57BF68A2ADCCF0C4F /* EKWindowProvider.swift */; };
+		48041D8F17E46CF10EA3D8818F5E5FB3 /* EKXStatusBarMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A41B2F223529F7588BAB8B7AC22A6 /* EKXStatusBarMessageView.swift */; };
+		49006B6CF68F80924010C9BC5C9E367E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979D2EB9B9494D54B2E134D2979AD02C /* UIKit.framework */; };
+		49E162A34D243408EFA8F095212A2408 /* UIRectCorner+Short.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B96E2DD9EEC0B53A5C265068E4942 /* UIRectCorner+Short.swift */; };
+		4A8C82118DF95DA82582ACCEA6EA3660 /* JTAppleCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE661A34403E1AC552D09922A3C834B4 /* JTAppleCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AD5512560A48C0D19887329AE7CA4AA /* EntryAppearanceDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60C001797EA6E33BF4CEC6AF520A1C4 /* EntryAppearanceDescriptor.swift */; };
+		556CA2E4376DEAA72CBBDB63EB48B54B /* EKAttributes+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29173131FF77DE709ED23F42E42D785C /* EKAttributes+Validations.swift */; };
+		57923154DD61D9F83A9FDFACA4A8236B /* EKRatingMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F218CEF51896D812BF83DC0E651CC4 /* EKRatingMessageView.swift */; };
+		57FB0BEAA651A935ECE4E6260B12E721 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CE8F3965BBF9768BF9530CC5CBEAA5 /* GradientView.swift */; };
+		5F95E758840175C2194AF43CE326AD58 /* JTCalendarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB050CCD3EBE421A74251B28D64BCF24 /* JTCalendarProtocols.swift */; };
+		61F23429F1F306F65B584FA721CA3479 /* EKAttributes+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4B7AE3CCD23DE32E65C333EEE7DAC8 /* EKAttributes+StatusBar.swift */; };
+		66FCC093D61ED88DED8F3182EB37A53E /* EKRatingSymbolsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187D4ECF229E2C4CB559DEACD382818C /* EKRatingSymbolsContainerView.swift */; };
+		675FB89256B6EC9A75E3AA0AA800390B /* EKRatingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3363FB94FF2FC2A5E961F1AB88F55C /* EKRatingMessage.swift */; };
+		6B105570198556866D7D1FAC4D753F1C /* EKRatingSymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64290873D9380FD601C8AD3F1EDE805A /* EKRatingSymbolView.swift */; };
+		70CF2F8D6488362C0CFF5E4242FF01B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91381F6EBD0EF4B70557285F22C461 /* Foundation.framework */; };
+		7194C42E0064E201AE3E6C9471BFF4ED /* EKAttributes+PopBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF46734A1C7A0E26D1394723D9C2BC /* EKAttributes+PopBehavior.swift */; };
+		72BE362D30F89F4EC8BE9D55B6E90537 /* EKSimpleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E5797913422CE7107A5C1554C7D3A1 /* EKSimpleMessage.swift */; };
+		74A30443258B270B06ECF932EF4289E6 /* EKAttributes+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA225BCE4CC415AFECA1E5A9C449A531 /* EKAttributes+Scroll.swift */; };
+		7678F0DEABDC4F01601E67B61B43DC02 /* EKAlertMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81F680ED86301DC9D2EBB4BFFA0F8A /* EKAlertMessageView.swift */; };
+		7B2C9A05ECCB62E5198289F8D56C8600 /* EKAttributes+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB2107250040C032957183833EEEC0 /* EKAttributes+Shadow.swift */; };
+		7D8CEDBCAFE60526686EECC002731532 /* EKSimpleMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31C47FFD7177EB8DB5D4E457C789E8 /* EKSimpleMessageView.swift */; };
+		7DE9C1DDC9A6C08D0618B3B674E137EE /* UIView+QuickLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABA161B69CBC72F351EC9D6D4B6C894 /* UIView+QuickLayout.swift */; };
+		810C31AA066FFCDD2D7D3CAAA9C4B382 /* EKAttributes+Precedence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717C0C2D2E9A8369F2F3150ED087CF9 /* EKAttributes+Precedence.swift */; };
+		81894E0F5DED43278ECAF9E2DBA4E614 /* SwiftEntryKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 574AE5C1BDEE61EB0D4FF5CA50B4BBC6 /* SwiftEntryKit-dummy.m */; };
+		819873CF8DBFAD45590AAC8945DC1B5C /* GlobalFunctionsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6BDF2A7D8A4E16F634DAB6B7B4DA12 /* GlobalFunctionsAndExtensions.swift */; };
+		8394230B7C1D50A0FA996E134955E23F /* JTAppleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB29F79C32F857035A883402E288259 /* JTAppleCell.swift */; };
+		83D5F7B7863E1CD7B089F4513AF7B19D /* EKProcessingNoteMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7FF454746BC2580AFAB3DC44183CA /* EKProcessingNoteMessageView.swift */; };
+		84701B0C75C54D63D917211B5AFF4D2C /* UIEdgeInsets+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF220AA2DA80804C2DC3E50E30BFFBC /* UIEdgeInsets+Utils.swift */; };
 		8903E9C0A30B9632496D02BBAC6AC061 /* Pods-Kegal TimerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AC0C4557A6BC60F88BFDB1210D313 /* Pods-Kegal TimerTests-dummy.m */; };
+		89720D631A48AD090D5677F6EC6DEEBA /* QuickLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6630AD0A9195C0B183BB872BDF3FC9 /* QuickLayout-dummy.m */; };
 		8DA1170B5F6BB27080196D6C6B71A38E /* Pods-Kegal TimerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F0BDA81871F3B371C776E0287643721 /* Pods-Kegal TimerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E2AF2573C443F0DD5BB8111EC5B5375 /* InternalQueryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCC9B301D596CEBB0DD8105B517113 /* InternalQueryFunctions.swift */; };
-		8E5E3D6FCB6C2C52ED20EF236FC3155B /* UIScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435272172B1F1E7E9C26DF0F162D5EF0 /* UIScrollViewDelegates.swift */; };
+		8E2AF2573C443F0DD5BB8111EC5B5375 /* InternalQueryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB756DFE446469F83CC4FF98F96A6F66 /* InternalQueryFunctions.swift */; };
+		8E5E3D6FCB6C2C52ED20EF236FC3155B /* UIScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D78FDC870212A82AB3C1306ECC135D /* UIScrollViewDelegates.swift */; };
+		8F0F67AF4AD92352B319518E737B02BA /* EKAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58739EDFD056CA0B18FFCEED3057D2 /* EKAttributes.swift */; };
+		8F8F9A57300473E58F1B82715943C9FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91381F6EBD0EF4B70557285F22C461 /* Foundation.framework */; };
+		9333E1242C8FFE36D37D6F95B01B784D /* UIView+QLContentWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B32A4C5F67BF3887A49297E78F0E1A /* UIView+QLContentWrap.swift */; };
+		933DAF3A435AECD9B5013C0B04407137 /* QuickLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75373633343CC960FAAEBF8491A7BDF1 /* QuickLayout.framework */; };
+		9499F2AAAEE9527ABB95981C0C6110FF /* EKAttributes+PositionConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E68C40A5CE8113229C4E2E58CDAA0 /* EKAttributes+PositionConstraints.swift */; };
 		A0B354FCC8F28F383C724D966DA711D4 /* Pods-Kegal TimerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D3CFBFC24B003D7F82AF3D897022BC /* Pods-Kegal TimerUITests-dummy.m */; };
-		B4739E1452E5D10D47F64666AE6C5591 /* JTAppleCalendarLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00603DB184CC3CBAAF53E7F46D6AC5D /* JTAppleCalendarLayoutProtocol.swift */; };
-		B5FF78FEFAE4B0C55F2FDB57A89617A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		C2DE02D3C4CC5353EB5A8401F05A5A8D /* JTAppleCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A827C4FB57592C28EDA273CC1A203A /* JTAppleCalendarView.swift */; };
-		CFDE80C521CD8313AA440E0FC7B82FBB /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D91DB49D50CC07F02559C764C5807 /* JTAppleCalendarLayout.swift */; };
-		D1B55151AE05392B4A05522DED127897 /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F4EECBD86B64A44448320B07E87AD /* UserInteractionFunctions.swift */; };
-		D42A00134A505A5ED05C10FC70F1926A /* UICollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F04D23C4665C25BDBF46EC968F27F9 /* UICollectionViewDelegates.swift */; };
-		D6E076D66CB4853DC0BEC99B8CA9A9A6 /* Pods-Kegal Timer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6126DB394A6DA2537DF30B0204CC7FE5 /* Pods-Kegal Timer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6733946C606E92E75D0C08605F40E38 /* EKProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25071A47968DB83C0BCC6442549AAC17 /* EKProperty.swift */; };
+		AA8A4A592A51180C1D179BABE056829A /* EKImageNoteMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605AA64AF857E7F38A1D61EE62BBBE61 /* EKImageNoteMessageView.swift */; };
+		ABD7A14B889800435A37DD1D872BF74F /* EKNotificationMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0590AA8CEACD53EBD39B18C4E08A9EB7 /* EKNotificationMessageView.swift */; };
+		ACE7C7AFEB9AF54CDC0967157E5AF50D /* EKAttributes+LifecycleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36449C6D516A8742F734A1AF59C4D9E1 /* EKAttributes+LifecycleActions.swift */; };
+		B19C7487BF8804CBDFB6727286FE6BD8 /* EKWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC27192C167C80FF33644D7745FB769 /* EKWindow.swift */; };
+		B4739E1452E5D10D47F64666AE6C5591 /* JTAppleCalendarLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D20586271645AF8998AB78508ED1E3A /* JTAppleCalendarLayoutProtocol.swift */; };
+		B5FF78FEFAE4B0C55F2FDB57A89617A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91381F6EBD0EF4B70557285F22C461 /* Foundation.framework */; };
+		BA9B224588EABA49664D70782070CB77 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594ED942EC46D15FA848356065E39632 /* UIView+Utils.swift */; };
+		BBE0F1E4D881713EE105CAC7517D75D0 /* EKAttributes+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A18CAE83C9282BE626E27BA331D535 /* EKAttributes+Position.swift */; };
+		BF029FF8D5E7EB74F5DD6C9B97704982 /* EKEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447F74659C2F18FC796DA22954618A81 /* EKEntryView.swift */; };
+		BF74F89F2C4ECC053442CC28ADC37453 /* EKButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07668363E26EC5FECB219C5BC05923 /* EKButtonBarView.swift */; };
+		C16351690ABA0358103C886A3223ABD6 /* UIApplication+EKAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B68513DB52923E5A02AC75D61A7DDDC /* UIApplication+EKAppearance.swift */; };
+		C2DE02D3C4CC5353EB5A8401F05A5A8D /* JTAppleCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7124E204BADD6EDA5341B67474B9E8 /* JTAppleCalendarView.swift */; };
+		C4E721771E9A76F3CE3D7E2CE4643131 /* EKRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5774E81ABACBA611C7CEB80C92878C30 /* EKRootViewController.swift */; };
+		C591F293E566EFECEEF6AB8DC16DC4F6 /* EKContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B7052C78390FA7911CC4B4254D2CA /* EKContentView.swift */; };
+		C768AB5266AABB8FC98F9E44EA95006D /* EKAttributes+UserInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAE15279C5F3E44AB1B00B6D53E24F8 /* EKAttributes+UserInteraction.swift */; };
+		C7EEB8A17A34D5F55E51F2A54036341C /* QLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959EE8F141D2AB902C2EFFE6EFF99FC /* QLUtils.swift */; };
+		C862A81B976DC35B9196CAB0F8E27939 /* EKNoteMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6DFBFBFD8054D841DA4ACC94DDA10F /* EKNoteMessageView.swift */; };
+		C8746A441A5692AD818EE4C62F3B5982 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91381F6EBD0EF4B70557285F22C461 /* Foundation.framework */; };
+		CA7A1C98FA30A06FD424199FA877A6BA /* EKAttributes+FrameStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C0BC3167A0463F1DFC5AF30E25FA8 /* EKAttributes+FrameStyle.swift */; };
+		CFDE80C521CD8313AA440E0FC7B82FBB /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A3EEADAA05DE871B8D2EC8ED555B /* JTAppleCalendarLayout.swift */; };
+		D0E8FF70F61E9F199D240476B11373AA /* HapticFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D8ED7B4CF657BAC2C4ACEAF45EBA2 /* HapticFeedbackGenerator.swift */; };
+		D1B55151AE05392B4A05522DED127897 /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037EE3A94CE8B4D6C5F57B3C521E37E /* UserInteractionFunctions.swift */; };
+		D42A00134A505A5ED05C10FC70F1926A /* UICollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542454EDA4F06EE86B1E97E3DB8AD9F /* UICollectionViewDelegates.swift */; };
+		D5C630A38BA57C8197E9B5F9DF3D8A63 /* Pods-Kegal Timer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 855F1AA4050901DC418BC2A57FB07DDD /* Pods-Kegal Timer-dummy.m */; };
+		D873950D612F5B7E34FCEB0754CFEE56 /* EKStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7DA736AAC7785CE6135E4A48074386 /* EKStyleView.swift */; };
+		D8C7387208FA1F578D31812281ED4A12 /* EKPopUpMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE30678D0FFE3FE3AD3D685A460D611 /* EKPopUpMessageView.swift */; };
+		DA2598DBE86F9C567329F889643DF251 /* EKButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA3F12662A7E63E4EAA96FD494CD3F /* EKButtonView.swift */; };
 		DEAAB0A03F4784D9C1665572AB6522E7 /* Pods-Kegal TimerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DEC87C63260CB1A3D4A1761235E1111 /* Pods-Kegal TimerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7CC890914AE49452861315913ED237E /* InternalActionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94872E6C5C3C4B342551466A836BEC /* InternalActionFunctions.swift */; };
-		E7F6F68D34A04BC292597F6E4B55AB28 /* JTAppleCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F21E7199EF3BB21BAB090C4F6691F /* JTAppleCalendar-dummy.m */; };
+		E0560FFB028BEA5E9A4B89E16B4EBCE2 /* UIViewArray+QuickLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F6C92925FE56387EA5AE3BFC7F33E /* UIViewArray+QuickLayout.swift */; };
+		E0FF1B98B9D6D089D18FEC6A199FB7CB /* EKNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83B811F522D260647084F62F0048178 /* EKNotificationMessage.swift */; };
+		E43BC69E98E9912858045EC42EA54FE5 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B276022C5973757C89281838E1F2F0E /* UIView+Shadow.swift */; };
+		E4FCC01EE6B676FAC87E7A6DA5EAD34C /* SwiftEntryKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33706475ED93E21C5F784C97D4219D /* SwiftEntryKit.swift */; };
+		E5AF7922B5A81E412FE026F96CEAA78C /* EKAlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2A322037ABC8D8E5A2C2B4AAEA243 /* EKAlertMessage.swift */; };
+		E7CC890914AE49452861315913ED237E /* InternalActionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D73A8750FE48F548B312A2A8E06DA15 /* InternalActionFunctions.swift */; };
+		E7F6F68D34A04BC292597F6E4B55AB28 /* JTAppleCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F35CE569F5B4D1E0BEAF63C0EC422889 /* JTAppleCalendar-dummy.m */; };
+		EB72234C7F5091835B6E541644BEA4D3 /* EKAttributes+WindowLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B3CAEEDA0CFF355E3C998617124DF /* EKAttributes+WindowLevel.swift */; };
+		EB91EA6E39D89AEEF897E99761A88D66 /* EKAttributes+BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9206C9D9CDDD7B44FB835079BE1A2F /* EKAttributes+BackgroundStyle.swift */; };
+		EC380C7810B05381FD79618C50763FBA /* Pods-Kegal Timer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6126DB394A6DA2537DF30B0204CC7FE5 /* Pods-Kegal Timer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1C2C26D5C174DBBEEFC3F80F11FA458 /* EKWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551E6DC0F206A0A88102BA5CCA2D1BD /* EKWrapperView.swift */; };
+		F6E6B0DF2173A5DE105A33FF16D9BAD4 /* EntryCachingHeuristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33DCEEBEDF4C3F41ECE77583370B1ED /* EntryCachingHeuristic.swift */; };
+		F7E311D9F659DA649BDCD0C42CD79564 /* EKAttributes+HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA974364B072964C50EF293D675BE353 /* EKAttributes+HapticFeedback.swift */; };
+		F88DF1CEF53CCF0FC658E4E816BC846C /* UIView+Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C85D3B132A7781E2919A449DCFA11E /* UIView+Responder.swift */; };
+		F9C21F3C77AF667C261F93A7AE05777C /* EKAttributes+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE16F77F54320102259474609609CE /* EKAttributes+Animation.swift */; };
+		FE4FC33DF7A03417772BCF0055397878 /* EKFormMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91CE8464A104B8C4FAF88504040FC0 /* EKFormMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		00D33688980BA6FA4E5CC872DC1B0AC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABF14D2781216B75C3CFF7798F3CF066;
+			remoteInfo = QuickLayout;
+		};
 		27337D09E97375CF26046B36C7985CD3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 60D95C0449DA2400D77F26137418D07A;
+			remoteGlobalIDString = 920BA394687E47CB123639F7EEF81058;
 			remoteInfo = "Pods-Kegal Timer";
+		};
+		2EA69A735807D490B5AC8C745C51148B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F60377FF017A03D54F578016BB6F37E;
+			remoteInfo = SwiftEntryKit;
 		};
 		31C1904CE01999F21C7FCD4D61690D5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 60D95C0449DA2400D77F26137418D07A;
+			remoteGlobalIDString = 920BA394687E47CB123639F7EEF81058;
 			remoteInfo = "Pods-Kegal Timer";
 		};
-		5DC6560F853DAE19C2996105A89AC5E2 /* PBXContainerItemProxy */ = {
+		6B9C1962E807B651AA60FA0565FE7452 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABF14D2781216B75C3CFF7798F3CF066;
+			remoteInfo = QuickLayout;
+		};
+		6C7BEFB2FC5B6A2950CA65C879816BAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -62,64 +156,145 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A6F4EECBD86B64A44448320B07E87AD /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInteractionFunctions.swift; path = Sources/UserInteractionFunctions.swift; sourceTree = "<group>"; };
-		0BEE123C421F9F17CEC8B1A0DD2A8191 /* JTAppleCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JTAppleCalendar.xcconfig; sourceTree = "<group>"; };
+		04D2A322037ABC8D8E5A2C2B4AAEA243 /* EKAlertMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKAlertMessage.swift; path = Source/Model/EKAlertMessage.swift; sourceTree = "<group>"; };
+		0590AA8CEACD53EBD39B18C4E08A9EB7 /* EKNotificationMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKNotificationMessageView.swift; path = Source/MessageViews/EKNotificationMessageView.swift; sourceTree = "<group>"; };
+		0AA4CA5A374BABE39E4A8555124C2DD5 /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCollectionReusableView.swift; path = Sources/JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
+		0BF438942840C2A9E1F3B136975184F2 /* JTAppleCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-prefix.pch"; sourceTree = "<group>"; };
+		0D9206C9D9CDDD7B44FB835079BE1A2F /* EKAttributes+BackgroundStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+BackgroundStyle.swift"; path = "Source/Model/EntryAttributes/EKAttributes+BackgroundStyle.swift"; sourceTree = "<group>"; };
 		0DEC87C63260CB1A3D4A1761235E1111 /* Pods-Kegal TimerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kegal TimerUITests-umbrella.h"; sourceTree = "<group>"; };
-		11553AB698B72E93630850DC395D94C5 /* CalendarStructs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarStructs.swift; path = Sources/CalendarStructs.swift; sourceTree = "<group>"; };
-		19DD34F2271AB71ED8AA82BF411284A2 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JTAppleCalendar.framework; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		304C6D8CE3CF203C175AA67E3DF06AC5 /* JTAppleCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-prefix.pch"; sourceTree = "<group>"; };
-		33DCC9B301D596CEBB0DD8105B517113 /* InternalQueryFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalQueryFunctions.swift; path = Sources/InternalQueryFunctions.swift; sourceTree = "<group>"; };
+		13CCC60A8395BAFD3670E2920F39EAA4 /* EKPopUpMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKPopUpMessage.swift; path = Source/Model/EKPopUpMessage.swift; sourceTree = "<group>"; };
+		15EB73362B2DD4303B1F69EAD2BF54AA /* SwiftEntryKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftEntryKit-umbrella.h"; sourceTree = "<group>"; };
+		187D4ECF229E2C4CB559DEACD382818C /* EKRatingSymbolsContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKRatingSymbolsContainerView.swift; path = Source/MessageViews/MessagesUtils/EKRatingSymbolsContainerView.swift; sourceTree = "<group>"; };
+		18C85D3B132A7781E2919A449DCFA11E /* UIView+Responder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Responder.swift"; path = "Source/Utils/UIView+Responder.swift"; sourceTree = "<group>"; };
+		1C13A3AD0D215DEAFEED823797EF65AB /* EKTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKTextField.swift; path = Source/MessageViews/MessagesUtils/EKTextField.swift; sourceTree = "<group>"; };
+		1E7124E204BADD6EDA5341B67474B9E8 /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarView.swift; path = Sources/JTAppleCalendarView.swift; sourceTree = "<group>"; };
+		232A41B2F223529F7588BAB8B7AC22A6 /* EKXStatusBarMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKXStatusBarMessageView.swift; path = Source/MessageViews/Notes/EKXStatusBarMessageView.swift; sourceTree = "<group>"; };
+		25071A47968DB83C0BCC6442549AAC17 /* EKProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKProperty.swift; path = Source/Model/EKProperty.swift; sourceTree = "<group>"; };
+		26B32A4C5F67BF3887A49297E78F0E1A /* UIView+QLContentWrap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+QLContentWrap.swift"; path = "QuickLayout/UIView+QLContentWrap.swift"; sourceTree = "<group>"; };
+		26B43A3005B42B9B86B4670FCAD620D6 /* SwiftEntryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftEntryKit.framework; path = SwiftEntryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2717C0C2D2E9A8369F2F3150ED087CF9 /* EKAttributes+Precedence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+Precedence.swift"; path = "Source/Model/EntryAttributes/EKAttributes+Precedence.swift"; sourceTree = "<group>"; };
+		29173131FF77DE709ED23F42E42D785C /* EKAttributes+Validations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+Validations.swift"; path = "Source/Model/EntryAttributes/EKAttributes+Validations.swift"; sourceTree = "<group>"; };
+		2AACFA28FD23ACA918D708F073DFDCDE /* CalendarStructs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarStructs.swift; path = Sources/CalendarStructs.swift; sourceTree = "<group>"; };
+		2B276022C5973757C89281838E1F2F0E /* UIView+Shadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Shadow.swift"; path = "Source/Extensions/UIView+Shadow.swift"; sourceTree = "<group>"; };
+		2C39EB139648C52B503C0258803E6C7C /* QuickLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QuickLayout-prefix.pch"; sourceTree = "<group>"; };
+		2D6BDF2A7D8A4E16F634DAB6B7B4DA12 /* GlobalFunctionsAndExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalFunctionsAndExtensions.swift; path = Sources/GlobalFunctionsAndExtensions.swift; sourceTree = "<group>"; };
+		30E0DB663D090C05D30E584020A23B3C /* QuickLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QuickLayout.xcconfig; sourceTree = "<group>"; };
+		32C36CA7EF82A2D3C4529BBE7DE9DF08 /* QuickLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QuickLayout.framework; path = QuickLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D3CFBFC24B003D7F82AF3D897022BC /* Pods-Kegal TimerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kegal TimerUITests-dummy.m"; sourceTree = "<group>"; };
+		3542454EDA4F06EE86B1E97E3DB8AD9F /* UICollectionViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionViewDelegates.swift; path = Sources/UICollectionViewDelegates.swift; sourceTree = "<group>"; };
+		36449C6D516A8742F734A1AF59C4D9E1 /* EKAttributes+LifecycleActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+LifecycleActions.swift"; path = "Source/Model/EntryAttributes/EKAttributes+LifecycleActions.swift"; sourceTree = "<group>"; };
 		38123CEAA8073D4FA1ABE6433980CB03 /* Pods-Kegal TimerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kegal TimerUITests-resources.sh"; sourceTree = "<group>"; };
-		435272172B1F1E7E9C26DF0F162D5EF0 /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewDelegates.swift; path = Sources/UIScrollViewDelegates.swift; sourceTree = "<group>"; };
+		3959EE8F141D2AB902C2EFFE6EFF99FC /* QLUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QLUtils.swift; path = QuickLayout/QLUtils.swift; sourceTree = "<group>"; };
+		3ABA161B69CBC72F351EC9D6D4B6C894 /* UIView+QuickLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+QuickLayout.swift"; path = "QuickLayout/UIView+QuickLayout.swift"; sourceTree = "<group>"; };
+		3AF220AA2DA80804C2DC3E50E30BFFBC /* UIEdgeInsets+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIEdgeInsets+Utils.swift"; path = "Source/Extensions/UIEdgeInsets+Utils.swift"; sourceTree = "<group>"; };
+		3D73A8750FE48F548B312A2A8E06DA15 /* InternalActionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalActionFunctions.swift; path = Sources/InternalActionFunctions.swift; sourceTree = "<group>"; };
+		3F1B3CAEEDA0CFF355E3C998617124DF /* EKAttributes+WindowLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+WindowLevel.swift"; path = "Source/Model/EntryAttributes/EKAttributes+WindowLevel.swift"; sourceTree = "<group>"; };
+		3F91CE8464A104B8C4FAF88504040FC0 /* EKFormMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKFormMessageView.swift; path = Source/MessageViews/EKFormMessageView.swift; sourceTree = "<group>"; };
+		4108A6729555E7A7CF796EDA5F56A636 /* Pods_Kegal_Timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kegal_Timer.framework; path = "Pods-Kegal Timer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41121882264C2DFE56D1D1A91FA53FB2 /* EKBackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKBackgroundView.swift; path = Source/Infra/EKBackgroundView.swift; sourceTree = "<group>"; };
+		441C0BC3167A0463F1DFC5AF30E25FA8 /* EKAttributes+FrameStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+FrameStyle.swift"; path = "Source/Model/EntryAttributes/EKAttributes+FrameStyle.swift"; sourceTree = "<group>"; };
+		447F74659C2F18FC796DA22954618A81 /* EKEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKEntryView.swift; path = Source/Infra/EKEntryView.swift; sourceTree = "<group>"; };
+		44D78FDC870212A82AB3C1306ECC135D /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewDelegates.swift; path = Sources/UIScrollViewDelegates.swift; sourceTree = "<group>"; };
+		452D8ED7B4CF657BAC2C4ACEAF45EBA2 /* HapticFeedbackGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticFeedbackGenerator.swift; path = Source/Utils/HapticFeedbackGenerator.swift; sourceTree = "<group>"; };
 		4661608A6CD6957DB6EB19E4C5FCA146 /* Pods-Kegal TimerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kegal TimerUITests-frameworks.sh"; sourceTree = "<group>"; };
 		473C57F39D8969B0A4113157AE206E8E /* Pods-Kegal TimerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kegal TimerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4916B149225FEE6FA03AFA35F38D5637 /* Pods-Kegal TimerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kegal TimerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4C3863E77E8682A084C2E8A73D5BAABF /* Pods_Kegal_TimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kegal_TimerTests.framework; path = "Pods-Kegal TimerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		504E412E686DD5D5C62D90F609F198EB /* JTAppleCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCell.swift; path = Sources/JTAppleCell.swift; sourceTree = "<group>"; };
+		4D20586271645AF8998AB78508ED1E3A /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayoutProtocol.swift; path = Sources/JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
+		4DE30678D0FFE3FE3AD3D685A460D611 /* EKPopUpMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKPopUpMessageView.swift; path = Source/MessageViews/EKPopUpMessageView.swift; sourceTree = "<group>"; };
+		4FEA3F12662A7E63E4EAA96FD494CD3F /* EKButtonView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKButtonView.swift; path = Source/MessageViews/MessagesUtils/EKButtonView.swift; sourceTree = "<group>"; };
+		5037EE3A94CE8B4D6C5F57B3C521E37E /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInteractionFunctions.swift; path = Sources/UserInteractionFunctions.swift; sourceTree = "<group>"; };
+		50F0A68F541E5EE43655B17B81A0EFB3 /* SwiftEntryKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftEntryKit-prefix.pch"; sourceTree = "<group>"; };
+		51A1EE19ECA4268F54E791D9F07A4556 /* JTAppleCalendarVariables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarVariables.swift; path = Sources/JTAppleCalendarVariables.swift; sourceTree = "<group>"; };
 		51AE2E4468EDB093AF65FBECF76171DD /* Pods-Kegal TimerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Kegal TimerUITests.modulemap"; sourceTree = "<group>"; };
 		5228157F17B1E8B68269A9A8B2DDD5A7 /* Pods-Kegal Timer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kegal Timer-acknowledgements.plist"; sourceTree = "<group>"; };
 		558EF35C98DBC4C3BEBFCCCED97209AB /* Pods-Kegal Timer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Kegal Timer.modulemap"; sourceTree = "<group>"; };
-		5953B2489F070C35812A4CD2D6867EF2 /* Pods_Kegal_Timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kegal_Timer.framework; path = "Pods-Kegal Timer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		59A827C4FB57592C28EDA273CC1A203A /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarView.swift; path = Sources/JTAppleCalendarView.swift; sourceTree = "<group>"; };
+		56C61DDDF7CB9C488B053D23B558E24D /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarDelegateProtocol.swift; path = Sources/JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
+		574AE5C1BDEE61EB0D4FF5CA50B4BBC6 /* SwiftEntryKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftEntryKit-dummy.m"; sourceTree = "<group>"; };
+		5774E81ABACBA611C7CEB80C92878C30 /* EKRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKRootViewController.swift; path = Source/Infra/EKRootViewController.swift; sourceTree = "<group>"; };
+		584E14C0296A5E4757D8A6BE0B6AB4A6 /* EKMessageContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKMessageContentView.swift; path = Source/MessageViews/EKMessageContentView.swift; sourceTree = "<group>"; };
+		594ED942EC46D15FA848356065E39632 /* UIView+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Source/Extensions/UIView+Utils.swift"; sourceTree = "<group>"; };
 		5ACF2BD6F00BC854BA8975205D41BD62 /* Pods-Kegal Timer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kegal Timer-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5B075772503FA4CB6743D1D08DEA45D2 /* Pods-Kegal TimerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kegal TimerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5B3363FB94FF2FC2A5E961F1AB88F55C /* EKRatingMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKRatingMessage.swift; path = Source/Model/EKRatingMessage.swift; sourceTree = "<group>"; };
+		5C7DA736AAC7785CE6135E4A48074386 /* EKStyleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKStyleView.swift; path = Source/Infra/EKStyleView.swift; sourceTree = "<group>"; };
 		5F77548488B6205C39BC4576ED66DDC4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FEB8CAE84B3BEB40A9DFA23D680E276 /* Pods-Kegal TimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kegal TimerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		605AA64AF857E7F38A1D61EE62BBBE61 /* EKImageNoteMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKImageNoteMessageView.swift; path = Source/MessageViews/Notes/EKImageNoteMessageView.swift; sourceTree = "<group>"; };
+		6090A780C04F9FCD13320833C94ADF0A /* CalendarEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarEnums.swift; path = Sources/CalendarEnums.swift; sourceTree = "<group>"; };
 		6126DB394A6DA2537DF30B0204CC7FE5 /* Pods-Kegal Timer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kegal Timer-umbrella.h"; sourceTree = "<group>"; };
+		64290873D9380FD601C8AD3F1EDE805A /* EKRatingSymbolView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKRatingSymbolView.swift; path = Source/MessageViews/MessagesUtils/EKRatingSymbolView.swift; sourceTree = "<group>"; };
 		6A9AC0C4557A6BC60F88BFDB1210D313 /* Pods-Kegal TimerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kegal TimerTests-dummy.m"; sourceTree = "<group>"; };
-		70F192D3521916B02D21EC6B3A2ACAA2 /* JTAppleCalendarVariables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarVariables.swift; path = Sources/JTAppleCalendarVariables.swift; sourceTree = "<group>"; };
-		81E3CC6A1168413889F1B71B76093D97 /* Pods_Kegal_TimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kegal_TimerUITests.framework; path = "Pods-Kegal TimerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E58739EDFD056CA0B18FFCEED3057D2 /* EKAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKAttributes.swift; path = Source/Model/EntryAttributes/EKAttributes.swift; sourceTree = "<group>"; };
+		6F6630AD0A9195C0B183BB872BDF3FC9 /* QuickLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QuickLayout-dummy.m"; sourceTree = "<group>"; };
+		75373633343CC960FAAEBF8491A7BDF1 /* QuickLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuickLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75CE8F3965BBF9768BF9530CC5CBEAA5 /* GradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Source/Utils/GradientView.swift; sourceTree = "<group>"; };
+		7B68513DB52923E5A02AC75D61A7DDDC /* UIApplication+EKAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+EKAppearance.swift"; path = "Source/Extensions/UIApplication+EKAppearance.swift"; sourceTree = "<group>"; };
+		7E33706475ED93E21C5F784C97D4219D /* SwiftEntryKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftEntryKit.swift; path = Source/SwiftEntryKit.swift; sourceTree = "<group>"; };
+		7E68427A57D31DB4A3BC628EDFB57DB0 /* Pods_Kegal_TimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kegal_TimerTests.framework; path = "Pods-Kegal TimerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82DF46734A1C7A0E26D1394723D9C2BC /* EKAttributes+PopBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+PopBehavior.swift"; path = "Source/Model/EntryAttributes/EKAttributes+PopBehavior.swift"; sourceTree = "<group>"; };
 		8499946CB7A6D7559CBB47D601034789 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		855F1AA4050901DC418BC2A57FB07DDD /* Pods-Kegal Timer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kegal Timer-dummy.m"; sourceTree = "<group>"; };
+		85D9794F0FED261DF1464D7AE27C4C93 /* QuickLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QuickLayout-umbrella.h"; sourceTree = "<group>"; };
+		89A18CAE83C9282BE626E27BA331D535 /* EKAttributes+Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+Position.swift"; path = "Source/Model/EntryAttributes/EKAttributes+Position.swift"; sourceTree = "<group>"; };
+		8E07668363E26EC5FECB219C5BC05923 /* EKButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKButtonBarView.swift; path = Source/MessageViews/MessagesUtils/EKButtonBarView.swift; sourceTree = "<group>"; };
+		8F2B2E727C165196BEA79D8A4D5AB1E0 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JTAppleCalendar.framework; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5453A272E80D1F864382C09272EFB9 /* QLCompatibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QLCompatibility.swift; path = QuickLayout/QLCompatibility.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		979D2EB9B9494D54B2E134D2979AD02C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B037274CEC1C33F3A0203D08A7E3439 /* Pods-Kegal TimerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kegal TimerTests-frameworks.sh"; sourceTree = "<group>"; };
-		9CEF845A69455A4A94C673E3BD05B2C5 /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCollectionReusableView.swift; path = Sources/JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
-		9D5364F77524433BC5C19E10FC745E8E /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTCalendarProtocols.swift; path = Sources/JTCalendarProtocols.swift; sourceTree = "<group>"; };
+		9C81F680ED86301DC9D2EBB4BFFA0F8A /* EKAlertMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKAlertMessageView.swift; path = Source/MessageViews/EKAlertMessageView.swift; sourceTree = "<group>"; };
+		9E67A166BE3C0B3BA4E76431C559E0B5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F0BDA81871F3B371C776E0287643721 /* Pods-Kegal TimerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kegal TimerTests-umbrella.h"; sourceTree = "<group>"; };
-		A10F21E7199EF3BB21BAB090C4F6691F /* JTAppleCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTAppleCalendar-dummy.m"; sourceTree = "<group>"; };
-		A21E7CCE8AFB3A84072E5F8B65D7A3D0 /* JTAppleCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-umbrella.h"; sourceTree = "<group>"; };
-		A40247B6E87FD11C0555E7C2B980060D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D6D3F6CA7E083543F8814B87D6FD77 /* SwiftEntryKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftEntryKit.modulemap; sourceTree = "<group>"; };
+		A60C001797EA6E33BF4CEC6AF520A1C4 /* EntryAppearanceDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EntryAppearanceDescriptor.swift; path = Source/MessageViews/MessagesUtils/EntryAppearanceDescriptor.swift; sourceTree = "<group>"; };
+		AA225BCE4CC415AFECA1E5A9C449A531 /* EKAttributes+Scroll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+Scroll.swift"; path = "Source/Model/EntryAttributes/EKAttributes+Scroll.swift"; sourceTree = "<group>"; };
 		AA965F40A64B9F5E1DE932005B4B21D6 /* Pods-Kegal TimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kegal TimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC0F6C92925FE56387EA5AE3BFC7F33E /* UIViewArray+QuickLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewArray+QuickLayout.swift"; path = "QuickLayout/UIViewArray+QuickLayout.swift"; sourceTree = "<group>"; };
+		AD4B7AE3CCD23DE32E65C333EEE7DAC8 /* EKAttributes+StatusBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+StatusBar.swift"; path = "Source/Model/EntryAttributes/EKAttributes+StatusBar.swift"; sourceTree = "<group>"; };
+		AD6DFBFBFD8054D841DA4ACC94DDA10F /* EKNoteMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKNoteMessageView.swift; path = Source/MessageViews/Notes/EKNoteMessageView.swift; sourceTree = "<group>"; };
+		AE31C47FFD7177EB8DB5D4E457C789E8 /* EKSimpleMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKSimpleMessageView.swift; path = Source/MessageViews/EKSimpleMessageView.swift; sourceTree = "<group>"; };
 		AFACA91309ADD6AE423E1719DE065775 /* Pods-Kegal Timer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kegal Timer-resources.sh"; sourceTree = "<group>"; };
-		AFC415DDF46DCADD76804CBC671ECFF1 /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
-		B00603DB184CC3CBAAF53E7F46D6AC5D /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayoutProtocol.swift; path = Sources/JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
 		B339B2AA2AEE0140819A3FD2D0044794 /* Pods-Kegal Timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kegal Timer.debug.xcconfig"; sourceTree = "<group>"; };
-		B57D91DB49D50CC07F02559C764C5807 /* JTAppleCalendarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayout.swift; path = Sources/JTAppleCalendarLayout.swift; sourceTree = "<group>"; };
+		B34A24A1DC0F1F4E1B638F5872560900 /* SwiftEntryKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftEntryKit.xcconfig; sourceTree = "<group>"; };
+		B3E5797913422CE7107A5C1554C7D3A1 /* EKSimpleMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKSimpleMessage.swift; path = Source/Model/EKSimpleMessage.swift; sourceTree = "<group>"; };
+		B5B482EB8EC06467F80F63AC384777E9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B636D59CECD2D0DE9C22323B13AB3484 /* Pods-Kegal TimerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kegal TimerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B8989DBD2AA2ACDCA8FB4DAF87C3DD99 /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
+		BAD7FF454746BC2580AFAB3DC44183CA /* EKProcessingNoteMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKProcessingNoteMessageView.swift; path = Source/MessageViews/Notes/EKProcessingNoteMessageView.swift; sourceTree = "<group>"; };
+		BAE016571ED291451200408FB8D825AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB050CCD3EBE421A74251B28D64BCF24 /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTCalendarProtocols.swift; path = Sources/JTCalendarProtocols.swift; sourceTree = "<group>"; };
 		BF9376931DF5E8DB2D59A37E9CDFC737 /* Pods-Kegal TimerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kegal TimerTests-resources.sh"; sourceTree = "<group>"; };
-		BF94872E6C5C3C4B342551466A836BEC /* InternalActionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalActionFunctions.swift; path = Sources/InternalActionFunctions.swift; sourceTree = "<group>"; };
+		C00F6522A3496312BFAA4C8A5F9E872F /* Pods_Kegal_TimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kegal_TimerUITests.framework; path = "Pods-Kegal TimerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C04DF661D6C01EEAA2168F40116E05D8 /* Pods-Kegal Timer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kegal Timer-frameworks.sh"; sourceTree = "<group>"; };
+		C11672466D889F04B8FB887BDF611512 /* EKAttributes+Presets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+Presets.swift"; path = "Source/Model/EntryAttributes/EKAttributes+Presets.swift"; sourceTree = "<group>"; };
+		C1B0A3EEADAA05DE871B8D2EC8ED555B /* JTAppleCalendarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayout.swift; path = Sources/JTAppleCalendarLayout.swift; sourceTree = "<group>"; };
+		C551E6DC0F206A0A88102BA5CCA2D1BD /* EKWrapperView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKWrapperView.swift; path = Source/Infra/EKWrapperView.swift; sourceTree = "<group>"; };
 		C699087E88FD1556F7EB128AE75AE0E8 /* Pods-Kegal Timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kegal Timer.release.xcconfig"; sourceTree = "<group>"; };
-		CAB9B2CC3F9DB7F5724CC988C9543DEC /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarDelegateProtocol.swift; path = Sources/JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
+		C781AE9ADEFAAD57EAE237A5AB964631 /* EKAttributes+Duration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+Duration.swift"; path = "Source/Model/EntryAttributes/EKAttributes+Duration.swift"; sourceTree = "<group>"; };
+		CA974364B072964C50EF293D675BE353 /* EKAttributes+HapticFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+HapticFeedback.swift"; path = "Source/Model/EntryAttributes/EKAttributes+HapticFeedback.swift"; sourceTree = "<group>"; };
+		CAB29F79C32F857035A883402E288259 /* JTAppleCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCell.swift; path = Sources/JTAppleCell.swift; sourceTree = "<group>"; };
+		CCEE16F77F54320102259474609609CE /* EKAttributes+Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+Animation.swift"; path = "Source/Model/EntryAttributes/EKAttributes+Animation.swift"; sourceTree = "<group>"; };
+		D06E68C40A5CE8113229C4E2E58CDAA0 /* EKAttributes+PositionConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+PositionConstraints.swift"; path = "Source/Model/EntryAttributes/EKAttributes+PositionConstraints.swift"; sourceTree = "<group>"; };
 		D16F9C31D75043FCF6CABDF8604D720C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D301DF91A9AA71D57BF68A2ADCCF0C4F /* EKWindowProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKWindowProvider.swift; path = Source/Infra/EKWindowProvider.swift; sourceTree = "<group>"; };
+		D3AB2107250040C032957183833EEEC0 /* EKAttributes+Shadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+Shadow.swift"; path = "Source/Model/EntryAttributes/EKAttributes+Shadow.swift"; sourceTree = "<group>"; };
 		D4F4760020A9AB224DA0A44F1DDDE134 /* Pods-Kegal TimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kegal TimerTests.release.xcconfig"; sourceTree = "<group>"; };
-		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F3426D14FB5C08BBD6272ABC8CBD01AB /* CalendarEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarEnums.swift; path = Sources/CalendarEnums.swift; sourceTree = "<group>"; };
-		F5F04D23C4665C25BDBF46EC968F27F9 /* UICollectionViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionViewDelegates.swift; path = Sources/UICollectionViewDelegates.swift; sourceTree = "<group>"; };
+		D7F218CEF51896D812BF83DC0E651CC4 /* EKRatingMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKRatingMessageView.swift; path = Source/MessageViews/EKRatingMessageView.swift; sourceTree = "<group>"; };
+		D80B96E2DD9EEC0B53A5C265068E4942 /* UIRectCorner+Short.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIRectCorner+Short.swift"; path = "Source/Extensions/UIRectCorner+Short.swift"; sourceTree = "<group>"; };
+		D83B811F522D260647084F62F0048178 /* EKNotificationMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKNotificationMessage.swift; path = Source/Model/EKNotificationMessage.swift; sourceTree = "<group>"; };
+		DE661A34403E1AC552D09922A3C834B4 /* JTAppleCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-umbrella.h"; sourceTree = "<group>"; };
+		EAAE15279C5F3E44AB1B00B6D53E24F8 /* EKAttributes+UserInteraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EKAttributes+UserInteraction.swift"; path = "Source/Model/EntryAttributes/EKAttributes+UserInteraction.swift"; sourceTree = "<group>"; };
+		EBD9FC1D8B5531BFEA2684DC998A3EE1 /* QuickLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QuickLayout.modulemap; sourceTree = "<group>"; };
+		EC7B7052C78390FA7911CC4B4254D2CA /* EKContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKContentView.swift; path = Source/Infra/EKContentView.swift; sourceTree = "<group>"; };
+		EE38108A57AC001AD71B5F17A576DB31 /* EKAccessoryNoteMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKAccessoryNoteMessageView.swift; path = Source/MessageViews/Notes/EKAccessoryNoteMessageView.swift; sourceTree = "<group>"; };
+		EF91381F6EBD0EF4B70557285F22C461 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F33DCEEBEDF4C3F41ECE77583370B1ED /* EntryCachingHeuristic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EntryCachingHeuristic.swift; path = Source/Infra/EntryCachingHeuristic.swift; sourceTree = "<group>"; };
+		F35CE569F5B4D1E0BEAF63C0EC422889 /* JTAppleCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTAppleCalendar-dummy.m"; sourceTree = "<group>"; };
 		F66044113149DD2380E8D02A2FF88DF8 /* Pods-Kegal TimerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kegal TimerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FB756DFE446469F83CC4FF98F96A6F66 /* InternalQueryFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternalQueryFunctions.swift; path = Sources/InternalQueryFunctions.swift; sourceTree = "<group>"; };
+		FBC27192C167C80FF33644D7745FB769 /* EKWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EKWindow.swift; path = Source/Infra/EKWindow.swift; sourceTree = "<group>"; };
+		FCA4C59DE3764859B4EFF56277C9FD22 /* JTAppleCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JTAppleCalendar.xcconfig; sourceTree = "<group>"; };
 		FCEDFBE73B221FADA9016A0C838030F7 /* Pods-Kegal TimerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Kegal TimerTests.modulemap"; sourceTree = "<group>"; };
-		FCF3F9A2BDEA400B6B86E1F3FB87D141 /* GlobalFunctionsAndExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalFunctionsAndExtensions.swift; path = Sources/GlobalFunctionsAndExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,11 +306,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		48CC09406B47D40BCE1172180E3BE997 /* Frameworks */ = {
+		3636B8EED9EA1BFE5C2EB55D4093CE43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				642DF1CED8793FAC6589694F0A01A202 /* Foundation.framework in Frameworks */,
+				8F8F9A57300473E58F1B82715943C9FF /* Foundation.framework in Frameworks */,
+				933DAF3A435AECD9B5013C0B04407137 /* QuickLayout.framework in Frameworks */,
+				49006B6CF68F80924010C9BC5C9E367E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +321,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				70CF2F8D6488362C0CFF5E4242FF01B8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		610E5D449AAC2082A2EE51B25DEB8BE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E54357424E90BF552A371FCCEFDE5F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7409C2BDD78898DAC83AB04B43DC5DE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8746A441A5692AD818EE4C62F3B5982 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,26 +351,106 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+		0FE836A652641DEECAF61EC0D3298456 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+				83D9B3C44BD84E99505808C6DD44BF2E /* JTAppleCalendar */,
+				58FB4788633E11DAFB6F46B6AD303F5C /* QuickLayout */,
+				1A0C345B1DCE69DF495877EE518E15B1 /* SwiftEntryKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1A0C345B1DCE69DF495877EE518E15B1 /* SwiftEntryKit */ = {
+			isa = PBXGroup;
+			children = (
+				EE38108A57AC001AD71B5F17A576DB31 /* EKAccessoryNoteMessageView.swift */,
+				04D2A322037ABC8D8E5A2C2B4AAEA243 /* EKAlertMessage.swift */,
+				9C81F680ED86301DC9D2EBB4BFFA0F8A /* EKAlertMessageView.swift */,
+				6E58739EDFD056CA0B18FFCEED3057D2 /* EKAttributes.swift */,
+				CCEE16F77F54320102259474609609CE /* EKAttributes+Animation.swift */,
+				0D9206C9D9CDDD7B44FB835079BE1A2F /* EKAttributes+BackgroundStyle.swift */,
+				C781AE9ADEFAAD57EAE237A5AB964631 /* EKAttributes+Duration.swift */,
+				441C0BC3167A0463F1DFC5AF30E25FA8 /* EKAttributes+FrameStyle.swift */,
+				CA974364B072964C50EF293D675BE353 /* EKAttributes+HapticFeedback.swift */,
+				36449C6D516A8742F734A1AF59C4D9E1 /* EKAttributes+LifecycleActions.swift */,
+				82DF46734A1C7A0E26D1394723D9C2BC /* EKAttributes+PopBehavior.swift */,
+				89A18CAE83C9282BE626E27BA331D535 /* EKAttributes+Position.swift */,
+				D06E68C40A5CE8113229C4E2E58CDAA0 /* EKAttributes+PositionConstraints.swift */,
+				2717C0C2D2E9A8369F2F3150ED087CF9 /* EKAttributes+Precedence.swift */,
+				C11672466D889F04B8FB887BDF611512 /* EKAttributes+Presets.swift */,
+				AA225BCE4CC415AFECA1E5A9C449A531 /* EKAttributes+Scroll.swift */,
+				D3AB2107250040C032957183833EEEC0 /* EKAttributes+Shadow.swift */,
+				AD4B7AE3CCD23DE32E65C333EEE7DAC8 /* EKAttributes+StatusBar.swift */,
+				EAAE15279C5F3E44AB1B00B6D53E24F8 /* EKAttributes+UserInteraction.swift */,
+				29173131FF77DE709ED23F42E42D785C /* EKAttributes+Validations.swift */,
+				3F1B3CAEEDA0CFF355E3C998617124DF /* EKAttributes+WindowLevel.swift */,
+				41121882264C2DFE56D1D1A91FA53FB2 /* EKBackgroundView.swift */,
+				8E07668363E26EC5FECB219C5BC05923 /* EKButtonBarView.swift */,
+				4FEA3F12662A7E63E4EAA96FD494CD3F /* EKButtonView.swift */,
+				EC7B7052C78390FA7911CC4B4254D2CA /* EKContentView.swift */,
+				447F74659C2F18FC796DA22954618A81 /* EKEntryView.swift */,
+				3F91CE8464A104B8C4FAF88504040FC0 /* EKFormMessageView.swift */,
+				605AA64AF857E7F38A1D61EE62BBBE61 /* EKImageNoteMessageView.swift */,
+				584E14C0296A5E4757D8A6BE0B6AB4A6 /* EKMessageContentView.swift */,
+				AD6DFBFBFD8054D841DA4ACC94DDA10F /* EKNoteMessageView.swift */,
+				D83B811F522D260647084F62F0048178 /* EKNotificationMessage.swift */,
+				0590AA8CEACD53EBD39B18C4E08A9EB7 /* EKNotificationMessageView.swift */,
+				13CCC60A8395BAFD3670E2920F39EAA4 /* EKPopUpMessage.swift */,
+				4DE30678D0FFE3FE3AD3D685A460D611 /* EKPopUpMessageView.swift */,
+				BAD7FF454746BC2580AFAB3DC44183CA /* EKProcessingNoteMessageView.swift */,
+				25071A47968DB83C0BCC6442549AAC17 /* EKProperty.swift */,
+				5B3363FB94FF2FC2A5E961F1AB88F55C /* EKRatingMessage.swift */,
+				D7F218CEF51896D812BF83DC0E651CC4 /* EKRatingMessageView.swift */,
+				187D4ECF229E2C4CB559DEACD382818C /* EKRatingSymbolsContainerView.swift */,
+				64290873D9380FD601C8AD3F1EDE805A /* EKRatingSymbolView.swift */,
+				5774E81ABACBA611C7CEB80C92878C30 /* EKRootViewController.swift */,
+				B3E5797913422CE7107A5C1554C7D3A1 /* EKSimpleMessage.swift */,
+				AE31C47FFD7177EB8DB5D4E457C789E8 /* EKSimpleMessageView.swift */,
+				5C7DA736AAC7785CE6135E4A48074386 /* EKStyleView.swift */,
+				1C13A3AD0D215DEAFEED823797EF65AB /* EKTextField.swift */,
+				FBC27192C167C80FF33644D7745FB769 /* EKWindow.swift */,
+				D301DF91A9AA71D57BF68A2ADCCF0C4F /* EKWindowProvider.swift */,
+				C551E6DC0F206A0A88102BA5CCA2D1BD /* EKWrapperView.swift */,
+				232A41B2F223529F7588BAB8B7AC22A6 /* EKXStatusBarMessageView.swift */,
+				A60C001797EA6E33BF4CEC6AF520A1C4 /* EntryAppearanceDescriptor.swift */,
+				F33DCEEBEDF4C3F41ECE77583370B1ED /* EntryCachingHeuristic.swift */,
+				75CE8F3965BBF9768BF9530CC5CBEAA5 /* GradientView.swift */,
+				452D8ED7B4CF657BAC2C4ACEAF45EBA2 /* HapticFeedbackGenerator.swift */,
+				7E33706475ED93E21C5F784C97D4219D /* SwiftEntryKit.swift */,
+				7B68513DB52923E5A02AC75D61A7DDDC /* UIApplication+EKAppearance.swift */,
+				3AF220AA2DA80804C2DC3E50E30BFFBC /* UIEdgeInsets+Utils.swift */,
+				D80B96E2DD9EEC0B53A5C265068E4942 /* UIRectCorner+Short.swift */,
+				18C85D3B132A7781E2919A449DCFA11E /* UIView+Responder.swift */,
+				2B276022C5973757C89281838E1F2F0E /* UIView+Shadow.swift */,
+				594ED942EC46D15FA848356065E39632 /* UIView+Utils.swift */,
+				D09D24902C9852ABD709462E7602172A /* Support Files */,
+			);
+			name = SwiftEntryKit;
+			path = SwiftEntryKit;
+			sourceTree = "<group>";
+		};
+		35717D55F620D06F42DF455AA7D59365 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EF91381F6EBD0EF4B70557285F22C461 /* Foundation.framework */,
+				979D2EB9B9494D54B2E134D2979AD02C /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4C0621B7D6AC65FF278C535F1D838ED2 /* Support Files */ = {
+		58FB4788633E11DAFB6F46B6AD303F5C /* QuickLayout */ = {
 			isa = PBXGroup;
 			children = (
-				A40247B6E87FD11C0555E7C2B980060D /* Info.plist */,
-				AFC415DDF46DCADD76804CBC671ECFF1 /* JTAppleCalendar.modulemap */,
-				0BEE123C421F9F17CEC8B1A0DD2A8191 /* JTAppleCalendar.xcconfig */,
-				A10F21E7199EF3BB21BAB090C4F6691F /* JTAppleCalendar-dummy.m */,
-				304C6D8CE3CF203C175AA67E3DF06AC5 /* JTAppleCalendar-prefix.pch */,
-				A21E7CCE8AFB3A84072E5F8B65D7A3D0 /* JTAppleCalendar-umbrella.h */,
+				8F5453A272E80D1F864382C09272EFB9 /* QLCompatibility.swift */,
+				3959EE8F141D2AB902C2EFFE6EFF99FC /* QLUtils.swift */,
+				26B32A4C5F67BF3887A49297E78F0E1A /* UIView+QLContentWrap.swift */,
+				3ABA161B69CBC72F351EC9D6D4B6C894 /* UIView+QuickLayout.swift */,
+				AC0F6C92925FE56387EA5AE3BFC7F33E /* UIViewArray+QuickLayout.swift */,
+				C61C2C580C928A7F0976923477573CE0 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/JTAppleCalendar";
+			name = QuickLayout;
+			path = QuickLayout;
 			sourceTree = "<group>";
 		};
 		5A88B62574B7EE72A0E1CA924713581B /* Pods-Kegal TimerUITests */ = {
@@ -198,13 +471,15 @@
 			path = "Target Support Files/Pods-Kegal TimerUITests";
 			sourceTree = "<group>";
 		};
-		69AEC88AF775CEF082E6C9D4E7B53AD2 /* Products */ = {
+		5AD5F896850B01F1E37A09CEA4075375 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19DD34F2271AB71ED8AA82BF411284A2 /* JTAppleCalendar.framework */,
-				5953B2489F070C35812A4CD2D6867EF2 /* Pods_Kegal_Timer.framework */,
-				4C3863E77E8682A084C2E8A73D5BAABF /* Pods_Kegal_TimerTests.framework */,
-				81E3CC6A1168413889F1B71B76093D97 /* Pods_Kegal_TimerUITests.framework */,
+				8F2B2E727C165196BEA79D8A4D5AB1E0 /* JTAppleCalendar.framework */,
+				4108A6729555E7A7CF796EDA5F56A636 /* Pods_Kegal_Timer.framework */,
+				7E68427A57D31DB4A3BC628EDFB57DB0 /* Pods_Kegal_TimerTests.framework */,
+				C00F6522A3496312BFAA4C8A5F9E872F /* Pods_Kegal_TimerUITests.framework */,
+				32C36CA7EF82A2D3C4529BBE7DE9DF08 /* QuickLayout.framework */,
+				26B43A3005B42B9B86B4670FCAD620D6 /* SwiftEntryKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,9 +488,9 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B5DBE6CF39B1CBB8C27DA72426F8CF2F /* Pods */,
-				69AEC88AF775CEF082E6C9D4E7B53AD2 /* Products */,
+				DA233F56E0BF500291B4CF4B57B3EA8D /* Frameworks */,
+				0FE836A652641DEECAF61EC0D3298456 /* Pods */,
+				5AD5F896850B01F1E37A09CEA4075375 /* Products */,
 				D10AAC52780A19B594AD4A594D349C22 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -238,6 +513,31 @@
 			path = "Target Support Files/Pods-Kegal Timer";
 			sourceTree = "<group>";
 		};
+		83D9B3C44BD84E99505808C6DD44BF2E /* JTAppleCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				6090A780C04F9FCD13320833C94ADF0A /* CalendarEnums.swift */,
+				2AACFA28FD23ACA918D708F073DFDCDE /* CalendarStructs.swift */,
+				2D6BDF2A7D8A4E16F634DAB6B7B4DA12 /* GlobalFunctionsAndExtensions.swift */,
+				3D73A8750FE48F548B312A2A8E06DA15 /* InternalActionFunctions.swift */,
+				FB756DFE446469F83CC4FF98F96A6F66 /* InternalQueryFunctions.swift */,
+				56C61DDDF7CB9C488B053D23B558E24D /* JTAppleCalendarDelegateProtocol.swift */,
+				C1B0A3EEADAA05DE871B8D2EC8ED555B /* JTAppleCalendarLayout.swift */,
+				4D20586271645AF8998AB78508ED1E3A /* JTAppleCalendarLayoutProtocol.swift */,
+				51A1EE19ECA4268F54E791D9F07A4556 /* JTAppleCalendarVariables.swift */,
+				1E7124E204BADD6EDA5341B67474B9E8 /* JTAppleCalendarView.swift */,
+				CAB29F79C32F857035A883402E288259 /* JTAppleCell.swift */,
+				0AA4CA5A374BABE39E4A8555124C2DD5 /* JTAppleCollectionReusableView.swift */,
+				BB050CCD3EBE421A74251B28D64BCF24 /* JTCalendarProtocols.swift */,
+				3542454EDA4F06EE86B1E97E3DB8AD9F /* UICollectionViewDelegates.swift */,
+				44D78FDC870212A82AB3C1306ECC135D /* UIScrollViewDelegates.swift */,
+				5037EE3A94CE8B4D6C5F57B3C521E37E /* UserInteractionFunctions.swift */,
+				9CC51659B75128D1B95A2A3EEB5B3C0A /* Support Files */,
+			);
+			name = JTAppleCalendar;
+			path = JTAppleCalendar;
+			sourceTree = "<group>";
+		};
 		89F707B709DCF7A475CEA88FE44DAC02 /* Pods-Kegal TimerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,20 +556,46 @@
 			path = "Target Support Files/Pods-Kegal TimerTests";
 			sourceTree = "<group>";
 		};
-		B5DBE6CF39B1CBB8C27DA72426F8CF2F /* Pods */ = {
+		9CC51659B75128D1B95A2A3EEB5B3C0A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E536CEC1AF88CD74159B1DD61628C918 /* JTAppleCalendar */,
+				9E67A166BE3C0B3BA4E76431C559E0B5 /* Info.plist */,
+				B8989DBD2AA2ACDCA8FB4DAF87C3DD99 /* JTAppleCalendar.modulemap */,
+				FCA4C59DE3764859B4EFF56277C9FD22 /* JTAppleCalendar.xcconfig */,
+				F35CE569F5B4D1E0BEAF63C0EC422889 /* JTAppleCalendar-dummy.m */,
+				0BF438942840C2A9E1F3B136975184F2 /* JTAppleCalendar-prefix.pch */,
+				DE661A34403E1AC552D09922A3C834B4 /* JTAppleCalendar-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/JTAppleCalendar";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C61C2C580C928A7F0976923477573CE0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				44D5347904CF754D6785B84253F2574A /* iOS */,
+				BAE016571ED291451200408FB8D825AE /* Info.plist */,
+				EBD9FC1D8B5531BFEA2684DC998A3EE1 /* QuickLayout.modulemap */,
+				30E0DB663D090C05D30E584020A23B3C /* QuickLayout.xcconfig */,
+				6F6630AD0A9195C0B183BB872BDF3FC9 /* QuickLayout-dummy.m */,
+				2C39EB139648C52B503C0258803E6C7C /* QuickLayout-prefix.pch */,
+				85D9794F0FED261DF1464D7AE27C4C93 /* QuickLayout-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/QuickLayout";
+			sourceTree = "<group>";
+		};
+		D09D24902C9852ABD709462E7602172A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5B482EB8EC06467F80F63AC384777E9 /* Info.plist */,
+				A4D6D3F6CA7E083543F8814B87D6FD77 /* SwiftEntryKit.modulemap */,
+				B34A24A1DC0F1F4E1B638F5872560900 /* SwiftEntryKit.xcconfig */,
+				574AE5C1BDEE61EB0D4FF5CA50B4BBC6 /* SwiftEntryKit-dummy.m */,
+				50F0A68F541E5EE43655B17B81A0EFB3 /* SwiftEntryKit-prefix.pch */,
+				15EB73362B2DD4303B1F69EAD2BF54AA /* SwiftEntryKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftEntryKit";
 			sourceTree = "<group>";
 		};
 		D10AAC52780A19B594AD4A594D349C22 /* Targets Support Files */ = {
@@ -282,47 +608,47 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E536CEC1AF88CD74159B1DD61628C918 /* JTAppleCalendar */ = {
+		DA233F56E0BF500291B4CF4B57B3EA8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3426D14FB5C08BBD6272ABC8CBD01AB /* CalendarEnums.swift */,
-				11553AB698B72E93630850DC395D94C5 /* CalendarStructs.swift */,
-				FCF3F9A2BDEA400B6B86E1F3FB87D141 /* GlobalFunctionsAndExtensions.swift */,
-				BF94872E6C5C3C4B342551466A836BEC /* InternalActionFunctions.swift */,
-				33DCC9B301D596CEBB0DD8105B517113 /* InternalQueryFunctions.swift */,
-				CAB9B2CC3F9DB7F5724CC988C9543DEC /* JTAppleCalendarDelegateProtocol.swift */,
-				B57D91DB49D50CC07F02559C764C5807 /* JTAppleCalendarLayout.swift */,
-				B00603DB184CC3CBAAF53E7F46D6AC5D /* JTAppleCalendarLayoutProtocol.swift */,
-				70F192D3521916B02D21EC6B3A2ACAA2 /* JTAppleCalendarVariables.swift */,
-				59A827C4FB57592C28EDA273CC1A203A /* JTAppleCalendarView.swift */,
-				504E412E686DD5D5C62D90F609F198EB /* JTAppleCell.swift */,
-				9CEF845A69455A4A94C673E3BD05B2C5 /* JTAppleCollectionReusableView.swift */,
-				9D5364F77524433BC5C19E10FC745E8E /* JTCalendarProtocols.swift */,
-				F5F04D23C4665C25BDBF46EC968F27F9 /* UICollectionViewDelegates.swift */,
-				435272172B1F1E7E9C26DF0F162D5EF0 /* UIScrollViewDelegates.swift */,
-				0A6F4EECBD86B64A44448320B07E87AD /* UserInteractionFunctions.swift */,
-				4C0621B7D6AC65FF278C535F1D838ED2 /* Support Files */,
+				75373633343CC960FAAEBF8491A7BDF1 /* QuickLayout.framework */,
+				35717D55F620D06F42DF455AA7D59365 /* iOS */,
 			);
-			name = JTAppleCalendar;
-			path = JTAppleCalendar;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		133E05779B9800F907AA865A76168C96 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				314BFD8B3ECC6D5848291CB6CB790B17 /* SwiftEntryKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19E30864404677A63639D1ECEA4699F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40D83B8BA84B8B6DAB11A715E26E1368 /* QuickLayout-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C0C7FC1CB758F0E4DD8DA6E0199C0D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC380C7810B05381FD79618C50763FBA /* Pods-Kegal Timer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		396310F30906BDD37C5D025A79251E3C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4A8C82118DF95DA82582ACCEA6EA3660 /* JTAppleCalendar-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		423BA3AD9941097AAB3DBF6980771E21 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D6E076D66CB4853DC0BEC99B8CA9A9A6 /* Pods-Kegal Timer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,23 +671,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		60D95C0449DA2400D77F26137418D07A /* Pods-Kegal Timer */ = {
+		6F60377FF017A03D54F578016BB6F37E /* SwiftEntryKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 569C07164C08242B1FC32AF4AC4881C2 /* Build configuration list for PBXNativeTarget "Pods-Kegal Timer" */;
+			buildConfigurationList = 7686082E4288FEA927F853F6BEFD6598 /* Build configuration list for PBXNativeTarget "SwiftEntryKit" */;
 			buildPhases = (
-				423BA3AD9941097AAB3DBF6980771E21 /* Headers */,
-				A443E45AD659680C5DBE58E6741745BD /* Sources */,
-				48CC09406B47D40BCE1172180E3BE997 /* Frameworks */,
-				5A4CAE820D1B22B165C78E60A982850F /* Resources */,
+				133E05779B9800F907AA865A76168C96 /* Headers */,
+				3AA444F87218A13E719DF56C8F8F85FC /* Sources */,
+				3636B8EED9EA1BFE5C2EB55D4093CE43 /* Frameworks */,
+				8F3592FDCF7C574848D8EE7C56FAC507 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				66CE81B0CB1DC0848A6D1FBB36FF63AC /* PBXTargetDependency */,
+				902356BC1D558A209E60AB36B518AEA7 /* PBXTargetDependency */,
 			);
-			name = "Pods-Kegal Timer";
-			productName = "Pods-Kegal Timer";
-			productReference = 5953B2489F070C35812A4CD2D6867EF2 /* Pods_Kegal_Timer.framework */;
+			name = SwiftEntryKit;
+			productName = SwiftEntryKit;
+			productReference = 26B43A3005B42B9B86B4670FCAD620D6 /* SwiftEntryKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		791E7B776DC18FAFD9755F8BBA33233B /* JTAppleCalendar */ = {
@@ -379,7 +705,28 @@
 			);
 			name = JTAppleCalendar;
 			productName = JTAppleCalendar;
-			productReference = 19DD34F2271AB71ED8AA82BF411284A2 /* JTAppleCalendar.framework */;
+			productReference = 8F2B2E727C165196BEA79D8A4D5AB1E0 /* JTAppleCalendar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		920BA394687E47CB123639F7EEF81058 /* Pods-Kegal Timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B987E0E7936DB8C498C42F6BCF4BC5C3 /* Build configuration list for PBXNativeTarget "Pods-Kegal Timer" */;
+			buildPhases = (
+				1C0C7FC1CB758F0E4DD8DA6E0199C0D8 /* Headers */,
+				09D4807961D9E91C8E5E745CFB51F213 /* Sources */,
+				7409C2BDD78898DAC83AB04B43DC5DE8 /* Frameworks */,
+				55B0F01D005556622D89E54271BE6CEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2896DE48AA78251B007458CDA9D8A192 /* PBXTargetDependency */,
+				CC2F4219CE18422BFF9ACA645ABE730B /* PBXTargetDependency */,
+				018EA79F89B688D63EA26B55ED4DFDC5 /* PBXTargetDependency */,
+			);
+			name = "Pods-Kegal Timer";
+			productName = "Pods-Kegal Timer";
+			productReference = 4108A6729555E7A7CF796EDA5F56A636 /* Pods_Kegal_Timer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		94AC84366C9199A9E6E26417F12C580B /* Pods-Kegal TimerUITests */ = {
@@ -398,7 +745,25 @@
 			);
 			name = "Pods-Kegal TimerUITests";
 			productName = "Pods-Kegal TimerUITests";
-			productReference = 81E3CC6A1168413889F1B71B76093D97 /* Pods_Kegal_TimerUITests.framework */;
+			productReference = C00F6522A3496312BFAA4C8A5F9E872F /* Pods_Kegal_TimerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ABF14D2781216B75C3CFF7798F3CF066 /* QuickLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD68EC970D8AD33E2F6B1E41F00F2F8 /* Build configuration list for PBXNativeTarget "QuickLayout" */;
+			buildPhases = (
+				19E30864404677A63639D1ECEA4699F6 /* Headers */,
+				F4CBB7239D8141FCD0DA184733FB60D6 /* Sources */,
+				610E5D449AAC2082A2EE51B25DEB8BE6 /* Frameworks */,
+				738D77509242A8A8344E2D6B538B04BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickLayout;
+			productName = QuickLayout;
+			productReference = 32C36CA7EF82A2D3C4529BBE7DE9DF08 /* QuickLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E87B820BEC252FBD76E0D3EE84B5E38F /* Pods-Kegal TimerTests */ = {
@@ -417,7 +782,7 @@
 			);
 			name = "Pods-Kegal TimerTests";
 			productName = "Pods-Kegal TimerTests";
-			productReference = 4C3863E77E8682A084C2E8A73D5BAABF /* Pods_Kegal_TimerTests.framework */;
+			productReference = 7E68427A57D31DB4A3BC628EDFB57DB0 /* Pods_Kegal_TimerTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -437,14 +802,16 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 69AEC88AF775CEF082E6C9D4E7B53AD2 /* Products */;
+			productRefGroup = 5AD5F896850B01F1E37A09CEA4075375 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				791E7B776DC18FAFD9755F8BBA33233B /* JTAppleCalendar */,
-				60D95C0449DA2400D77F26137418D07A /* Pods-Kegal Timer */,
+				920BA394687E47CB123639F7EEF81058 /* Pods-Kegal Timer */,
 				E87B820BEC252FBD76E0D3EE84B5E38F /* Pods-Kegal TimerTests */,
 				94AC84366C9199A9E6E26417F12C580B /* Pods-Kegal TimerUITests */,
+				ABF14D2781216B75C3CFF7798F3CF066 /* QuickLayout */,
+				6F60377FF017A03D54F578016BB6F37E /* SwiftEntryKit */,
 			);
 		};
 /* End PBXProject section */
@@ -457,7 +824,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A4CAE820D1B22B165C78E60A982850F /* Resources */ = {
+		55B0F01D005556622D89E54271BE6CEE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -465,6 +832,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6504F5AB1C4E5325630F1B4914FC60F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		738D77509242A8A8344E2D6B538B04BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3592FDCF7C574848D8EE7C56FAC507 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -481,6 +862,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		09D4807961D9E91C8E5E745CFB51F213 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C630A38BA57C8197E9B5F9DF3D8A63 /* Pods-Kegal Timer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1EAB681C0A7F1A93441D57BFC66F8B81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -513,11 +902,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A443E45AD659680C5DBE58E6741745BD /* Sources */ = {
+		3AA444F87218A13E719DF56C8F8F85FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DB1C3A3161086BB2126BC509026AF20 /* Pods-Kegal Timer-dummy.m in Sources */,
+				343FD2A887C7DA045904F6CBC7B8BF0B /* EKAccessoryNoteMessageView.swift in Sources */,
+				E5AF7922B5A81E412FE026F96CEAA78C /* EKAlertMessage.swift in Sources */,
+				7678F0DEABDC4F01601E67B61B43DC02 /* EKAlertMessageView.swift in Sources */,
+				F9C21F3C77AF667C261F93A7AE05777C /* EKAttributes+Animation.swift in Sources */,
+				EB91EA6E39D89AEEF897E99761A88D66 /* EKAttributes+BackgroundStyle.swift in Sources */,
+				35F49BCAFF0DB6AB49F69D9108935637 /* EKAttributes+Duration.swift in Sources */,
+				CA7A1C98FA30A06FD424199FA877A6BA /* EKAttributes+FrameStyle.swift in Sources */,
+				F7E311D9F659DA649BDCD0C42CD79564 /* EKAttributes+HapticFeedback.swift in Sources */,
+				ACE7C7AFEB9AF54CDC0967157E5AF50D /* EKAttributes+LifecycleActions.swift in Sources */,
+				7194C42E0064E201AE3E6C9471BFF4ED /* EKAttributes+PopBehavior.swift in Sources */,
+				BBE0F1E4D881713EE105CAC7517D75D0 /* EKAttributes+Position.swift in Sources */,
+				9499F2AAAEE9527ABB95981C0C6110FF /* EKAttributes+PositionConstraints.swift in Sources */,
+				810C31AA066FFCDD2D7D3CAAA9C4B382 /* EKAttributes+Precedence.swift in Sources */,
+				1624339040AB69266E577C26E805A12F /* EKAttributes+Presets.swift in Sources */,
+				74A30443258B270B06ECF932EF4289E6 /* EKAttributes+Scroll.swift in Sources */,
+				7B2C9A05ECCB62E5198289F8D56C8600 /* EKAttributes+Shadow.swift in Sources */,
+				61F23429F1F306F65B584FA721CA3479 /* EKAttributes+StatusBar.swift in Sources */,
+				C768AB5266AABB8FC98F9E44EA95006D /* EKAttributes+UserInteraction.swift in Sources */,
+				556CA2E4376DEAA72CBBDB63EB48B54B /* EKAttributes+Validations.swift in Sources */,
+				EB72234C7F5091835B6E541644BEA4D3 /* EKAttributes+WindowLevel.swift in Sources */,
+				8F0F67AF4AD92352B319518E737B02BA /* EKAttributes.swift in Sources */,
+				2ED055D9C57629BFD7F74FD0966B789C /* EKBackgroundView.swift in Sources */,
+				BF74F89F2C4ECC053442CC28ADC37453 /* EKButtonBarView.swift in Sources */,
+				DA2598DBE86F9C567329F889643DF251 /* EKButtonView.swift in Sources */,
+				C591F293E566EFECEEF6AB8DC16DC4F6 /* EKContentView.swift in Sources */,
+				BF029FF8D5E7EB74F5DD6C9B97704982 /* EKEntryView.swift in Sources */,
+				FE4FC33DF7A03417772BCF0055397878 /* EKFormMessageView.swift in Sources */,
+				AA8A4A592A51180C1D179BABE056829A /* EKImageNoteMessageView.swift in Sources */,
+				27C1BFFACB9FB7D453CCBCD035AB301A /* EKMessageContentView.swift in Sources */,
+				C862A81B976DC35B9196CAB0F8E27939 /* EKNoteMessageView.swift in Sources */,
+				E0FF1B98B9D6D089D18FEC6A199FB7CB /* EKNotificationMessage.swift in Sources */,
+				ABD7A14B889800435A37DD1D872BF74F /* EKNotificationMessageView.swift in Sources */,
+				01ADC7E5DBE1263291361EC776AB2947 /* EKPopUpMessage.swift in Sources */,
+				D8C7387208FA1F578D31812281ED4A12 /* EKPopUpMessageView.swift in Sources */,
+				83D5F7B7863E1CD7B089F4513AF7B19D /* EKProcessingNoteMessageView.swift in Sources */,
+				A6733946C606E92E75D0C08605F40E38 /* EKProperty.swift in Sources */,
+				675FB89256B6EC9A75E3AA0AA800390B /* EKRatingMessage.swift in Sources */,
+				57923154DD61D9F83A9FDFACA4A8236B /* EKRatingMessageView.swift in Sources */,
+				66FCC093D61ED88DED8F3182EB37A53E /* EKRatingSymbolsContainerView.swift in Sources */,
+				6B105570198556866D7D1FAC4D753F1C /* EKRatingSymbolView.swift in Sources */,
+				C4E721771E9A76F3CE3D7E2CE4643131 /* EKRootViewController.swift in Sources */,
+				72BE362D30F89F4EC8BE9D55B6E90537 /* EKSimpleMessage.swift in Sources */,
+				7D8CEDBCAFE60526686EECC002731532 /* EKSimpleMessageView.swift in Sources */,
+				D873950D612F5B7E34FCEB0754CFEE56 /* EKStyleView.swift in Sources */,
+				11CE7539CD8265DD0957D7AB917F4990 /* EKTextField.swift in Sources */,
+				B19C7487BF8804CBDFB6727286FE6BD8 /* EKWindow.swift in Sources */,
+				46420A75A9D1AE886BFB5B223466DC65 /* EKWindowProvider.swift in Sources */,
+				F1C2C26D5C174DBBEEFC3F80F11FA458 /* EKWrapperView.swift in Sources */,
+				48041D8F17E46CF10EA3D8818F5E5FB3 /* EKXStatusBarMessageView.swift in Sources */,
+				4AD5512560A48C0D19887329AE7CA4AA /* EntryAppearanceDescriptor.swift in Sources */,
+				F6E6B0DF2173A5DE105A33FF16D9BAD4 /* EntryCachingHeuristic.swift in Sources */,
+				57FB0BEAA651A935ECE4E6260B12E721 /* GradientView.swift in Sources */,
+				D0E8FF70F61E9F199D240476B11373AA /* HapticFeedbackGenerator.swift in Sources */,
+				81894E0F5DED43278ECAF9E2DBA4E614 /* SwiftEntryKit-dummy.m in Sources */,
+				E4FCC01EE6B676FAC87E7A6DA5EAD34C /* SwiftEntryKit.swift in Sources */,
+				C16351690ABA0358103C886A3223ABD6 /* UIApplication+EKAppearance.swift in Sources */,
+				84701B0C75C54D63D917211B5AFF4D2C /* UIEdgeInsets+Utils.swift in Sources */,
+				49E162A34D243408EFA8F095212A2408 /* UIRectCorner+Short.swift in Sources */,
+				F88DF1CEF53CCF0FC658E4E816BC846C /* UIView+Responder.swift in Sources */,
+				E43BC69E98E9912858045EC42EA54FE5 /* UIView+Shadow.swift in Sources */,
+				BA9B224588EABA49664D70782070CB77 /* UIView+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,33 +978,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4CBB7239D8141FCD0DA184733FB60D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35B1ADE9B95994372681834AD8043DC2 /* QLCompatibility.swift in Sources */,
+				C7EEB8A17A34D5F55E51F2A54036341C /* QLUtils.swift in Sources */,
+				89720D631A48AD090D5677F6EC6DEEBA /* QuickLayout-dummy.m in Sources */,
+				9333E1242C8FFE36D37D6F95B01B784D /* UIView+QLContentWrap.swift in Sources */,
+				7DE9C1DDC9A6C08D0618B3B674E137EE /* UIView+QuickLayout.swift in Sources */,
+				E0560FFB028BEA5E9A4B89E16B4EBCE2 /* UIViewArray+QuickLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		50883FDD385B70B97C71879B8A15C5E0 /* PBXTargetDependency */ = {
+		018EA79F89B688D63EA26B55ED4DFDC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-Kegal Timer";
-			target = 60D95C0449DA2400D77F26137418D07A /* Pods-Kegal Timer */;
-			targetProxy = 27337D09E97375CF26046B36C7985CD3 /* PBXContainerItemProxy */;
+			name = SwiftEntryKit;
+			target = 6F60377FF017A03D54F578016BB6F37E /* SwiftEntryKit */;
+			targetProxy = 2EA69A735807D490B5AC8C745C51148B /* PBXContainerItemProxy */;
 		};
-		66CE81B0CB1DC0848A6D1FBB36FF63AC /* PBXTargetDependency */ = {
+		2896DE48AA78251B007458CDA9D8A192 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JTAppleCalendar;
 			target = 791E7B776DC18FAFD9755F8BBA33233B /* JTAppleCalendar */;
-			targetProxy = 5DC6560F853DAE19C2996105A89AC5E2 /* PBXContainerItemProxy */;
+			targetProxy = 6C7BEFB2FC5B6A2950CA65C879816BAC /* PBXContainerItemProxy */;
+		};
+		50883FDD385B70B97C71879B8A15C5E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Kegal Timer";
+			target = 920BA394687E47CB123639F7EEF81058 /* Pods-Kegal Timer */;
+			targetProxy = 27337D09E97375CF26046B36C7985CD3 /* PBXContainerItemProxy */;
 		};
 		77E2AFC523D4B838CEE10B68D219F1A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Kegal Timer";
-			target = 60D95C0449DA2400D77F26137418D07A /* Pods-Kegal Timer */;
+			target = 920BA394687E47CB123639F7EEF81058 /* Pods-Kegal Timer */;
 			targetProxy = 31C1904CE01999F21C7FCD4D61690D5F /* PBXContainerItemProxy */;
+		};
+		902356BC1D558A209E60AB36B518AEA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickLayout;
+			target = ABF14D2781216B75C3CFF7798F3CF066 /* QuickLayout */;
+			targetProxy = 00D33688980BA6FA4E5CC872DC1B0AC3 /* PBXContainerItemProxy */;
+		};
+		CC2F4219CE18422BFF9ACA645ABE730B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickLayout;
+			target = ABF14D2781216B75C3CFF7798F3CF066 /* QuickLayout */;
+			targetProxy = 6B9C1962E807B651AA60FA0565FE7452 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0FFDBAF7D689DEC14A33CF87292872EC /* Debug */ = {
+		021CC413406459C3E11A1365E011CDE0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BEE123C421F9F17CEC8B1A0DD2A8191 /* JTAppleCalendar.xcconfig */;
+			baseConfigurationReference = B34A24A1DC0F1F4E1B638F5872560900 /* SwiftEntryKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -566,29 +1046,30 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JTAppleCalendar/JTAppleCalendar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JTAppleCalendar/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftEntryKit/SwiftEntryKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftEntryKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/JTAppleCalendar/JTAppleCalendar.modulemap";
-				PRODUCT_MODULE_NAME = JTAppleCalendar;
-				PRODUCT_NAME = JTAppleCalendar;
+				MODULEMAP_FILE = "Target Support Files/SwiftEntryKit/SwiftEntryKit.modulemap";
+				PRODUCT_MODULE_NAME = SwiftEntryKit;
+				PRODUCT_NAME = SwiftEntryKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		16BC524EDE752B9BB72D7E267116A89A /* Debug */ = {
+		0AA3B91655AF95B1F49159CD8085CD89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -641,7 +1122,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -654,7 +1135,190 @@
 			};
 			name = Debug;
 		};
-		1DF68876DF2AD07A12482477C1AA7DB8 /* Release */ = {
+		0DE9883538EDEC50F3980A5890BC07DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B34A24A1DC0F1F4E1B638F5872560900 /* SwiftEntryKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftEntryKit/SwiftEntryKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftEntryKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftEntryKit/SwiftEntryKit.modulemap";
+				PRODUCT_MODULE_NAME = SwiftEntryKit;
+				PRODUCT_NAME = SwiftEntryKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0FFDBAF7D689DEC14A33CF87292872EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCA4C59DE3764859B4EFF56277C9FD22 /* JTAppleCalendar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JTAppleCalendar/JTAppleCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JTAppleCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/JTAppleCalendar/JTAppleCalendar.modulemap";
+				PRODUCT_MODULE_NAME = JTAppleCalendar;
+				PRODUCT_NAME = JTAppleCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1D1ECC84FA515C6FA488DD25B2D4D10D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4F4760020A9AB224DA0A44F1DDDE134 /* Pods-Kegal TimerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kegal TimerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kegal TimerTests/Pods-Kegal TimerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		794750019D8087AFCA339DBA09355F75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C699087E88FD1556F7EB128AE75AE0E8 /* Pods-Kegal Timer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kegal Timer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7DEE1F4CC3B72EC9AB6A1127B0DE8FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30E0DB663D090C05D30E584020A23B3C /* QuickLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QuickLayout/QuickLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QuickLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/QuickLayout/QuickLayout.modulemap";
+				PRODUCT_MODULE_NAME = QuickLayout;
+				PRODUCT_NAME = QuickLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8000995DA02063BF3777393CD52061DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -704,7 +1368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -716,7 +1380,43 @@
 			};
 			name = Release;
 		};
-		2460D28D6B70E3C35B9AC729CB42AC43 /* Release */ = {
+		AD086D3CDB18469D4234EC5D67CA7AE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30E0DB663D090C05D30E584020A23B3C /* QuickLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QuickLayout/QuickLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QuickLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/QuickLayout/QuickLayout.modulemap";
+				PRODUCT_MODULE_NAME = QuickLayout;
+				PRODUCT_NAME = QuickLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B13EAF8EA5026A02FE2DA79FDFA238A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B636D59CECD2D0DE9C22323B13AB3484 /* Pods-Kegal TimerUITests.release.xcconfig */;
 			buildSettings = {
@@ -733,7 +1433,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Kegal TimerUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -755,46 +1455,7 @@
 			};
 			name = Release;
 		};
-		303ACF548AF6A6B71E1879F54252EEE2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C699087E88FD1556F7EB128AE75AE0E8 /* Pods-Kegal Timer.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Kegal Timer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		52B69A6E32A74965BEBEDD2FEA01AA00 /* Debug */ = {
+		B276B7F6D411915EB0F64980E037F3E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA965F40A64B9F5E1DE932005B4B21D6 /* Pods-Kegal TimerUITests.debug.xcconfig */;
 			buildSettings = {
@@ -811,7 +1472,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Kegal TimerUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -832,47 +1493,9 @@
 			};
 			name = Debug;
 		};
-		5F816CC02B5EFE31AC8391A90B74DE86 /* Debug */ = {
+		BE8C53A3BEAB1C3E4E2B38C322C9937A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B339B2AA2AEE0140819A3FD2D0044794 /* Pods-Kegal Timer.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Kegal Timer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B31A1F704F53AE882DEBC5F071F8FC25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4F4760020A9AB224DA0A44F1DDDE134 /* Pods-Kegal TimerTests.release.xcconfig */;
+			baseConfigurationReference = 5FEB8CAE84B3BEB40A9DFA23D680E276 /* Pods-Kegal TimerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -887,7 +1510,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Kegal TimerTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -903,15 +1526,14 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		C2C874C0D84017218C1B6B2888CA534E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BEE123C421F9F17CEC8B1A0DD2A8191 /* JTAppleCalendar.xcconfig */;
+			baseConfigurationReference = FCA4C59DE3764859B4EFF56277C9FD22 /* JTAppleCalendar.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -945,9 +1567,9 @@
 			};
 			name = Release;
 		};
-		C60A1D2993BDC6388F7C903720C5CDD2 /* Debug */ = {
+		DA14D62267EEAF22E24E051AC9B9A8CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FEB8CAE84B3BEB40A9DFA23D680E276 /* Pods-Kegal TimerTests.debug.xcconfig */;
+			baseConfigurationReference = B339B2AA2AEE0140819A3FD2D0044794 /* Pods-Kegal Timer.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -960,16 +1582,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Kegal TimerTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kegal Timer/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Kegal TimerTests/Pods-Kegal TimerTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -989,8 +1611,17 @@
 		044A6C77D669D0C506F718CF41C5FFB4 /* Build configuration list for PBXNativeTarget "Pods-Kegal TimerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C60A1D2993BDC6388F7C903720C5CDD2 /* Debug */,
-				B31A1F704F53AE882DEBC5F071F8FC25 /* Release */,
+				BE8C53A3BEAB1C3E4E2B38C322C9937A /* Debug */,
+				1D1ECC84FA515C6FA488DD25B2D4D10D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BD68EC970D8AD33E2F6B1E41F00F2F8 /* Build configuration list for PBXNativeTarget "QuickLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DEE1F4CC3B72EC9AB6A1127B0DE8FB3 /* Debug */,
+				AD086D3CDB18469D4234EC5D67CA7AE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -998,17 +1629,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16BC524EDE752B9BB72D7E267116A89A /* Debug */,
-				1DF68876DF2AD07A12482477C1AA7DB8 /* Release */,
+				0AA3B91655AF95B1F49159CD8085CD89 /* Debug */,
+				8000995DA02063BF3777393CD52061DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		569C07164C08242B1FC32AF4AC4881C2 /* Build configuration list for PBXNativeTarget "Pods-Kegal Timer" */ = {
+		7686082E4288FEA927F853F6BEFD6598 /* Build configuration list for PBXNativeTarget "SwiftEntryKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5F816CC02B5EFE31AC8391A90B74DE86 /* Debug */,
-				303ACF548AF6A6B71E1879F54252EEE2 /* Release */,
+				0DE9883538EDEC50F3980A5890BC07DA /* Debug */,
+				021CC413406459C3E11A1365E011CDE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1016,8 +1647,17 @@
 		A873925F2514D0A1E7066485EED73633 /* Build configuration list for PBXNativeTarget "Pods-Kegal TimerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52B69A6E32A74965BEBEDD2FEA01AA00 /* Debug */,
-				2460D28D6B70E3C35B9AC729CB42AC43 /* Release */,
+				B276B7F6D411915EB0F64980E037F3E1 /* Debug */,
+				B13EAF8EA5026A02FE2DA79FDFA238A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B987E0E7936DB8C498C42F6BCF4BC5C3 /* Build configuration list for PBXNativeTarget "Pods-Kegal Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA14D62267EEAF22E24E051AC9B9A8CA /* Debug */,
+				794750019D8087AFCA339DBA09355F75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
