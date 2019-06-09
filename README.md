@@ -9,6 +9,7 @@ You can find the live app [here](https://itunes.apple.com/gb/app/kegal-trainer/i
 - Swift
 - Core Data
 - [JTAppleCalendar](https://github.com/patchthecode/JTAppleCalendar)
+- [SwiftEntryKit](https://github.com/huri000/SwiftEntryKit)
 
 ## Authors
 Alex Marchant
