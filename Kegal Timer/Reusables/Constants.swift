@@ -23,6 +23,7 @@ struct Constants {
     //  User Default Keys
     static let appLaunchCount = "AppLaunchCount"
     static let launchedBefore = "LaunchedBefore"
+    static let levelsCompleted = "LevelsCompleted"
     
     //  Font Styling
     static let fontName = "Avenir Next Condensed"

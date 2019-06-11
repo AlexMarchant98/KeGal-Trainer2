@@ -28,6 +28,12 @@ class StageTableViewController: UITableViewController, Storyboarded {
         getStages()
     }
     
+    override func viewDidLoad() {
+        title = "Stages"
+        
+        navigationItem.setLeftBarButton(nil, animated: false)
+    }
+    
     func getStages()
     {
         if let context = container?.viewContext {

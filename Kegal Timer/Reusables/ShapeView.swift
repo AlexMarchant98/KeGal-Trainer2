@@ -41,7 +41,7 @@ class ShapeView: UIView {
         // Configure the CAShapeLayer using all our settings.
         layer.strokeColor = strokeColor.cgColor
         layer.fillColor = fillColor.cgColor
-        layer.lineWidth = 5
+        layer.lineWidth = 20
         layer.path = pathCopy.cgPath
     }
     

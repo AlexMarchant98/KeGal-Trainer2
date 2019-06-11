@@ -11,7 +11,7 @@ import CoreData
 
 @IBDesignable
 class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, Storyboarded {
-
+    
     weak var coordinator: TimerCoordinator?
     
     @IBOutlet weak var timerButton: TimerButton!
@@ -298,9 +298,13 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
             if let context = container?.viewContext {
                 Level.completeLevel(context, _level!)
                 
+                RequestReview.levelsRequestReview()
+                
                 if(Level.unlockNextLevel(context, Int32(_stage), currentLevelOrder: Int32(_levelOrder)) == nil)
                 {
                     let stage = Stage.unlockNextStage(context, Int32(_stage))
+                    
+                    RequestReview.stagesRequestReview()
                     
                     do {
                         try Level.unlockFirstLevelOfStage(context, stage!.stage)

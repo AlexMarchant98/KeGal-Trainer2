@@ -1237,7 +1237,7 @@
         <scene sceneID="Tsr-Qc-lH3">
             <objects>
                 <viewController storyboardIdentifier="WorkoutCompleteViewController" id="TtX-aI-GUm" customClass="WorkoutCompleteViewController" customModule="Kegal_Timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2ps-T4-mKg" customClass="WelcomeView" customModule="Unwrap" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="2ps-T4-mKg" customClass="WelcomeView" customModule="Kegal_Timer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

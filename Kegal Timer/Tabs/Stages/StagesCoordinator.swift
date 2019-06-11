@@ -13,7 +13,6 @@ class StagesCoordinator: Coordinator {
     
     init() {
         self.navigationController = UINavigationController()
-        self.navigationController.setNavigationBarHidden(true, animated: false)
         
         let viewController = StageTableViewController.instantiate()
         viewController.tabBarItem = UITabBarItem(title: "Stages", image: UIImage(named: "Challenges"), tag: 0)

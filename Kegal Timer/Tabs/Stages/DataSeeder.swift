@@ -37,7 +37,8 @@ public class DataSeeder : IDataSeeder {
             (stage: 2, unlocked: false, completed: false),
             (stage: 3, unlocked: false, completed: false),
             (stage: 4, unlocked: false, completed: false),
-            (stage: 5, unlocked: false, completed: false)
+            (stage: 5, unlocked: false, completed: false),
+            (stage: 6, unlocked: false, completed: false)
         ]
         
         for stage in stages {
@@ -52,6 +53,7 @@ public class DataSeeder : IDataSeeder {
         let thirdStage = try! Stage.getStageByStageNumber(context, 3)
         let fourthStage = try! Stage.getStageByStageNumber(context, 4)
         let fifthStage = try! Stage.getStageByStageNumber(context, 5)
+        let sixthStage = try! Stage.getStageByStageNumber(context, 6)
         
         let levels = [
             (level: "1.1", unlocked: true, completed: false, order: 0, stage: firstStage!),
@@ -117,7 +119,34 @@ public class DataSeeder : IDataSeeder {
             (level: "5.8", unlocked: false, completed: false, order: 7, stage: fifthStage!),
             (level: "5.9", unlocked: false, completed: false, order: 8, stage: fifthStage!),
             (level: "5.10", unlocked: false, completed: false, order: 9, stage: fifthStage!),
-
+            (level: "5.11", unlocked: false, completed: false, order: 10, stage: fifthStage!),
+            (level: "5.12", unlocked: false, completed: false, order: 11, stage: fifthStage!),
+            (level: "5.13", unlocked: false, completed: false, order: 12, stage: fifthStage!),
+            (level: "5.14", unlocked: false, completed: false, order: 13, stage: fifthStage!),
+            (level: "5.15", unlocked: false, completed: false, order: 14, stage: fifthStage!),
+            (level: "5.16", unlocked: false, completed: false, order: 15, stage: fifthStage!),
+            (level: "5.17", unlocked: false, completed: false, order: 16, stage: fifthStage!),
+            (level: "5.18", unlocked: false, completed: false, order: 17, stage: fifthStage!),
+            (level: "5.19", unlocked: false, completed: false, order: 18, stage: fifthStage!),
+            (level: "5.20", unlocked: false, completed: false, order: 19, stage: fifthStage!),
+            
+            (level: "6.1", unlocked: false, completed: false, order: 0, stage: sixthStage!),
+            (level: "6.2", unlocked: false, completed: false, order: 1, stage: sixthStage!),
+            (level: "6.3", unlocked: false, completed: false, order: 2, stage: sixthStage!),
+            (level: "6.4", unlocked: false, completed: false, order: 3, stage: sixthStage!),
+            (level: "6.5", unlocked: false, completed: false, order: 4, stage: sixthStage!),
+            (level: "6.6", unlocked: false, completed: false, order: 5, stage: sixthStage!),
+            (level: "6.7", unlocked: false, completed: false, order: 6, stage: sixthStage!),
+            (level: "6.8", unlocked: false, completed: false, order: 7, stage: sixthStage!),
+            (level: "6.9", unlocked: false, completed: false, order: 8, stage: sixthStage!),
+            (level: "6.10", unlocked: false, completed: false, order: 9, stage: sixthStage!),
+            (level: "6.11", unlocked: false, completed: false, order: 10, stage: sixthStage!),
+            (level: "6.12", unlocked: false, completed: false, order: 11, stage: sixthStage!),
+            (level: "6.13", unlocked: false, completed: false, order: 12, stage: sixthStage!),
+            (level: "6.14", unlocked: false, completed: false, order: 13, stage: sixthStage!),
+            (level: "6.15", unlocked: false, completed: false, order: 14, stage: sixthStage!),
+            (level: "6.16", unlocked: false, completed: false, order: 15, stage: sixthStage!)
+            
         ]
         
         for level in levels {
@@ -190,8 +219,36 @@ public class DataSeeder : IDataSeeder {
         let level5_8 = try! Level.getLevel(context, "5.8")
         let level5_9 = try! Level.getLevel(context, "5.9")
         let level5_10 = try! Level.getLevel(context, "5.10")
+        let level5_11 = try! Level.getLevel(context, "5.11")
+        let level5_12 = try! Level.getLevel(context, "5.12")
+        let level5_13 = try! Level.getLevel(context, "5.13")
+        let level5_14 = try! Level.getLevel(context, "5.14")
+        let level5_15 = try! Level.getLevel(context, "5.15")
+        let level5_16 = try! Level.getLevel(context, "5.16")
+        let level5_17 = try! Level.getLevel(context, "5.17")
+        let level5_18 = try! Level.getLevel(context, "5.18")
+        let level5_19 = try! Level.getLevel(context, "5.19")
+        let level5_20 = try! Level.getLevel(context, "5.20")
+        
+        let level6_1 = try! Level.getLevel(context, "6.1")
+        let level6_2 = try! Level.getLevel(context, "6.2")
+        let level6_3 = try! Level.getLevel(context, "6.3")
+        let level6_4 = try! Level.getLevel(context, "6.4")
+        let level6_5 = try! Level.getLevel(context, "6.5")
+        let level6_6 = try! Level.getLevel(context, "6.6")
+        let level6_7 = try! Level.getLevel(context, "6.7")
+        let level6_8 = try! Level.getLevel(context, "6.8")
+        let level6_9 = try! Level.getLevel(context, "6.9")
+        let level6_10 = try! Level.getLevel(context, "6.10")
+        let level6_11 = try! Level.getLevel(context, "6.11")
+        let level6_12 = try! Level.getLevel(context, "6.12")
+        let level6_13 = try! Level.getLevel(context, "6.13")
+        let level6_14 = try! Level.getLevel(context, "6.14")
+        let level6_15 = try! Level.getLevel(context, "6.15")
+        let level6_16 = try! Level.getLevel(context, "6.16")
         
         let workouts = [
+            
             /// Build strength with the basic flex
             (repCount: 3, repLength: 2, restLength: 3, level: level1_1),
             (repCount: 4, repLength: 2, restLength: 3, level: level1_2),
@@ -260,7 +317,35 @@ public class DataSeeder : IDataSeeder {
             (repCount: 4, repLength: 10, restLength: 6, level: level5_8),
             (repCount: 4, repLength: 12, restLength: 6, level: level5_9),
             (repCount: 4, repLength: 12, restLength: 5, level: level5_10),
-
+            (repCount: 4, repLength: 12, restLength: 5, level: level5_11),
+            (repCount: 4, repLength: 12, restLength: 4, level: level5_12),
+            (repCount: 5, repLength: 9, restLength: 5, level: level5_13),
+            (repCount: 5, repLength: 9, restLength: 4, level: level5_14),
+            (repCount: 5, repLength: 10, restLength: 4, level: level5_15),
+            (repCount: 3, repLength: 15, restLength: 6, level: level5_16),
+            (repCount: 3, repLength: 15, restLength: 6, level: level5_17),
+            (repCount: 3, repLength: 15, restLength: 5, level: level5_18),
+            (repCount: 4, repLength: 15, restLength: 5, level: level5_19),
+            (repCount: 4, repLength: 15, restLength: 4, level: level5_20),
+            
+            /// Begin mixing up differeent session types
+            (repCount: 10, repLength: 6, restLength: 6, level: level6_1),
+            (repCount: 25, repLength: 1, restLength: 1, level: level6_2),
+            (repCount: 20, repLength: 2, restLength: 1, level: level6_3),
+            (repCount: 5, repLength: 13, restLength: 6, level: level6_4),
+            (repCount: 8, repLength: 5, restLength: 3, level: level6_5),
+            (repCount: 13, repLength: 7, restLength: 5, level: level6_6),
+            (repCount: 12, repLength: 3, restLength: 2, level: level6_7),
+            (repCount: 6, repLength: 8, restLength: 6, level: level6_8),
+            (repCount: 6, repLength: 8, restLength: 5, level: level6_9),
+            (repCount: 12, repLength: 2, restLength: 1, level: level6_10),
+            (repCount: 8, repLength: 5, restLength: 2, level: level6_11),
+            (repCount: 3, repLength: 15, restLength: 4, level: level6_12),
+            (repCount: 24, repLength: 2, restLength: 2, level: level6_13),
+            (repCount: 6, repLength: 9, restLength: 6, level: level6_14),
+            (repCount: 7, repLength: 12, restLength: 5, level: level6_15),
+            (repCount: 10, repLength: 8, restLength: 6, level: level6_16)
+            
         ]
         
         for workout in workouts {
