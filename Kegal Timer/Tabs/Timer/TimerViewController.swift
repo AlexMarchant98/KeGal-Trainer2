@@ -373,6 +373,8 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         timerButton.animateableTrackLayer.removeAllAnimations()
         
         focusCollectionView()
+        
+        _restLength = userPreferences.integer(forKey: Constants.restLength)
     }
     
     private func focusCollectionView()

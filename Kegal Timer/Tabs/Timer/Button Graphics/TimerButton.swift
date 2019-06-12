@@ -167,6 +167,8 @@ class TimerButton: UIButton {
     
     public func animateCircle()
     {
+        _restLength = userPreferences.integer(forKey: Constants.restLength)
+        
         animateableTrackLayer.strokeStart = 0.0
         animateableTrackLayer.strokeEnd = 0.0
         animateableTrackLayer.speed = 1.0

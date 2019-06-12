@@ -971,7 +971,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps Per Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh5-uK-3Y4">
-                                                    <rect key="frame" x="16.000000000000007" y="12" width="118.66666666666669" height="20"/>
+                                                    <rect key="frame" x="16" y="12" width="175" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -988,7 +988,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="N9E-nG-Tdv" secondAttribute="trailing" constant="16" id="T2l-mF-i6W"/>
                                                 <constraint firstItem="qh5-uK-3Y4" firstAttribute="centerY" secondItem="bUb-uZ-45Q" secondAttribute="centerY" id="WFW-Ch-9pI"/>
                                                 <constraint firstItem="N9E-nG-Tdv" firstAttribute="leading" secondItem="bUb-uZ-45Q" secondAttribute="centerX" id="gae-Bf-u50"/>
-                                                <constraint firstItem="N9E-nG-Tdv" firstAttribute="leading" secondItem="qh5-uK-3Y4" secondAttribute="trailing" constant="72.5" id="kpL-de-kyx"/>
+                                                <constraint firstItem="N9E-nG-Tdv" firstAttribute="leading" secondItem="qh5-uK-3Y4" secondAttribute="trailing" constant="16" id="kpL-de-kyx"/>
                                                 <constraint firstItem="qh5-uK-3Y4" firstAttribute="leading" secondItem="bUb-uZ-45Q" secondAttribute="leading" constant="16" id="zpi-BE-GgL"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1001,7 +1001,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rep Length (secs)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9h-N2-Q2q">
-                                                    <rect key="frame" x="16" y="11.333333333333336" width="159.66666666666666" height="21"/>
+                                                    <rect key="frame" x="16" y="11.333333333333336" width="175" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1016,7 +1016,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Zca-3D-F3a" secondAttribute="trailing" constant="16" id="KR9-Xh-hRr"/>
                                                 <constraint firstItem="z9h-N2-Q2q" firstAttribute="leading" secondItem="Fxj-a7-9SD" secondAttribute="leading" constant="16" id="KZ6-bG-cdB"/>
-                                                <constraint firstItem="Zca-3D-F3a" firstAttribute="leading" secondItem="z9h-N2-Q2q" secondAttribute="trailing" constant="31.5" id="cCx-o8-hF4"/>
+                                                <constraint firstItem="Zca-3D-F3a" firstAttribute="leading" secondItem="z9h-N2-Q2q" secondAttribute="trailing" constant="16" id="cCx-o8-hF4"/>
                                                 <constraint firstItem="Zca-3D-F3a" firstAttribute="centerY" secondItem="Fxj-a7-9SD" secondAttribute="centerY" id="hws-pJ-map"/>
                                                 <constraint firstItem="Zca-3D-F3a" firstAttribute="leading" secondItem="Fxj-a7-9SD" secondAttribute="centerX" id="ige-Ts-4zQ"/>
                                                 <constraint firstItem="z9h-N2-Q2q" firstAttribute="centerY" secondItem="Fxj-a7-9SD" secondAttribute="centerY" id="mpm-Sy-ueQ"/>
@@ -1031,7 +1031,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest Length (secs)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kh7-t8-iaO">
-                                                    <rect key="frame" x="16" y="11.333333333333336" width="163.66666666666666" height="21"/>
+                                                    <rect key="frame" x="16" y="11.333333333333336" width="175" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1049,7 +1049,7 @@
                                                 <constraint firstItem="Kh7-t8-iaO" firstAttribute="centerY" secondItem="F2n-Vz-4Ve" secondAttribute="centerY" id="bz7-IY-gK5"/>
                                                 <constraint firstItem="Kh7-t8-iaO" firstAttribute="leading" secondItem="F2n-Vz-4Ve" secondAttribute="leading" constant="16" id="dcX-m2-UDG"/>
                                                 <constraint firstAttribute="trailing" secondItem="NNT-PB-2Fj" secondAttribute="trailing" constant="16" id="ruF-ZL-YyS"/>
-                                                <constraint firstItem="NNT-PB-2Fj" firstAttribute="leading" secondItem="Kh7-t8-iaO" secondAttribute="trailing" constant="27.5" id="yNj-jB-y1N"/>
+                                                <constraint firstItem="NNT-PB-2Fj" firstAttribute="leading" secondItem="Kh7-t8-iaO" secondAttribute="trailing" constant="16" id="yNj-jB-y1N"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1231,7 +1231,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9l-wx-75b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="24"/>
+            <point key="canvasLocation" x="2386.9565217391305" y="23.64130434782609"/>
         </scene>
         <!--Workout Complete View Controller-->
         <scene sceneID="Tsr-Qc-lH3">
