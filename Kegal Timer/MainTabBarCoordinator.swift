@@ -27,4 +27,5 @@ class MainTabBarCoordinator: UITabBarController {
         
         self.selectedIndex = 2
     }
+    
 }

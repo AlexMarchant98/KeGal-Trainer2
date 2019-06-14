@@ -104,7 +104,7 @@ class StageTableViewController: UITableViewController, Storyboarded {
                 return
             }
         
-        let levelAlert = UIAlertController(title: "Level " + level.level.level!, message: "Would you like to tackle this level?", preferredStyle: UIAlertController.Style.actionSheet)
+        let levelAlert = UIAlertController(title: "Level " + level.level.level!, message: "Would you like to tackle this level?", preferredStyle: coordinator?.getAlertStyle() ?? UIAlertController.Style.alert)
         
         levelAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (_) in self.setWorkoutSettings(level.level!); self.tabBarController!.selectedIndex = 2}))
         levelAlert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.destructive))

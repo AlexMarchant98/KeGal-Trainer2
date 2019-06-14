@@ -12,3 +12,14 @@ import UIKit
 protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get }
 }
+
+extension Coordinator {
+    func getAlertStyle() -> UIAlertController.Style {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            return UIAlertController.Style.actionSheet
+        default:
+            return UIAlertController.Style.alert
+        }
+    }
+}

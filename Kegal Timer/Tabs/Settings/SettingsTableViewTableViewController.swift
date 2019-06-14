@@ -178,7 +178,7 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
             
             saveSettings()
             
-            let saveSuccessfulAlert = UIAlertController(title: "Save Successful", message: "", preferredStyle: UIAlertController.Style.alert)
+            let saveSuccessfulAlert = UIAlertController(title: "Save Successful", message: "", preferredStyle: coordinator?.getAlertStyle() ?? UIAlertController.Style.alert)
             
             saveSuccessfulAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in saveSuccessfulAlert.dismiss(animated: true, completion: nil)}))
             
