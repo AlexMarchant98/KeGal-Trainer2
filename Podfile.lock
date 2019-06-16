@@ -1,24 +1,62 @@
 PODS:
+  - Google-Mobile-Ads-SDK (7.44.0):
+    - GoogleAppMeasurement (~> 6.0)
+  - GoogleAppMeasurement (6.0.1):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (6.2.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.2.0)
+  - GoogleUtilities/Logger (6.2.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.2.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.2.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.2.0)"
+  - GoogleUtilities/Reachability (6.2.0):
+    - GoogleUtilities/Logger
   - JTAppleCalendar (7.1.6)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
   - QuickLayout (3.0.0)
   - SwiftEntryKit (1.0.1):
     - QuickLayout (= 3.0.0)
 
 DEPENDENCIES:
+  - Google-Mobile-Ads-SDK
   - JTAppleCalendar
   - SwiftEntryKit (= 1.0.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUtilities
     - JTAppleCalendar
+    - nanopb
     - QuickLayout
     - SwiftEntryKit
 
 SPEC CHECKSUMS:
+  Google-Mobile-Ads-SDK: 1e72b4f438d997ab0f2ee62b3a7b0cbcc87c47cb
+  GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
+  GoogleUtilities: 996e0db07153674fd1b54b220fda3a3dc3547cba
   JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   SwiftEntryKit: 3f55c0b8e676afe24a3703237bcac68372891c56
 
-PODFILE CHECKSUM: 95ab0eac6e4a269861f336784a94f55bb14f9510
+PODFILE CHECKSUM: dd0c23d646d793961d466b3d388e8af06c682f53
 
 COCOAPODS: 1.5.3

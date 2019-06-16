@@ -40,9 +40,12 @@ struct Constants {
     //  Dispatch Queue
     static let dispatchQueueLabel = "resumeWorkout"
     
-    //  Segue Identifiers
-    static let addReminderSegue = "AddReminderSegue"
-    static let updateReminderSegue = "UpdateReminderSegue"
+    // AdMob Test Ad Id's
+    static let testBannerAdId = "ca-app-pub-3940256099942544/2934735716"
+    static let testInterstitialAdId = "ca-app-pub-3940256099942544/4411468910"
     
-    static let unwindSegueToReminders = "unwindSegueToReminders"
+    //  AdMob Ad Unit Id's
+    static let trackTabBannerAdId = "ca-app-pub-4293952743610750/7827912265"
+    static let timerTabBannerAdId = "ca-app-pub-4293952743610750/5867252897"
+    static let workoutCompleteAdId = "ca-app-pub-4293952743610750/3195065512"
 }

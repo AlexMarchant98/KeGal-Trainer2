@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
 protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get }

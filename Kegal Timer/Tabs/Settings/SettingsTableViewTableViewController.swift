@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class SettingsTableViewController : UITableViewController, UITextFieldDelegate, UITabBarControllerDelegate, Storyboarded {
+class SettingsTableViewController : UITableViewController, UITextFieldDelegate, UITabBarControllerDelegate, GADBannerViewDelegate, Storyboarded {
     
     weak var coordinator: SettingsCoordinator?
     
     let userPreferences = UserDefaults.standard
+    
+    lazy var adBannerView: GADBannerView = {
+        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adBannerView.adUnitID = Constants.testBannerAdId //Constants.trackTabBannerAd
+        adBannerView.delegate = self
+        adBannerView.rootViewController = self
+        
+        return adBannerView
+    }()
+    
     private var dirtyInput = false
     
     @IBOutlet weak var repsPerSetTextBox: UITextField!
@@ -55,6 +66,8 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         soundCueSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
         
         self.hideKeyboardWhenTappedAround()
+        
+        adBannerView.load(GADRequest())
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -233,6 +246,18 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         } else {
             return true
         }
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner loaded successfully")
+        tableView.tableHeaderView?.frame = bannerView.frame
+        tableView.tableHeaderView = bannerView
+        
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Fail to receive ads")
+        print(error)
     }
     
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import GoogleMobileAds
 
 class RemindersTableViewController: UITableViewController, Storyboarded {
     
@@ -91,21 +92,6 @@ class RemindersTableViewController: UITableViewController, Storyboarded {
             selectedReminder = reminders[indexPath.row]
             coordinator?.showUpdateReminder(reminder: selectedReminder!)
         }
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        
-        if (identifier == Constants.addReminderSegue && tableView.numberOfRows(inSection: 0) == 24) {
-            let maxRemindersAlert = UIAlertController(title: "Reminder Limit Reached", message: "You can create a maximum of 24 reminders, please delete one before attempting to add another", preferredStyle: UIAlertController.Style.alert)
-            
-            maxRemindersAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in maxRemindersAlert.dismiss(animated: true, completion: nil)}))
-            
-            self.present(maxRemindersAlert, animated: true, completion: nil)
-            
-            return false
-        }
-        
-        return true
     }
     
     func generateReminders()

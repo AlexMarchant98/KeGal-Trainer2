@@ -10,7 +10,6 @@ import UIKit
 import SwiftEntryKit
 
 class TimerCoordinator: Coordinator {
-    
     let navigationController: UINavigationController
     
     init() {

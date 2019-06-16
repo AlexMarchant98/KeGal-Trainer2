@@ -8,11 +8,11 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
 class StageTableViewController: UITableViewController, Storyboarded {
     
     weak var coordinator: StagesCoordinator?
-    
     
     let userPreferences = UserDefaults.standard
     
@@ -106,7 +106,7 @@ class StageTableViewController: UITableViewController, Storyboarded {
         
         let levelAlert = UIAlertController(title: "Level " + level.level.level!, message: "Would you like to tackle this level?", preferredStyle: coordinator?.getAlertStyle() ?? UIAlertController.Style.alert)
         
-        levelAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (_) in self.setWorkoutSettings(level.level!); self.tabBarController!.selectedIndex = 2}))
+        levelAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (_) in self.setWorkoutSettings(level.level!); self.tabBarController!.selectedIndex = 2;}))
         levelAlert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.destructive))
         
         self.present(levelAlert, animated: true, completion: nil)

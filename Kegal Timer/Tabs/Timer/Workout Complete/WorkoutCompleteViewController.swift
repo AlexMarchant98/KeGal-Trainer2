@@ -17,13 +17,9 @@ class WorkoutCompleteViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var image: ShapeView!
     @IBOutlet weak var workoutCompleteLabel: UILabel!
-    @IBAction func nextLevel(_ sender: Any) {
-        SwiftEntryKit.dismiss()
-        coordinator?.didFinishWorkout()
-    }
+    
     @IBAction func dismissPopup(_ sender: Any) {
         SwiftEntryKit.dismiss()
-        coordinator?.didFinishWork()
     }
     
     override func viewDidLoad() {

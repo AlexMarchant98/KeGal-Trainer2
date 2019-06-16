@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import UserNotifications
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             UserDefaults.standard.set(true, forKey: Constants.launchedBefore)
         }
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
 
         RequestReview.incrementLaunchCount()
         return true

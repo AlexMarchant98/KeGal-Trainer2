@@ -8,6 +8,7 @@ target 'Kegal Timer' do
   # Pods for Kegal Timer
 pod 'JTAppleCalendar'
 pod 'SwiftEntryKit', '1.0.1'
+pod 'Google-Mobile-Ads-SDK'
 
   target 'Kegal TimerTests' do
     inherit! :search_paths

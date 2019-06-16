@@ -9,16 +9,19 @@
 import UIKit
 import CoreData
 import JTAppleCalendar
+import GoogleMobileAds
 
 class TrackWorkoutsViewController: UIViewController, Storyboarded {
     
     weak var coordinator: TrackWorkoutsCoordinator?
+    let adMobDisplayer = AdMobDisplayer()
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: TopAlignedLabel!
     @IBOutlet weak var lastMonth: UILabel!
     @IBOutlet weak var currentMonth: UILabel!
     @IBOutlet weak var nextMonth: UILabel!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     let formatter = DateFormatter()
     
@@ -28,6 +31,10 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         
         setupCalendarView()
+        
+        self.bannerView.adUnitID = Constants.testBannerAdId //Constants.trackTabBannerAd
+        self.bannerView.rootViewController = self
+        self.adMobDisplayer.displayBannerAdRequest(self.bannerView)
     }
     
     override func viewWillAppear(_ animated: Bool) {

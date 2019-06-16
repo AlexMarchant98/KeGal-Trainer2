@@ -8,17 +8,20 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
 @IBDesignable
 class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, Storyboarded {
     
     weak var coordinator: TimerCoordinator?
+    let adMobDisplayer = AdMobDisplayer()
     
     @IBOutlet weak var timerButton: TimerButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var currentRepLabel: UILabel!
     @IBOutlet weak var currentRepUICollectionView: UICollectionView!
     
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBAction func backButton(_ sender: Any) {
         restartRep()
     }
@@ -36,6 +39,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 runTimer()
                 workoutCue.playBeginSoundBite()
                 workoutCue.vibrateDevice()
+                adMobDisplayer.setupGadInterstitial(adUnitID: Constants.workoutCompleteAdId)
             }
         }
         else
@@ -87,6 +91,10 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.bannerView.adUnitID = Constants.testBannerAdId //Constants.timerTabBannerAd
+        self.bannerView.rootViewController = self
+        self.adMobDisplayer.displayBannerAdRequest(self.bannerView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -176,6 +184,8 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 completeLevel()
                 
                 resetTimer()
+                
+                adMobDisplayer.displayGADInterstitial(viewController: self)
                 
                 if #available(iOS 10.3, *) {
                     RequestReview.requestReview()

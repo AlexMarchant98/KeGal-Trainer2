@@ -24,6 +24,8 @@
 		D410601521922DDC00089961 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410601421922DDC00089961 /* StopButton.swift */; };
 		D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */; };
 		D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF022177AA700CCC697 /* CustomCell.swift */; };
+		D44A595C22B5331C009A053D /* AdMobDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobDisplayer.swift */; };
+		D44A596D22B66052009A053D /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A596C22B66052009A053D /* BannerAdView.swift */; };
 		D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4505815221F23B7004CEEEF /* RequestReview.swift */; };
 		D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */; };
 		D467598122060B8000341027 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D467598022060B8000341027 /* Reminder.swift */; };
@@ -119,6 +121,8 @@
 		D410601421922DDC00089961 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 		D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewTableViewController.swift; sourceTree = "<group>"; };
 		D4406DF022177AA700CCC697 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		D44A595B22B5331C009A053D /* AdMobDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobDisplayer.swift; sourceTree = "<group>"; };
+		D44A596C22B66052009A053D /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCollectionViewCell.swift; sourceTree = "<group>"; };
 		D467598022060B8000341027 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
@@ -360,6 +364,8 @@
 				D4505815221F23B7004CEEEF /* RequestReview.swift */,
 				D484CF4322AD25C30042802C /* ShapeView.swift */,
 				D484CF3F22AD1DD20042802C /* AlertViewController.swift */,
+				D44A595B22B5331C009A053D /* AdMobDisplayer.swift */,
+				D44A596C22B66052009A053D /* BannerAdView.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -680,17 +686,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -750,6 +760,7 @@
 				D485DEDD220A28B2002E9DB1 /* UpdateReminderTableViewController.swift in Sources */,
 				D484CF5122AD739E0042802C /* BackButton.swift in Sources */,
 				D484CF2F22AD19840042802C /* UIViewController-Keyboard.swift in Sources */,
+				D44A596D22B66052009A053D /* BannerAdView.swift in Sources */,
 				D484CF2022A993600042802C /* StagesCoordinator.swift in Sources */,
 				D4E48D5621921960006366A7 /* TimerButton.swift in Sources */,
 				D48CFC4A21A744B500AD6179 /* WorkoutCue.swift in Sources */,
@@ -757,6 +768,7 @@
 				D484CF3522AD19FE0042802C /* Date-StripDate.swift in Sources */,
 				D4C3264522A83A2A001F9BEA /* MainTabBarCoordinator.swift in Sources */,
 				D47C86652206050A0070476F /* AddReminderTableViewController.swift in Sources */,
+				D44A595C22B5331C009A053D /* AdMobDisplayer.swift in Sources */,
 				D40780F421E2502500C3D2D1 /* Workout.swift in Sources */,
 				D484CF2A22AD171B0042802C /* WorkoutCompleteViewController.swift in Sources */,
 				D484CF3722AD1A2C0042802C /* String-Stage.swift in Sources */,
