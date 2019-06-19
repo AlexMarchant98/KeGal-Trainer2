@@ -14,8 +14,6 @@ For a better experience, while using our Service, I may require you to provide u
 
 The app does use third party services that may collect information used to identify you.
 
-Link to privacy policy of third party service providers used by the app
-
 ###### Log Data
 
 I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.
@@ -24,7 +22,33 @@ I want to inform you that whenever you use my Service, in a case of an error in 
 
 Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
 
-This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
+This Service does not use these “cookies” explicitly. However, the app uses third party code and libraries provided by Google that use “cookies” to collect information, tailor adverts to display to you and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you should uninstall the free mobile product and/or choose an available paid version of mobile products, which does not collect cookies.
+
+###### Advertisments
+
+To be able to offer you our services for free, we show third party ads within your mobile apps through popular ad networks, which are listed below. You can tap the icon to learn more about the ad network.
+
+To enable the ad, we embed a third-party software development kit (SDK) for these ads. The SDK code is provided by third party ad agencies or networks.
+
+Data of our mobile users remain anonymous to us and to the third party ad agencies. However, the ad agencies’ SDK code will collect data to tailor ads to you, such as the third-party apps you installed on your device, your iOS advertising identifier, your IP Address, your device's operating system details and MAC address, and other statistical and technical information. You can find more information in each network’s privacy policy, the link to which we are also including in the overview below.
+
+Ad Network:
+AdMob	
+
+Provider:
+Google
+
+Link to Privacy Policy, Additional Information:
+
+https://policies.google.com/privacy?hl=en
+
+https://support.google.com/admob/answer/6128543?hl=en-GB
+
+https://support.google.com/admob/answer/9012903?hl=en-GB
+
+https://support.google.com/admob/answer/2753860#Interest_based
+
+If you do not want to view third party ads, you may uninstall the free mobile product and/or choose an available paid version of mobile products, which does not serve third party ads.
 
 ###### Service Providers
 
