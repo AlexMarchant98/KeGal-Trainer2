@@ -92,9 +92,9 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bannerView.adUnitID = Constants.testBannerAdId //Constants.timerTabBannerAd
-        self.bannerView.rootViewController = self
-        self.adMobDisplayer.displayBannerAdRequest(self.bannerView)
+        self.bannerView = self.adMobDisplayer.setupAdBannerView(self.bannerView, viewController: self, adUnitId: Constants.timerTabBannerAdId)
+        
+        self.adMobDisplayer.displayBannerAd(self.bannerView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -186,13 +186,6 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 resetTimer()
                 
                 adMobDisplayer.displayGADInterstitial(viewController: self)
-                
-                if #available(iOS 10.3, *) {
-                    RequestReview.requestReview()
-                }
-                else {
-                    // Review View is unvailable for lower versions. Use a custom view.
-                }
                 
             }
         } else {
@@ -308,13 +301,9 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
             if let context = container?.viewContext {
                 Level.completeLevel(context, _level!)
                 
-                RequestReview.levelsRequestReview()
-                
                 if(Level.unlockNextLevel(context, Int32(_stage), currentLevelOrder: Int32(_levelOrder)) == nil)
                 {
                     let stage = Stage.unlockNextStage(context, Int32(_stage))
-                    
-                    RequestReview.stagesRequestReview()
                     
                     do {
                         try Level.unlockFirstLevelOfStage(context, stage!.stage)

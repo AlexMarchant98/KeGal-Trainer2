@@ -10,12 +10,15 @@ import UIKit
 import UserNotifications
 import GoogleMobileAds
 
-class RemindersTableViewController: UITableViewController, Storyboarded {
+class RemindersTableViewController: UITableViewController, GADBannerViewDelegate, Storyboarded {
     
     weak var coordinator: RemindersCoordinator?
+    let adMobDisplayer = AdMobDisplayer()
     
     var reminders = [Reminder]()
     var selectedReminder: Reminder?
+    
+    var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,10 @@ class RemindersTableViewController: UITableViewController, Storyboarded {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addReminder))
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.remindersTableViewCellReuseIdentifier)
+        
+        self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.remindersTabBannerAdId, bannerViewDelgate: self)
+        
+        self.adMobDisplayer.displayBannerAd(self.adBannerView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -138,5 +145,25 @@ class RemindersTableViewController: UITableViewController, Storyboarded {
         }
         
         reminders.remove(at: row)
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner loaded successfully")
+        
+        // Reposition the banner ad to create a slide down effect
+        let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
+        bannerView.transform = translateTransform
+        
+        UIView.animate(withDuration: 0.5) {
+            self.tableView.tableHeaderView?.frame = bannerView.frame
+            bannerView.transform = CGAffineTransform.identity
+            self.tableView.tableHeaderView = bannerView
+        }
+        
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Fail to receive ads")
+        print(error)
     }
 }

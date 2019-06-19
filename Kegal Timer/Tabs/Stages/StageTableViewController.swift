@@ -10,11 +10,14 @@ import UIKit
 import CoreData
 import GoogleMobileAds
 
-class StageTableViewController: UITableViewController, Storyboarded {
+class StageTableViewController: UITableViewController, GADBannerViewDelegate, Storyboarded {
     
     weak var coordinator: StagesCoordinator?
+    let adMobDisplayer = AdMobDisplayer()
     
     let userPreferences = UserDefaults.standard
+    
+    var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
     
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
 
@@ -32,6 +35,10 @@ class StageTableViewController: UITableViewController, Storyboarded {
         title = "Stages"
         
         navigationItem.setLeftBarButton(nil, animated: false)
+        
+        self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.stagesTabBannerAdId, bannerViewDelgate: self)
+        
+        self.adMobDisplayer.displayBannerAd(self.adBannerView)
     }
     
     func getStages()
@@ -125,11 +132,32 @@ class StageTableViewController: UITableViewController, Storyboarded {
                 userPreferences.set(level.level!, forKey: Constants.level)
                 userPreferences.set(level.order, forKey: Constants.levelOrder)
                 
-                
             } catch {
                 print("An error has occured when trying to access the stages")
             }
+            
+            RequestReview.levelsRequestReview()
         }
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner loaded successfully")
+        
+        // Reposition the banner ad to create a slide down effect
+        let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
+        bannerView.transform = translateTransform
+        
+        UIView.animate(withDuration: 0.5) {
+            self.tableView.tableHeaderView?.frame = bannerView.frame
+            bannerView.transform = CGAffineTransform.identity
+            self.tableView.tableHeaderView = bannerView
+        }
+        
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Fail to receive ads")
+        print(error)
     }
 
 }

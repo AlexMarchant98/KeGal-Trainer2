@@ -12,17 +12,11 @@ import GoogleMobileAds
 class SettingsTableViewController : UITableViewController, UITextFieldDelegate, UITabBarControllerDelegate, GADBannerViewDelegate, Storyboarded {
     
     weak var coordinator: SettingsCoordinator?
+    let adMobDisplayer = AdMobDisplayer()
     
     let userPreferences = UserDefaults.standard
     
-    lazy var adBannerView: GADBannerView = {
-        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        adBannerView.adUnitID = Constants.testBannerAdId //Constants.trackTabBannerAd
-        adBannerView.delegate = self
-        adBannerView.rootViewController = self
-        
-        return adBannerView
-    }()
+    var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
     
     private var dirtyInput = false
     
@@ -67,7 +61,9 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         
         self.hideKeyboardWhenTappedAround()
         
-        adBannerView.load(GADRequest())
+        self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.settingsTabBannerAdId, bannerViewDelgate: self)
+        
+        self.adMobDisplayer.displayBannerAd(self.adBannerView)
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -250,8 +246,16 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("Banner loaded successfully")
-        tableView.tableHeaderView?.frame = bannerView.frame
-        tableView.tableHeaderView = bannerView
+        
+        // Reposition the banner ad to create a slide down effect
+        let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
+        bannerView.transform = translateTransform
+        
+        UIView.animate(withDuration: 0.5) {
+            self.tableView.tableHeaderView?.frame = bannerView.frame
+            bannerView.transform = CGAffineTransform.identity
+            self.tableView.tableHeaderView = bannerView
+        }
         
     }
     

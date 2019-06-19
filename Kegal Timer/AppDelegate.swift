@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
 
-        RequestReview.incrementLaunchCount()
+        RequestReview.requestReview()
         return true
     }
 

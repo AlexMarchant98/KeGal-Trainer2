@@ -32,9 +32,9 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
         
         setupCalendarView()
         
-        self.bannerView.adUnitID = Constants.testBannerAdId //Constants.trackTabBannerAd
-        self.bannerView.rootViewController = self
-        self.adMobDisplayer.displayBannerAdRequest(self.bannerView)
+        self.bannerView = self.adMobDisplayer.setupAdBannerView(self.bannerView, viewController: self, adUnitId: Constants.trackTabBannerAdId)
+        
+        self.adMobDisplayer.displayBannerAd(self.bannerView)
     }
     
     override func viewWillAppear(_ animated: Bool) {

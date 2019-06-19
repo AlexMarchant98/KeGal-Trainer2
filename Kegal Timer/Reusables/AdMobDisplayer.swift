@@ -13,7 +13,7 @@ class AdMobDisplayer {
     var interstitial: GADInterstitial?
     
     func setupGadInterstitial(adUnitID: String) {
-        self.interstitial = GADInterstitial(adUnitID: Constants.testInterstitialAdId)
+        self.interstitial = GADInterstitial(adUnitID: adUnitID)
         let request = GADRequest()
         self.interstitial!.load(request)
     }
@@ -26,7 +26,19 @@ class AdMobDisplayer {
         }
     }
     
-    func displayBannerAdRequest(_ bannerView: GADBannerView) {
+    func setupAdBannerView(_ bannerView: GADBannerView, viewController: UIViewController, adUnitId: String, bannerViewDelgate: GADBannerViewDelegate? = nil) -> GADBannerView {
+        /// bannerView.adUnitID = adUnitId
+        bannerView.adUnitID = Constants.testBannerAdId
+        bannerView.rootViewController = viewController
+        
+        if let delegate = bannerViewDelgate {
+            bannerView.delegate = delegate
+        }
+        
+        return bannerView
+    }
+    
+    func displayBannerAd(_ bannerView: GADBannerView) {
         let request = GADRequest()
         bannerView.load(request)
     }

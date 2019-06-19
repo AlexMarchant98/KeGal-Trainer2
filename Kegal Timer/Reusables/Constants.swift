@@ -46,6 +46,9 @@ struct Constants {
     
     //  AdMob Ad Unit Id's
     static let trackTabBannerAdId = "ca-app-pub-4293952743610750/7827912265"
+    static let stagesTabBannerAdId = "ca-app-pub-4293952743610750/9079508085"
     static let timerTabBannerAdId = "ca-app-pub-4293952743610750/5867252897"
     static let workoutCompleteAdId = "ca-app-pub-4293952743610750/3195065512"
+    static let remindersTabBannerAdId = "ca-app-pub-4293952743610750/9271079775"
+    static let settingsTabBannerAdId = "ca-app-pub-4293952743610750/5906549836"
 }
