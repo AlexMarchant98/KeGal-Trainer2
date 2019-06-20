@@ -22,7 +22,7 @@ class AdMobDisplayer {
     }
     
     func displayGADInterstitial(viewController: UIViewController) {
-        if(!checkIfAdsAreDisabled()) {
+        if(checkIfAdsAreDisabled()) {
             return
         }
         if self.interstitial?.isReady ?? false {
@@ -33,7 +33,7 @@ class AdMobDisplayer {
     }
     
     func setupAdBannerView(_ bannerView: GADBannerView, viewController: UIViewController, adUnitId: String, bannerViewDelgate: GADBannerViewDelegate? = nil) -> GADBannerView {
-        if(!checkIfAdsAreDisabled()) {
+        if(checkIfAdsAreDisabled()) {
             return bannerView
         }
         bannerView.adUnitID = adUnitId
@@ -48,7 +48,7 @@ class AdMobDisplayer {
     }
     
     func displayBannerAd(_ bannerView: GADBannerView) {
-        if(!checkIfAdsAreDisabled()) {
+        if(checkIfAdsAreDisabled()) {
             return
         }
         let request = GADRequest()

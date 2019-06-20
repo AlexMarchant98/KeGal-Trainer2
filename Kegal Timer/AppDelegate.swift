@@ -36,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             dataSeeder.seedData()
 
             UserDefaults.standard.set(true, forKey: Constants.launchedBefore)
-            UserDefaults.standard.set(true, forKey: Constants.adsDisabled)
         }
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)

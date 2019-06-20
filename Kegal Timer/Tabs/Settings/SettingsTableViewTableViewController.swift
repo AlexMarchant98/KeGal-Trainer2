@@ -50,6 +50,8 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         
         navigationItem.setLeftBarButton(nil, animated: false)
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Restore Purchases", style: .plain, target: self, action: #selector(restorePurchases))
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveChanges))
         
         self.tabBarController?.delegate = self
@@ -299,7 +301,7 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         SKPaymentQueue.default().add(pay as SKPayment)
     }
     
-    func restorePurchases() {
+    @objc func restorePurchases() {
         SKPaymentQueue.default().add(self)
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
@@ -319,20 +321,20 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
     }
     
     func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
-        print("transactions restored")
+        print("RESTORING TRANSACTIONS")
         for transaction in queue.transactions {
             let t: SKPaymentTransaction = transaction
             let prodID = t.payment.productIdentifier as String
             
             switch prodID {
             case "KegalTimer.LowTierAdRemoval":
-                print("Low Tier Remove Ads")
+                print("Restoring: Low Tier Remove Ads")
                 disableAds()
             case "KegalTimer.MidTierAdRemoval":
-                print("Mid Tier Remove Ads")
+                print("Restoring: Mid Tier Remove Ads")
                 disableAds()
             case "KegalTimer.HighTierAdRemoval":
-                print("High Tier Remove Ads")
+                print("Restoring: High Tier Remove Ads")
                 disableAds()
             default:
                 print("IAP not found")
@@ -349,19 +351,18 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
             
             switch trans.transactionState {
             case .purchased:
-                print("buy ok, unlock IAP HERE")
-                print(p.productIdentifier)
+                print("PURCHASE SUCCESSFUL \(p.productIdentifier)")
                 
                 let prodID = p.productIdentifier
                 switch prodID {
                 case "KegalTimer.LowTierAdRemoval":
-                    print("Low Tier Remove Ads")
+                    print("Purchased: Low Tier Remove Ads")
                     disableAds()
                 case "KegalTimer.MidTierAdRemoval":
-                    print("Mid Tier Remove Ads")
+                    print("Purchased: Mid Tier Remove Ads")
                     disableAds()
                 case "KegalTimer.HighTierAdRemoval":
-                    print("High Tier Remove Ads")
+                    print("Purchased: High Tier Remove Ads")
                     disableAds()
                 default:
                     print("IAP not found")
