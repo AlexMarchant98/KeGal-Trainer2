@@ -73,7 +73,7 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         if(SKPaymentQueue.canMakePayments()) {
             print("IAP is enabled, loading")
             
-            let productID: Set<String> = Set<String>(["KegalTimer.LowTierAdRemoval", "KegalTimer.MidTierAdRemoval", "KegalTimer.HighTierAdRemoval"])
+            let productID: Set<String> = Set<String>(["KegalTimer.MidTierAdRemoval"])
             
             let request: SKProductsRequest = SKProductsRequest(productIdentifiers: productID)
             request.delegate = self
@@ -304,6 +304,12 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
     @objc func restorePurchases() {
         SKPaymentQueue.default().add(self)
         SKPaymentQueue.default().restoreCompletedTransactions()
+        
+        let saveSuccessfulAlert = UIAlertController(title: "Purchases Successfully Restored", message: "Please re-open the app for the restore to take effect!", preferredStyle: UIAlertController.Style.alert)
+        
+        saveSuccessfulAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in saveSuccessfulAlert.dismiss(animated: true, completion: nil)}))
+        
+        self.present(saveSuccessfulAlert, animated: true, completion: nil)
     }
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
