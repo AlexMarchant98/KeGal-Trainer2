@@ -8,15 +8,18 @@
 
 import UIKit
 import GoogleMobileAds
+import StoreKit
 
-class SettingsTableViewController : UITableViewController, UITextFieldDelegate, UITabBarControllerDelegate, GADBannerViewDelegate, Storyboarded {
+class SettingsTableViewController : UITableViewController, UITextFieldDelegate, UITabBarControllerDelegate, GADBannerViewDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver, Storyboarded {
     
     weak var coordinator: SettingsCoordinator?
     let adMobDisplayer = AdMobDisplayer()
-    
     let userPreferences = UserDefaults.standard
     
     var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+    
+    var list = [SKProduct]()
+    var p = SKProduct()
     
     private var dirtyInput = false
     
@@ -64,9 +67,22 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
         self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.settingsTabBannerAdId, bannerViewDelgate: self)
         
         self.adMobDisplayer.displayBannerAd(self.adBannerView)
+        
+        if(SKPaymentQueue.canMakePayments()) {
+            print("IAP is enabled, loading")
+            
+            let productID: Set<String> = Set<String>(["KegalTimer.LowTierAdRemoval", "KegalTimer.MidTierAdRemoval", "KegalTimer.HighTierAdRemoval"])
+            
+            let request: SKProductsRequest = SKProductsRequest(productIdentifiers: productID)
+            request.delegate = self
+            request.start()
+        }
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if(indexPath.section == 3) {
+            return indexPath
+        }
         let selectedCell = tableView.cellForRow(at: indexPath)
         if (selectedCell!.textLabel!.text == nil) {
             return nil
@@ -75,7 +91,18 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        displayChosenPresetAlert(indexPath)
+        if(indexPath.section == 3) {
+            print("rem ads")
+            for product in list {
+                let prodID = product.productIdentifier
+                if(prodID == "KegalTimer.MidTierAdRemoval") {
+                    p = product
+                    buyProduct()
+                }
+            }
+        } else {
+            displayChosenPresetAlert(indexPath)
+        }
     }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
@@ -262,6 +289,97 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("Fail to receive ads")
         print(error)
+    }
+    
+    func buyProduct() {
+        print("buying product \(p.productIdentifier)")
+        
+        let pay = SKPayment(product: p)
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().add(pay as SKPayment)
+    }
+    
+    func restorePurchases() {
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        print("product request")
+        let myProduct = response.products
+        for product in myProduct {
+            print("product added")
+            print(product.productIdentifier)
+            print(product.localizedTitle)
+            print(product.localizedDescription)
+            print(product.price)
+            
+            list.append(product)
+        }
+    }
+    
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+        print("transactions restored")
+        for transaction in queue.transactions {
+            let t: SKPaymentTransaction = transaction
+            let prodID = t.payment.productIdentifier as String
+            
+            switch prodID {
+            case "KegalTimer.LowTierAdRemoval":
+                print("Low Tier Remove Ads")
+                disableAds()
+            case "KegalTimer.MidTierAdRemoval":
+                print("Mid Tier Remove Ads")
+                disableAds()
+            case "KegalTimer.HighTierAdRemoval":
+                print("High Tier Remove Ads")
+                disableAds()
+            default:
+                print("IAP not found")
+            }
+        }
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        print("add payment")
+        
+        for transaction: AnyObject in transactions {
+            let trans = transaction as! SKPaymentTransaction
+            print(trans.error)
+            
+            switch trans.transactionState {
+            case .purchased:
+                print("buy ok, unlock IAP HERE")
+                print(p.productIdentifier)
+                
+                let prodID = p.productIdentifier
+                switch prodID {
+                case "KegalTimer.LowTierAdRemoval":
+                    print("Low Tier Remove Ads")
+                    disableAds()
+                case "KegalTimer.MidTierAdRemoval":
+                    print("Mid Tier Remove Ads")
+                    disableAds()
+                case "KegalTimer.HighTierAdRemoval":
+                    print("High Tier Remove Ads")
+                    disableAds()
+                default:
+                    print("IAP not found")
+                }
+                queue.finishTransaction(trans)
+            case .failed:
+                print("buy error")
+                queue.finishTransaction(trans)
+                break
+            default:
+                print("Default")
+                break
+            }
+        }
+    }
+    
+    private func disableAds() {
+        userPreferences.set(false, forKey: Constants.adsEnabled)
     }
     
 }

@@ -66,6 +66,7 @@
 		D4CF42C4229A63A800505A28 /* StageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF42C3229A63A800505A28 /* StageTableViewController.swift */; };
 		D4CF42C6229A68A700505A28 /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF42C5229A68A700505A28 /* DataSeeder.swift */; };
 		D4E48D5621921960006366A7 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48D5521921960006366A7 /* TimerButton.swift */; };
+		D4F7035D22BA9E010007EB1A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F7035C22BA9E010007EB1A /* StoreKit.framework */; };
 		E3AA8CBDAAB1280BB45DB5C5 /* Pods_Kegal_TimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7AE1A3101195C0FF3431F1 /* Pods_Kegal_TimerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		D4CF42C3229A63A800505A28 /* StageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageTableViewController.swift; sourceTree = "<group>"; };
 		D4CF42C5229A68A700505A28 /* DataSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
 		D4E48D5521921960006366A7 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
+		D4F7035C22BA9E010007EB1A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E63BEE54ED79D2F743DDB8E3 /* Pods-Kegal Timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal Timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer.release.xcconfig"; sourceTree = "<group>"; };
 		FC7AE1A3101195C0FF3431F1 /* Pods_Kegal_TimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kegal_TimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				391262BB834D2BD6F8D02508 /* Pods_Kegal_Timer.framework in Frameworks */,
+				D4F7035D22BA9E010007EB1A /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +211,7 @@
 		A3190652BC2EEBFDC845BDD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4F7035C22BA9E010007EB1A /* StoreKit.framework */,
 				AF4E6D9728982A20ED600BA8 /* Pods_Kegal_Timer.framework */,
 				FC7AE1A3101195C0FF3431F1 /* Pods_Kegal_TimerTests.framework */,
 				288F3543FC7A375C0FBEDD1D /* Pods_Kegal_TimerUITests.framework */,
@@ -553,6 +557,9 @@
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1010;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
