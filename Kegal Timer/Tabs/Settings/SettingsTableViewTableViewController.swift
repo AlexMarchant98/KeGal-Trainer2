@@ -379,7 +379,7 @@ class SettingsTableViewController : UITableViewController, UITextFieldDelegate, 
     }
     
     private func disableAds() {
-        userPreferences.set(false, forKey: Constants.adsEnabled)
+        userPreferences.set(true, forKey: Constants.adsDisabled)
     }
     
 }

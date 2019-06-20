@@ -19,7 +19,7 @@ struct Constants {
     static let stage = "Stage"
     static let level = "Level"
     static let levelOrder = "LevelOrder"
-    static let adsEnabled = "AdsEnabled"
+    static let adsDisabled = "AdsDisabled"
     
     //  User Default Keys
     static let appLaunchCount = "AppLaunchCount"

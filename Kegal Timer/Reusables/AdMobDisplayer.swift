@@ -13,7 +13,7 @@ class AdMobDisplayer {
     var interstitial: GADInterstitial?
     
     func setupGadInterstitial(adUnitID: String) {
-        if(!checkIfAdsAreEnabled()) {
+        if(checkIfAdsAreDisabled()) {
             return
         }
         self.interstitial = GADInterstitial(adUnitID: adUnitID)
@@ -22,7 +22,7 @@ class AdMobDisplayer {
     }
     
     func displayGADInterstitial(viewController: UIViewController) {
-        if(!checkIfAdsAreEnabled()) {
+        if(!checkIfAdsAreDisabled()) {
             return
         }
         if self.interstitial?.isReady ?? false {
@@ -33,11 +33,11 @@ class AdMobDisplayer {
     }
     
     func setupAdBannerView(_ bannerView: GADBannerView, viewController: UIViewController, adUnitId: String, bannerViewDelgate: GADBannerViewDelegate? = nil) -> GADBannerView {
-        if(!checkIfAdsAreEnabled()) {
+        if(!checkIfAdsAreDisabled()) {
             return bannerView
         }
-        /// bannerView.adUnitID = adUnitId
-        bannerView.adUnitID = Constants.testBannerAdId
+        bannerView.adUnitID = adUnitId
+        /// bannerView.adUnitID = Constants.testBannerAdId
         bannerView.rootViewController = viewController
         
         if let delegate = bannerViewDelgate {
@@ -48,14 +48,14 @@ class AdMobDisplayer {
     }
     
     func displayBannerAd(_ bannerView: GADBannerView) {
-        if(!checkIfAdsAreEnabled()) {
+        if(!checkIfAdsAreDisabled()) {
             return
         }
         let request = GADRequest()
         bannerView.load(request)
     }
     
-    private func checkIfAdsAreEnabled() -> Bool {
-        return UserDefaults.standard.bool(forKey: Constants.vibrationCue)
+    private func checkIfAdsAreDisabled() -> Bool {
+        return UserDefaults.standard.bool(forKey: Constants.adsDisabled)
     }
 }
