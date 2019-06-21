@@ -57,6 +57,8 @@
 		D48CFC5F21A74F6300AD6179 /* Workout Complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = D48CFC5C21A74F6300AD6179 /* Workout Complete.wav */; };
 		D48CFC6321B70CBF00AD6179 /* QueueTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */; };
 		D49C41FF229EF8A7005F8FA1 /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C41FE229EF8A7005F8FA1 /* LevelTableViewCell.swift */; };
+		D49C98AA22BD148E001E17B7 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C98A922BD148E001E17B7 /* ProductCell.swift */; };
+		D49C98AC22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C98AB22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift */; };
 		D4C3263F22A6FB3B001F9BEA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3263E22A6FB3B001F9BEA /* Coordinator.swift */; };
 		D4C3264122A6FB93001F9BEA /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3264022A6FB93001F9BEA /* Storyboarded.swift */; };
 		D4C3264522A83A2A001F9BEA /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3264422A83A2A001F9BEA /* MainTabBarCoordinator.swift */; };
@@ -67,6 +69,8 @@
 		D4CF42C6229A68A700505A28 /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF42C5229A68A700505A28 /* DataSeeder.swift */; };
 		D4E48D5621921960006366A7 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48D5521921960006366A7 /* TimerButton.swift */; };
 		D4F7035D22BA9E010007EB1A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F7035C22BA9E010007EB1A /* StoreKit.framework */; };
+		D4F7036122BCF7B70007EB1A /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F7036022BCF7B70007EB1A /* IAPHelper.swift */; };
+		D4F7036322BCFFCA0007EB1A /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F7036222BCFFCA0007EB1A /* IAPProducts.swift */; };
 		E3AA8CBDAAB1280BB45DB5C5 /* Pods_Kegal_TimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7AE1A3101195C0FF3431F1 /* Pods_Kegal_TimerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,8 +126,8 @@
 		D410601421922DDC00089961 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 		D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewTableViewController.swift; sourceTree = "<group>"; };
 		D4406DF022177AA700CCC697 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		D44A595B22B5331C009A053D /* AdMobDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobDisplayer.swift; sourceTree = "<group>"; };
-		D44A596C22B66052009A053D /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		D44A595B22B5331C009A053D /* AdMobDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdMobDisplayer.swift; path = ../AdMobDisplayer.swift; sourceTree = "<group>"; };
+		D44A596C22B66052009A053D /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BannerAdView.swift; path = ../BannerAdView.swift; sourceTree = "<group>"; };
 		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCollectionViewCell.swift; sourceTree = "<group>"; };
 		D467598022060B8000341027 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 		D48CFC5C21A74F6300AD6179 /* Workout Complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Workout Complete.wav"; sourceTree = "<group>"; };
 		D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTimer.swift; sourceTree = "<group>"; };
 		D49C41FE229EF8A7005F8FA1 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
+		D49C98A922BD148E001E17B7 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		D49C98AB22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsTableViewController-TextFieldNumbersOnly.swift"; sourceTree = "<group>"; };
 		D4C3263E22A6FB3B001F9BEA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D4C3264022A6FB93001F9BEA /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		D4C3264422A83A2A001F9BEA /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 		D4CF42C5229A68A700505A28 /* DataSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
 		D4E48D5521921960006366A7 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
 		D4F7035C22BA9E010007EB1A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D4F7036022BCF7B70007EB1A /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IAPHelper.swift; path = ../IAPHelper.swift; sourceTree = "<group>"; };
+		D4F7036222BCFFCA0007EB1A /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IAPProducts.swift; path = ../IAPProducts.swift; sourceTree = "<group>"; };
 		E63BEE54ED79D2F743DDB8E3 /* Pods-Kegal Timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal Timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal Timer/Pods-Kegal Timer.release.xcconfig"; sourceTree = "<group>"; };
 		FC7AE1A3101195C0FF3431F1 /* Pods_Kegal_TimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kegal_TimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -292,6 +300,7 @@
 				D484CF3422AD19FE0042802C /* Date-StripDate.swift */,
 				D484CF3622AD1A2C0042802C /* String-Stage.swift */,
 				D484CF4122AD236C0042802C /* UIBezierPath-Tick.swift */,
+				D49C98AB22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -362,14 +371,14 @@
 		D484CF4A22AD71660042802C /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				D4F7036622BD13C30007EB1A /* AdMob */,
+				D4F7036522BD13840007EB1A /* In App Purchases */,
 				D406FCF421FC80BE00B993B6 /* BottomAlignedLabel.swift */,
 				D406FCE821FC7B7500B993B6 /* TopAlignedLabel.swift */,
 				D485DEDA220A1FF9002E9DB1 /* Constants.swift */,
 				D4505815221F23B7004CEEEF /* RequestReview.swift */,
 				D484CF4322AD25C30042802C /* ShapeView.swift */,
 				D484CF3F22AD1DD20042802C /* AlertViewController.swift */,
-				D44A595B22B5331C009A053D /* AdMobDisplayer.swift */,
-				D44A596C22B66052009A053D /* BannerAdView.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -450,6 +459,25 @@
 				D410601421922DDC00089961 /* StopButton.swift */,
 			);
 			path = "Button Graphics";
+			sourceTree = "<group>";
+		};
+		D4F7036522BD13840007EB1A /* In App Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				D4F7036022BCF7B70007EB1A /* IAPHelper.swift */,
+				D4F7036222BCFFCA0007EB1A /* IAPProducts.swift */,
+				D49C98A922BD148E001E17B7 /* ProductCell.swift */,
+			);
+			path = "In App Purchases";
+			sourceTree = "<group>";
+		};
+		D4F7036622BD13C30007EB1A /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				D44A595B22B5331C009A053D /* AdMobDisplayer.swift */,
+				D44A596C22B66052009A053D /* BannerAdView.swift */,
+			);
+			path = AdMob;
 			sourceTree = "<group>";
 		};
 		E9E24F452FE526CD8EFD2623 /* Pods */ = {
@@ -744,6 +772,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4CB023F22637EF50014F723 /* Level.swift in Sources */,
+				D49C98AC22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift in Sources */,
 				D467598122060B8000341027 /* Reminder.swift in Sources */,
 				D485DEDB220A1FF9002E9DB1 /* Constants.swift in Sources */,
 				D4CB024122637F020014F723 /* Stage.swift in Sources */,
@@ -760,7 +789,10 @@
 				D4CF42C4229A63A800505A28 /* StageTableViewController.swift in Sources */,
 				D49C41FF229EF8A7005F8FA1 /* LevelTableViewCell.swift in Sources */,
 				D484CF3122AD19C50042802C /* UIColor-AppColors.swift in Sources */,
+				D49C98AA22BD148E001E17B7 /* ProductCell.swift in Sources */,
 				D406FCE921FC7B7500B993B6 /* TopAlignedLabel.swift in Sources */,
+				D4F7036122BCF7B70007EB1A /* IAPHelper.swift in Sources */,
+				D4F7036322BCFFCA0007EB1A /* IAPProducts.swift in Sources */,
 				D484CF2222A9960E0042802C /* TimerCoordinator.swift in Sources */,
 				D484CF1E22A98BAB0042802C /* TrackWorkoutsCoordinator.swift in Sources */,
 				D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */,
