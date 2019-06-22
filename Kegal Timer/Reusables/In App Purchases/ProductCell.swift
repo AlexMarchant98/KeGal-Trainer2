@@ -27,20 +27,21 @@ class ProductCell: UITableViewCell {
             
             textLabel?.text = "Remove Ads"
             
+            
             if IAPProducts.store.isProductPurchased(product.productIdentifier) {
                 accessoryType = .checkmark
                 accessoryView = nil
                 detailTextLabel?.text = ""
                 
                 UserDefaults.standard.set(true, forKey: Constants.adsDisabled)
-            } else {
+            } else if IAPHelper.canMakePayments() {
                 ProductCell.priceFormatter.locale = product.priceLocale
                 detailTextLabel?.text = ProductCell.priceFormatter.string(from: product.price)
                 
-                UserDefaults.standard.set(false, forKey: Constants.adsDisabled)
-                
                 accessoryType = .none
-                accessoryView = newBuyButton()
+                accessoryView = self.newBuyButton()
+            } else {
+                detailTextLabel?.text = "Not available"
             }
         }
     }
