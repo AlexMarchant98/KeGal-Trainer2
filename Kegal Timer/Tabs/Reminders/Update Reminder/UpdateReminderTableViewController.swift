@@ -9,9 +9,13 @@
 import UIKit
 import UserNotifications
 
+protocol UpdateReminderTableViewControllerDelegate: AnyObject {
+    func didFinishUpdatingReminder(_ updateReminderTableViewController: UpdateReminderTableViewController)
+}
+
 class UpdateReminderTableViewController: UITableViewController, Storyboarded {
     
-    weak var coordinator: RemindersCoordinator?
+    public weak var delegate: UpdateReminderTableViewControllerDelegate?
     
     @IBOutlet weak var reminderDatePicker: UIDatePicker!
     @IBOutlet weak var reminderMessageTextField: UITextField!
@@ -39,7 +43,7 @@ class UpdateReminderTableViewController: UITableViewController, Storyboarded {
     {
         rescheduleNotification()
         
-        coordinator?.didFinishWork()
+        self.delegate?.didFinishUpdatingReminder(self)
     }
     
     func rescheduleNotification() {

@@ -15,53 +15,54 @@ class RemindersCoordinator: Coordinator {
     init() {
         self.navigationController = UINavigationController()
         
-        let viewController = RemindersTableViewController.instantiate()
-        viewController.tabBarItem = UITabBarItem(title: "Reminder", image: UIImage(named: "Reminder"), tag: 0)
-        viewController.coordinator = self
+        self.navigationController.tabBarItem = UITabBarItem(title: "Reminder", image: UIImage(named: "Reminder"), tag: 0)
         
-        navigationController.viewControllers = [viewController]
+        showReminders()
     }
     
-    /// Show the add reminder screen
-    func showAddReminder()
-    {
-        let viewController = AddReminderTableViewController.instantiate()
-        viewController.coordinator = self
+    func showReminders() {
+        let viewController = RemindersTableViewController.instantiate()
+        viewController.delegate = self
         
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    /// Show the update reminder screen
+    func showAddReminder()
+    {
+        let viewController = AddReminderTableViewController.instantiate()
+        viewController.delegate = self
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
     func showUpdateReminder(reminder: Reminder)
     {
         let viewController = UpdateReminderTableViewController.instantiate()
-        viewController.coordinator = self
+        viewController.delegate = self
         viewController.reminder = reminder
         
         navigationController.pushViewController(viewController, animated: true)
     }
-    
-    func didFinishWork()
-    {
-        navigationController.popViewController(animated: true)
-        
-        navigationController.dismiss(animated: true, completion: {})
+}
+
+extension RemindersCoordinator: RemindersTableViewControllerDelegate {
+    func didTapAddReminder() {
+        self.showAddReminder()
     }
     
-    func checkNotificationSettings()
-    {
-        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
-            
-            /// Do not schedule notifications if not authorized.
-            guard settings.authorizationStatus != .authorized else {return}
-            
-            let action = UIAlertAction(title: "OK", style: .default, handler: { (nil) in
-                self.navigationController.tabBarController?.selectedIndex = 1
-            })
-            
-            let alert = UIAlertController(title: "Notifications Disabled", message: "You have disabled notifications for KeGal Trainer. \n\n Please go to Settings > KeGal Trainer and enable notifications to setup reminders.", preferredStyle: .alert)
-            alert.addAction(action)
-            self.navigationController.present(alert, animated: true, completion: nil)
-        }
+    func didTapUpdateReminder(_ reminder: Reminder) {
+        self.showUpdateReminder(reminder: reminder)
+    }
+}
+
+extension RemindersCoordinator: AddReminderTableViewControllerDelegate {
+    func didAddReminder(_ addReminderTableViewController: AddReminderTableViewController) {
+        self.navigationController.popViewController(animated: true)
+    }
+}
+
+extension RemindersCoordinator: UpdateReminderTableViewControllerDelegate {
+    func didFinishUpdatingReminder(_ updateReminderTableViewController: UpdateReminderTableViewController) {
+        self.navigationController.popViewController(animated: true)
     }
 }

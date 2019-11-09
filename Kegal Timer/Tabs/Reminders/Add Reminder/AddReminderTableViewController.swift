@@ -9,9 +9,13 @@
 import UIKit
 import UserNotifications
 
+protocol AddReminderTableViewControllerDelegate: AnyObject {
+    func didAddReminder(_ addReminderTableViewController: AddReminderTableViewController)
+}
+
 class AddReminderTableViewController: UITableViewController, Storyboarded {
     
-    weak var coordinator: RemindersCoordinator?
+    public weak var delegate: AddReminderTableViewControllerDelegate?
     
     @IBOutlet weak var reminderDatePicker: UIDatePicker!
     @IBOutlet weak var reminderMessageTextField: UITextField!
@@ -29,7 +33,7 @@ class AddReminderTableViewController: UITableViewController, Storyboarded {
     {
         scheduleNotification()
         
-        coordinator?.didFinishWork()
+        self.delegate?.didAddReminder(self)
     }
     
     func scheduleNotification() {

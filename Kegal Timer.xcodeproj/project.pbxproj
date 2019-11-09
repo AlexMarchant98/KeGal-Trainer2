@@ -23,6 +23,7 @@
 		D40780F621E2504500C3D2D1 /* WorkoutDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40780F521E2504500C3D2D1 /* WorkoutDate.swift */; };
 		D410601521922DDC00089961 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410601421922DDC00089961 /* StopButton.swift */; };
 		D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */; };
+		D4206FFE23774310003E38A7 /* AlertHandlerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4206FFD23774310003E38A7 /* AlertHandlerService.swift */; };
 		D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF022177AA700CCC697 /* CustomCell.swift */; };
 		D44A595C22B5331C009A053D /* AdMobDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobDisplayer.swift */; };
 		D44A596D22B66052009A053D /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A596C22B66052009A053D /* BannerAdView.swift */; };
@@ -125,6 +126,7 @@
 		D40780F521E2504500C3D2D1 /* WorkoutDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDate.swift; sourceTree = "<group>"; };
 		D410601421922DDC00089961 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 		D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewTableViewController.swift; sourceTree = "<group>"; };
+		D4206FFD23774310003E38A7 /* AlertHandlerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandlerService.swift; sourceTree = "<group>"; };
 		D4406DF022177AA700CCC697 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D44A595B22B5331C009A053D /* AdMobDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobDisplayer.swift; sourceTree = "<group>"; };
 		D44A596C22B66052009A053D /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
@@ -290,6 +292,14 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		D4206FFC237742E6003E38A7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D4206FFD23774310003E38A7 /* AlertHandlerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D484CF2D22AD19510042802C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +381,7 @@
 		D484CF4A22AD71660042802C /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				D4206FFC237742E6003E38A7 /* Services */,
 				D4F7036622BD13C30007EB1A /* AdMob */,
 				D4F7036522BD13840007EB1A /* In App Purchases */,
 				D406FCF421FC80BE00B993B6 /* BottomAlignedLabel.swift */,
@@ -818,6 +829,7 @@
 				D4006454217FAF9F0077765D /* TrackWorkoutsViewController.swift in Sources */,
 				D484CF2422A998390042802C /* RemindersCoordinator.swift in Sources */,
 				D40780E721E12C6600C3D2D1 /* KegalTimer.xcdatamodeld in Sources */,
+				D4206FFE23774310003E38A7 /* AlertHandlerService.swift in Sources */,
 				D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */,
 				D484CF4222AD236C0042802C /* UIBezierPath-Tick.swift in Sources */,
 				D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */,
@@ -1011,13 +1023,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.2.3;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1032,13 +1046,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.2.3;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

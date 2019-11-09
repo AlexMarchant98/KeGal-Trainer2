@@ -80,12 +80,16 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
                     print("Products loaded successfully")
                     self.products = products!
                     
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 } else {
                     print("Products loaded unsuccessfully")
                 }
                 
-                self.refreshControl?.endRefreshing()
+                DispatchQueue.main.async {
+                    self.refreshControl?.endRefreshing()
+                }
             }
         }
         

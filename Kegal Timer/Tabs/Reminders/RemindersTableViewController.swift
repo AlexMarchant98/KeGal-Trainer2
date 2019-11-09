@@ -10,13 +10,20 @@ import UIKit
 import UserNotifications
 import GoogleMobileAds
 
+protocol RemindersTableViewControllerDelegate: AnyObject {
+    func didTapAddReminder()
+    func didTapUpdateReminder(_ reminder: Reminder)
+}
+
 class RemindersTableViewController: UITableViewController, GADBannerViewDelegate, Storyboarded {
     
-    weak var coordinator: RemindersCoordinator?
+    public weak var delegate: RemindersTableViewControllerDelegate?
+    
+    internal var alertHandlerService = AlertHandlerService()
+    
     let adMobDisplayer = AdMobDisplayer()
     
     var reminders = [Reminder]()
-    var selectedReminder: Reminder?
     
     var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
     
@@ -36,7 +43,20 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        coordinator?.checkNotificationSettings()
+        
+        areNotificationsEnabled(callback: { (isEnabled) in
+            if(!isEnabled) {
+                self.alertHandlerService.showCustomAlert(
+                    view: self,
+                    title: "Notification are disabled",
+                    message: "To setup reminders, please enable notifications for Kegel Tainer.",
+                    actionTitles: ["OK"],
+                    actions: [ { (action: UIAlertAction!) in
+                            self.navigationController?.tabBarController?.selectedIndex = 1 }
+                ])
+            }
+        })
+        
         generateReminders()
     }
     
@@ -96,8 +116,7 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row < reminders.count) {
-            selectedReminder = reminders[indexPath.row]
-            coordinator?.showUpdateReminder(reminder: selectedReminder!)
+            self.delegate?.didTapUpdateReminder(reminders[indexPath.row])
         }
     }
     
@@ -120,6 +139,7 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
                         self.reminders.append(Reminder(identifier: item.identifier, time: triggerDate, message: item.content.body, withSound: withSound, isAPendingNotification: true))
                     }
                 }
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -129,7 +149,7 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     
     @objc func addReminder()
     {
-        coordinator?.showAddReminder()
+        self.delegate?.didTapAddReminder()
     }
     
     func deleteReminder(row: Int)
@@ -165,5 +185,17 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("Fail to receive ads")
         print(error)
+    }
+    
+    func areNotificationsEnabled(callback: @escaping(Bool) -> Void)
+    {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            
+            if(settings.authorizationStatus != .authorized) {
+                callback(false)
+            } else {
+                callback(true)
+            }
+        }
     }
 }
