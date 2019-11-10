@@ -49,7 +49,7 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
                 self.alertHandlerService.showCustomAlert(
                     view: self,
                     title: "Notification are disabled",
-                    message: "To setup reminders, please enable notifications for Kegel Tainer.",
+                    message: "To setup reminders, please enable notifications for Kegel Trainer.",
                     actionTitles: ["OK"],
                     actions: [ { (action: UIAlertAction!) in
                             self.navigationController?.tabBarController?.selectedIndex = 1 }
