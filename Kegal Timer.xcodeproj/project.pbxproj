@@ -107,7 +107,7 @@
 		8F84EEE5DFC3223C100933EC /* Pods-Kegal TimerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal TimerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal TimerUITests/Pods-Kegal TimerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A92AD1CB0491F0BA0F14109F /* Pods-Kegal TimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kegal TimerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kegal TimerUITests/Pods-Kegal TimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF4E6D9728982A20ED600BA8 /* Pods_Kegal_Timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kegal_Timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D400644E217FAF9F0077765D /* Kegal Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kegal Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D400644E217FAF9F0077765D /* Kegel Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kegel Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4006451217FAF9F0077765D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4006453217FAF9F0077765D /* TrackWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackWorkoutsViewController.swift; sourceTree = "<group>"; };
 		D4006455217FAF9F0077765D /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 		D400644F217FAF9F0077765D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D400644E217FAF9F0077765D /* Kegal Timer.app */,
+				D400644E217FAF9F0077765D /* Kegel Trainer.app */,
 				D4006464217FAFA30077765D /* Kegal TimerTests.xctest */,
 				D400646F217FAFA30077765D /* Kegal TimerUITests.xctest */,
 				D4CB02482263A9BA0014F723 /* KeGal Trainer Unit Tests.xctest */,
@@ -523,7 +523,7 @@
 			);
 			name = "Kegal Timer";
 			productName = "Kegal Timer";
-			productReference = D400644E217FAF9F0077765D /* Kegal Timer.app */;
+			productReference = D400644E217FAF9F0077765D /* Kegel Trainer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D4006463217FAFA30077765D /* Kegal TimerTests */ = {
@@ -1023,7 +1023,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.4;
+				CURRENT_PROJECT_VERSION = 2.2.5;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -1031,9 +1031,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.4;
+				MARKETING_VERSION = 2.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Kegel Trainer";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1046,7 +1046,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.2.4;
+				CURRENT_PROJECT_VERSION = 2.2.5;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -1054,9 +1054,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.4;
+				MARKETING_VERSION = 2.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Kegel Trainer";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
