@@ -14,10 +14,16 @@ class SettingsCoordinator: Coordinator {
     init() {
         self.navigationController = UINavigationController()
         
+        self.navigationController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "Settings"), tag: 0)
+        
+        showSettings()
+    }
+    
+    func showSettings() {
         let viewController = SettingsTableViewController.instantiate()
-        viewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "Settings"), tag: 0)
+        
         viewController.coordinator = self
         
-        navigationController.viewControllers = [viewController]
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
