@@ -99,10 +99,6 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
         self.tableView.register(ProductCell.self, forCellReuseIdentifier: "ProductCell")
     }
     
-    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        return nil
-    }
-    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if(indexPath.section == 2) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
