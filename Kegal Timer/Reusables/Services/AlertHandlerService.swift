@@ -11,6 +11,22 @@ import UIKit
 class AlertHandlerService {
     
     init() {}
+    
+    func showWarningAlert(view: UIViewController, message: String) {
+        let alert = UIAlertController(
+            title: "Warning",
+            message: message,
+            preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(
+            title: "OK",
+            style: UIAlertAction.Style.default,
+            handler: nil))
+        
+        DispatchQueue.main.async {
+            view.present(alert, animated: true, completion: nil)
+        }
+    }
 
     func showCustomAlert(view: UIViewController, title: String, message: String, actionTitles:[String?], actions: [((UIAlertAction) -> Void)?]) {
         

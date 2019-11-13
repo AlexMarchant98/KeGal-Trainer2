@@ -9,10 +9,13 @@
 import UIKit
 import GoogleMobileAds
 import StoreKit
+import MessageUI
 
 class SettingsTableViewController : UITableViewController, UITabBarControllerDelegate, GADBannerViewDelegate, Storyboarded {
     
     weak var coordinator: SettingsCoordinator?
+    internal var alertHandlerService = AlertHandlerService()
+    
     let adMobDisplayer = AdMobDisplayer()
     let userPreferences = UserDefaults.standard
     
@@ -112,6 +115,31 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
                 }
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let emailIndexPath = IndexPath(row: 0, section: 3)
+        
+        switch indexPath {
+        case emailIndexPath:
+            if MFMailComposeViewController.canSendMail() {
+                let vc = MFMailComposeViewController()
+                
+                vc.mailComposeDelegate = self
+                
+                vc.setToRecipients(["alex_marchant@outlook.com"])
+                
+                self.present(vc, animated: true, completion: nil)
+            } else {
+                alertHandlerService.showWarningAlert(
+                    view: self,
+                    message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n My Email: \n alex_marchant@outlook.com")
+            }
+        default:
+            break
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private func setWorkoutSettings(repsPerSet: Int, repLength: Int, restLength: Int) {
@@ -229,4 +257,10 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
         self.present(saveSuccessfulAlert, animated: true, completion: nil)
     }
     
+}
+
+extension SettingsTableViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
 }
