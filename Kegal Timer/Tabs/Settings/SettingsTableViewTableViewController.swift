@@ -100,21 +100,22 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if(indexPath.section == 2) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
-            if(products.count != 0) {
-                let product = products[indexPath.row]
-                
-                cell.product = product
-                cell.buyButtonHandler = { product in
-                    IAPProducts.store.buyProduct(product)
+        if(indexPath.section == 3) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell {
+                if(products.count != 0) {
+                    let product = products[indexPath.row]
+                    
+                    cell.product = product
+                    cell.buyButtonHandler = { product in
+                        IAPProducts.store.buyProduct(product)
+                    }
                 }
             }
         }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let emailIndexPath = IndexPath(row: 0, section: 3)
+        let emailIndexPath = IndexPath(row: 0, section: 2)
         
         switch indexPath {
         case emailIndexPath:
