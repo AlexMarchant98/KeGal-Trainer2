@@ -21,7 +21,7 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     
     internal var alertHandlerService = AlertHandlerService()
     
-    var adMobDisplayer: AdMobDisplayer!
+    var adMobService: AdMobService!
     
     var reminders = [Reminder]()
     
@@ -36,9 +36,13 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.remindersTableViewCellReuseIdentifier)
         
-        self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.remindersTabBannerAdId, bannerViewDelgate: self)
+        self.adBannerView = self.adMobService.setupAdBannerView(
+            self.adBannerView,
+            viewController: self,
+            adUnitId: Constants.remindersTabBannerAdId,
+            bannerViewDelgate: self)
         
-        self.adMobDisplayer.displayBannerAd(self.adBannerView)
+        self.adMobService.displayBannerAd(self.adBannerView)
     }
     
     override func viewWillAppear(_ animated: Bool) {

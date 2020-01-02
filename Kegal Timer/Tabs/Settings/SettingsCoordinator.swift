@@ -11,12 +11,12 @@ import UIKit
 class SettingsCoordinator: Coordinator {
     
     var navigationController: UINavigationController!
-    var admobService: AdMobDisplayer!
+    var adMobService: AdMobService!
     
-    required init(_ admobService: AdMobDisplayer) {
+    required init(_ adMobService: AdMobService) {
         self.navigationController = UINavigationController()
         
-        self.admobService = admobService
+        self.adMobService = adMobService
         
         self.navigationController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "Settings"), tag: 0)
         
@@ -26,7 +26,7 @@ class SettingsCoordinator: Coordinator {
     func showSettings() {
         let viewController = SettingsTableViewController.instantiate()
         
-        viewController.adMobDisplayer = self.admobService
+        viewController.adMobDisplayer = self.adMobService
         viewController.coordinator = self
         
         navigationController.pushViewController(viewController, animated: true)

@@ -18,7 +18,7 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
     
     let userPreferences = UserDefaults.standard
     
-    var adMobDisplayer: AdMobDisplayer!
+    var adMobDisplayer: AdMobService!
     
     var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
     

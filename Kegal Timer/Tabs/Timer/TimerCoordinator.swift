@@ -12,17 +12,17 @@ import SwiftEntryKit
 class TimerCoordinator: Coordinator {
     
     var navigationController: UINavigationController!
-    var admobService: AdMobDisplayer!
+    var adMobService: AdMobService!
     
-    required init(_ admobService: AdMobDisplayer) {
+    required init(_ adMobService: AdMobService) {
         self.navigationController = UINavigationController()
         self.navigationController.setNavigationBarHidden(true, animated: false)
         
-        self.admobService = admobService
+        self.adMobService = adMobService
         
         let viewController = TimerViewController.instantiate()
         
-        viewController.adMobDisplayer = self.admobService
+        viewController.adMobService = self.adMobService
         viewController.tabBarItem = UITabBarItem(title: "Timer", image: UIImage(named: "Timer"), tag: 0)
         viewController.coordinator = self
         

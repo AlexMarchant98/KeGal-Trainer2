@@ -9,7 +9,7 @@
 import Foundation
 import GoogleMobileAds
 
-class AdMobDisplayer {
+class AdMobService {
     var interstitial: GADInterstitial?
     
     var bannerAdRequest: GADRequest!

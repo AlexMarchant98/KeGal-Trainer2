@@ -25,7 +25,7 @@
 		D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */; };
 		D4206FFE23774310003E38A7 /* AlertHandlerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4206FFD23774310003E38A7 /* AlertHandlerService.swift */; };
 		D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF022177AA700CCC697 /* CustomCell.swift */; };
-		D44A595C22B5331C009A053D /* AdMobDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobDisplayer.swift */; };
+		D44A595C22B5331C009A053D /* AdMobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobService.swift */; };
 		D44A596D22B66052009A053D /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A596C22B66052009A053D /* BannerAdView.swift */; };
 		D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4505815221F23B7004CEEEF /* RequestReview.swift */; };
 		D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */; };
@@ -128,7 +128,7 @@
 		D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewTableViewController.swift; sourceTree = "<group>"; };
 		D4206FFD23774310003E38A7 /* AlertHandlerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandlerService.swift; sourceTree = "<group>"; };
 		D4406DF022177AA700CCC697 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		D44A595B22B5331C009A053D /* AdMobDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobDisplayer.swift; sourceTree = "<group>"; };
+		D44A595B22B5331C009A053D /* AdMobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobService.swift; sourceTree = "<group>"; };
 		D44A596C22B66052009A053D /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -295,6 +295,7 @@
 		D4206FFC237742E6003E38A7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D4F7036622BD13C30007EB1A /* AdMob */,
 				D4206FFD23774310003E38A7 /* AlertHandlerService.swift */,
 			);
 			path = Services;
@@ -382,7 +383,6 @@
 			isa = PBXGroup;
 			children = (
 				D4206FFC237742E6003E38A7 /* Services */,
-				D4F7036622BD13C30007EB1A /* AdMob */,
 				D4F7036522BD13840007EB1A /* In App Purchases */,
 				D406FCF421FC80BE00B993B6 /* BottomAlignedLabel.swift */,
 				D406FCE821FC7B7500B993B6 /* TopAlignedLabel.swift */,
@@ -485,7 +485,7 @@
 		D4F7036622BD13C30007EB1A /* AdMob */ = {
 			isa = PBXGroup;
 			children = (
-				D44A595B22B5331C009A053D /* AdMobDisplayer.swift */,
+				D44A595B22B5331C009A053D /* AdMobService.swift */,
 				D44A596C22B66052009A053D /* BannerAdView.swift */,
 			);
 			path = AdMob;
@@ -818,7 +818,7 @@
 				D484CF3522AD19FE0042802C /* Date-StripDate.swift in Sources */,
 				D4C3264522A83A2A001F9BEA /* MainTabBarCoordinator.swift in Sources */,
 				D47C86652206050A0070476F /* AddReminderTableViewController.swift in Sources */,
-				D44A595C22B5331C009A053D /* AdMobDisplayer.swift in Sources */,
+				D44A595C22B5331C009A053D /* AdMobService.swift in Sources */,
 				D40780F421E2502500C3D2D1 /* Workout.swift in Sources */,
 				D484CF2A22AD171B0042802C /* WorkoutCompleteViewController.swift in Sources */,
 				D484CF3722AD1A2C0042802C /* String-Stage.swift in Sources */,

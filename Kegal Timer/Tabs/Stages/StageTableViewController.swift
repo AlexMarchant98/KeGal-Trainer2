@@ -13,7 +13,7 @@ import GoogleMobileAds
 class StageTableViewController: UITableViewController, GADBannerViewDelegate, Storyboarded {
     
     weak var coordinator: StagesCoordinator?
-    var adMobDisplayer: AdMobDisplayer!
+    var adMobService: AdMobService!
     
     let userPreferences = UserDefaults.standard
     
@@ -36,9 +36,13 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
         
         navigationItem.setLeftBarButton(nil, animated: false)
         
-        self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.stagesTabBannerAdId, bannerViewDelgate: self)
+        self.adBannerView = self.adMobService.setupAdBannerView(
+            self.adBannerView,
+            viewController: self,
+            adUnitId: Constants.stagesTabBannerAdId,
+            bannerViewDelgate: self)
         
-        self.adMobDisplayer.displayBannerAd(self.adBannerView)
+        self.adMobService.displayBannerAd(self.adBannerView)
     }
     
     func getStages()

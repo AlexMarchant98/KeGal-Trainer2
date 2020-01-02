@@ -14,7 +14,7 @@ import GoogleMobileAds
 class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, Storyboarded {
     
     weak var coordinator: TimerCoordinator?
-    var adMobDisplayer: AdMobDisplayer!
+    var adMobService: AdMobService!
     
     @IBOutlet weak var timerButton: TimerButton!
     @IBOutlet weak var timeLabel: UILabel!
@@ -39,7 +39,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 runTimer()
                 workoutCue.playBeginSoundBite()
                 workoutCue.vibrateDevice()
-                adMobDisplayer.setupGadInterstitial(adUnitID: Constants.workoutCompleteAdId)
+                adMobService.setupGadInterstitial(adUnitID: Constants.workoutCompleteAdId)
             }
         }
         else
@@ -92,7 +92,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bannerView = self.adMobDisplayer.setupAdBannerView(
+        self.bannerView = self.adMobService.setupAdBannerView(
             self.bannerView,
             viewController: self,
             adUnitId: Constants.timerTabBannerAdId)
@@ -108,8 +108,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         _level = userPreferences.string(forKey: Constants.level) ?? ""
         _levelOrder = userPreferences.integer(forKey: Constants.levelOrder)
         
-        adMobDisplayer.displayBannerAd(self.bannerView)
-        adMobDisplayer.setupGadInterstitial(adUnitID: Constants.workoutCompleteAdId)
+        adMobService.displayBannerAd(self.bannerView)
         
         if(_repsPerSet > 1) {
             reps = Array(1..._repsPerSet)
@@ -189,7 +188,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 
                 resetTimer()
                 
-                adMobDisplayer.displayGADInterstitial(viewController: self)
+                adMobService.displayGADInterstitial(viewController: self)
                 
             }
         } else {

@@ -14,7 +14,7 @@ import GoogleMobileAds
 class TrackWorkoutsViewController: UIViewController, Storyboarded {
     
     weak var coordinator: TrackWorkoutsCoordinator?
-    var admobService: AdMobDisplayer!
+    var adMobService: AdMobService!
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: TopAlignedLabel!
@@ -32,9 +32,12 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
         
         setupCalendarView()
         
-        self.bannerView = self.admobService.setupAdBannerView(self.bannerView, viewController: self, adUnitId: Constants.trackTabBannerAdId)
+        self.bannerView = self.adMobService.setupAdBannerView(
+            self.bannerView,
+            viewController: self,
+            adUnitId: Constants.trackTabBannerAdId)
         
-        self.admobService.displayBannerAd(self.bannerView)
+        self.adMobService.displayBannerAd(self.bannerView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
