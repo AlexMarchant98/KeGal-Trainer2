@@ -13,7 +13,7 @@ import GoogleMobileAds
 class StageTableViewController: UITableViewController, GADBannerViewDelegate, Storyboarded {
     
     weak var coordinator: StagesCoordinator?
-    let adMobDisplayer = AdMobDisplayer()
+    var adMobDisplayer: AdMobDisplayer!
     
     let userPreferences = UserDefaults.standard
     

@@ -16,8 +16,9 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
     weak var coordinator: SettingsCoordinator?
     internal var alertHandlerService = AlertHandlerService()
     
-    let adMobDisplayer = AdMobDisplayer()
     let userPreferences = UserDefaults.standard
+    
+    var adMobDisplayer: AdMobDisplayer!
     
     var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
     

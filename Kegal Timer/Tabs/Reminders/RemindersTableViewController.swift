@@ -21,7 +21,7 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     
     internal var alertHandlerService = AlertHandlerService()
     
-    let adMobDisplayer = AdMobDisplayer()
+    var adMobDisplayer: AdMobDisplayer!
     
     var reminders = [Reminder]()
     

@@ -14,7 +14,7 @@ import GoogleMobileAds
 class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, Storyboarded {
     
     weak var coordinator: TimerCoordinator?
-    let adMobDisplayer = AdMobDisplayer()
+    var adMobDisplayer: AdMobDisplayer!
     
     @IBOutlet weak var timerButton: TimerButton!
     @IBOutlet weak var timeLabel: UILabel!
@@ -92,9 +92,10 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bannerView = self.adMobDisplayer.setupAdBannerView(self.bannerView, viewController: self, adUnitId: Constants.timerTabBannerAdId)
-        
-        self.adMobDisplayer.displayBannerAd(self.bannerView)
+        self.bannerView = self.adMobDisplayer.setupAdBannerView(
+            self.bannerView,
+            viewController: self,
+            adUnitId: Constants.timerTabBannerAdId)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,6 +107,9 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         _stage = userPreferences.integer(forKey: Constants.stage)
         _level = userPreferences.string(forKey: Constants.level) ?? ""
         _levelOrder = userPreferences.integer(forKey: Constants.levelOrder)
+        
+        adMobDisplayer.displayBannerAd(self.bannerView)
+        adMobDisplayer.setupGadInterstitial(adUnitID: Constants.workoutCompleteAdId)
         
         if(_repsPerSet > 1) {
             reps = Array(1..._repsPerSet)

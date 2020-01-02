@@ -10,13 +10,19 @@ import Foundation
 import UIKit
 
 class TrackWorkoutsCoordinator: Coordinator {
-    let navigationController: UINavigationController
     
-    init() {
+    var navigationController: UINavigationController!
+    var admobService: AdMobDisplayer!
+    
+    required init(_ admobService: AdMobDisplayer) {
         self.navigationController = UINavigationController()
         self.navigationController.setNavigationBarHidden(true, animated: false)
         
+        self.admobService = admobService
+        
         let viewController = TrackWorkoutsViewController.instantiate()
+        
+        viewController.admobService = self.admobService
         viewController.tabBarItem = UITabBarItem(title: "Track", image: UIImage(named: "Calendar"), tag: 0)
         viewController.coordinator = self
         
