@@ -10,24 +10,24 @@ import Foundation
 import GoogleMobileAds
 
 class AdMobService {
-    var interstitial: GADInterstitial?
-    
+    var interstitial: GADInterstitial!
     var bannerAdRequest: GADRequest!
     var interstitialAdRequest: GADRequest!
     
     var areAdsDisabled: Bool!
     
-    init() {
+    init(_ interstitialAdUnitId: String) {
         self.areAdsDisabled = UserDefaults.standard.bool(forKey: Constants.adsDisabled)
         
         self.bannerAdRequest = GADRequest()
         self.interstitialAdRequest = GADRequest()
-    }
-    
-    func setupGadInterstitial(adUnitID: String) {
+        self.interstitial = GADInterstitial(adUnitID: interstitialAdUnitId)
+//        self.interstitial = GADInterstitial(adUnitID: Constants.testInterstitialAdId)
+        
         if(!areAdsDisabled) {
-            self.interstitial = GADInterstitial(adUnitID: adUnitID)
             self.interstitial!.load(self.interstitialAdRequest)
+        } else {
+            print("Ads have been disabled")
         }
     }
     

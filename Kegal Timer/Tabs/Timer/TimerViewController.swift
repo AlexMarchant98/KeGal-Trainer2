@@ -39,7 +39,6 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 runTimer()
                 workoutCue.playBeginSoundBite()
                 workoutCue.vibrateDevice()
-                adMobService.setupGadInterstitial(adUnitID: Constants.workoutCompleteAdId)
             }
         }
         else

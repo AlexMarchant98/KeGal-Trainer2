@@ -21,15 +21,13 @@ class MainTabBarCoordinator: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.adMobService = AdMobService()
+        self.adMobService = AdMobService(Constants.workoutCompleteAdId)
         
         self.trackWorkoutsCoordinator = TrackWorkoutsCoordinator(adMobService)
         self.stagesCoordinator = StagesCoordinator(adMobService)
         self.timerCoordinator = TimerCoordinator(adMobService)
         self.remindersCoordinator = RemindersCoordinator(adMobService)
         self.settingsCoordinator = SettingsCoordinator(adMobService)
-        
-        adMobService.setupGadInterstitial(adUnitID: Constants.workoutCompleteAdId)
         
         self.tabBar.barTintColor = UIColor.white
         self.tabBar.tintColor = UIColor.workoutBackgroundColor
