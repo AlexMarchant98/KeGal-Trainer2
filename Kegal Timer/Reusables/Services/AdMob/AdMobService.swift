@@ -10,6 +10,7 @@ import Foundation
 import GoogleMobileAds
 
 class AdMobService {
+    
     var interstitial: GADInterstitial!
     var bannerAdRequest: GADRequest!
     var interstitialAdRequest: GADRequest!
@@ -33,8 +34,8 @@ class AdMobService {
     
     func displayGADInterstitial(viewController: UIViewController) {
         if(!areAdsDisabled) {
-            if self.interstitial?.isReady ?? false {
-                self.interstitial!.present(fromRootViewController: viewController)
+            if self.interstitial.isReady {
+                self.interstitial.present(fromRootViewController: viewController)
             } else {
                 print("Ad wasn't ready")
             }
