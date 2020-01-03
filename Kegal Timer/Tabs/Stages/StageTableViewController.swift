@@ -161,7 +161,9 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("Fail to receive ads")
-        print(error)
+        print(error.description)
+        
+        self.adMobService.displayBannerAd(self.adBannerView)
     }
 
 }
