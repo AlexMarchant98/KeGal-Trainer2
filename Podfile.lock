@@ -1,4 +1,7 @@
 PODS:
+  - FBAudienceNetwork (5.6.0):
+    - FBSDKCoreKit/Basics (>= 5.6.0)
+  - FBSDKCoreKit/Basics (5.13.1)
   - Google-Mobile-Ads-SDK (7.44.0):
     - GoogleAppMeasurement (~> 6.0)
   - GoogleAppMeasurement (6.0.1):
@@ -34,12 +37,13 @@ PODS:
     - QuickLayout (= 3.0.0)
 
 DEPENDENCIES:
+  - FBAudienceNetwork
   - Google-Mobile-Ads-SDK
   - JTAppleCalendar
   - SwiftEntryKit (= 1.0.1)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -47,8 +51,13 @@ SPEC REPOS:
     - nanopb
     - QuickLayout
     - SwiftEntryKit
+  trunk:
+    - FBAudienceNetwork
+    - FBSDKCoreKit
 
 SPEC CHECKSUMS:
+  FBAudienceNetwork: 1ea63543665445a3a5b4a059e8210a343b6ab3c1
+  FBSDKCoreKit: 8fb98209109fb684937f05d534305edb18c20207
   Google-Mobile-Ads-SDK: 1e72b4f438d997ab0f2ee62b3a7b0cbcc87c47cb
   GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
   GoogleUtilities: 996e0db07153674fd1b54b220fda3a3dc3547cba
@@ -57,6 +66,6 @@ SPEC CHECKSUMS:
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   SwiftEntryKit: 3f55c0b8e676afe24a3703237bcac68372891c56
 
-PODFILE CHECKSUM: dd0c23d646d793961d466b3d388e8af06c682f53
+PODFILE CHECKSUM: a2dac72eb70257e22cf0d7e7ecd6f6868b57c6a8
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4
