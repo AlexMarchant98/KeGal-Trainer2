@@ -69,6 +69,8 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
         
         self.hideKeyboardWhenTappedAround()
         
+        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
+        
         if let bannerView = self.adServer.setupAdBannerView(
             adId: Constants.settingsTabBannerAdId,
             viewController: self,

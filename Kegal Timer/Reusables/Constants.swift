@@ -55,4 +55,5 @@ struct Constants {
     
     //  Audience Network Ad Placement Id's
     static let audienceNetworkWorkoutCompletePlacementId = "767020503801089_767022473800892"
+    static let audienceNetworkTabsBannerAdPlacementId = "767020503801089_767591013744038"
 }

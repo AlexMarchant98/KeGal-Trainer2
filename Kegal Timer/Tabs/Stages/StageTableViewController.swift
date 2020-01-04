@@ -36,6 +36,8 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
         
         navigationItem.setLeftBarButton(nil, animated: false)
         
+        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
+        
         if let bannerView = self.adServer.setupAdBannerView(
             adId: Constants.stagesTabBannerAdId,
             viewController: self,

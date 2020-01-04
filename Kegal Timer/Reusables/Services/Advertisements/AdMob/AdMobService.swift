@@ -49,7 +49,7 @@ class AdMobService: NSObject {
         _ viewController: UIViewController,
         _ bannerContainerView: UIView) -> GADBannerView {
         
-        let bannerView = GADBannerView(adSize: adSize)
+        let bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         
         bannerView.adUnitID = Constants.testBannerAdId
         bannerView.rootViewController = viewController
@@ -89,9 +89,9 @@ extension AdMobService: GADBannerViewDelegate {
         bannerView.transform = translateTransform
         
         UIView.animate(withDuration: 0.5) {
-            bannerView.superview!.frame = bannerView.frame
             bannerView.transform = CGAffineTransform.identity
-//            bannerView.superview = bannerView
+            bannerView.centerInSuperview()
+            bannerView.superview?.setNeedsLayout()
         }
         
     }
