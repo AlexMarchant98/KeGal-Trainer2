@@ -20,7 +20,7 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
     
     var adServer: AdServer!
     
-    var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+    var adBannerView: GADBannerView!
     
     var products: [SKProduct] = []
     
@@ -71,7 +71,7 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
         
         self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
         
-        if let bannerView = self.adServer.setupAdBannerView(
+        if let bannerView = self.adServer.setupAdMobBannerView(
             adId: Constants.settingsTabBannerAdId,
             viewController: self,
             bannerContainerView: self.tableView!.tableHeaderView!) {

@@ -46,9 +46,9 @@
             filePath = "Kegal Timer/Reusables/Services/Advertisements/AdMob/AdMobService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "setupAdBannerView(_:_:_:_:)"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "setupAdBannerView(_:_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,9 +78,9 @@
             filePath = "Kegal Timer/Reusables/Services/Advertisements/AdMob/AdMobService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "setupAdBannerView(_:_:_:_:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "setupAdBannerView(_:_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +94,25 @@
             filePath = "Kegal Timer/Reusables/Services/Advertisements/AdMob/AdMobService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "setupAdBannerView(_:_:_:_:)"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "setupAdBannerView(_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52BC9F63-8410-48D1-8597-72204A205C6F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kegal Timer/Tabs/Reminders/RemindersTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

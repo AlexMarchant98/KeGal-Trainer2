@@ -93,7 +93,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let bannerView = self.adServer.setupAdBannerView(
+        if let bannerView = self.adServer.setupAdMobBannerView(
             adId: Constants.timerTabBannerAdId,
             viewController: self,
             bannerContainerView: self.bannerAdContainerView) {

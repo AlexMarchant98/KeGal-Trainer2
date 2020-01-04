@@ -33,7 +33,7 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
         
         setupCalendarView()
         
-        if let bannerView = self.adServer.setupAdBannerView(
+        if let bannerView = self.adServer.setupAdMobBannerView(
             adId: Constants.trackTabBannerAdId,
             viewController: self,
             bannerContainerView: self.bannerAdContainerView) {

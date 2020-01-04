@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import GoogleMobileAds
+import FBAudienceNetwork
 
 protocol RemindersTableViewControllerDelegate: AnyObject {
     func didTapAddReminder()
@@ -25,7 +26,8 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     
     var reminders = [Reminder]()
     
-    var adBannerView: GADBannerView!
+    var adMobBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +40,20 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
         
         self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
         
-        if let bannerView = self.adServer.setupAdBannerView(
+        if let returnedAdMobBannerView = self.adServer.setupAdMobBannerView(
             adId: Constants.remindersTabBannerAdId,
             viewController: self,
             bannerContainerView: self.tableView!.tableHeaderView!) {
             
-            self.adBannerView = bannerView
+            self.adMobBannerView = returnedAdMobBannerView
+        } else {
+            if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+                placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+                viewController: self,
+                bannerContainerView: self.tableView!.tableHeaderView!) {
+                
+                self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
+            }
         }
     }
     

@@ -29,13 +29,12 @@ class AudienceNetworkService: NSObject {
     
     func setupAdBannerView(
         _ placementId: String,
-        _ adSize: CGSize,
         _ viewController: UIViewController,
         _ bannerContainerView: UIView) -> FBAdView {
         
         let bannerView = FBAdView(
             placementID: placementId,
-            adSize: FBAdSize(size: adSize),
+            adSize: FBAdSize(size: bannerContainerView.frame.size),
             rootViewController: viewController)
         
         bannerView.delegate = self
@@ -77,15 +76,20 @@ extension AudienceNetworkService: FBAdViewDelegate {
     func adViewDidLoad(_ adView: FBAdView) {
         print("-----AUDIENCE NETWORK BANNER-----")
         print("Banner loaded successfully")
-        
-        // Reposition the banner ad to create a slide down effect
-        let translateTransform = CGAffineTransform(translationX: 0, y: -adView.bounds.size.height)
-        adView.transform = translateTransform
-        
-        UIView.animate(withDuration: 0.5) {
-            adView.transform = CGAffineTransform.identity
-            adView.centerInSuperview()
-            adView.superview?.setNeedsLayout()
+
+        if (adView.isAdValid) {
+            // Reposition the banner ad to create a slide down effect
+            let translateTransform = CGAffineTransform(translationX: 0, y: -adView.bounds.size.height)
+            adView.transform = translateTransform
+            
+            UIView.animate(withDuration: 0.5) {
+                adView.transform = CGAffineTransform.identity
+                adView.centerInSuperview()
+                adView.superview?.setNeedsLayout()
+            }
+        } else {
+            print("-----AUDIENCE NETWORK BANNER-----")
+            print("Banner ad was not valid")
         }
     }
     

@@ -45,7 +45,6 @@ class AdMobService: NSObject {
     
     func setupAdBannerView(
         _ adUnitId: String,
-        _ adSize: GADAdSize,
         _ viewController: UIViewController,
         _ bannerContainerView: UIView) -> GADBannerView {
         

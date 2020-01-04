@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import GoogleMobileAds
+import FBAudienceNetwork
 
 class AdServer {
     
@@ -43,12 +44,23 @@ class AdServer {
         }
     }
     
-    func setupAdBannerView(
+    func setupAdMobBannerView(
         adId: String,
         viewController: UIViewController,
         bannerContainerView: UIView) -> GADBannerView? {
         if(!areAdsDisabled) {
-            return adMobService.setupAdBannerView(adId, GADAdSize(size: bannerContainerView.frame.size, flags: 0), viewController, bannerContainerView)
+            return adMobService.setupAdBannerView(adId, viewController, bannerContainerView)
+        }
+        
+        return nil
+    }
+    
+    func setupAudienceNetworkBannerView(
+        placementId: String,
+        viewController: UIViewController,
+        bannerContainerView: UIView) -> FBAdView? {
+        if(!areAdsDisabled) {
+            return audienceNetworkService.setupAdBannerView(placementId, viewController, bannerContainerView)
         }
         
         return nil

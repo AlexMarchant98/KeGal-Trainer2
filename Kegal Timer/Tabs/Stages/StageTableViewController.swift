@@ -38,7 +38,7 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
         
         self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
         
-        if let bannerView = self.adServer.setupAdBannerView(
+        if let bannerView = self.adServer.setupAdMobBannerView(
             adId: Constants.stagesTabBannerAdId,
             viewController: self,
             bannerContainerView: self.tableView!.tableHeaderView!) {
