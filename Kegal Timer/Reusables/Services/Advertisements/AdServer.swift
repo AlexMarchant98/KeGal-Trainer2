@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
 class AdServer {
     
@@ -20,8 +21,15 @@ class AdServer {
         self.areAdsDisabled = UserDefaults.standard.bool(forKey: Constants.adsDisabled)
         
         if(!self.areAdsDisabled) {
-            self.adMobService = AdMobService(Constants.workoutCompleteAdId)
+            self.adMobService = AdMobService()
             self.audienceNetworkService = AudienceNetworkService()
+        }
+    }
+    
+    func reloadAds() {
+        if(!areAdsDisabled) {
+            self.adMobService.loadAds()
+            self.audienceNetworkService.loadAds()
         }
     }
     
@@ -32,6 +40,20 @@ class AdServer {
             if(!adDisplayed) {
                 audienceNetworkService.displayAudienceNetworkInterstitial(viewController)
             }
+        }
+    }
+    
+    func setupAdBannerView(_ bannerView: GADBannerView, viewController: UIViewController, adId: String, bannerViewDelgate: GADBannerViewDelegate? = nil) -> GADBannerView? {
+        if(!areAdsDisabled) {
+            return adMobService.setupAdBannerView(bannerView, viewController, adId, bannerViewDelgate)
+        }
+        
+        return nil
+    }
+    
+    func displayBannerAd(_ bannerView: GADBannerView) {
+        if(!areAdsDisabled) {
+            adMobService.displayBannerAd(bannerView)
         }
     }
 }

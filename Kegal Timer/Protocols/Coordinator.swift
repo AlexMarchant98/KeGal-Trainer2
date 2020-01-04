@@ -8,14 +8,13 @@
 
 import Foundation
 import UIKit
-import GoogleMobileAds
 
 protocol Coordinator: AnyObject {
     
     var navigationController: UINavigationController! { get set }
-    var adMobService: AdMobService! { get }
+    var adServer: AdServer! { get }
     
-    init(_ adMobService: AdMobService)
+    init(_ adServer: AdServer)
 }
 
 extension Coordinator {

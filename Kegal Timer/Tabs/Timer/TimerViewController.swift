@@ -14,14 +14,14 @@ import GoogleMobileAds
 class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, Storyboarded {
     
     weak var coordinator: TimerCoordinator?
-    var adMobService: AdMobService!
+    var adServer: AdServer!
     
     @IBOutlet weak var timerButton: TimerButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var currentRepLabel: UILabel!
     @IBOutlet weak var currentRepUICollectionView: UICollectionView!
     
-    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var adBannerView: GADBannerView!
     @IBAction func backButton(_ sender: Any) {
         restartRep()
     }
@@ -91,10 +91,15 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bannerView = self.adMobService.setupAdBannerView(
-            self.bannerView,
+        if let bannerView = self.adServer.setupAdBannerView(
+            self.adBannerView,
             viewController: self,
-            adUnitId: Constants.timerTabBannerAdId)
+            adId: Constants.timerTabBannerAdId) {
+            
+            self.adBannerView = bannerView
+            
+            self.adServer.displayBannerAd(self.adBannerView)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,8 +111,6 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         _stage = userPreferences.integer(forKey: Constants.stage)
         _level = userPreferences.string(forKey: Constants.level) ?? ""
         _levelOrder = userPreferences.integer(forKey: Constants.levelOrder)
-        
-        adMobService.displayBannerAd(self.bannerView)
         
         if(_repsPerSet > 1) {
             reps = Array(1..._repsPerSet)
@@ -187,7 +190,9 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 
                 resetTimer()
                 
-                adMobService.displayGADInterstitial(viewController: self)
+                adServer.displayInterstitialAd(viewController: self)
+                
+                adServer.reloadAds()
                 
             }
         } else {

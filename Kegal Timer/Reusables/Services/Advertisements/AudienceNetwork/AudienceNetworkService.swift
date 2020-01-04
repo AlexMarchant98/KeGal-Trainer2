@@ -14,26 +14,25 @@ class AudienceNetworkService: NSObject {
     var interstitialAd: FBInterstitialAd!
     var bannerAd: FBAdView!
     
-    var areAdsDisabled: Bool!
-    
     override init() {
         super.init()
-        
-        self.areAdsDisabled = UserDefaults.standard.bool(forKey: Constants.adsDisabled)
         
         self.interstitialAd = FBInterstitialAd(placementID: Constants.audienceNetworkWorkoutCompletePlacementId)
         
         self.interstitialAd.delegate = self
+        
+        loadAds()
+    }
+    
+    func loadAds() {
         self.interstitialAd.load()
     }
     
     func displayAudienceNetworkInterstitial(_ viewController: UIViewController) {
-        if(!areAdsDisabled) {
-            if self.interstitialAd.isAdValid {
-                self.interstitialAd.show(fromRootViewController: viewController)
-            } else {
-                print("Audience Network interstitial Ad wasn't ready")
-            }
+        if self.interstitialAd.isAdValid {
+            self.interstitialAd.show(fromRootViewController: viewController)
+        } else {
+            print("Audience Network interstitial Ad wasn't ready")
         }
     }
     
@@ -41,10 +40,16 @@ class AudienceNetworkService: NSObject {
 
 extension AudienceNetworkService: FBInterstitialAdDelegate {
     func interstitialAdDidLoad(_ interstitialAd: FBInterstitialAd) {
+        print("-----AUDIENCE NETWORK INTERSTITIAL-----")
         print("Audience Network interstitial ad loaded")
     }
     
     func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
+        print("-----AUDIENCE NETWORK INTERSTITIAL-----")
         print("Audience Network interstitial ad failed to load with the following error: \(error.localizedDescription)")
+    }
+    
+    func interstitialAdDidClose(_ interstitialAd: FBInterstitialAd) {
+        loadAds()
     }
 }

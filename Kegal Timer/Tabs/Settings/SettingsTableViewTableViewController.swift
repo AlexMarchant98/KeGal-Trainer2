@@ -18,7 +18,7 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
     
     let userPreferences = UserDefaults.standard
     
-    var adMobDisplayer: AdMobService!
+    var adServer: AdServer!
     
     var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
     
@@ -69,9 +69,16 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
         
         self.hideKeyboardWhenTappedAround()
         
-        self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.settingsTabBannerAdId, bannerViewDelgate: self)
-        
-        self.adMobDisplayer.displayBannerAd(self.adBannerView)
+        if let bannerView = self.adServer.setupAdBannerView(
+            self.adBannerView,
+            viewController: self,
+            adId: Constants.settingsTabBannerAdId,
+            bannerViewDelgate: self) {
+            
+            self.adBannerView = bannerView
+            
+            self.adServer.displayBannerAd(self.adBannerView)
+        }
         
         if(SKPaymentQueue.canMakePayments()) {
             print("IAP is enabled, loading")

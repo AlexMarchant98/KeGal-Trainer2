@@ -13,7 +13,7 @@ import GoogleMobileAds
 class StageTableViewController: UITableViewController, GADBannerViewDelegate, Storyboarded {
     
     weak var coordinator: StagesCoordinator?
-    var adMobService: AdMobService!
+    var adServer: AdServer!
     
     let userPreferences = UserDefaults.standard
     
@@ -36,13 +36,16 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
         
         navigationItem.setLeftBarButton(nil, animated: false)
         
-        self.adBannerView = self.adMobService.setupAdBannerView(
+        if let bannerView = self.adServer.setupAdBannerView(
             self.adBannerView,
             viewController: self,
-            adUnitId: Constants.stagesTabBannerAdId,
-            bannerViewDelgate: self)
-        
-        self.adMobService.displayBannerAd(self.adBannerView)
+            adId: Constants.stagesTabBannerAdId,
+            bannerViewDelgate: self) {
+            
+            self.adBannerView = bannerView
+            
+            self.adServer.displayBannerAd(self.adBannerView)
+        }
     }
     
     func getStages()
@@ -163,7 +166,7 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
         print("Fail to receive ads")
         print(error.description)
         
-        self.adMobService.displayBannerAd(self.adBannerView)
+        self.adServer.displayBannerAd(self.adBannerView)
     }
 
 }

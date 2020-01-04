@@ -11,16 +11,16 @@ import UIKit
 class StagesCoordinator: Coordinator {
     
     var navigationController: UINavigationController!
-    var adMobService: AdMobService!
+    var adServer: AdServer!
     
-    required init(_ adMobService: AdMobService) {
+    required init(_ adServer: AdServer) {
         self.navigationController = UINavigationController()
         
-        self.adMobService = adMobService
+        self.adServer = adServer
         
         let viewController = StageTableViewController.instantiate()
         
-        viewController.adMobService = self.adMobService
+        viewController.adServer = self.adServer
         viewController.tabBarItem = UITabBarItem(title: "Stages", image: UIImage(named: "Challenges"), tag: 0)
         viewController.coordinator = self
         

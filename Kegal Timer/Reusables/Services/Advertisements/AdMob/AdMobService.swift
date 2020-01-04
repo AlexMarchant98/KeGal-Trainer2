@@ -9,58 +9,71 @@
 import Foundation
 import GoogleMobileAds
 
-class AdMobService {
+class AdMobService: NSObject {
     
     var interstitial: GADInterstitial!
     var bannerAdRequest: GADRequest!
     var interstitialAdRequest: GADRequest!
     
-    var areAdsDisabled: Bool!
-    
-    init(_ interstitialAdUnitId: String) {
-        self.areAdsDisabled = UserDefaults.standard.bool(forKey: Constants.adsDisabled)
+    override init() {
+        super.init()
         
         self.bannerAdRequest = GADRequest()
         self.interstitialAdRequest = GADRequest()
-        self.interstitial = GADInterstitial(adUnitID: interstitialAdUnitId)
-//        self.interstitial = GADInterstitial(adUnitID: Constants.testInterstitialAdId)
         
-        if(!areAdsDisabled) {
-            self.interstitial!.load(self.interstitialAdRequest)
-        } else {
-            print("Ads have been disabled")
-        }
+        self.interstitial = GADInterstitial(adUnitID: Constants.workoutCompleteAdId)
+        self.interstitial.delegate = self
+        
+        loadAds()
+    }
+    
+    func loadAds() {
+        self.interstitial.load(self.interstitialAdRequest)
     }
     
     func displayGADInterstitial(_ viewController: UIViewController) -> Bool {
-        if(!areAdsDisabled) {
-            if self.interstitial.isReady {
-                self.interstitial.present(fromRootViewController: viewController)
-                return true
-            } else {
-                print("AdMob interstitial Ad wasn't ready")
-                return false
-            }
+        if self.interstitial.isReady {
+            self.interstitial.present(fromRootViewController: viewController)
+            return true
+        } else {
+            print("AdMob interstitial Ad wasn't ready")
+            return false
         }
     }
     
-    func setupAdBannerView(_ bannerView: GADBannerView, viewController: UIViewController, adUnitId: String, bannerViewDelgate: GADBannerViewDelegate? = nil) -> GADBannerView {
-        if(!areAdsDisabled) {
-            bannerView.adUnitID = adUnitId
-//            bannerView.adUnitID = Constants.testBannerAdId
-            bannerView.rootViewController = viewController
-            
-            if let delegate = bannerViewDelgate {
-                bannerView.delegate = delegate
-            }
+    func setupAdBannerView(
+        _ bannerView: GADBannerView,
+        _ viewController: UIViewController,
+        _ adUnitId: String,
+        _ bannerViewDelgate: GADBannerViewDelegate? = nil) -> GADBannerView {
+        
+        bannerView.adUnitID = adUnitId
+        bannerView.rootViewController = viewController
+        
+        if let delegate = bannerViewDelgate {
+            bannerView.delegate = delegate
         }
         
         return bannerView
     }
     
     func displayBannerAd(_ bannerView: GADBannerView) {
-        if(!areAdsDisabled) {
-            bannerView.load(self.bannerAdRequest)
-        }
+        bannerView.load(self.bannerAdRequest)
+    }
+}
+
+extension AdMobService: GADInterstitialDelegate {
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("-----ADMOB INTERSTITIAL-----")
+        print("AdMob interstitial ad loaded")
+    }
+    
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        print("-----ADMOB INTERSTITIAL-----")
+        print("AdMob interstitial failed to load with error: \(error.localizedDescription)")
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        loadAds()
     }
 }
