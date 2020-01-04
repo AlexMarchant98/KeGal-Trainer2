@@ -52,4 +52,7 @@ struct Constants {
     static let workoutCompleteAdId = "ca-app-pub-4293952743610750/3195065512"
     static let remindersTabBannerAdId = "ca-app-pub-4293952743610750/9271079775"
     static let settingsTabBannerAdId = "ca-app-pub-4293952743610750/5906549836"
+    
+    //  Audience Network Ad Placement Id's
+    static let audienceNetworkWorkoutCompletePlacementId = "767020503801089_767022473800892"
 }
