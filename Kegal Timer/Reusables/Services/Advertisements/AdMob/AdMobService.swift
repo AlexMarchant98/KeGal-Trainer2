@@ -51,7 +51,7 @@ class AdMobService: NSObject {
         
         let bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         
-        bannerView.adUnitID = Constants.testBannerAdId
+        bannerView.adUnitID = adUnitId
         bannerView.rootViewController = viewController
         bannerView.delegate = self
         
@@ -82,6 +82,7 @@ extension AdMobService: GADInterstitialDelegate {
 extension AdMobService: GADBannerViewDelegate {
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("-----ADMOB BANNER-----")
         print("Banner loaded successfully")
         
         // Reposition the banner ad to create a slide down effect
@@ -93,11 +94,10 @@ extension AdMobService: GADBannerViewDelegate {
             bannerView.centerInSuperview()
             bannerView.superview?.setNeedsLayout()
         }
-        
     }
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("Fail to receive ads")
-        print(error)
+        print("-----ADMOB BANNER-----")
+        print("Banner failed to load with the follow error: \(error.localizedDescription)")
     }
 }

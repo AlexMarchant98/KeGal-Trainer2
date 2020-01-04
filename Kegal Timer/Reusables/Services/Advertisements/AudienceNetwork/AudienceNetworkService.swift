@@ -28,16 +28,21 @@ class AudienceNetworkService: NSObject {
     }
     
     func setupAdBannerView(
+        _ placementId: String,
         _ adSize: CGSize,
         _ viewController: UIViewController,
-        _ placementID: String) -> FBAdView {
+        _ bannerContainerView: UIView) -> FBAdView {
         
         let bannerView = FBAdView(
-            placementID: placementID,
+            placementID: placementId,
             adSize: FBAdSize(size: adSize),
             rootViewController: viewController)
         
+        bannerView.delegate = self
+        
         bannerView.loadAd()
+        
+        bannerContainerView.addSubview(bannerView)
         
         return bannerView
     }
@@ -65,5 +70,27 @@ extension AudienceNetworkService: FBInterstitialAdDelegate {
     
     func interstitialAdDidClose(_ interstitialAd: FBInterstitialAd) {
         loadAds()
+    }
+}
+
+extension AudienceNetworkService: FBAdViewDelegate {
+    func adViewDidLoad(_ adView: FBAdView) {
+        print("-----AUDIENCE NETWORK BANNER-----")
+        print("Banner loaded successfully")
+        
+        // Reposition the banner ad to create a slide down effect
+        let translateTransform = CGAffineTransform(translationX: 0, y: -adView.bounds.size.height)
+        adView.transform = translateTransform
+        
+        UIView.animate(withDuration: 0.5) {
+            adView.transform = CGAffineTransform.identity
+            adView.centerInSuperview()
+            adView.superview?.setNeedsLayout()
+        }
+    }
+    
+    func adView(_ adView: FBAdView, didFailWithError error: Error) {
+        print("-----AUDIENCE NETWORK BANNER-----")
+        print("Banner failed to load with the follow error: \(error.localizedDescription)")
     }
 }
