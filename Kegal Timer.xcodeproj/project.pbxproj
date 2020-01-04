@@ -25,6 +25,7 @@
 		D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */; };
 		D4206FFE23774310003E38A7 /* AlertHandlerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4206FFD23774310003E38A7 /* AlertHandlerService.swift */; };
 		D422E43123C07D45005853AB /* AudienceNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422E43023C07D45005853AB /* AudienceNetworkService.swift */; };
+		D422E43423C080D6005853AB /* AdServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422E43323C080D6005853AB /* AdServer.swift */; };
 		D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF022177AA700CCC697 /* CustomCell.swift */; };
 		D44A595C22B5331C009A053D /* AdMobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobService.swift */; };
 		D44A596D22B66052009A053D /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A596C22B66052009A053D /* BannerAdView.swift */; };
@@ -129,6 +130,7 @@
 		D4106018219CBB7800089961 /* SettingsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewTableViewController.swift; sourceTree = "<group>"; };
 		D4206FFD23774310003E38A7 /* AlertHandlerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandlerService.swift; sourceTree = "<group>"; };
 		D422E43023C07D45005853AB /* AudienceNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudienceNetworkService.swift; sourceTree = "<group>"; };
+		D422E43323C080D6005853AB /* AdServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdServer.swift; sourceTree = "<group>"; };
 		D4406DF022177AA700CCC697 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D44A595B22B5331C009A053D /* AdMobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobService.swift; sourceTree = "<group>"; };
 		D44A596C22B66052009A053D /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
@@ -297,9 +299,7 @@
 		D4206FFC237742E6003E38A7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D422E43223C08092005853AB /* Advertisments */,
-				D422E42F23C07D1C005853AB /* AudienceNetwork */,
-				D4F7036622BD13C30007EB1A /* AdMob */,
+				D422E43223C08092005853AB /* Advertisements */,
 				D4206FFD23774310003E38A7 /* AlertHandlerService.swift */,
 			);
 			path = Services;
@@ -313,11 +313,14 @@
 			path = AudienceNetwork;
 			sourceTree = "<group>";
 		};
-		D422E43223C08092005853AB /* Advertisments */ = {
+		D422E43223C08092005853AB /* Advertisements */ = {
 			isa = PBXGroup;
 			children = (
+				D422E43323C080D6005853AB /* AdServer.swift */,
+				D4F7036622BD13C30007EB1A /* AdMob */,
+				D422E42F23C07D1C005853AB /* AudienceNetwork */,
 			);
-			path = Advertisments;
+			path = Advertisements;
 			sourceTree = "<group>";
 		};
 		D484CF2D22AD19510042802C /* Extensions */ = {
@@ -833,6 +836,7 @@
 				D4C3263F22A6FB3B001F9BEA /* Coordinator.swift in Sources */,
 				D4106019219CBB7800089961 /* SettingsTableViewTableViewController.swift in Sources */,
 				D484CF3A22AD1CF00042802C /* AlertShowing.swift in Sources */,
+				D422E43423C080D6005853AB /* AdServer.swift in Sources */,
 				D4006454217FAF9F0077765D /* TrackWorkoutsViewController.swift in Sources */,
 				D484CF2422A998390042802C /* RemindersCoordinator.swift in Sources */,
 				D40780E721E12C6600C3D2D1 /* KegalTimer.xcdatamodeld in Sources */,

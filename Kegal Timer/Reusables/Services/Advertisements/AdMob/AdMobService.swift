@@ -32,12 +32,14 @@ class AdMobService {
         }
     }
     
-    func displayGADInterstitial(viewController: UIViewController) {
+    func displayGADInterstitial(_ viewController: UIViewController) -> Bool {
         if(!areAdsDisabled) {
             if self.interstitial.isReady {
                 self.interstitial.present(fromRootViewController: viewController)
+                return true
             } else {
-                print("Ad wasn't ready")
+                print("AdMob interstitial Ad wasn't ready")
+                return false
             }
         }
     }

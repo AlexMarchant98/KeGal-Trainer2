@@ -27,7 +27,7 @@ class AudienceNetworkService: NSObject {
         self.interstitialAd.load()
     }
     
-    func displayAudienceNetworkInterstitial(viewController: UIViewController) {
+    func displayAudienceNetworkInterstitial(_ viewController: UIViewController) {
         if(!areAdsDisabled) {
             if self.interstitialAd.isAdValid {
                 self.interstitialAd.show(fromRootViewController: viewController)
