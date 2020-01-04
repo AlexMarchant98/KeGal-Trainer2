@@ -21,10 +21,11 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
     @IBOutlet weak var lastMonth: UILabel!
     @IBOutlet weak var currentMonth: UILabel!
     @IBOutlet weak var nextMonth: UILabel!
-    @IBOutlet weak var adBannerView: GADBannerView!
+    @IBOutlet weak var bannerAdContainerView: UIView!
     
     let formatter = DateFormatter()
     
+    var adBannerView: GADBannerView!
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
 
     override func viewDidLoad() {
@@ -33,13 +34,11 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
         setupCalendarView()
         
         if let bannerView = self.adServer.setupAdBannerView(
-            self.adBannerView,
+            adId: Constants.trackTabBannerAdId,
             viewController: self,
-            adId: Constants.trackTabBannerAdId) {
+            bannerContainerView: self.bannerAdContainerView) {
             
             self.adBannerView = bannerView
-            
-            self.adServer.displayBannerAd(self.adBannerView)
         }
     }
     

@@ -15,6 +15,8 @@ class AdMobService: NSObject {
     var bannerAdRequest: GADRequest!
     var interstitialAdRequest: GADRequest!
     
+    var bannerContainerView: UIView!
+    
     override init() {
         super.init()
         
@@ -42,23 +44,22 @@ class AdMobService: NSObject {
     }
     
     func setupAdBannerView(
-        _ bannerView: GADBannerView,
-        _ viewController: UIViewController,
         _ adUnitId: String,
-        _ bannerViewDelgate: GADBannerViewDelegate? = nil) -> GADBannerView {
+        _ adSize: GADAdSize,
+        _ viewController: UIViewController,
+        _ bannerContainerView: UIView) -> GADBannerView {
         
-        bannerView.adUnitID = adUnitId
+        let bannerView = GADBannerView(adSize: adSize)
+        
+        bannerView.adUnitID = Constants.testBannerAdId
         bannerView.rootViewController = viewController
+        bannerView.delegate = self
         
-        if let delegate = bannerViewDelgate {
-            bannerView.delegate = delegate
-        }
+        bannerView.load(self.bannerAdRequest)
+        
+        bannerContainerView.addSubview(bannerView)
         
         return bannerView
-    }
-    
-    func displayBannerAd(_ bannerView: GADBannerView) {
-        bannerView.load(self.bannerAdRequest)
     }
 }
 
@@ -75,5 +76,28 @@ extension AdMobService: GADInterstitialDelegate {
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         loadAds()
+    }
+}
+
+extension AdMobService: GADBannerViewDelegate {
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner loaded successfully")
+        
+        // Reposition the banner ad to create a slide down effect
+        let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
+        bannerView.transform = translateTransform
+        
+        UIView.animate(withDuration: 0.5) {
+            bannerView.superview!.frame = bannerView.frame
+            bannerView.transform = CGAffineTransform.identity
+//            bannerView.superview = bannerView
+        }
+        
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Fail to receive ads")
+        print(error)
     }
 }

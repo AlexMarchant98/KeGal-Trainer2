@@ -25,7 +25,7 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     
     var reminders = [Reminder]()
     
-    var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+    var adBannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +36,13 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.remindersTableViewCellReuseIdentifier)
         
+        
         if let bannerView = self.adServer.setupAdBannerView(
-            self.adBannerView,
-            viewController: self,
             adId: Constants.remindersTabBannerAdId,
-            bannerViewDelgate: self) {
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
             
             self.adBannerView = bannerView
-            
-            self.adServer.displayBannerAd(self.adBannerView)
         }
     }
     

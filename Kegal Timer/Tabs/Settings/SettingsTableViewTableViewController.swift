@@ -70,14 +70,11 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
         self.hideKeyboardWhenTappedAround()
         
         if let bannerView = self.adServer.setupAdBannerView(
-            self.adBannerView,
-            viewController: self,
             adId: Constants.settingsTabBannerAdId,
-            bannerViewDelgate: self) {
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
             
             self.adBannerView = bannerView
-            
-            self.adServer.displayBannerAd(self.adBannerView)
         }
         
         if(SKPaymentQueue.canMakePayments()) {

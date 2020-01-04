@@ -20,8 +20,10 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var currentRepLabel: UILabel!
     @IBOutlet weak var currentRepUICollectionView: UICollectionView!
+    @IBOutlet weak var bannerAdContainerView: UIView!
     
-    @IBOutlet weak var adBannerView: GADBannerView!
+    var adBannerView: GADBannerView!
+    
     @IBAction func backButton(_ sender: Any) {
         restartRep()
     }
@@ -92,13 +94,11 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
         super.viewDidLoad()
         
         if let bannerView = self.adServer.setupAdBannerView(
-            self.adBannerView,
+            adId: Constants.timerTabBannerAdId,
             viewController: self,
-            adId: Constants.timerTabBannerAdId) {
+            bannerContainerView: self.bannerAdContainerView) {
             
             self.adBannerView = bannerView
-            
-            self.adServer.displayBannerAd(self.adBannerView)
         }
     }
     

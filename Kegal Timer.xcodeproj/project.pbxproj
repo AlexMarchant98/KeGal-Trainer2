@@ -28,7 +28,6 @@
 		D422E43423C080D6005853AB /* AdServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422E43323C080D6005853AB /* AdServer.swift */; };
 		D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF022177AA700CCC697 /* CustomCell.swift */; };
 		D44A595C22B5331C009A053D /* AdMobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobService.swift */; };
-		D44A596D22B66052009A053D /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A596C22B66052009A053D /* BannerAdView.swift */; };
 		D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4505815221F23B7004CEEEF /* RequestReview.swift */; };
 		D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */; };
 		D467598122060B8000341027 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D467598022060B8000341027 /* Reminder.swift */; };
@@ -133,7 +132,6 @@
 		D422E43323C080D6005853AB /* AdServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdServer.swift; sourceTree = "<group>"; };
 		D4406DF022177AA700CCC697 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D44A595B22B5331C009A053D /* AdMobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobService.swift; sourceTree = "<group>"; };
-		D44A596C22B66052009A053D /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCollectionViewCell.swift; sourceTree = "<group>"; };
 		D467598022060B8000341027 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
@@ -508,7 +506,6 @@
 			isa = PBXGroup;
 			children = (
 				D44A595B22B5331C009A053D /* AdMobService.swift */,
-				D44A596C22B66052009A053D /* BannerAdView.swift */,
 			);
 			path = AdMob;
 			sourceTree = "<group>";
@@ -820,7 +817,6 @@
 				D422E43123C07D45005853AB /* AudienceNetworkService.swift in Sources */,
 				D484CF5122AD739E0042802C /* BackButton.swift in Sources */,
 				D484CF2F22AD19840042802C /* UIViewController-Keyboard.swift in Sources */,
-				D44A596D22B66052009A053D /* BannerAdView.swift in Sources */,
 				D484CF2022A993600042802C /* StagesCoordinator.swift in Sources */,
 				D4E48D5621921960006366A7 /* TimerButton.swift in Sources */,
 				D48CFC4A21A744B500AD6179 /* WorkoutCue.swift in Sources */,

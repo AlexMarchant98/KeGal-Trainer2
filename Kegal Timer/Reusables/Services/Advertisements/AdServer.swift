@@ -43,17 +43,14 @@ class AdServer {
         }
     }
     
-    func setupAdBannerView(_ bannerView: GADBannerView, viewController: UIViewController, adId: String, bannerViewDelgate: GADBannerViewDelegate? = nil) -> GADBannerView? {
+    func setupAdBannerView(
+        adId: String,
+        viewController: UIViewController,
+        bannerContainerView: UIView) -> GADBannerView? {
         if(!areAdsDisabled) {
-            return adMobService.setupAdBannerView(bannerView, viewController, adId, bannerViewDelgate)
+            return adMobService.setupAdBannerView(adId, GADAdSize(size: bannerContainerView.frame.size, flags: 0), viewController, bannerContainerView)
         }
         
         return nil
-    }
-    
-    func displayBannerAd(_ bannerView: GADBannerView) {
-        if(!areAdsDisabled) {
-            adMobService.displayBannerAd(bannerView)
-        }
     }
 }

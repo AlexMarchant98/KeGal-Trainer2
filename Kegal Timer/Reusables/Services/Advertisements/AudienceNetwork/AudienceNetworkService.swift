@@ -12,7 +12,6 @@ import FBAudienceNetwork
 class AudienceNetworkService: NSObject {
     
     var interstitialAd: FBInterstitialAd!
-    var bannerAd: FBAdView!
     
     override init() {
         super.init()
@@ -26,6 +25,21 @@ class AudienceNetworkService: NSObject {
     
     func loadAds() {
         self.interstitialAd.load()
+    }
+    
+    func setupAdBannerView(
+        _ adSize: CGSize,
+        _ viewController: UIViewController,
+        _ placementID: String) -> FBAdView {
+        
+        let bannerView = FBAdView(
+            placementID: placementID,
+            adSize: FBAdSize(size: adSize),
+            rootViewController: viewController)
+        
+        bannerView.loadAd()
+        
+        return bannerView
     }
     
     func displayAudienceNetworkInterstitial(_ viewController: UIViewController) {

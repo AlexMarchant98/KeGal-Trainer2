@@ -17,7 +17,7 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
     
     let userPreferences = UserDefaults.standard
     
-    var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+    var adBannerView: GADBannerView!
     
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
 
@@ -37,14 +37,11 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
         navigationItem.setLeftBarButton(nil, animated: false)
         
         if let bannerView = self.adServer.setupAdBannerView(
-            self.adBannerView,
-            viewController: self,
             adId: Constants.stagesTabBannerAdId,
-            bannerViewDelgate: self) {
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
             
             self.adBannerView = bannerView
-            
-            self.adServer.displayBannerAd(self.adBannerView)
         }
     }
     
@@ -165,8 +162,6 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("Fail to receive ads")
         print(error.description)
-        
-        self.adServer.displayBannerAd(self.adBannerView)
     }
 
 }

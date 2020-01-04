@@ -309,7 +309,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5X-EB-mmy" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5X-EB-mmy">
                                 <rect key="frame" x="47" y="44" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -342,7 +342,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Track" image="Calendar" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="adBannerView" destination="o5X-EB-mmy" id="qEX-Cr-I8k"/>
+                        <outlet property="bannerAdContainerView" destination="o5X-EB-mmy" id="Iu9-cy-wFy"/>
                         <outlet property="calendarView" destination="Uix-FL-1Xd" id="i9e-ax-4ic"/>
                         <outlet property="currentMonth" destination="FfP-zG-cj8" id="oYs-CW-gn5"/>
                         <outlet property="lastMonth" destination="i0d-1L-ren" id="Hkl-uX-7HH"/>
@@ -480,7 +480,7 @@
                                     <action selector="stopWorkoutButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="jKB-2Z-lnC"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="nPq-Ud-L0p" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="nPq-Ud-L0p">
                                 <rect key="frame" x="47" y="44" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -525,7 +525,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="Timer" landscapeImage="Settings" largeContentSizeImage="Settings" selectedImage="Timer" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="adBannerView" destination="nPq-Ud-L0p" id="yvd-4h-B7l"/>
+                        <outlet property="bannerAdContainerView" destination="nPq-Ud-L0p" id="G4d-eK-079"/>
                         <outlet property="currentRepLabel" destination="SQ5-mc-3zh" id="gvv-Y9-FOM"/>
                         <outlet property="currentRepUICollectionView" destination="2kh-54-BF2" id="j3Z-BB-519"/>
                         <outlet property="timeLabel" destination="ZOl-A9-5xy" id="M1K-jN-vBK"/>
