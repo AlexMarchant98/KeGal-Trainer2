@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import FBAudienceNetwork
 import StoreKit
 import MessageUI
 
@@ -16,10 +17,12 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
     weak var coordinator: SettingsCoordinator?
     internal var alertHandlerService = AlertHandlerService()
     
-    let adMobDisplayer = AdMobDisplayer()
     let userPreferences = UserDefaults.standard
     
-    var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+    var adServer: AdServer!
+    
+    var adBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
     
     var products: [SKProduct] = []
     
@@ -68,9 +71,22 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
         
         self.hideKeyboardWhenTappedAround()
         
-        self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.settingsTabBannerAdId, bannerViewDelgate: self)
+        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
         
-        self.adMobDisplayer.displayBannerAd(self.adBannerView)
+        if let bannerView = self.adServer.setupAdMobBannerView(
+            adId: Constants.settingsTabBannerAdId,
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
+            
+            self.adBannerView = bannerView
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
+        }
         
         if(SKPaymentQueue.canMakePayments()) {
             print("IAP is enabled, loading")

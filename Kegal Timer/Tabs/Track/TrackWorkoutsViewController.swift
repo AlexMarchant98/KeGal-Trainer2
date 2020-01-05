@@ -10,20 +10,24 @@ import UIKit
 import CoreData
 import JTAppleCalendar
 import GoogleMobileAds
+import FBAudienceNetwork
 
 class TrackWorkoutsViewController: UIViewController, Storyboarded {
     
     weak var coordinator: TrackWorkoutsCoordinator?
-    let adMobDisplayer = AdMobDisplayer()
+    var adServer: AdServer!
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: TopAlignedLabel!
     @IBOutlet weak var lastMonth: UILabel!
     @IBOutlet weak var currentMonth: UILabel!
     @IBOutlet weak var nextMonth: UILabel!
-    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerAdContainerView: UIView!
     
     let formatter = DateFormatter()
+    
+    var adBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
     
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
 
@@ -32,9 +36,20 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
         
         setupCalendarView()
         
-        self.bannerView = self.adMobDisplayer.setupAdBannerView(self.bannerView, viewController: self, adUnitId: Constants.trackTabBannerAdId)
-        
-        self.adMobDisplayer.displayBannerAd(self.bannerView)
+        if let bannerView = self.adServer.setupAdMobBannerView(
+            adId: Constants.trackTabBannerAdId,
+            viewController: self,
+            bannerContainerView: self.bannerAdContainerView) {
+            
+            self.adBannerView = bannerView
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.bannerAdContainerView) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

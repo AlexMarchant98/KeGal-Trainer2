@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D5E61C09F4485D42ACA6F6210C13810"
+               BlueprintIdentifier = "FEA6FF0588A91CCD972EDCD698B85647"
+               BuildableName = "SwiftEntryKit.framework"
                BlueprintName = "SwiftEntryKit"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SwiftEntryKit.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

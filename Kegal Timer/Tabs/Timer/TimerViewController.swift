@@ -9,19 +9,23 @@
 import UIKit
 import CoreData
 import GoogleMobileAds
+import FBAudienceNetwork
 
 @IBDesignable
 class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, Storyboarded {
     
     weak var coordinator: TimerCoordinator?
-    let adMobDisplayer = AdMobDisplayer()
+    var adServer: AdServer!
     
     @IBOutlet weak var timerButton: TimerButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var currentRepLabel: UILabel!
     @IBOutlet weak var currentRepUICollectionView: UICollectionView!
+    @IBOutlet weak var bannerAdContainerView: UIView!
     
-    @IBOutlet weak var bannerView: GADBannerView!
+    var adBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
+    
     @IBAction func backButton(_ sender: Any) {
         restartRep()
     }
@@ -39,7 +43,6 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 runTimer()
                 workoutCue.playBeginSoundBite()
                 workoutCue.vibrateDevice()
-                adMobDisplayer.setupGadInterstitial(adUnitID: Constants.workoutCompleteAdId)
             }
         }
         else
@@ -92,9 +95,20 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bannerView = self.adMobDisplayer.setupAdBannerView(self.bannerView, viewController: self, adUnitId: Constants.timerTabBannerAdId)
-        
-        self.adMobDisplayer.displayBannerAd(self.bannerView)
+        if let bannerView = self.adServer.setupAdMobBannerView(
+            adId: Constants.timerTabBannerAdId,
+            viewController: self,
+            bannerContainerView: self.bannerAdContainerView) {
+            
+            self.adBannerView = bannerView
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.bannerAdContainerView) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -185,7 +199,9 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
                 
                 resetTimer()
                 
-                adMobDisplayer.displayGADInterstitial(viewController: self)
+                adServer.displayInterstitialAd(viewController: self)
+                
+                adServer.reloadAds()
                 
             }
         } else {

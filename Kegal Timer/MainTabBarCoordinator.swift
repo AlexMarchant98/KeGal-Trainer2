@@ -11,14 +11,23 @@ import UIKit
 
 class MainTabBarCoordinator: UITabBarController {
     
-    let trackWorkoutsCoordinator = TrackWorkoutsCoordinator()
-    let stagesCoordinator = StagesCoordinator()
-    let timerCoordinator = TimerCoordinator()
-    let remindersCoordinator = RemindersCoordinator()
-    let settingsCoordinator = SettingsCoordinator()
+    var adServer: AdServer!
+    var trackWorkoutsCoordinator: TrackWorkoutsCoordinator!
+    var stagesCoordinator: StagesCoordinator!
+    var timerCoordinator: TimerCoordinator!
+    var remindersCoordinator: RemindersCoordinator!
+    var settingsCoordinator: SettingsCoordinator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.adServer = AdServer()
+        
+        self.trackWorkoutsCoordinator = TrackWorkoutsCoordinator(adServer)
+        self.stagesCoordinator = StagesCoordinator(adServer)
+        self.timerCoordinator = TimerCoordinator(adServer)
+        self.remindersCoordinator = RemindersCoordinator(adServer)
+        self.settingsCoordinator = SettingsCoordinator(adServer)
         
         self.tabBar.barTintColor = UIColor.white
         self.tabBar.tintColor = UIColor.workoutBackgroundColor

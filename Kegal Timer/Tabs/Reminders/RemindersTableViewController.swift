@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import GoogleMobileAds
+import FBAudienceNetwork
 
 protocol RemindersTableViewControllerDelegate: AnyObject {
     func didTapAddReminder()
@@ -21,11 +22,12 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     
     internal var alertHandlerService = AlertHandlerService()
     
-    let adMobDisplayer = AdMobDisplayer()
+    var adServer: AdServer!
     
     var reminders = [Reminder]()
     
-    var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+    var adMobBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +38,22 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.remindersTableViewCellReuseIdentifier)
         
-        self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.remindersTabBannerAdId, bannerViewDelgate: self)
-        
-        self.adMobDisplayer.displayBannerAd(self.adBannerView)
+        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
+
+        if let returnedAdMobBannerView = self.adServer.setupAdMobBannerView(
+            adId: Constants.remindersTabBannerAdId,
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
+
+            self.adMobBannerView = returnedAdMobBannerView
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

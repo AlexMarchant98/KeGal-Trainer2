@@ -9,15 +9,17 @@
 import UIKit
 import CoreData
 import GoogleMobileAds
+import FBAudienceNetwork
 
 class StageTableViewController: UITableViewController, GADBannerViewDelegate, Storyboarded {
     
     weak var coordinator: StagesCoordinator?
-    let adMobDisplayer = AdMobDisplayer()
+    var adServer: AdServer!
     
     let userPreferences = UserDefaults.standard
     
-    var adBannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+    var adBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
     
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
 
@@ -36,9 +38,22 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
         
         navigationItem.setLeftBarButton(nil, animated: false)
         
-        self.adBannerView = self.adMobDisplayer.setupAdBannerView(self.adBannerView, viewController: self, adUnitId: Constants.stagesTabBannerAdId, bannerViewDelgate: self)
+        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
         
-        self.adMobDisplayer.displayBannerAd(self.adBannerView)
+        if let bannerView = self.adServer.setupAdMobBannerView(
+            adId: Constants.stagesTabBannerAdId,
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
+            
+            self.adBannerView = bannerView
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
+        }
     }
     
     func getStages()
@@ -157,7 +172,7 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("Fail to receive ads")
-        print(error)
+        print(error.description)
     }
 
 }

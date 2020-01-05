@@ -10,10 +10,14 @@ import UIKit
 import UserNotifications
 
 class RemindersCoordinator: Coordinator {
-    let navigationController: UINavigationController
     
-    init() {
+    var navigationController: UINavigationController!
+    var adServer: AdServer!
+    
+    required init(_ adServer: AdServer) {
         self.navigationController = UINavigationController()
+        
+        self.adServer = adServer
         
         self.navigationController.tabBarItem = UITabBarItem(title: "Reminder", image: UIImage(named: "Reminder"), tag: 0)
         
@@ -22,6 +26,8 @@ class RemindersCoordinator: Coordinator {
     
     func showReminders() {
         let viewController = RemindersTableViewController.instantiate()
+        
+        viewController.adServer = self.adServer
         viewController.delegate = self
         
         navigationController.pushViewController(viewController, animated: true)
