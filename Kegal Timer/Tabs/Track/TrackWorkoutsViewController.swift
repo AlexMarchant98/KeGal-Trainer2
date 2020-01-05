@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import JTAppleCalendar
 import GoogleMobileAds
+import FBAudienceNetwork
 
 class TrackWorkoutsViewController: UIViewController, Storyboarded {
     
@@ -26,6 +27,8 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
     let formatter = DateFormatter()
     
     var adBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
+    
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
 
     override func viewDidLoad() {
@@ -39,6 +42,13 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
             bannerContainerView: self.bannerAdContainerView) {
             
             self.adBannerView = bannerView
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.bannerAdContainerView) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
         }
     }
     

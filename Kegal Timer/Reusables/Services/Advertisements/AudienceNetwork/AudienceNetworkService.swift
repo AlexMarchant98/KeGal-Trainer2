@@ -34,7 +34,7 @@ class AudienceNetworkService: NSObject {
         
         let bannerView = FBAdView(
             placementID: placementId,
-            adSize: FBAdSize(size: bannerContainerView.frame.size),
+            adSize: kFBAdSizeHeight50Banner,
             rootViewController: viewController)
         
         bannerView.delegate = self
@@ -81,7 +81,7 @@ extension AudienceNetworkService: FBAdViewDelegate {
             // Reposition the banner ad to create a slide down effect
             let translateTransform = CGAffineTransform(translationX: 0, y: -adView.bounds.size.height)
             adView.transform = translateTransform
-            
+
             UIView.animate(withDuration: 0.5) {
                 adView.transform = CGAffineTransform.identity
                 adView.centerInSuperview()
@@ -95,6 +95,6 @@ extension AudienceNetworkService: FBAdViewDelegate {
     
     func adView(_ adView: FBAdView, didFailWithError error: Error) {
         print("-----AUDIENCE NETWORK BANNER-----")
-        print("Banner failed to load with the follow error: \(error.localizedDescription)")
+        print("Banner failed to load with the following error: \(error)")
     }
 }

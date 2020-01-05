@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import GoogleMobileAds
+import FBAudienceNetwork
 
 @IBDesignable
 class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, Storyboarded {
@@ -23,6 +24,7 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var bannerAdContainerView: UIView!
     
     var adBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
     
     @IBAction func backButton(_ sender: Any) {
         restartRep()
@@ -99,6 +101,13 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
             bannerContainerView: self.bannerAdContainerView) {
             
             self.adBannerView = bannerView
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.bannerAdContainerView) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
         }
     }
     

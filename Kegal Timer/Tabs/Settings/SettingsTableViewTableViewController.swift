@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import FBAudienceNetwork
 import StoreKit
 import MessageUI
 
@@ -21,6 +22,7 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
     var adServer: AdServer!
     
     var adBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
     
     var products: [SKProduct] = []
     
@@ -77,6 +79,13 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
             bannerContainerView: self.tableView!.tableHeaderView!) {
             
             self.adBannerView = bannerView
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
         }
         
         if(SKPaymentQueue.canMakePayments()) {

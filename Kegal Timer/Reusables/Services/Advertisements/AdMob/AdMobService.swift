@@ -97,6 +97,6 @@ extension AdMobService: GADBannerViewDelegate {
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("-----ADMOB BANNER-----")
-        print("Banner failed to load with the follow error: \(error.localizedDescription)")
+        print("Banner failed to load with the following error: \(error.localizedDescription)")
     }
 }

@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import GoogleMobileAds
+import FBAudienceNetwork
 
 class StageTableViewController: UITableViewController, GADBannerViewDelegate, Storyboarded {
     
@@ -18,6 +19,7 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
     let userPreferences = UserDefaults.standard
     
     var adBannerView: GADBannerView!
+    var audienceNetworkBannerView: FBAdView!
     
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
 
@@ -44,6 +46,13 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
             bannerContainerView: self.tableView!.tableHeaderView!) {
             
             self.adBannerView = bannerView
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
         }
     }
     

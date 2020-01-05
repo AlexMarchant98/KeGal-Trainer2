@@ -39,21 +39,20 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.remindersTableViewCellReuseIdentifier)
         
         self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
-        
+
         if let returnedAdMobBannerView = self.adServer.setupAdMobBannerView(
             adId: Constants.remindersTabBannerAdId,
             viewController: self,
             bannerContainerView: self.tableView!.tableHeaderView!) {
-            
+
             self.adMobBannerView = returnedAdMobBannerView
-        } else {
-            if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
-                placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
-                viewController: self,
-                bannerContainerView: self.tableView!.tableHeaderView!) {
-                
-                self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
-            }
+        }
+        if let returnedAudienceNetworkBannerView = self.adServer.setupAudienceNetworkBannerView(
+            placementId: Constants.audienceNetworkTabsBannerAdPlacementId,
+            viewController: self,
+            bannerContainerView: self.tableView!.tableHeaderView!) {
+            
+            self.audienceNetworkBannerView = returnedAudienceNetworkBannerView
         }
     }
     
