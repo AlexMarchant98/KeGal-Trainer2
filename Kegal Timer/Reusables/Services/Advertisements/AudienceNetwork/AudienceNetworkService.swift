@@ -9,14 +9,24 @@
 import Foundation
 import FBAudienceNetwork
 
+protocol AudienceNetworkServiceDelegate {
+    func didFailToLoadBanner()
+    func didFailToLoadInterstitial()
+}
+
 class AudienceNetworkService: NSObject {
+    
+    let delegate: AudienceNetworkServiceDelegate
     
     var interstitialAd: FBInterstitialAd!
     
-    override init() {
-        super.init()
+    override init(delegate: AudienceNetworkServiceDelegate) {
+        
+        self.delegate = delegate
         
         self.interstitialAd = FBInterstitialAd(placementID: Constants.audienceNetworkWorkoutCompletePlacementId)
+        
+        super.init()
         
         self.interstitialAd.delegate = self
         
@@ -65,6 +75,8 @@ extension AudienceNetworkService: FBInterstitialAdDelegate {
     func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
         print("-----AUDIENCE NETWORK INTERSTITIAL-----")
         print("Audience Network interstitial ad failed to load with the following error: \(error.localizedDescription)")
+        
+        self.delegate.didFailToLoadInterstitial()
     }
     
     func interstitialAdDidClose(_ interstitialAd: FBInterstitialAd) {
@@ -96,5 +108,7 @@ extension AudienceNetworkService: FBAdViewDelegate {
     func adView(_ adView: FBAdView, didFailWithError error: Error) {
         print("-----AUDIENCE NETWORK BANNER-----")
         print("Banner failed to load with the following error: \(error)")
+        
+        self.delegate.didFailToLoadBanner()
     }
 }

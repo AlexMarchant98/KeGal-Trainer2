@@ -23,7 +23,7 @@ class AdServer {
         
         if(!self.areAdsDisabled) {
             self.adMobService = AdMobService(delegate: self)
-            self.audienceNetworkService = AudienceNetworkService()
+            self.audienceNetworkService = AudienceNetworkService(delegate: self)
         }
     }
     
@@ -69,11 +69,23 @@ class AdServer {
 
 extension AdServer: AdMobServiceDelegate {
     func didFailToLoadAdMobBanner() {
-        <#code#>
+        // Send Notification to centre
     }
     
     func didFailToLoadAdMobInterstitial() {
-        <#code#>
+        // Send Notification to centre
+    }
+    
+    
+}
+
+extension AdServer: AudienceNetworkServiceDelegate {
+    func didFailToLoadBanner() {
+        // Send Notification to centre
+    }
+    
+    func didFailToLoadInterstitial() {
+        // Send Notification to centre
     }
     
     
