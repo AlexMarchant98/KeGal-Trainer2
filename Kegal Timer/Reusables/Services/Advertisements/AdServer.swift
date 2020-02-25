@@ -67,24 +67,12 @@ class AdServer {
     }
 }
 
-extension AdServer: AdMobServiceDelegate {
-    func didFailToLoadBanner() {
+extension AdServer: AdServiceDelegate {
+    func didFailToLoadBanner(_ adService: AdService) {
         // Send Notification to centre
     }
     
-    func didFailToLoadInterstitial() {
-        // Send Notification to centre
-    }
-    
-    
-}
-
-extension AdServer: AudienceNetworkServiceDelegate {
-    func didFailToLoadBanner() {
-        // Send Notification to centre
-    }
-    
-    func didFailToLoadInterstitial() {
+    func didFailToLoadInterstitial(_ adService: AdService) {
         // Send Notification to centre
     }
     

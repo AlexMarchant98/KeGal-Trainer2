@@ -9,14 +9,9 @@
 import Foundation
 import GoogleMobileAds
 
-protocol AdMobServiceDelegate {
-    func didFailToLoadBanner()
-    func didFailToLoadInterstitial()
-}
-
 class AdMobService: NSObject {
     
-    let delegate: AdMobServiceDelegate
+    let delegate: AdServiceDelegate
     
     var interstitial: GADInterstitial!
     var bannerAdRequest: GADRequest!
@@ -24,7 +19,7 @@ class AdMobService: NSObject {
     
     var bannerContainerView: UIView!
     
-    init(delegate: AdMobServiceDelegate) {
+    init(delegate: AdServiceDelegate) {
         
         self.delegate = delegate
         
@@ -83,7 +78,7 @@ extension AdMobService: GADInterstitialDelegate {
         print("-----ADMOB INTERSTITIAL-----")
         print("AdMob interstitial failed to load with error: \(error.localizedDescription)")
         
-        self.delegate.didFailToLoadInterstitial()
+        self.delegate.didFailToLoadInterstitial(AdService.adMob)
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
@@ -112,6 +107,6 @@ extension AdMobService: GADBannerViewDelegate {
         print("-----ADMOB BANNER-----")
         print("Banner failed to load with the following error: \(error.localizedDescription)")
         
-        self.delegate.didFailToLoadBanner()
+        self.delegate.didFailToLoadBanner(AdService.adMob)
     }
 }
