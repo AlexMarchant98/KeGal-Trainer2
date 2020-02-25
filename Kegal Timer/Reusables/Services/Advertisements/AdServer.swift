@@ -22,7 +22,7 @@ class AdServer {
         self.areAdsDisabled = UserDefaults.standard.bool(forKey: Constants.adsDisabled)
         
         if(!self.areAdsDisabled) {
-            self.adMobService = AdMobService()
+            self.adMobService = AdMobService(delegate: self)
             self.audienceNetworkService = AudienceNetworkService()
         }
     }
@@ -65,4 +65,16 @@ class AdServer {
         
         return nil
     }
+}
+
+extension AdServer: AdMobServiceDelegate {
+    func didFailToLoadAdMobBanner() {
+        <#code#>
+    }
+    
+    func didFailToLoadAdMobInterstitial() {
+        <#code#>
+    }
+    
+    
 }
