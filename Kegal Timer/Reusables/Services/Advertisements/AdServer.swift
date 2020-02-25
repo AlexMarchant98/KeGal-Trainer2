@@ -14,6 +14,7 @@ import FBAudienceNetwork
 class AdServer {
     
     let areAdsDisabled: Bool!
+    let notificationCenter = NotificationCenter.default
     
     var adMobService: AdMobService!
     var audienceNetworkService: AudienceNetworkService!
@@ -69,11 +70,21 @@ class AdServer {
 
 extension AdServer: AdServiceDelegate {
     func didFailToLoadBanner(_ adService: AdService) {
-        // Send Notification to centre
+        switch adService {
+        case .adMob:
+            self.notificationCenter.post(.didFailToLoadAdMobBanner())
+        case .audienceNetwork:
+            self.notificationCenter.post(.didFailToLoadAudienceNetworkBanner())
+        }
     }
     
     func didFailToLoadInterstitial(_ adService: AdService) {
-        // Send Notification to centre
+        switch adService {
+        case .adMob:
+            self.notificationCenter.post(.didFailToLoadAdMobInterstitial())
+        case .audienceNetwork:
+            self.notificationCenter.post(.didFailToLoadAudienceNetworkInterstitial())
+        }
     }
     
     
