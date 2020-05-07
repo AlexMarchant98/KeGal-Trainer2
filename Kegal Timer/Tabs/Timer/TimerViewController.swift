@@ -14,6 +14,8 @@ import FBAudienceNetwork
 @IBDesignable
 class TimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, Storyboarded {
     
+    let notificationCenter = NotificationCenter.default
+    
     weak var coordinator: TimerCoordinator?
     var adServer: AdServer!
     
@@ -95,6 +97,8 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        registerForNotifications()
+        
         if let bannerView = self.adServer.setupAdMobBannerView(
             adId: Constants.timerTabBannerAdId,
             viewController: self,
@@ -144,6 +148,22 @@ class TimerViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         resetTimer()
+    }
+    
+    private func registerForNotifications() {
+        notificationCenter
+            .addObserver(forName: .didFailToLoadAdMobBanner,
+                         object: nil,
+                         queue: nil) { [weak self] (notification) in
+                            self?.adBannerView.isHidden = true
+                            self?.audienceNetworkBannerView.isHidden = false
+        }
+        notificationCenter
+            .addObserver(forName: .didFailToLoadAudienceNetworkBanner,
+                         object: nil,
+                         queue: nil) { [weak self] (notification) in
+                         self?.audienceNetworkBannerView.isHidden = true
+        }
     }
     
     func runTimer() {

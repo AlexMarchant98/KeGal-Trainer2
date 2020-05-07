@@ -31,6 +31,9 @@
 		D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4505815221F23B7004CEEEF /* RequestReview.swift */; };
 		D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */; };
 		D467598122060B8000341027 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D467598022060B8000341027 /* Reminder.swift */; };
+		D474243B2405AAA100757B2A /* AdServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474243A2405AAA100757B2A /* AdServiceDelegate.swift */; };
+		D474243D2405AACB00757B2A /* AdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474243C2405AACB00757B2A /* AdService.swift */; };
+		D47424412405AE6E00757B2A /* AdServerNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47424402405AE6E00757B2A /* AdServerNotifications.swift */; };
 		D47C86652206050A0070476F /* AddReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C86642206050A0070476F /* AddReminderTableViewController.swift */; };
 		D484CF1E22A98BAB0042802C /* TrackWorkoutsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484CF1D22A98BAB0042802C /* TrackWorkoutsCoordinator.swift */; };
 		D484CF2022A993600042802C /* StagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484CF1F22A993600042802C /* StagesCoordinator.swift */; };
@@ -135,6 +138,9 @@
 		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCollectionViewCell.swift; sourceTree = "<group>"; };
 		D467598022060B8000341027 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		D474243A2405AAA100757B2A /* AdServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdServiceDelegate.swift; sourceTree = "<group>"; };
+		D474243C2405AACB00757B2A /* AdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdService.swift; sourceTree = "<group>"; };
+		D47424402405AE6E00757B2A /* AdServerNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdServerNotifications.swift; sourceTree = "<group>"; };
 		D47C865D2204E85B0070476F /* Kegal Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kegal Timer.entitlements"; sourceTree = "<group>"; };
 		D47C86642206050A0070476F /* AddReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderTableViewController.swift; sourceTree = "<group>"; };
 		D484CF1D22A98BAB0042802C /* TrackWorkoutsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackWorkoutsCoordinator.swift; sourceTree = "<group>"; };
@@ -314,11 +320,22 @@
 		D422E43223C08092005853AB /* Advertisements */ = {
 			isa = PBXGroup;
 			children = (
+				D474243E2405AC5A00757B2A /* AdService */,
 				D422E43323C080D6005853AB /* AdServer.swift */,
+				D47424402405AE6E00757B2A /* AdServerNotifications.swift */,
+			);
+			path = Advertisements;
+			sourceTree = "<group>";
+		};
+		D474243E2405AC5A00757B2A /* AdService */ = {
+			isa = PBXGroup;
+			children = (
+				D474243A2405AAA100757B2A /* AdServiceDelegate.swift */,
+				D474243C2405AACB00757B2A /* AdService.swift */,
 				D4F7036622BD13C30007EB1A /* AdMob */,
 				D422E42F23C07D1C005853AB /* AudienceNetwork */,
 			);
-			path = Advertisements;
+			path = AdService;
 			sourceTree = "<group>";
 		};
 		D484CF2D22AD19510042802C /* Extensions */ = {
@@ -791,7 +808,9 @@
 				D4CB023F22637EF50014F723 /* Level.swift in Sources */,
 				D49C98AC22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift in Sources */,
 				D467598122060B8000341027 /* Reminder.swift in Sources */,
+				D474243B2405AAA100757B2A /* AdServiceDelegate.swift in Sources */,
 				D485DEDB220A1FF9002E9DB1 /* Constants.swift in Sources */,
+				D474243D2405AACB00757B2A /* AdService.swift in Sources */,
 				D4CB024122637F020014F723 /* Stage.swift in Sources */,
 				D48CFC6321B70CBF00AD6179 /* QueueTimer.swift in Sources */,
 				D484CF4422AD25C30042802C /* ShapeView.swift in Sources */,
@@ -820,6 +839,7 @@
 				D484CF2022A993600042802C /* StagesCoordinator.swift in Sources */,
 				D4E48D5621921960006366A7 /* TimerButton.swift in Sources */,
 				D48CFC4A21A744B500AD6179 /* WorkoutCue.swift in Sources */,
+				D47424412405AE6E00757B2A /* AdServerNotifications.swift in Sources */,
 				D484CF2622A998820042802C /* SettingsCoordinator.swift in Sources */,
 				D484CF3522AD19FE0042802C /* Date-StripDate.swift in Sources */,
 				D4C3264522A83A2A001F9BEA /* MainTabBarCoordinator.swift in Sources */,
