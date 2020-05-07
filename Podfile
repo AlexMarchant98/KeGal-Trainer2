@@ -6,7 +6,7 @@ target 'Kegal Timer' do
   use_frameworks!
 
   # Pods for Kegal Timer
-pod 'JTAppleCalendar'
+pod 'JTAppleCalendar', '7.1.6'
 pod 'SwiftEntryKit', '1.0.1'
 pod 'Google-Mobile-Ads-SDK'
 pod 'FBAudienceNetwork'

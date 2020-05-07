@@ -26,7 +26,7 @@ class AdMobService: NSObject {
         self.bannerAdRequest = GADRequest()
         self.interstitialAdRequest = GADRequest()
         
-        self.interstitial = GADInterstitial(adUnitID: Constants.workoutCompleteAdId)
+        self.interstitial = GADInterstitial(adUnitID: Constants.generalInterstitialAdId)
         
         super.init()
         
@@ -54,9 +54,9 @@ class AdMobService: NSObject {
         _ viewController: UIViewController,
         _ bannerContainerView: UIView) -> GADBannerView {
         
-        let bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        let bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         
-        bannerView.adUnitID = adUnitId
+        bannerView.adUnitID = Constants.generalBannerAdId
         bannerView.rootViewController = viewController
         bannerView.delegate = self
         

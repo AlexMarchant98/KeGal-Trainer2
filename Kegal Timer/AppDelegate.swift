@@ -17,14 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = MainTabBarCoordinator()
+        window?.makeKeyAndVisible()
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound])
         { (granted, error) in
             
         }
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MainTabBarCoordinator()
-        window?.makeKeyAndVisible()
+
+        RequestReview.requestReview()
         
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         print(paths[0])
@@ -38,9 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(true, forKey: Constants.launchedBefore)
         }
         
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-
-        RequestReview.requestReview()
         return true
     }
 
