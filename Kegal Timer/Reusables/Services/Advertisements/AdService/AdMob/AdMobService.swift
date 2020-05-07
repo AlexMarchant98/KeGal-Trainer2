@@ -26,7 +26,7 @@ class AdMobService: NSObject {
         self.bannerAdRequest = GADRequest()
         self.interstitialAdRequest = GADRequest()
         
-        self.interstitial = GADInterstitial(adUnitID: Constants.workoutCompleteAdId)
+        self.interstitial = GADInterstitial(adUnitID: Constants.generalInterstitialAdId)
         
         super.init()
         
@@ -36,6 +36,8 @@ class AdMobService: NSObject {
     }
     
     func loadAds() {
+        self.interstitialAdRequest = GADRequest()
+        self.interstitial = GADInterstitial(adUnitID: Constants.generalInterstitialAdId)
         self.interstitial.load(self.interstitialAdRequest)
     }
     
@@ -54,9 +56,9 @@ class AdMobService: NSObject {
         _ viewController: UIViewController,
         _ bannerContainerView: UIView) -> GADBannerView {
         
-        let bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        let bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         
-        bannerView.adUnitID = adUnitId
+        bannerView.adUnitID = Constants.generalBannerAdId
         bannerView.rootViewController = viewController
         bannerView.delegate = self
         
@@ -79,6 +81,8 @@ extension AdMobService: GADInterstitialDelegate {
         print("AdMob interstitial failed to load with error: \(error.localizedDescription)")
         
         self.delegate.didFailToLoadInterstitial(AdService.adMob)
+        
+        loadAds()
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
