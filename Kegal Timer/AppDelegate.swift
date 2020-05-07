@@ -35,6 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
         if !launchedBefore  {
+            
+            UserDefaults.standard.set(Int(5), forKey: Constants.repsPerSet)
+            UserDefaults.standard.set(Int(3), forKey: Constants.repLength)
+            UserDefaults.standard.set(Int(5), forKey: Constants.restLength)
+            
             let dataSeeder:IDataSeeder = DataSeeder(context: self.persistentContainer.viewContext)
 
             dataSeeder.seedData()

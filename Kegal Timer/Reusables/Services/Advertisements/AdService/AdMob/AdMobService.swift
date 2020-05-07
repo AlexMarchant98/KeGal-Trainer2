@@ -36,6 +36,8 @@ class AdMobService: NSObject {
     }
     
     func loadAds() {
+        self.interstitialAdRequest = GADRequest()
+        self.interstitial = GADInterstitial(adUnitID: Constants.generalInterstitialAdId)
         self.interstitial.load(self.interstitialAdRequest)
     }
     
@@ -79,6 +81,8 @@ extension AdMobService: GADInterstitialDelegate {
         print("AdMob interstitial failed to load with error: \(error.localizedDescription)")
         
         self.delegate.didFailToLoadInterstitial(AdService.adMob)
+        
+        loadAds()
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
