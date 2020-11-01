@@ -45,7 +45,7 @@ class WalkthroughCoordinator: Coordinator {
         walkthroughViewController.walkthroughPresenter = walkthroughPresenter
         
         walkthroughViewController.modalPresentationStyle = .overFullScreen
-
+        
         self.navigationController.present(walkthroughViewController, animated: true, completion: nil)
     }
 }

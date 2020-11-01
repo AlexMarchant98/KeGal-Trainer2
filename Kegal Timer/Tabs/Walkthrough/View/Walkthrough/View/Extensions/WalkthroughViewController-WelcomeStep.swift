@@ -18,7 +18,7 @@ extension WalkthroughViewController {
         welcomeVc.setupScreenInformation(
             imageName: "welcome",
             stepTitle: "Welcome to Kegel Trainer",
-            stepDescription: "We are extremely happy you are apart of our community! Here's a quick overview of how to use PTFinder.",
+            stepDescription: "Here is a quick overview of how to use the app.",
             delegate: self)
         
         orderedWalkthroughSteps.insert(welcomeVc, at: 0)

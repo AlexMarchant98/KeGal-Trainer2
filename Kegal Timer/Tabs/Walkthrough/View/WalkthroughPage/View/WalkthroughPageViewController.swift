@@ -14,7 +14,7 @@ protocol WalkthroughPageViewControllerDelegate {
 
 class WalkthroughPageViewController: UIViewController, Storyboarded {
     
-    private (set) var stepImage: UIImage = UIImage(named: "lost")!
+    private (set) var stepImage: UIImage = UIImage(named: "welcome")!
     private (set) var stepTitle: String = "Title"
     private (set) var stepDescription: String = "Description"
     private (set) var buttonText: String = "Next"

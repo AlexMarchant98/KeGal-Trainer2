@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
+        self.appCoordinator.showWalkthroughOnStartup()
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         

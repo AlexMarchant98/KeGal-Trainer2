@@ -57,12 +57,14 @@ class AppCoordinator: Coordinator {
         
         self.navigationController.hideKeyboardWhenTappedAround()
         
-        let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
-        if(!launchedBefore) {
-            self.showWalkthrough()
-        }
     }
     
+    func showWalkthroughOnStartup() {
+        let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
+//        if(!launchedBefore) {
+            self.showWalkthrough()
+//        }
+    }
     
     private func showWalkthrough() {
         

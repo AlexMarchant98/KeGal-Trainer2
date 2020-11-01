@@ -37,6 +37,7 @@
 		D4418B8B254ECE2D0029E100 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B7C254ECE2D0029E100 /* WalkthroughPageViewController.swift */; };
 		D4418B8C254ECE2D0029E100 /* WalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4418B7D254ECE2D0029E100 /* WalkthroughPage.storyboard */; };
 		D4418B8D254ECE2D0029E100 /* WalkthroughPageViewController-Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B7F254ECE2D0029E100 /* WalkthroughPageViewController-Animations.swift */; };
+		D4418BE0254EDCA70029E100 /* WalkthroughImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4418BDF254EDCA70029E100 /* WalkthroughImages.xcassets */; };
 		D44A595C22B5331C009A053D /* AdMobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobService.swift */; };
 		D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4505815221F23B7004CEEEF /* RequestReview.swift */; };
 		D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */; };
@@ -79,7 +80,6 @@
 		D4C3264522A83A2A001F9BEA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3264422A83A2A001F9BEA /* AppCoordinator.swift */; };
 		D4CB023F22637EF50014F723 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB023E22637EF50014F723 /* Level.swift */; };
 		D4CB024122637F020014F723 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB024022637F020014F723 /* Stage.swift */; };
-		D4CB024B2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB024A2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift */; };
 		D4CF42C4229A63A800505A28 /* StageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF42C3229A63A800505A28 /* StageTableViewController.swift */; };
 		D4CF42C6229A68A700505A28 /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF42C5229A68A700505A28 /* DataSeeder.swift */; };
 		D4E48D5621921960006366A7 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48D5521921960006366A7 /* TimerButton.swift */; };
@@ -154,6 +154,7 @@
 		D4418B7C254ECE2D0029E100 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		D4418B7D254ECE2D0029E100 /* WalkthroughPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WalkthroughPage.storyboard; sourceTree = "<group>"; };
 		D4418B7F254ECE2D0029E100 /* WalkthroughPageViewController-Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WalkthroughPageViewController-Animations.swift"; sourceTree = "<group>"; };
+		D4418BDF254EDCA70029E100 /* WalkthroughImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WalkthroughImages.xcassets; sourceTree = "<group>"; };
 		D44A595B22B5331C009A053D /* AdMobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobService.swift; sourceTree = "<group>"; };
 		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -198,8 +199,6 @@
 		D4CB023E22637EF50014F723 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		D4CB024022637F020014F723 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		D4CB02482263A9BA0014F723 /* KeGal Trainer Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KeGal Trainer Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4CB024A2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeGal_Trainer_Unit_Tests.swift; sourceTree = "<group>"; };
-		D4CB024C2263A9BA0014F723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4CF42C3229A63A800505A28 /* StageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageTableViewController.swift; sourceTree = "<group>"; };
 		D4CF42C5229A68A700505A28 /* DataSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
 		D4E48D5521921960006366A7 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
@@ -262,7 +261,6 @@
 			children = (
 				D4006450217FAF9F0077765D /* Kegal Timer */,
 				D4006472217FAFA30077765D /* Kegal TimerUITests */,
-				D4CB02492263A9BA0014F723 /* KeGal Trainer Unit Tests */,
 				D400644F217FAF9F0077765D /* Products */,
 				E9E24F452FE526CD8EFD2623 /* Pods */,
 				A3190652BC2EEBFDC845BDD6 /* Frameworks */,
@@ -520,6 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				D400645A217FAFA30077765D /* Assets.xcassets */,
+				D4418BDF254EDCA70029E100 /* WalkthroughImages.xcassets */,
 				D48CFC4D21A7471100AD6179 /* Sound Bites */,
 			);
 			path = Content;
@@ -598,15 +597,6 @@
 				D48CFC5C21A74F6300AD6179 /* Workout Complete.wav */,
 			);
 			path = "Sound Bites";
-			sourceTree = "<group>";
-		};
-		D4CB02492263A9BA0014F723 /* KeGal Trainer Unit Tests */ = {
-			isa = PBXGroup;
-			children = (
-				D4CB024A2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift */,
-				D4CB024C2263A9BA0014F723 /* Info.plist */,
-			);
-			path = "KeGal Trainer Unit Tests";
 			sourceTree = "<group>";
 		};
 		D4E48D502190CFD4006366A7 /* Button Graphics */ = {
@@ -796,6 +786,7 @@
 				D400645E217FAFA30077765D /* LaunchScreen.storyboard in Resources */,
 				D4418B87254ECE2D0029E100 /* Walkthrough.storyboard in Resources */,
 				D400645B217FAFA30077765D /* Assets.xcassets in Resources */,
+				D4418BE0254EDCA70029E100 /* WalkthroughImages.xcassets in Resources */,
 				D48CFC5E21A74F6300AD6179 /* Begin.wav in Resources */,
 				D48CFC5D21A74F6300AD6179 /* Rest.wav in Resources */,
 				D4418B8C254ECE2D0029E100 /* WalkthroughPage.storyboard in Resources */,
@@ -1005,7 +996,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4CB024B2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
