@@ -26,11 +26,13 @@ class AppCoordinator: Coordinator {
         self.navigationController = navigationController
         self.adServer = AdServer()
         
+        super.init()
+        
         self.trackWorkoutsCoordinator = TrackWorkoutsCoordinator(adServer)
         self.stagesCoordinator = StagesCoordinator(adServer)
         self.timerCoordinator = TimerCoordinator(adServer)
         self.remindersCoordinator = RemindersCoordinator(adServer)
-        self.settingsCoordinator = SettingsCoordinator(adServer)
+        self.settingsCoordinator = SettingsCoordinator(adServer, delegate: self)
     }
     
     override func start() {
@@ -84,5 +86,11 @@ extension AppCoordinator: WalkthroughCoordinatorDelegate {
     func didFinishWalkthrough(_ walkthroughCoordinator: WalkthroughCoordinator) {
         walkthroughCoordinator.navigationController.dismiss(animated: true)
         self.removeChildCoordinator(walkthroughCoordinator)
+    }
+}
+
+extension AppCoordinator: SettingsCoordinatorDelegate {
+    func showAppWalkthrough() {
+        self.showWalkthrough()
     }
 }

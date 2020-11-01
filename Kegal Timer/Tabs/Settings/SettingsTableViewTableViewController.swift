@@ -132,6 +132,7 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let emailIndexPath = IndexPath(row: 0, section: 2)
+        let appWalkthroughIndexPath = IndexPath(row: 1, section: 2)
         
         switch indexPath {
         case emailIndexPath:
@@ -148,6 +149,8 @@ class SettingsTableViewController : UITableViewController, UITabBarControllerDel
                     view: self,
                     message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n My Email: \n alex_marchant@outlook.com")
             }
+        case appWalkthroughIndexPath:
+            self.coordinator?.showWalkthrough()
         default:
             break
         }

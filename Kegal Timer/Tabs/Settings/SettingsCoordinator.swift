@@ -8,15 +8,24 @@
 
 import UIKit
 
+protocol SettingsCoordinatorDelegate {
+    func showAppWalkthrough()
+}
+
 class SettingsCoordinator: Coordinator {
     
     var navigationController: UINavigationController!
     var adServer: AdServer!
     
-    init(_ adServer: AdServer) {
+    let delegate: SettingsCoordinatorDelegate
+    
+    init(
+        _ adServer: AdServer,
+        delegate: SettingsCoordinatorDelegate) {
         self.navigationController = UINavigationController()
         
         self.adServer = adServer
+        self.delegate = delegate
         
         self.navigationController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "Settings"), tag: 0)
 
@@ -33,5 +42,9 @@ class SettingsCoordinator: Coordinator {
         viewController.coordinator = self
         
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func showWalkthrough() {
+        self.delegate.showAppWalkthrough()
     }
 }
