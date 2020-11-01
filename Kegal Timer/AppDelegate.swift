@@ -23,14 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let navigationController = UINavigationController()
-        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.isNavigationBarHidden = true
         
         self.appCoordinator = AppCoordinator(navigationController: navigationController)
         self.appCoordinator.start()
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
-        self.appCoordinator.showWalkthroughOnStartup()
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
@@ -45,7 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(paths[0])
         
         let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
-        if !launchedBefore  {
+        
+        if (launchedBefore == false) {
+            
+            self.appCoordinator.showWalkthroughOnStartup()
             
             UserDefaults.standard.set(Int(5), forKey: Constants.repsPerSet)
             UserDefaults.standard.set(Int(3), forKey: Constants.repLength)

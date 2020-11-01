@@ -60,10 +60,7 @@ class AppCoordinator: Coordinator {
     }
     
     func showWalkthroughOnStartup() {
-        let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
-//        if(!launchedBefore) {
-            self.showWalkthrough()
-//        }
+        self.showWalkthrough()
     }
     
     private func showWalkthrough() {

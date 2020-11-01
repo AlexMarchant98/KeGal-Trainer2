@@ -238,8 +238,8 @@
             filePath = "Kegal Timer/AppCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "showWalkthrough()"
             landmarkType = "7">
          </BreakpointContent>
