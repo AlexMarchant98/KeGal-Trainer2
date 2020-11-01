@@ -13,10 +13,17 @@ class StagesCoordinator: Coordinator {
     var navigationController: UINavigationController!
     var adServer: AdServer!
     
-    required init(_ adServer: AdServer) {
+    init(_ adServer: AdServer) {
         self.navigationController = UINavigationController()
         
         self.adServer = adServer
+    }
+    
+    override func start() {
+        showStages()
+    }
+    
+    func showStages() {
         
         let viewController = StageTableViewController.instantiate()
         
@@ -24,5 +31,7 @@ class StagesCoordinator: Coordinator {
         viewController.tabBarItem = UITabBarItem(title: "Stages", image: UIImage(named: "Challenges"), tag: 0)
         viewController.coordinator = self
         
-        navigationController.viewControllers = [viewController]
-    }}
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+    
+}

@@ -13,13 +13,16 @@ class SettingsCoordinator: Coordinator {
     var navigationController: UINavigationController!
     var adServer: AdServer!
     
-    required init(_ adServer: AdServer) {
+    init(_ adServer: AdServer) {
         self.navigationController = UINavigationController()
         
         self.adServer = adServer
         
         self.navigationController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "Settings"), tag: 0)
-        
+
+    }
+    
+    override func start() {
         showSettings()
     }
     
