@@ -27,6 +27,17 @@
 		D422E43123C07D45005853AB /* AudienceNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422E43023C07D45005853AB /* AudienceNetworkService.swift */; };
 		D422E43423C080D6005853AB /* AdServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422E43323C080D6005853AB /* AdServer.swift */; };
 		D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4406DF022177AA700CCC697 /* CustomCell.swift */; };
+		D4418B80254ECE2D0029E100 /* WalkthroughCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B63254ECE2D0029E100 /* WalkthroughCoordinator.swift */; };
+		D4418B81254ECE2D0029E100 /* WalkthroughPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B67254ECE2D0029E100 /* WalkthroughPresenter.swift */; };
+		D4418B82254ECE2D0029E100 /* WalkthroughPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B68254ECE2D0029E100 /* WalkthroughPresenterProtocol.swift */; };
+		D4418B83254ECE2D0029E100 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B6A254ECE2D0029E100 /* WalkthroughViewController.swift */; };
+		D4418B85254ECE2D0029E100 /* WalkthroughViewController-WelcomeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B6D254ECE2D0029E100 /* WalkthroughViewController-WelcomeStep.swift */; };
+		D4418B86254ECE2D0029E100 /* WalkthroughViewController-SetupWalkthroughViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B6E254ECE2D0029E100 /* WalkthroughViewController-SetupWalkthroughViewControllers.swift */; };
+		D4418B87254ECE2D0029E100 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4418B6F254ECE2D0029E100 /* Walkthrough.storyboard */; };
+		D4418B8B254ECE2D0029E100 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B7C254ECE2D0029E100 /* WalkthroughPageViewController.swift */; };
+		D4418B8C254ECE2D0029E100 /* WalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4418B7D254ECE2D0029E100 /* WalkthroughPage.storyboard */; };
+		D4418B8D254ECE2D0029E100 /* WalkthroughPageViewController-Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4418B7F254ECE2D0029E100 /* WalkthroughPageViewController-Animations.swift */; };
+		D4418BE0254EDCA70029E100 /* WalkthroughImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4418BDF254EDCA70029E100 /* WalkthroughImages.xcassets */; };
 		D44A595C22B5331C009A053D /* AdMobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobService.swift */; };
 		D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4505815221F23B7004CEEEF /* RequestReview.swift */; };
 		D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */; };
@@ -66,10 +77,9 @@
 		D49C98AC22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C98AB22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift */; };
 		D4C3263F22A6FB3B001F9BEA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3263E22A6FB3B001F9BEA /* Coordinator.swift */; };
 		D4C3264122A6FB93001F9BEA /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3264022A6FB93001F9BEA /* Storyboarded.swift */; };
-		D4C3264522A83A2A001F9BEA /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3264422A83A2A001F9BEA /* MainTabBarCoordinator.swift */; };
+		D4C3264522A83A2A001F9BEA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3264422A83A2A001F9BEA /* AppCoordinator.swift */; };
 		D4CB023F22637EF50014F723 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB023E22637EF50014F723 /* Level.swift */; };
 		D4CB024122637F020014F723 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB024022637F020014F723 /* Stage.swift */; };
-		D4CB024B2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB024A2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift */; };
 		D4CF42C4229A63A800505A28 /* StageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF42C3229A63A800505A28 /* StageTableViewController.swift */; };
 		D4CF42C6229A68A700505A28 /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF42C5229A68A700505A28 /* DataSeeder.swift */; };
 		D4E48D5621921960006366A7 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48D5521921960006366A7 /* TimerButton.swift */; };
@@ -134,6 +144,17 @@
 		D422E43023C07D45005853AB /* AudienceNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudienceNetworkService.swift; sourceTree = "<group>"; };
 		D422E43323C080D6005853AB /* AdServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdServer.swift; sourceTree = "<group>"; };
 		D4406DF022177AA700CCC697 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		D4418B63254ECE2D0029E100 /* WalkthroughCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughCoordinator.swift; sourceTree = "<group>"; };
+		D4418B67254ECE2D0029E100 /* WalkthroughPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPresenter.swift; sourceTree = "<group>"; };
+		D4418B68254ECE2D0029E100 /* WalkthroughPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPresenterProtocol.swift; sourceTree = "<group>"; };
+		D4418B6A254ECE2D0029E100 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		D4418B6D254ECE2D0029E100 /* WalkthroughViewController-WelcomeStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WalkthroughViewController-WelcomeStep.swift"; sourceTree = "<group>"; };
+		D4418B6E254ECE2D0029E100 /* WalkthroughViewController-SetupWalkthroughViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WalkthroughViewController-SetupWalkthroughViewControllers.swift"; sourceTree = "<group>"; };
+		D4418B6F254ECE2D0029E100 /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
+		D4418B7C254ECE2D0029E100 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		D4418B7D254ECE2D0029E100 /* WalkthroughPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WalkthroughPage.storyboard; sourceTree = "<group>"; };
+		D4418B7F254ECE2D0029E100 /* WalkthroughPageViewController-Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WalkthroughPageViewController-Animations.swift"; sourceTree = "<group>"; };
+		D4418BDF254EDCA70029E100 /* WalkthroughImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WalkthroughImages.xcassets; sourceTree = "<group>"; };
 		D44A595B22B5331C009A053D /* AdMobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobService.swift; sourceTree = "<group>"; };
 		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D463C64D21C976E200F2A1BA /* RepCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -174,12 +195,10 @@
 		D49C98AB22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsTableViewController-TextFieldNumbersOnly.swift"; sourceTree = "<group>"; };
 		D4C3263E22A6FB3B001F9BEA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D4C3264022A6FB93001F9BEA /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		D4C3264422A83A2A001F9BEA /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		D4C3264422A83A2A001F9BEA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D4CB023E22637EF50014F723 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		D4CB024022637F020014F723 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		D4CB02482263A9BA0014F723 /* KeGal Trainer Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KeGal Trainer Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4CB024A2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeGal_Trainer_Unit_Tests.swift; sourceTree = "<group>"; };
-		D4CB024C2263A9BA0014F723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4CF42C3229A63A800505A28 /* StageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageTableViewController.swift; sourceTree = "<group>"; };
 		D4CF42C5229A68A700505A28 /* DataSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
 		D4E48D5521921960006366A7 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
@@ -242,7 +261,6 @@
 			children = (
 				D4006450217FAF9F0077765D /* Kegal Timer */,
 				D4006472217FAFA30077765D /* Kegal TimerUITests */,
-				D4CB02492263A9BA0014F723 /* KeGal Trainer Unit Tests */,
 				D400644F217FAF9F0077765D /* Products */,
 				E9E24F452FE526CD8EFD2623 /* Pods */,
 				A3190652BC2EEBFDC845BDD6 /* Frameworks */,
@@ -270,7 +288,7 @@
 				D40780E821E12D5D00C3D2D1 /* Core Data */,
 				D484CF4A22AD71660042802C /* Reusables */,
 				D484CF4922AD71290042802C /* Content */,
-				D4C3264422A83A2A001F9BEA /* MainTabBarCoordinator.swift */,
+				D4C3264422A83A2A001F9BEA /* AppCoordinator.swift */,
 				D4006451217FAF9F0077765D /* AppDelegate.swift */,
 				D4006457217FAF9F0077765D /* Main.storyboard */,
 				D400645C217FAFA30077765D /* LaunchScreen.storyboard */,
@@ -325,6 +343,95 @@
 				D47424402405AE6E00757B2A /* AdServerNotifications.swift */,
 			);
 			path = Advertisements;
+			sourceTree = "<group>";
+		};
+		D4418B61254ECE2D0029E100 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B62254ECE2D0029E100 /* Coordinator */,
+				D4418B64254ECE2D0029E100 /* View */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		D4418B62254ECE2D0029E100 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B63254ECE2D0029E100 /* WalkthroughCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4418B64254ECE2D0029E100 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B65254ECE2D0029E100 /* Walkthrough */,
+				D4418B7A254ECE2D0029E100 /* WalkthroughPage */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4418B65254ECE2D0029E100 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B66254ECE2D0029E100 /* Presenter */,
+				D4418B69254ECE2D0029E100 /* View */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		D4418B66254ECE2D0029E100 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B67254ECE2D0029E100 /* WalkthroughPresenter.swift */,
+				D4418B68254ECE2D0029E100 /* WalkthroughPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D4418B69254ECE2D0029E100 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B6A254ECE2D0029E100 /* WalkthroughViewController.swift */,
+				D4418B6F254ECE2D0029E100 /* Walkthrough.storyboard */,
+				D4418B6B254ECE2D0029E100 /* Extensions */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4418B6B254ECE2D0029E100 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B6D254ECE2D0029E100 /* WalkthroughViewController-WelcomeStep.swift */,
+				D4418B6E254ECE2D0029E100 /* WalkthroughViewController-SetupWalkthroughViewControllers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4418B7A254ECE2D0029E100 /* WalkthroughPage */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B7B254ECE2D0029E100 /* View */,
+			);
+			path = WalkthroughPage;
+			sourceTree = "<group>";
+		};
+		D4418B7B254ECE2D0029E100 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B7C254ECE2D0029E100 /* WalkthroughPageViewController.swift */,
+				D4418B7D254ECE2D0029E100 /* WalkthroughPage.storyboard */,
+				D4418B7E254ECE2D0029E100 /* Extensions */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4418B7E254ECE2D0029E100 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4418B7F254ECE2D0029E100 /* WalkthroughPageViewController-Animations.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D474243E2405AC5A00757B2A /* AdService */ = {
@@ -411,6 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				D400645A217FAFA30077765D /* Assets.xcassets */,
+				D4418BDF254EDCA70029E100 /* WalkthroughImages.xcassets */,
 				D48CFC4D21A7471100AD6179 /* Sound Bites */,
 			);
 			path = Content;
@@ -471,6 +579,7 @@
 		D484CF4F22AD725C0042802C /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				D4418B61254ECE2D0029E100 /* Walkthrough */,
 				D484CF4522AD6FE90042802C /* Track */,
 				D484CF4622AD70220042802C /* Stages */,
 				D484CF4722AD70670042802C /* Timer */,
@@ -488,15 +597,6 @@
 				D48CFC5C21A74F6300AD6179 /* Workout Complete.wav */,
 			);
 			path = "Sound Bites";
-			sourceTree = "<group>";
-		};
-		D4CB02492263A9BA0014F723 /* KeGal Trainer Unit Tests */ = {
-			isa = PBXGroup;
-			children = (
-				D4CB024A2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift */,
-				D4CB024C2263A9BA0014F723 /* Info.plist */,
-			);
-			path = "KeGal Trainer Unit Tests";
 			sourceTree = "<group>";
 		};
 		D4E48D502190CFD4006366A7 /* Button Graphics */ = {
@@ -684,9 +784,12 @@
 			files = (
 				D48CFC5F21A74F6300AD6179 /* Workout Complete.wav in Resources */,
 				D400645E217FAFA30077765D /* LaunchScreen.storyboard in Resources */,
+				D4418B87254ECE2D0029E100 /* Walkthrough.storyboard in Resources */,
 				D400645B217FAFA30077765D /* Assets.xcassets in Resources */,
+				D4418BE0254EDCA70029E100 /* WalkthroughImages.xcassets in Resources */,
 				D48CFC5E21A74F6300AD6179 /* Begin.wav in Resources */,
 				D48CFC5D21A74F6300AD6179 /* Rest.wav in Resources */,
+				D4418B8C254ECE2D0029E100 /* WalkthroughPage.storyboard in Resources */,
 				D4006459217FAF9F0077765D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -806,6 +909,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4CB023F22637EF50014F723 /* Level.swift in Sources */,
+				D4418B81254ECE2D0029E100 /* WalkthroughPresenter.swift in Sources */,
 				D49C98AC22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift in Sources */,
 				D467598122060B8000341027 /* Reminder.swift in Sources */,
 				D474243B2405AAA100757B2A /* AdServiceDelegate.swift in Sources */,
@@ -822,17 +926,20 @@
 				D4006456217FAF9F0077765D /* TimerViewController.swift in Sources */,
 				D484CF3E22AD1D2C0042802C /* AlertHandling.swift in Sources */,
 				D40780F621E2504500C3D2D1 /* WorkoutDate.swift in Sources */,
+				D4418B8B254ECE2D0029E100 /* WalkthroughPageViewController.swift in Sources */,
 				D4CF42C4229A63A800505A28 /* StageTableViewController.swift in Sources */,
 				D49C41FF229EF8A7005F8FA1 /* LevelTableViewCell.swift in Sources */,
 				D484CF3122AD19C50042802C /* UIColor-AppColors.swift in Sources */,
 				D49C98AA22BD148E001E17B7 /* ProductCell.swift in Sources */,
 				D406FCE921FC7B7500B993B6 /* TopAlignedLabel.swift in Sources */,
+				D4418B86254ECE2D0029E100 /* WalkthroughViewController-SetupWalkthroughViewControllers.swift in Sources */,
 				D4F7036122BCF7B70007EB1A /* IAPHelper.swift in Sources */,
 				D4F7036322BCFFCA0007EB1A /* IAPProducts.swift in Sources */,
 				D484CF2222A9960E0042802C /* TimerCoordinator.swift in Sources */,
 				D484CF1E22A98BAB0042802C /* TrackWorkoutsCoordinator.swift in Sources */,
 				D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */,
 				D485DEDD220A28B2002E9DB1 /* UpdateReminderTableViewController.swift in Sources */,
+				D4418B80254ECE2D0029E100 /* WalkthroughCoordinator.swift in Sources */,
 				D422E43123C07D45005853AB /* AudienceNetworkService.swift in Sources */,
 				D484CF5122AD739E0042802C /* BackButton.swift in Sources */,
 				D484CF2F22AD19840042802C /* UIViewController-Keyboard.swift in Sources */,
@@ -842,10 +949,12 @@
 				D47424412405AE6E00757B2A /* AdServerNotifications.swift in Sources */,
 				D484CF2622A998820042802C /* SettingsCoordinator.swift in Sources */,
 				D484CF3522AD19FE0042802C /* Date-StripDate.swift in Sources */,
-				D4C3264522A83A2A001F9BEA /* MainTabBarCoordinator.swift in Sources */,
+				D4C3264522A83A2A001F9BEA /* AppCoordinator.swift in Sources */,
 				D47C86652206050A0070476F /* AddReminderTableViewController.swift in Sources */,
 				D44A595C22B5331C009A053D /* AdMobService.swift in Sources */,
+				D4418B85254ECE2D0029E100 /* WalkthroughViewController-WelcomeStep.swift in Sources */,
 				D40780F421E2502500C3D2D1 /* Workout.swift in Sources */,
+				D4418B83254ECE2D0029E100 /* WalkthroughViewController.swift in Sources */,
 				D484CF2A22AD171B0042802C /* WorkoutCompleteViewController.swift in Sources */,
 				D484CF3722AD1A2C0042802C /* String-Stage.swift in Sources */,
 				D4CF42C6229A68A700505A28 /* DataSeeder.swift in Sources */,
@@ -856,9 +965,11 @@
 				D4006454217FAF9F0077765D /* TrackWorkoutsViewController.swift in Sources */,
 				D484CF2422A998390042802C /* RemindersCoordinator.swift in Sources */,
 				D40780E721E12C6600C3D2D1 /* KegalTimer.xcdatamodeld in Sources */,
+				D4418B82254ECE2D0029E100 /* WalkthroughPresenterProtocol.swift in Sources */,
 				D4206FFE23774310003E38A7 /* AlertHandlerService.swift in Sources */,
 				D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */,
 				D484CF4222AD236C0042802C /* UIBezierPath-Tick.swift in Sources */,
+				D4418B8D254ECE2D0029E100 /* WalkthroughPageViewController-Animations.swift in Sources */,
 				D4406DF122177AA700CCC697 /* CustomCell.swift in Sources */,
 				D484CF4022AD1DD20042802C /* AlertViewController.swift in Sources */,
 				D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */,
@@ -885,7 +996,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4CB024B2263A9BA0014F723 /* KeGal_Trainer_Unit_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1050,7 +1160,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.4;
+				CURRENT_PROJECT_VERSION = 2.5;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -1058,7 +1168,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
 				PRODUCT_NAME = "Kegel Trainer";
 				SWIFT_VERSION = 4.2;
@@ -1073,7 +1183,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.4;
+				CURRENT_PROJECT_VERSION = 2.5;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -1081,7 +1191,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
 				PRODUCT_NAME = "Kegel Trainer";
 				SWIFT_VERSION = 4.2;

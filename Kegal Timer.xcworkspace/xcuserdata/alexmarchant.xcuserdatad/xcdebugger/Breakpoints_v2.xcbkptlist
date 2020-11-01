@@ -14,10 +14,10 @@
             filePath = "Kegal Timer/Tabs/Settings/SettingsTableViewTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "saveChanges()"
-            landmarkType = "7">
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -148,7 +148,7 @@
             landmarkType = "21">
             <Locations>
                <Location
-                  uuid = "DD134A95-D728-488A-A450-966460F84929 - d08bde2ed8b97ebd"
+                  uuid = "DD134A95-D728-488A-A450-966460F84929 - 1e181bbde6098f2"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -163,7 +163,7 @@
                   offsetFromSymbolStart = "820">
                </Location>
                <Location
-                  uuid = "DD134A95-D728-488A-A450-966460F84929 - 8779f2aab9e782a9"
+                  uuid = "DD134A95-D728-488A-A450-966460F84929 - 5613ad3fbf3e64c7"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -225,6 +225,38 @@
             startingLineNumber = "89"
             endingLineNumber = "89"
             landmarkName = "interstitialDidDismissScreen(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1914EF8-65ED-473A-86F6-F0F7A17C2F74"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kegal Timer/AppCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "showWalkthrough()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31A4BB7D-6370-4032-96D2-122B19A405C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kegal Timer/Tabs/Walkthrough/Coordinator/WalkthroughCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "showWalkthrough()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

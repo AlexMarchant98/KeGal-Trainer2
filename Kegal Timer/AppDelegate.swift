@@ -13,13 +13,23 @@ import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
     var window: UIWindow?
+    private var appCoordinator: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MainTabBarCoordinator()
-        window?.makeKeyAndVisible()
+        
+        let navigationController = UINavigationController()
+        navigationController.isNavigationBarHidden = true
+        
+        self.appCoordinator = AppCoordinator(navigationController: navigationController)
+        self.appCoordinator.start()
+        
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
@@ -34,7 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(paths[0])
         
         let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
-        if !launchedBefore  {
+        
+        if (launchedBefore == false) {
+            
+            self.appCoordinator.showWalkthroughOnStartup()
             
             UserDefaults.standard.set(Int(5), forKey: Constants.repsPerSet)
             UserDefaults.standard.set(Int(3), forKey: Constants.repLength)

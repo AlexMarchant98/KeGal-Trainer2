@@ -14,19 +14,25 @@ class TimerCoordinator: Coordinator {
     var navigationController: UINavigationController!
     var adServer: AdServer!
     
-    required init(_ adServer: AdServer) {
+    init(_ adServer: AdServer) {
         self.navigationController = UINavigationController()
         self.navigationController.setNavigationBarHidden(true, animated: false)
         
         self.adServer = adServer
-        
+    }
+    
+    override func start() {
+        showTimer()
+    }
+    
+    func showTimer() {
         let viewController = TimerViewController.instantiate()
         
         viewController.adServer = self.adServer
         viewController.tabBarItem = UITabBarItem(title: "Timer", image: UIImage(named: "Timer"), tag: 0)
         viewController.coordinator = self
         
-        navigationController.viewControllers = [viewController]
+        self.navigationController.pushViewController(viewController, animated: true)
     }
     
     func showWorkoutComplete()

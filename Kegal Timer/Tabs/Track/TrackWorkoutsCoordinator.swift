@@ -19,13 +19,19 @@ class TrackWorkoutsCoordinator: Coordinator {
         self.navigationController.setNavigationBarHidden(true, animated: false)
         
         self.adServer = adServer
-        
+    }
+    
+    override func start() {
+        showTracking()
+    }
+    
+    func showTracking() {
         let viewController = TrackWorkoutsViewController.instantiate()
         
         viewController.adServer = self.adServer
         viewController.tabBarItem = UITabBarItem(title: "Track", image: UIImage(named: "Calendar"), tag: 0)
         viewController.coordinator = self
         
-        navigationController.viewControllers = [viewController]
+        self.navigationController.pushViewController(viewController, animated: true)
     }
 }

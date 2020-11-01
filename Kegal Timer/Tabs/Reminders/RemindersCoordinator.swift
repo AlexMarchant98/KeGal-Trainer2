@@ -14,13 +14,15 @@ class RemindersCoordinator: Coordinator {
     var navigationController: UINavigationController!
     var adServer: AdServer!
     
-    required init(_ adServer: AdServer) {
+    init(_ adServer: AdServer) {
         self.navigationController = UINavigationController()
         
         self.adServer = adServer
         
         self.navigationController.tabBarItem = UITabBarItem(title: "Reminder", image: UIImage(named: "Reminder"), tag: 0)
-        
+    }
+    
+    override func start() {
         showReminders()
     }
     

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="432" y="24"/>
         </scene>
-        <!--Ib Calendar Data Source-->
+        <!--Track-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController storyboardIdentifier="TrackWorkoutsViewController" id="9pv-A4-QxB" customClass="TrackWorkoutsViewController" customModule="Kegel_Trainer" customModuleProvider="target" sceneMemberID="viewController">
@@ -318,6 +318,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Exe-Qr-sfl"/>
                         <color key="backgroundColor" red="0.070648171007633209" green="0.070429481565952301" blue="0.078432478010654449" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="2G2-p8-AdW" firstAttribute="leading" secondItem="n74-Jy-iLn" secondAttribute="trailing" constant="5" id="3dF-8t-Kov"/>
@@ -338,7 +339,6 @@
                             <constraint firstItem="2G2-p8-AdW" firstAttribute="top" secondItem="Uix-FL-1Xd" secondAttribute="bottom" constant="7.5" id="r6x-jR-x8j"/>
                             <constraint firstItem="atf-ra-vU6" firstAttribute="leading" secondItem="IvK-Fv-LVR" secondAttribute="trailing" constant="5" id="vrL-sR-Sh0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Exe-Qr-sfl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Track" image="Calendar" id="acW-dT-cKf"/>
                     <connections>
@@ -380,7 +380,7 @@
                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="54"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6o-Ps-2RQ" customClass="TimerButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6o-Ps-2RQ" customClass="TimerButton" customModule="Kegel_Trainer" customModuleProvider="target">
                                 <rect key="frame" x="157" y="687" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="rrX-u9-Xdm"/>
@@ -470,7 +470,7 @@
                                     <constraint firstAttribute="height" constant="10" id="LYw-PC-04l"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myh-uR-7Ff" userLabel="Stop Button" customClass="StopButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myh-uR-7Ff" userLabel="Stop Button" customClass="StopButton" customModule="Kegel_Trainer" customModuleProvider="target">
                                 <rect key="frame" x="323.5" y="724.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="TJv-Wj-3Rs"/>
@@ -482,14 +482,15 @@
                             </button>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="nPq-Ud-L0p">
                                 <rect key="frame" x="47" y="44" width="320" height="50"/>
+                                <viewLayoutGuide key="safeArea" id="fUA-Jf-4Vc"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HIW-Ou-6hE"/>
                                     <constraint firstAttribute="width" constant="320" id="V94-BH-cHf"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="fUA-Jf-4Vc"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="rXg-XN-RIN" firstAttribute="centerY" secondItem="M6o-Ps-2RQ" secondAttribute="centerY" id="1Ja-EG-a0s"/>
@@ -521,7 +522,6 @@
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="M6o-Ps-2RQ" secondAttribute="bottom" constant="75" id="z0F-RV-lEe"/>
                             <constraint firstItem="M6o-Ps-2RQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2kh-54-BF2" secondAttribute="bottom" constant="16" id="zm7-f8-JhU"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="Timer" landscapeImage="Settings" largeContentSizeImage="Settings" selectedImage="Timer" id="cPa-gy-q4n"/>
                     <connections>
@@ -543,7 +543,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pfs-v9-Ohc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Reminders" id="LA2-Ia-p42">
                                 <cells>
@@ -760,7 +760,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="SYo-pH-Oos">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="JsA-D9-5Cs">
                                 <cells>
@@ -821,7 +821,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDw-h0-HM7">
-                                                    <rect key="frame" x="16" y="11.5" width="49.5" height="21"/>
+                                                    <rect key="frame" x="16" y="11.5" width="49" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -864,7 +864,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="yG4-Ol-cKx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="VvN-or-vco">
                                 <cells>
@@ -926,7 +926,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6B-Yh-eku">
-                                                    <rect key="frame" x="16" y="11.5" width="49.5" height="21"/>
+                                                    <rect key="frame" x="16" y="11.5" width="49" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -972,7 +972,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="9eB-VE-BPY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Workout Settings" id="DMv-VO-7vf">
                                 <cells>
@@ -1166,12 +1166,29 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="2l6-Ik-nzc" style="IBUITableViewCellStyleDefault" id="eOs-LM-Bxr">
+                                        <rect key="frame" x="0.0" y="455.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eOs-LM-Bxr" id="aHD-BZ-LmU">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="View App Walkthrough" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2l6-Ik-nzc">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="hxs-uA-YCT">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" textLabel="hRf-w5-XJh" style="IBUITableViewCellStyleDefault" id="Ijp-lk-Hwp" customClass="ProductCell" customModule="Kegel_Trainer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="491.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="535.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ijp-lk-Hwp" id="hdc-gr-wTy">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -1238,12 +1255,12 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Complete" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7t-RF-ZEt">
-                                <rect key="frame" x="66.5" y="324" width="281.5" height="43"/>
+                                <rect key="frame" x="66.5" y="324" width="281" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-sw-P2d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-sw-P2d">
                                 <rect key="frame" x="0.0" y="472" width="414" height="370"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="4Hr-8u-n9r"/>
@@ -1261,6 +1278,7 @@
                                 <rect key="frame" x="0.0" y="60" width="414" height="752"/>
                             </containerView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rdf-0P-cdN"/>
                         <color key="backgroundColor" red="0.2274509804" green="0.81568627449999997" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="vcj-sw-P2d" firstAttribute="leading" secondItem="Rdf-0P-cdN" secondAttribute="leading" id="0eO-52-Xgx"/>
@@ -1278,7 +1296,6 @@
                             <constraint firstItem="Rdf-0P-cdN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V7t-RF-ZEt" secondAttribute="trailing" constant="20" id="sBt-lJ-H4h"/>
                             <constraint firstItem="8Im-yy-s3G" firstAttribute="centerX" secondItem="Rdf-0P-cdN" secondAttribute="centerX" constant="-5" id="xXl-UD-Mt2"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Rdf-0P-cdN"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                 <color key="value" red="0.035294117649999998" green="0.50196078430000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1298,10 +1315,63 @@
             <point key="canvasLocation" x="707" y="-708"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1fo-9C-n1g">
+            <size key="intrinsicContentSize" width="26.5" height="25"/>
+        </designable>
+        <designable name="3g9-fM-akl">
+            <size key="intrinsicContentSize" width="25.5" height="20.5"/>
+        </designable>
+        <designable name="4om-bs-eDZ">
+            <size key="intrinsicContentSize" width="20" height="20.5"/>
+        </designable>
+        <designable name="FKv-Et-3BY">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="FfP-zG-cj8">
+            <size key="intrinsicContentSize" width="58" height="31.5"/>
+        </designable>
+        <designable name="M6o-Ps-2RQ">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="YBc-US-2qU">
+            <size key="intrinsicContentSize" width="17" height="20.5"/>
+        </designable>
+        <designable name="ZwU-D2-pZT">
+            <size key="intrinsicContentSize" width="18.5" height="20.5"/>
+        </designable>
+        <designable name="f7i-1A-ie0">
+            <size key="intrinsicContentSize" width="23.5" height="20.5"/>
+        </designable>
+        <designable name="i0d-1L-ren">
+            <size key="intrinsicContentSize" width="96.5" height="31.5"/>
+        </designable>
+        <designable name="s8Y-gt-itq">
+            <size key="intrinsicContentSize" width="102" height="31.5"/>
+        </designable>
+        <designable name="tPP-LU-fWA">
+            <size key="intrinsicContentSize" width="28" height="20.5"/>
+        </designable>
+        <designable name="uuy-7q-1ZE">
+            <size key="intrinsicContentSize" width="22" height="20.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Calendar" width="50" height="50"/>
         <image name="Reminder" width="50" height="50"/>
         <image name="Settings" width="50" height="50"/>
         <image name="Timer" width="50" height="50"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
