@@ -74,6 +74,7 @@
 		D48CFC6321B70CBF00AD6179 /* QueueTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */; };
 		D49B75CD255F0EA200B31D74 /* FirestoreRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B75CC255F0EA200B31D74 /* FirestoreRepositoryService.swift */; };
 		D49B75D3255F0EAF00B31D74 /* FirestoreRepositoryServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B75D2255F0EAF00B31D74 /* FirestoreRepositoryServiceProtocol.swift */; };
+		D49B75DB255F0FB100B31D74 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D49B75DA255F0FB100B31D74 /* GoogleService-Info.plist */; };
 		D49C41FF229EF8A7005F8FA1 /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C41FE229EF8A7005F8FA1 /* LevelTableViewCell.swift */; };
 		D49C98AA22BD148E001E17B7 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C98A922BD148E001E17B7 /* ProductCell.swift */; };
 		D49C98AC22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C98AB22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift */; };
@@ -194,6 +195,7 @@
 		D48CFC6221B70CBE00AD6179 /* QueueTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTimer.swift; sourceTree = "<group>"; };
 		D49B75CC255F0EA200B31D74 /* FirestoreRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepositoryService.swift; sourceTree = "<group>"; };
 		D49B75D2255F0EAF00B31D74 /* FirestoreRepositoryServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepositoryServiceProtocol.swift; sourceTree = "<group>"; };
+		D49B75DA255F0FB100B31D74 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D49C41FE229EF8A7005F8FA1 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
 		D49C98A922BD148E001E17B7 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		D49C98AB22BD45BA001E17B7 /* SettingsTableViewController-TextFieldNumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsTableViewController-TextFieldNumbersOnly.swift"; sourceTree = "<group>"; };
@@ -285,9 +287,10 @@
 		D4006450217FAF9F0077765D /* Kegal Timer */ = {
 			isa = PBXGroup;
 			children = (
+				D49B75D8255F0F6600B31D74 /* Config */,
+				D484CF4F22AD725C0042802C /* Tabs */,
 				D49B75B5255F0E6300B31D74 /* Services */,
 				D47C865D2204E85B0070476F /* Kegal Timer.entitlements */,
-				D484CF4F22AD725C0042802C /* Tabs */,
 				D484CF3822AD1CDC0042802C /* Protocols */,
 				D484CF2D22AD19510042802C /* Extensions */,
 				D40780E821E12D5D00C3D2D1 /* Core Data */,
@@ -621,6 +624,22 @@
 			path = FirestoreRepositoryService;
 			sourceTree = "<group>";
 		};
+		D49B75D8255F0F6600B31D74 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D49B75D9255F0F6B00B31D74 /* Live */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D49B75D9255F0F6B00B31D74 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				D49B75DA255F0FB100B31D74 /* GoogleService-Info.plist */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
 		D4E48D502190CFD4006366A7 /* Button Graphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,6 +830,7 @@
 				D4418BE0254EDCA70029E100 /* WalkthroughImages.xcassets in Resources */,
 				D48CFC5E21A74F6300AD6179 /* Begin.wav in Resources */,
 				D48CFC5D21A74F6300AD6179 /* Rest.wav in Resources */,
+				D49B75DB255F0FB100B31D74 /* GoogleService-Info.plist in Resources */,
 				D4418B8C254ECE2D0029E100 /* WalkthroughPage.storyboard in Resources */,
 				D4006459217FAF9F0077765D /* Main.storyboard in Resources */,
 			);

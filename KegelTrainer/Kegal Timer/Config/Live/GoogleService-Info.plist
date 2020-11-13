@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>796165821077-1fstpr5neqvm1fds1498kon1q84o2pcg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.796165821077-1fstpr5neqvm1fds1498kon1q84o2pcg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAuS3fmJU8rVDA4CIEuPC074Xs2Gb6cRA8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>796165821077</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Alex-Marchant.Kegal-Timer</string>
+	<key>PROJECT_ID</key>
+	<string>kegel-trainer-ef62f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kegel-trainer-ef62f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:796165821077:ios:4ecce2e3782b38a6f1419c</string>
+	<key>DATABASE_URL</key>
+	<string>https://kegel-trainer-ef62f.firebaseio.com</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-4293952743610750~6383625195</string>
+</dict>
+</plist>
