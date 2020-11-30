@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
     //  User Preference Keys
@@ -27,8 +28,7 @@ struct Constants {
     static let levelsCompleted = "LevelsCompleted"
     
     //  Font Styling
-    static let fontName = "Avenir Next Condensed"
-    static let fontSize = 25.0
+    static let fontSize: Double = 24
     
     //  Animation Keys
     static let strokeEndAnimation = "strokeEndAnimation"
@@ -58,4 +58,26 @@ struct Constants {
     //  Audience Network Ad Placement Id's
     static let audienceNetworkWorkoutCompletePlacementId = "767020503801089_767022473800892"
     static let audienceNetworkTabsBannerAdPlacementId = "767020503801089_767591013744038"
+    
+    static let maxDailyPoints = 5000
+    static let pointsForWatchingAnAdvert = 250
+    static let pointsForRatingApp = 2500
+    static let pointsForReviewingApp = 5000
+    
+    static let cornerRadius: CGFloat = 5
+    
+    static let iapNotificationUserInfoKey = "iapNotification"
+    
+    // Leaderboard Cell
+    static let leaderboardCellIdentifier = "LeaderboardCell"
+    
+    static let ktTableHeaderViewIdentifier = "KTTableHeaderView"
+    
+    // Index Paths
+    static let emailIndexPath = IndexPath(row: 0, section: 2)
+    static let appWalkthroughIndexPath = IndexPath(row: 1, section: 2)
+    static let removeAdvertsIndexPath = IndexPath(row: 0, section: 3)
+    
+    static let websiteLink = "https://www.kegeltrainer.app"
+    static let supportEmail = "kegeltrainerapp@outlook.com"
 }

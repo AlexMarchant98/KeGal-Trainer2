@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Profile View Controller-->
+        <scene sceneID="jgd-Nd-VJv">
+            <objects>
+                <viewController storyboardIdentifier="CreateProfileViewController" id="kGw-kZ-wrh" customClass="CreateProfileViewController" customModule="Kegel_Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uDo-ga-a6K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7d-n4-AYd">
+                                <rect key="frame" x="25" y="209" width="364" height="478"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAB-eh-tnU" customClass="KTPrimaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="378" width="364" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="oqd-xv-HCJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Create Profile"/>
+                                        <connections>
+                                            <action selector="createProfileButtonTapped:" destination="kGw-kZ-wrh" eventType="touchUpInside" id="hgb-Ro-yX0"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUE-ah-LOr" customClass="MDCTextField">
+                                        <rect key="frame" x="0.0" y="294" width="364" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKh-jz-uO2" customClass="EditProfilePictureView" customModule="Kegel_Trainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="294"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="294" id="BQu-JO-Asb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vAB-eh-tnU" secondAttribute="bottom" constant="50" id="HAK-4f-rwb"/>
+                                    <constraint firstItem="oUE-ah-LOr" firstAttribute="leading" secondItem="Q7d-n4-AYd" secondAttribute="leading" id="LRa-Ev-3Yc"/>
+                                    <constraint firstItem="vAB-eh-tnU" firstAttribute="leading" secondItem="Q7d-n4-AYd" secondAttribute="leading" id="PVa-P1-627"/>
+                                    <constraint firstItem="dKh-jz-uO2" firstAttribute="top" secondItem="Q7d-n4-AYd" secondAttribute="top" id="WFn-gD-CkM"/>
+                                    <constraint firstItem="dKh-jz-uO2" firstAttribute="leading" secondItem="Q7d-n4-AYd" secondAttribute="leading" id="WcF-mO-tah"/>
+                                    <constraint firstAttribute="trailing" secondItem="oUE-ah-LOr" secondAttribute="trailing" id="c3m-uk-pyW"/>
+                                    <constraint firstItem="oUE-ah-LOr" firstAttribute="top" secondItem="dKh-jz-uO2" secondAttribute="bottom" id="e4L-KL-lbS"/>
+                                    <constraint firstAttribute="trailing" secondItem="dKh-jz-uO2" secondAttribute="trailing" id="mNF-JY-MSQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="vAB-eh-tnU" secondAttribute="trailing" id="mxl-5L-kHs"/>
+                                    <constraint firstItem="vAB-eh-tnU" firstAttribute="top" secondItem="oUE-ah-LOr" secondAttribute="bottom" constant="50" id="pto-9k-u36"/>
+                                    <constraint firstItem="dKh-jz-uO2" firstAttribute="centerX" secondItem="Q7d-n4-AYd" secondAttribute="centerX" id="rKc-kE-AUz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5R-Z9-KYR" customClass="KTTitle" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="94" width="364" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ag6-bY-amz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ag6-bY-amz" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Q7d-n4-AYd" secondAttribute="bottom" constant="25" id="4ji-xc-G2S"/>
+                            <constraint firstItem="Q7d-n4-AYd" firstAttribute="centerY" secondItem="uDo-ga-a6K" secondAttribute="centerY" id="C2K-7Q-iWd"/>
+                            <constraint firstItem="ag6-bY-amz" firstAttribute="trailing" secondItem="f5R-Z9-KYR" secondAttribute="trailing" constant="25" id="H6F-WW-lSt"/>
+                            <constraint firstItem="ag6-bY-amz" firstAttribute="trailing" secondItem="Q7d-n4-AYd" secondAttribute="trailing" constant="25" id="Q0h-sU-ys4"/>
+                            <constraint firstItem="Q7d-n4-AYd" firstAttribute="leading" secondItem="ag6-bY-amz" secondAttribute="leading" constant="25" id="UGI-0c-lCG"/>
+                            <constraint firstItem="f5R-Z9-KYR" firstAttribute="top" secondItem="ag6-bY-amz" secondAttribute="top" constant="50" id="YK0-yt-3g0"/>
+                            <constraint firstItem="f5R-Z9-KYR" firstAttribute="leading" secondItem="ag6-bY-amz" secondAttribute="leading" constant="25" id="lb7-g1-3iH"/>
+                            <constraint firstItem="Q7d-n4-AYd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="f5R-Z9-KYR" secondAttribute="bottom" constant="50" id="q4K-OU-8Tz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createProfileButton" destination="vAB-eh-tnU" id="Xpg-za-4Cb"/>
+                        <outlet property="editProfilePictureView" destination="dKh-jz-uO2" id="enI-jI-l3t"/>
+                        <outlet property="usernameTextField" destination="oUE-ah-LOr" id="IiR-mW-ZI0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXc-lG-I8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46.376811594202906" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

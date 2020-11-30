@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Enable Photo Access View Controller-->
+        <scene sceneID="JfS-5K-Hz7">
+            <objects>
+                <viewController storyboardIdentifier="EnablePhotoAccessViewController" id="5Ff-Bh-wnj" customClass="EnablePhotoAccessViewController" customModule="Kegel_Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xNp-Jm-dke">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i60-8W-xtc" customClass="KTPrimaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="762" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dIg-s6-wt9"/>
+                                </constraints>
+                                <state key="normal" title="Primary Button"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enable-photo-access" translatesAutoresizingMaskIntoConstraints="NO" id="G1I-ls-Q4K">
+                                <rect key="frame" x="50" y="94" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G1I-ls-Q4K" secondAttribute="height" multiplier="1:1" id="NVX-RZ-Kpc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uZ-e2-c66" customClass="KTTitle" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="433" width="364" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="uXg-a5-3Cu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEM-TW-lrR" customClass="KTBody" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="489" width="364" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="w7T-U9-ICd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRL-mF-uyW" customClass="MDCFloatingButton">
+                                <rect key="frame" x="339" y="69" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EZa-1e-sG8"/>
+                                    <constraint firstAttribute="width" constant="50" id="Tcq-lz-Ntv"/>
+                                </constraints>
+                                <state key="normal" image="close-icon"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="svq-sM-LhM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="svq-sM-LhM" firstAttribute="bottom" secondItem="i60-8W-xtc" secondAttribute="bottom" constant="50" id="A9g-51-x7E"/>
+                            <constraint firstItem="5uZ-e2-c66" firstAttribute="centerX" secondItem="xNp-Jm-dke" secondAttribute="centerX" id="IvF-WO-lmw"/>
+                            <constraint firstItem="G1I-ls-Q4K" firstAttribute="centerX" secondItem="svq-sM-LhM" secondAttribute="centerX" id="P41-jT-i7a"/>
+                            <constraint firstItem="svq-sM-LhM" firstAttribute="trailing" secondItem="5uZ-e2-c66" secondAttribute="trailing" constant="25" id="SZJ-Od-EUy"/>
+                            <constraint firstItem="svq-sM-LhM" firstAttribute="trailing" secondItem="i60-8W-xtc" secondAttribute="trailing" constant="25" id="UBU-2i-KbK"/>
+                            <constraint firstItem="i60-8W-xtc" firstAttribute="leading" secondItem="svq-sM-LhM" secondAttribute="leading" constant="25" id="XcE-U2-e3h"/>
+                            <constraint firstItem="svq-sM-LhM" firstAttribute="trailing" secondItem="mRL-mF-uyW" secondAttribute="trailing" constant="25" id="aki-w8-LFh"/>
+                            <constraint firstItem="svq-sM-LhM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G1I-ls-Q4K" secondAttribute="trailing" constant="50" id="bIH-OW-nA6"/>
+                            <constraint firstItem="5uZ-e2-c66" firstAttribute="leading" secondItem="svq-sM-LhM" secondAttribute="leading" constant="25" id="dVf-yC-4DY"/>
+                            <constraint firstItem="mRL-mF-uyW" firstAttribute="top" secondItem="svq-sM-LhM" secondAttribute="top" constant="25" id="fbO-Vy-Dfk"/>
+                            <constraint firstItem="G1I-ls-Q4K" firstAttribute="top" secondItem="svq-sM-LhM" secondAttribute="top" constant="50" id="g3J-eE-bkh"/>
+                            <constraint firstItem="i60-8W-xtc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iEM-TW-lrR" secondAttribute="bottom" constant="25" id="jKJ-DE-DIU"/>
+                            <constraint firstItem="G1I-ls-Q4K" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="svq-sM-LhM" secondAttribute="leading" constant="50" id="kLi-CC-t2g"/>
+                            <constraint firstItem="iEM-TW-lrR" firstAttribute="leading" secondItem="svq-sM-LhM" secondAttribute="leading" constant="25" id="ms7-Vh-rQD"/>
+                            <constraint firstItem="iEM-TW-lrR" firstAttribute="top" secondItem="5uZ-e2-c66" secondAttribute="bottom" constant="16" id="sxF-PX-b7C"/>
+                            <constraint firstItem="5uZ-e2-c66" firstAttribute="top" secondItem="G1I-ls-Q4K" secondAttribute="bottom" constant="25" id="tTM-Sl-qPs"/>
+                            <constraint firstItem="svq-sM-LhM" firstAttribute="trailing" secondItem="iEM-TW-lrR" secondAttribute="trailing" constant="25" id="v0N-9B-F0I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="mRL-mF-uyW" id="bAR-66-aV1"/>
+                        <outlet property="primaryButton" destination="i60-8W-xtc" id="zgF-cY-N7a"/>
+                        <outlet property="screenDescription" destination="iEM-TW-lrR" id="Ppe-OF-rI8"/>
+                        <outlet property="screenImage" destination="G1I-ls-Q4K" id="sDq-Th-AJF"/>
+                        <outlet property="screenTitle" destination="5uZ-e2-c66" id="HK7-oR-fOa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCG-ak-1fb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266.66666666666669" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close-icon" width="16" height="16"/>
+        <image name="enable-photo-access" width="2000" height="2000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

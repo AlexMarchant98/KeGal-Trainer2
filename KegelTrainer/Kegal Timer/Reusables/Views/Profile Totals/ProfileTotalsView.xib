@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileTotalsView" customModule="Kegel_Trainer" customModuleProvider="target">
+            <connections>
+                <outlet property="showWorkoutTrackerButton" destination="w1n-Vr-aDu" id="QBI-D8-Tv1"/>
+                <outlet property="totalWorkoutTimeCard" destination="13X-vT-i2t" id="fv4-Mm-OcZ"/>
+                <outlet property="totalWorkoutTimeSubHeader" destination="dzK-bD-g4k" id="hvv-QR-ncQ"/>
+                <outlet property="totalWorkoutsCard" destination="XX8-Cn-hvi" id="i77-c9-OYj"/>
+                <outlet property="totalWorkoutsSubHeader" destination="mwz-lU-lbn" id="D2C-8h-23j"/>
+                <outlet property="totalsHeader" destination="i3F-Wr-E8T" id="p9E-Hg-dZ1"/>
+                <outlet property="view" destination="iN0-l3-epB" id="KhP-is-x1H"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Totals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3F-Wr-E8T" customClass="KTHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                    <rect key="frame" x="25" y="44" width="84.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="9Tn-o4-DGa">
+                    <rect key="frame" x="25" y="85" width="364" height="80"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qjs-gh-isX">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwz-lU-lbn" customClass="KTSubHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="22"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XX8-Cn-hvi" customClass="ProfileInfoCardView" customModule="Kegel_Trainer" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="30" width="100" height="50"/>
+                                    <color key="backgroundColor" systemColor="linkColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="uac-k2-RYo"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="0aM-ih-xN2"/>
+                                <constraint firstItem="XX8-Cn-hvi" firstAttribute="width" secondItem="mwz-lU-lbn" secondAttribute="width" id="82Q-zt-c6t"/>
+                                <constraint firstAttribute="width" constant="100" id="PcP-tl-TJb"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CZ7-My-ORb">
+                            <rect key="frame" x="125" y="0.0" width="239" height="80"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzK-bD-g4k" customClass="KTSubHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="239" height="22"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13X-vT-i2t" customClass="ProfileInfoCardView" customModule="Kegel_Trainer" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="30" width="239" height="50"/>
+                                    <color key="backgroundColor" systemColor="linkColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="O64-0N-jOy"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="13X-vT-i2t" firstAttribute="width" secondItem="dzK-bD-g4k" secondAttribute="width" id="gP4-9m-OFb"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1n-Vr-aDu" customClass="KTSecondaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                    <rect key="frame" x="25" y="190" width="364" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="NX3-Nc-CIK"/>
+                    </constraints>
+                    <state key="normal" title="View Workout Tracker"/>
+                    <connections>
+                        <action selector="showWorkoutTracker:" destination="-1" eventType="touchUpInside" id="WoK-tA-315"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9Tn-o4-DGa" firstAttribute="top" secondItem="i3F-Wr-E8T" secondAttribute="bottom" constant="25" id="0Xj-QY-TUR"/>
+                <constraint firstItem="w1n-Vr-aDu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="Deu-P1-dAc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="w1n-Vr-aDu" secondAttribute="bottom" constant="50" id="F1t-Hs-GcU"/>
+                <constraint firstItem="i3F-Wr-E8T" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Kt5-et-PST"/>
+                <constraint firstItem="i3F-Wr-E8T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="OTO-R8-Vbq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Tn-o4-DGa" secondAttribute="trailing" constant="25" id="XXK-Uh-XTA"/>
+                <constraint firstItem="w1n-Vr-aDu" firstAttribute="top" secondItem="9Tn-o4-DGa" secondAttribute="bottom" constant="25" id="crQ-dZ-lAY"/>
+                <constraint firstItem="9Tn-o4-DGa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="h19-fl-wWS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="w1n-Vr-aDu" secondAttribute="trailing" constant="25" id="n6k-rJ-WjZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="77.678571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

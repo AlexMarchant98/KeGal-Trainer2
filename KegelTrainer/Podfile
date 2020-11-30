@@ -12,6 +12,12 @@ pod 'Google-Mobile-Ads-SDK'
 pod 'FBAudienceNetwork'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'Firebase/Crashlytics'
+pod 'Firebase/Storage'
+pod 'FirebaseUI/Storage'
+pod 'Firebase/Analytics'
+pod 'MaterialComponents/Buttons'
+pod 'MaterialComponents/TextFields'
 
   target 'Kegal TimerTests' do
     inherit! :search_paths

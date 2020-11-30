@@ -11,10 +11,12 @@ import Foundation
 public struct IAPProducts {
     
     public static let MidTierAdRemoval = "KegalTimer.MidTierAdRemoval"
+    public static let streakProtector = "KTSPSINGLE"
+    public static let saveLostStreak = "KTSLSTREAK"
     
-    private static let productIdentifiers: Set<ProductIdentifier> = [IAPProducts.MidTierAdRemoval]
+    public static let allProductIdentifiers: Set<ProductIdentifier> = [IAPProducts.MidTierAdRemoval, IAPProducts.streakProtector, IAPProducts.saveLostStreak]
     
-    public static let store = IAPHelper(productIds: IAPProducts.productIdentifiers)
+    public static let store = IAPHelper(productIds: IAPProducts.allProductIdentifiers)
 }
 
 func resourceNameForProductIdentifier(_ productIdentifier: String) -> String? {

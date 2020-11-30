@@ -12,7 +12,26 @@ import StoreKit
 public typealias ProductIdentifier = String
 public typealias ProductsRequestCompletionHandler = (_ success: Bool, _ products: [SKProduct]?) -> Void
 
+struct IAPNotification {
+    
+    let successful: Bool
+    let message: String
+    let productId: String
+    
+    init(successful: Bool, message: String, productId: String) {
+        self.successful = successful
+        self.message = message
+        self.productId = productId
+    }
+    
+}
+
 extension Notification.Name {
+    static let iapAdRemovalPurchaseNotification = Notification.Name("iapAdRemovalPurchaseNotification")
+    static let iapStreakProtectorPurchaseNotification = Notification.Name("iapStreakProtectorPurchaseNotification")
+    static let iapSaveStreakPurchaseNotification = Notification.Name("iapSaveStreakPurchaseNotification")
+    static let iapErrorNotification = Notification.Name("iapErrorNotification")
+    
     static let IAPHelperPurchaseNotification = Notification.Name("IAPHelperPurchaseNotification")
 }
 

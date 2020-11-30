@@ -11,15 +11,20 @@ import StoreKit
 
 struct RequestReview {
     
-    static func requestReview() {
-        let minimumLaunchCount = 5
-        let launchCount = UserDefaults.standard.integer(forKey: Constants.appLaunchCount)
+    static func requestReview(forceReview: Bool = false) {
         
-        if launchCount >= minimumLaunchCount {
-            UserDefaults.standard.set((0), forKey: Constants.appLaunchCount)
+        if(forceReview) {
             SKStoreReviewController.requestReview()
         } else {
-            UserDefaults.standard.set((launchCount + 1), forKey: Constants.appLaunchCount)
+            let minimumLaunchCount = 20
+            let launchCount = UserDefaults.standard.integer(forKey: Constants.appLaunchCount)
+            
+            if launchCount >= minimumLaunchCount {
+                UserDefaults.standard.set((0), forKey: Constants.appLaunchCount)
+                SKStoreReviewController.requestReview()
+            } else {
+                UserDefaults.standard.set((launchCount + 1), forKey: Constants.appLaunchCount)
+            }
         }
     }
     
@@ -28,7 +33,7 @@ struct RequestReview {
     }
     
     static func levelsRequestReview() {
-        let minimumLevelsCompletedCount = 2
+        let minimumLevelsCompletedCount = 10
         let levelsCompletedCount = UserDefaults.standard.integer(forKey: Constants.levelsCompleted)
         
         if levelsCompletedCount >= minimumLevelsCompletedCount {
@@ -43,6 +48,11 @@ struct RequestReview {
         let levelsCompletedCount = UserDefaults.standard.integer(forKey: Constants.levelsCompleted)
         
         UserDefaults.standard.set((levelsCompletedCount + 1), forKey: Constants.levelsCompleted)
+    }
+    
+    static func requestWrittenReview() {
+        let appStoreUrl = URL(string: "https://apps.apple.com/app/id1451350209?action=write-review")!
+        UIApplication.shared.open(appStoreUrl)
     }
 
 }

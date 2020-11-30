@@ -13,11 +13,13 @@ import FBAudienceNetwork
 
 class AdServer {
     
-    let areAdsDisabled: Bool!
+    private (set) var areAdsDisabled: Bool!
     let notificationCenter = NotificationCenter.default
     
     var adMobService: AdMobService!
     var audienceNetworkService: AudienceNetworkService!
+    
+    var iapAdRemovalPurchaseNotificationObserver: NSObjectProtocol?
     
     init() {
         self.areAdsDisabled = UserDefaults.standard.bool(forKey: Constants.adsDisabled)
@@ -25,6 +27,39 @@ class AdServer {
         if(!self.areAdsDisabled) {
             self.adMobService = AdMobService(delegate: self)
             self.audienceNetworkService = AudienceNetworkService(delegate: self)
+        }
+        
+        registerForNotifications()
+    }
+    
+    deinit {
+        deregisterNotifications()
+    }
+    
+    func registerForNotifications() {
+        
+        iapAdRemovalPurchaseNotificationObserver = notificationCenter
+            .addObserver(forName: .iapAdRemovalPurchaseNotification,
+                         object: nil,
+                         queue: nil) { [weak self] (notification) in
+                
+                guard let self = self else {
+                    return
+                }
+                
+                if let iapNotification = notification.userInfo?[Constants.iapNotificationUserInfoKey] as? IAPNotification {
+                    
+                    if(iapNotification.successful) {
+                        self.areAdsDisabled = true
+                    }
+                }
+            }
+        
+    }
+    
+    private func deregisterNotifications() {
+        if let iapAdRemovalPurchaseNotificationObserver = self.iapAdRemovalPurchaseNotificationObserver {
+            notificationCenter.removeObserver(iapAdRemovalPurchaseNotificationObserver, name: .iapAdRemovalPurchaseNotification, object: nil)
         }
     }
     
@@ -35,8 +70,8 @@ class AdServer {
         }
     }
     
-    func displayInterstitialAd(viewController: UIViewController) {
-        if(!areAdsDisabled) {
+    func displayInterstitialAd(viewController: UIViewController, userWantsToViewAd: Bool = false) {
+        if(areAdsDisabled == false || userWantsToViewAd == true) {
             let adDisplayed = adMobService.displayGADInterstitial(viewController)
             
             if(!adDisplayed) {
@@ -69,6 +104,7 @@ class AdServer {
 }
 
 extension AdServer: AdServiceDelegate {
+    
     func didFailToLoadBanner(_ adService: AdService) {
         switch adService {
         case .adMob:
@@ -87,5 +123,13 @@ extension AdServer: AdServiceDelegate {
         }
     }
     
+    func didDismissInterstitial(_ adService: AdService) {
+        switch adService {
+        case .adMob:
+            self.notificationCenter.post(.didDismissInterstitial())
+        case .audienceNetwork:
+            self.notificationCenter.post(.didDismissInterstitial())
+        }
+    }
     
 }

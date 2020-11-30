@@ -11,4 +11,5 @@ import Foundation
 protocol AdServiceDelegate {
     func didFailToLoadBanner(_ adService: AdService)
     func didFailToLoadInterstitial(_ adService: AdService)
+    func didDismissInterstitial(_ adService: AdService)
 }

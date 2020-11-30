@@ -12,24 +12,37 @@ class LevelTableViewCell: UITableViewCell {
     
     var level: Level! { 
         didSet {
-            self.textLabel!.text = level.level
+            
+            self.textLabel?.font = Fonts.subHeaderFont
+            
+            if(level.completed) {
+                self.textLabel!.text = "\(level.level!) Completed"
+                self.accessoryType = .none
+            } else if(level.unlocked == false) {
+                self.textLabel!.text = "\(level.level!) Locked"
+                self.accessoryType = .none
+            } else {
+                self.textLabel!.text = level.level
+                self.accessoryType = .disclosureIndicator
+            }
         }
     }
     
     var levelDisplay: Level! {
         didSet {
+            
             var userInteractionEnabled = false
             var textLabelEnabled = false
-            var backgroundColor = UIColor.white
+            var backgroundColor = UIColor.leaderboardGray
             var tintColor = UIColor.white
-            var textColor = UIColor.gray
+            var textColor = UIColor.white
             
             if(level.completed == true)
             {
                 userInteractionEnabled = true
                 textLabelEnabled = true
-                backgroundColor = UIColor.workoutCompleteBackgroundColor
-                tintColor = UIColor.workoutCompleteBackgroundColor
+                backgroundColor = UIColor.appGreen
+                tintColor = UIColor.appGreen
                 textColor = UIColor.white
             }
             else if (level.unlocked == true)
@@ -38,7 +51,7 @@ class LevelTableViewCell: UITableViewCell {
                 textLabelEnabled = true
                 backgroundColor = UIColor.white
                 tintColor = UIColor.white
-                textColor = UIColor.black
+                textColor = UIColor.workoutBackgroundColor
             }
             
             self.isUserInteractionEnabled = userInteractionEnabled
@@ -53,9 +66,9 @@ class LevelTableViewCell: UITableViewCell {
     {
         self.isUserInteractionEnabled = false
         self.textLabel!.isEnabled = false
-        self.contentView.backgroundColor = UIColor.white
+        self.contentView.backgroundColor = UIColor.leaderboardGray
         self.contentView.tintColor = UIColor.white
-        self.textLabel!.textColor = UIColor.gray
+        self.textLabel!.textColor = UIColor.white
     }
     
     override func awakeFromNib() {

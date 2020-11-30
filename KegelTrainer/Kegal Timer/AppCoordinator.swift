@@ -13,8 +13,20 @@ class AppCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     
+    let notificationCenter = NotificationCenter.default
+    
+    var iapErrorNotificationObserver: NSObjectProtocol?
+    
+    let iapService: IAPServiceProtocol
+    let firestoreRepositoryService: FirestoreRepositoryServiceProtocol
+    let firebaseCloudStorageService: FirebaseCloudStorageServiceProtocol
+    let firebaseCrashlyticsService: FirebaseCrashlyticsServiceProtocol
+    let firebaseAuthenticatorService: FirebaseAuthenticatorServiceProtocol
+    
+    let userPreferences = UserDefaults.standard
+    
     var adServer: AdServer!
-    var trackWorkoutsCoordinator: TrackWorkoutsCoordinator!
+    var profileCoordinator: ProfileCoordinator!
     var stagesCoordinator: StagesCoordinator!
     var timerCoordinator: TimerCoordinator!
     var remindersCoordinator: RemindersCoordinator!
@@ -24,15 +36,31 @@ class AppCoordinator: Coordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        
+        self.iapService = IAPService()
         self.adServer = AdServer()
+        
+        self.firebaseCrashlyticsService = FirebaseCrashlyticsService()
+        self.firebaseAuthenticatorService = FirebaseAuthenticatorService(firebaseCrashlyticsService)
+        self.firebaseCloudStorageService = FirebaseCloudStorageService(firebaseCrashlyticsService)
+        self.firestoreRepositoryService = FirestoreRepositoryService(firebaseCrashlyticsService)
         
         super.init()
         
-        self.trackWorkoutsCoordinator = TrackWorkoutsCoordinator(adServer)
+        self.profileCoordinator = ProfileCoordinator(
+            adServer,
+            iapService,
+            firestoreRepositoryService,
+            firebaseCloudStorageService,
+            firebaseAuthenticatorService,
+            delegate: self)
         self.stagesCoordinator = StagesCoordinator(adServer)
         self.timerCoordinator = TimerCoordinator(adServer)
         self.remindersCoordinator = RemindersCoordinator(adServer)
-        self.settingsCoordinator = SettingsCoordinator(adServer, delegate: self)
+        self.settingsCoordinator = SettingsCoordinator(adServer, iapService, delegate: self)
+        
+        ErrorScreensCoordinator.shared.navigationController = self.navigationController
+        ErrorScreensCoordinator.shared.delegate = self
     }
     
     override func start() {
@@ -40,38 +68,52 @@ class AppCoordinator: Coordinator {
         let tabBarController = UITabBarController()
         tabBarController.tabBar.tintColor = UIColor.workoutBackgroundColor
         
-        trackWorkoutsCoordinator.start()
+        profileCoordinator.start()
         stagesCoordinator.start()
         timerCoordinator.start()
         remindersCoordinator.start()
         settingsCoordinator.start()
         
         tabBarController.viewControllers = [
-            trackWorkoutsCoordinator.navigationController,
+            profileCoordinator.navigationController,
             stagesCoordinator.navigationController,
             timerCoordinator.navigationController,
             remindersCoordinator.navigationController,
             settingsCoordinator.navigationController]
         
-        tabBarController.selectedIndex = 2
+        tabBarController.selectedIndex = 0
         
         self.navigationController.pushViewController(tabBarController, animated: true)
         
         self.navigationController.hideKeyboardWhenTappedAround()
         
+        iapErrorNotificationObserver = notificationCenter
+            .addObserver(forName: .iapErrorNotification,
+                         object: nil,
+                         queue: nil) { [weak self] (notification) in
+                
+                guard let self = self else {
+                    return
+                }
+                
+                if let iapNotification = notification.userInfo?[Constants.iapNotificationUserInfoKey] as? IAPNotification {
+                    AlertHandlerService.shared.showWarningAlert(
+                        view: self.navigationController,
+                        message: iapNotification.message)
+                }
+        }
+        
     }
     
     func showWalkthroughOnStartup() {
-        self.showWalkthrough()
+        self.showWalkthrough(walkthroughType: .firstLaunchAppWalkthrough)
     }
     
-    private func showWalkthrough() {
-        
-        let launchedBefore = UserDefaults.standard.bool(forKey: Constants.launchedBefore)
+    private func showWalkthrough(walkthroughType: WalkthroughType) {
         
         let walkthroughCoordinator = WalkthroughCoordinator(
             self.navigationController,
-            launchedBefore)
+            walkthroughType)
         
         walkthroughCoordinator.delegate = self
             
@@ -89,8 +131,17 @@ extension AppCoordinator: WalkthroughCoordinatorDelegate {
     }
 }
 
+extension AppCoordinator: ProfileCoordinatorDelegate {
+    func showProfileWalkthrough(walkthroughType: WalkthroughType) {
+        showWalkthrough(walkthroughType: walkthroughType)
+    }
+}
+
 extension AppCoordinator: SettingsCoordinatorDelegate {
     func showAppWalkthrough() {
-        self.showWalkthrough()
+        self.showWalkthrough(walkthroughType: .appWalkthrough)
     }
+}
+
+extension AppCoordinator: ErrorScreensCoordinatorDelegate {
 }

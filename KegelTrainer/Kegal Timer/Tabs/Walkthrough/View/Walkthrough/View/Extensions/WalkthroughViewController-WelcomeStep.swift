@@ -16,7 +16,7 @@ extension WalkthroughViewController {
         let welcomeVc = WalkthroughPageViewController.instantiate(storyboard: "WalkthroughPage")
         
         welcomeVc.setupScreenInformation(
-            imageName: "welcome",
+            imageName: "welcome-inverted",
             stepTitle: "Welcome to Kegel Trainer",
             stepDescription: "Here is a quick overview of how to use the app.",
             delegate: self)

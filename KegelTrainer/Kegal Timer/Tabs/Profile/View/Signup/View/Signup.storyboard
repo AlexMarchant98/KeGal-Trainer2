@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Signup View Controller-->
+        <scene sceneID="rBl-FE-lBs">
+            <objects>
+                <viewController storyboardIdentifier="SignupViewController" id="78P-F3-Fks" customClass="SignupViewController" customModule="Kegel_Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N7J-4W-zES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-fW-p3b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mzu-Xm-NoY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1003"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="LOt-ry-qXe">
+                                                <rect key="frame" x="75" y="50" width="264" height="264"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LOt-ry-qXe" secondAttribute="height" multiplier="1:1" id="ezr-Eu-Rtd"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAT-Ux-Xr5" customClass="KTTitle" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                <rect key="frame" x="177" y="339" width="60" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMy-ZA-Tgb">
+                                                <rect key="frame" x="25" y="495.5" width="364" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="vSN-Z5-Hbb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Signup with Apple"/>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eH5-pf-bOH" customClass="MDCTextField">
+                                                <rect key="frame" x="25" y="616" width="364" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kwi-2J-6z1" customClass="MDCTextField">
+                                                <rect key="frame" x="25" y="650" width="364" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9io-j3-wXi" customClass="MDCTextField">
+                                                <rect key="frame" x="25" y="684" width="364" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mge-H7-7Iu" customClass="KTPrimaryButtonInverted" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="743" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="GOA-TC-HKy"/>
+                                                </constraints>
+                                                <state key="normal" title="Privacy Policy"/>
+                                                <connections>
+                                                    <action selector="privacyPolicyButtonTapped:" destination="78P-F3-Fks" eventType="touchUpInside" id="mBf-56-U0g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c1-in-qzJ" customClass="KTPrimaryButtonInverted" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="788" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="1tm-cj-U3z"/>
+                                                </constraints>
+                                                <state key="normal" title="Terms &amp; Conditions"/>
+                                                <connections>
+                                                    <action selector="termsAndConditionsButtonTapped:" destination="78P-F3-Fks" eventType="touchUpInside" id="bRR-i1-8G2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzf-yB-ja7" customClass="KTPrimaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="843" width="364" height="50"/>
+                                                <color key="backgroundColor" red="0.20392156859999999" green="0.3294117647" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="qIE-nS-qfZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <state key="normal" title="Sign Up">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signUpButtonTapped:" destination="78P-F3-Fks" eventType="touchUpInside" id="xqv-Hn-PGn"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Gcb-29-0Cn">
+                                                <rect key="frame" x="83" y="943" width="248" height="35"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUE-l0-XjU" customClass="KTSubHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="195" height="35"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv4-v6-L4a" customClass="KTSecondaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                        <rect key="frame" x="210" y="0.0" width="38" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="5S4-pJ-bXp"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Login"/>
+                                                        <connections>
+                                                            <action selector="backButtonTapped:" destination="78P-F3-Fks" eventType="touchUpInside" id="561-x4-sxR"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Iv4-v6-L4a" firstAttribute="height" secondItem="uUE-l0-XjU" secondAttribute="height" id="KBU-R8-w95"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vX4-7D-Nsx" customClass="KTHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                <rect key="frame" x="197.5" y="570.5" width="19" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijd-Hg-psU" customClass="KTBody" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="384.5" width="364" height="61"/>
+                                                <string key="text">If you would like to track your workouts, earn points to compete with other users, view the leaderboards and more you need to sign up.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="vX4-7D-Nsx" firstAttribute="centerX" secondItem="Mzu-Xm-NoY" secondAttribute="centerX" id="0gt-wl-2BA"/>
+                                            <constraint firstItem="4c1-in-qzJ" firstAttribute="leading" secondItem="Mzu-Xm-NoY" secondAttribute="leading" constant="25" id="47H-hv-LBb"/>
+                                            <constraint firstItem="Gcb-29-0Cn" firstAttribute="centerX" secondItem="Mzu-Xm-NoY" secondAttribute="centerX" id="5QE-ee-7zb"/>
+                                            <constraint firstItem="gzf-yB-ja7" firstAttribute="top" secondItem="4c1-in-qzJ" secondAttribute="bottom" constant="25" id="5cB-Xt-EhZ"/>
+                                            <constraint firstItem="vX4-7D-Nsx" firstAttribute="top" secondItem="oMy-ZA-Tgb" secondAttribute="bottom" constant="25" id="6ad-JX-jlj"/>
+                                            <constraint firstItem="mge-H7-7Iu" firstAttribute="top" secondItem="9io-j3-wXi" secondAttribute="bottom" constant="25" id="6l8-d0-9gI"/>
+                                            <constraint firstAttribute="trailing" secondItem="9io-j3-wXi" secondAttribute="trailing" constant="25" id="D9m-dm-SBh"/>
+                                            <constraint firstAttribute="trailing" secondItem="4c1-in-qzJ" secondAttribute="trailing" constant="25" id="DhK-0T-yys"/>
+                                            <constraint firstItem="Kwi-2J-6z1" firstAttribute="leading" secondItem="Mzu-Xm-NoY" secondAttribute="leading" constant="25" id="EmR-k3-hwt"/>
+                                            <constraint firstAttribute="trailing" secondItem="LOt-ry-qXe" secondAttribute="trailing" constant="75" id="FSw-Dr-hy2"/>
+                                            <constraint firstItem="mge-H7-7Iu" firstAttribute="leading" secondItem="Mzu-Xm-NoY" secondAttribute="leading" constant="25" id="JzS-Sq-BDw"/>
+                                            <constraint firstItem="ijd-Hg-psU" firstAttribute="top" secondItem="EAT-Ux-Xr5" secondAttribute="bottom" constant="25" id="KLk-Ts-oqC"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Gcb-29-0Cn" secondAttribute="bottom" constant="25" id="LX6-XC-PYF"/>
+                                            <constraint firstItem="LOt-ry-qXe" firstAttribute="top" secondItem="Mzu-Xm-NoY" secondAttribute="top" constant="50" id="Lj6-5C-kVX"/>
+                                            <constraint firstItem="EAT-Ux-Xr5" firstAttribute="top" secondItem="LOt-ry-qXe" secondAttribute="bottom" constant="25" id="Oh0-6C-jMp"/>
+                                            <constraint firstItem="ijd-Hg-psU" firstAttribute="leading" secondItem="Mzu-Xm-NoY" secondAttribute="leading" constant="25" id="Qjs-1P-7B7"/>
+                                            <constraint firstItem="Gcb-29-0Cn" firstAttribute="top" secondItem="gzf-yB-ja7" secondAttribute="bottom" constant="50" id="RtZ-3S-odL"/>
+                                            <constraint firstItem="Kwi-2J-6z1" firstAttribute="top" secondItem="eH5-pf-bOH" secondAttribute="bottom" id="StO-Wg-BeS"/>
+                                            <constraint firstItem="eH5-pf-bOH" firstAttribute="leading" secondItem="Mzu-Xm-NoY" secondAttribute="leading" constant="25" id="TE8-cN-lEG"/>
+                                            <constraint firstItem="9io-j3-wXi" firstAttribute="leading" secondItem="Mzu-Xm-NoY" secondAttribute="leading" constant="25" id="Yua-Aq-Vr0"/>
+                                            <constraint firstItem="eH5-pf-bOH" firstAttribute="top" secondItem="vX4-7D-Nsx" secondAttribute="bottom" constant="25" id="cRA-sd-VM6"/>
+                                            <constraint firstItem="oMy-ZA-Tgb" firstAttribute="top" secondItem="ijd-Hg-psU" secondAttribute="bottom" constant="50" id="daX-Bq-j0t"/>
+                                            <constraint firstItem="EAT-Ux-Xr5" firstAttribute="centerX" secondItem="Mzu-Xm-NoY" secondAttribute="centerX" id="e4E-g7-7Zy"/>
+                                            <constraint firstAttribute="trailing" secondItem="eH5-pf-bOH" secondAttribute="trailing" constant="25" id="edV-fl-AAZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="ijd-Hg-psU" secondAttribute="trailing" constant="25" id="hJF-oL-Nza"/>
+                                            <constraint firstItem="LOt-ry-qXe" firstAttribute="leading" secondItem="Mzu-Xm-NoY" secondAttribute="leading" constant="75" id="iui-Hb-Z0j"/>
+                                            <constraint firstItem="gzf-yB-ja7" firstAttribute="leading" secondItem="Mzu-Xm-NoY" secondAttribute="leading" constant="25" id="mmn-iY-XWr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kwi-2J-6z1" secondAttribute="trailing" constant="25" id="nLM-Uj-lK8"/>
+                                            <constraint firstAttribute="trailing" secondItem="mge-H7-7Iu" secondAttribute="trailing" constant="25" id="qjr-fN-Vea"/>
+                                            <constraint firstItem="4c1-in-qzJ" firstAttribute="top" secondItem="mge-H7-7Iu" secondAttribute="bottom" constant="15" id="sGm-cz-ck2"/>
+                                            <constraint firstItem="oMy-ZA-Tgb" firstAttribute="leading" secondItem="Mzu-Xm-NoY" secondAttribute="leading" constant="25" id="te4-6j-Ywa"/>
+                                            <constraint firstAttribute="trailing" secondItem="oMy-ZA-Tgb" secondAttribute="trailing" constant="25" id="wmu-X9-H95"/>
+                                            <constraint firstItem="9io-j3-wXi" firstAttribute="top" secondItem="Kwi-2J-6z1" secondAttribute="bottom" id="x4w-mE-Kex"/>
+                                            <constraint firstAttribute="trailing" secondItem="gzf-yB-ja7" secondAttribute="trailing" constant="25" id="xHV-ds-P7f"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mzu-Xm-NoY" secondAttribute="trailing" id="9Uy-wk-FJn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mzu-Xm-NoY" secondAttribute="bottom" id="Kk1-VB-WeU"/>
+                                    <constraint firstItem="Mzu-Xm-NoY" firstAttribute="top" secondItem="tT1-fW-p3b" secondAttribute="top" id="pBP-JN-pWF"/>
+                                    <constraint firstItem="Mzu-Xm-NoY" firstAttribute="leading" secondItem="tT1-fW-p3b" secondAttribute="leading" id="zyR-Ot-OiM"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="pB3-sC-XUx"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="xu4-Qc-nQf"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mmo-jL-jPx"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mzu-Xm-NoY" firstAttribute="height" secondItem="N7J-4W-zES" secondAttribute="height" priority="250" id="EEf-Bl-OrX"/>
+                            <constraint firstItem="tT1-fW-p3b" firstAttribute="top" secondItem="N7J-4W-zES" secondAttribute="top" id="P5O-wp-ady"/>
+                            <constraint firstAttribute="bottom" secondItem="tT1-fW-p3b" secondAttribute="bottom" id="ejR-ge-DC1"/>
+                            <constraint firstItem="mmo-jL-jPx" firstAttribute="trailing" secondItem="tT1-fW-p3b" secondAttribute="trailing" id="kZ2-Jw-A82"/>
+                            <constraint firstItem="Mzu-Xm-NoY" firstAttribute="width" secondItem="N7J-4W-zES" secondAttribute="width" id="ksh-Az-xBF"/>
+                            <constraint firstItem="tT1-fW-p3b" firstAttribute="leading" secondItem="mmo-jL-jPx" secondAttribute="leading" id="lCz-l4-egC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appleButtonLocation" destination="oMy-ZA-Tgb" id="KL2-Km-kqO"/>
+                        <outlet property="confirmPasswordTextBox" destination="9io-j3-wXi" id="zRF-tO-e1R"/>
+                        <outlet property="emailTextBox" destination="eH5-pf-bOH" id="HtJ-GF-i9K"/>
+                        <outlet property="loginButton" destination="Iv4-v6-L4a" id="6pD-hp-2W1"/>
+                        <outlet property="nextButton" destination="gzf-yB-ja7" id="lw4-Vq-nk8"/>
+                        <outlet property="orLabel" destination="vX4-7D-Nsx" id="Cc5-LN-w07"/>
+                        <outlet property="passwordTextBox" destination="Kwi-2J-6z1" id="NYH-TO-f1P"/>
+                        <outlet property="privacyPolicyButton" destination="mge-H7-7Iu" id="zTN-Yd-wHP"/>
+                        <outlet property="termsAndConditionsButton" destination="4c1-in-qzJ" id="lRr-yo-sdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XyL-WW-Mo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-733.33333333333337" y="-409.15178571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login" width="694" height="694"/>
+    </resources>
+</document>

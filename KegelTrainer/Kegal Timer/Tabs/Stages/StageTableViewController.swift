@@ -36,6 +36,11 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
     override func viewDidLoad() {
         title = "Stages"
         
+        self.view.backgroundColor = .workoutBackgroundColor
+        self.tableView.backgroundColor = .workoutBackgroundColor
+        self.tableView.separatorColor = .clear
+        self.tableView.sectionIndexColor = .white
+        
         navigationItem.setLeftBarButton(nil, animated: false)
         
         self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
@@ -89,9 +94,28 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stages[section].levels?.count ?? 0
     }
-
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Stage \(String(stages[section].stage))"
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = KTTableHeaderView()
+        
+        let stage = stages[section]
+        
+        if(stage.completed) {
+            headerView.backgroundColor = .appGreen
+            headerView.titleLabel.text = "Stage \(stages[section].stage)"
+        } else if(stage.unlocked) {
+            headerView.backgroundColor = .workoutBackgroundColor
+            headerView.titleLabel.text = "Stage \(stages[section].stage)"
+        } else {
+            headerView.backgroundColor = .leaderboardGray
+            headerView.titleLabel.text = "Stage \(stages[section].stage) Locked"
+        }
+        
+        return headerView
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -13,6 +13,7 @@ extension Notification.Name {
     static let didFailToLoadAdMobInterstitial = Notification.Name("didFailToLoadAdMobInterstitial")
     static let didFailToLoadAudienceNetworkBanner = Notification.Name("didFailToLoadAudienceNetworkBanner")
     static let didFailToLoadAudienceNetworkInterstitial = Notification.Name("didFailToLoadAudienceNetworkInterstitial")
+    static let didDismissInterstitial = Notification.Name("didDismissInterstitial")
 }
 
 extension Notification {
@@ -27,5 +28,8 @@ extension Notification {
     }
     static func didFailToLoadAudienceNetworkInterstitial() -> Notification {
         return Notification(name: Notification.Name.didFailToLoadAudienceNetworkInterstitial)
+    }
+    static func didDismissInterstitial() -> Notification {
+        return Notification(name: Notification.Name.didDismissInterstitial)
     }
 }

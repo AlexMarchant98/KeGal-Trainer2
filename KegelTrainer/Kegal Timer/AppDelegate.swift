@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import UserNotifications
 import GoogleMobileAds
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,11 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        FirebaseApp.configure()
+        
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
         
         self.appCoordinator = AppCoordinator(navigationController: navigationController)
-        self.appCoordinator.start()
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
@@ -53,12 +55,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(Int(3), forKey: Constants.repLength)
             UserDefaults.standard.set(Int(5), forKey: Constants.restLength)
             
-            let dataSeeder:IDataSeeder = DataSeeder(context: self.persistentContainer.viewContext)
+            let dataSeeder: IDataSeeder = DataSeeder(context: self.persistentContainer.viewContext)
 
             dataSeeder.seedData()
 
             UserDefaults.standard.set(true, forKey: Constants.launchedBefore)
         }
+        
+        self.appCoordinator.start()
         
         return true
     }

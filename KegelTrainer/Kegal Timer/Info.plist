@@ -35,10 +35,11 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Cabin-Bold.ttf</string>
-		<string>Cabin-Medium.ttf</string>
-		<string>Cabin-Regular.ttf</string>
-		<string>Cabin-SemiBold.ttf</string>
+		<string>Quicksand-Bold.ttf</string>
+		<string>Quicksand-SemiBold.ttf</string>
+		<string>Quicksand-Medium.ttf</string>
+		<string>Quicksand-Regular.ttf</string>
+		<string>Quicksand-Light.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -67,5 +68,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Kegel Trainer needs to access your photos so you can upload a profile picture, this image is displayed on your profile to other users.</string>
 </dict>
 </plist>
