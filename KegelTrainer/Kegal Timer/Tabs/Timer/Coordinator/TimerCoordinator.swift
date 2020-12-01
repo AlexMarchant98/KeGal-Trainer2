@@ -37,12 +37,13 @@ class TimerCoordinator: Coordinator {
         self.navigationController.pushViewController(viewController, animated: true)
     }
     
-    func showWorkoutComplete(_ pointsEarned: Double, _ levelCompleted: String?)
+    func showWorkoutComplete(_ pointsEarned: Double, _ levelCompleted: String?, _ maxDailyPointsEarned: Bool = false)
     {
         let viewController = WorkoutCompleteViewController.instantiate(storyboard: "WorkoutComplete")
         
         let presenter = WorkoutCompletePresenter(
             pointsEarned: pointsEarned,
+            maxDailyPointsEarned: maxDailyPointsEarned,
             with: viewController,
             delegate: self,
             levelCompleted: levelCompleted)
@@ -67,8 +68,8 @@ class TimerCoordinator: Coordinator {
 }
 
 extension TimerCoordinator: TimerPresenterDelegate {
-    func didCompleteWorkout(_ pointsEarned: Double, _ levelCompleted: String?) {
-        showWorkoutComplete(pointsEarned, levelCompleted)
+    func didCompleteWorkout(_ pointsEarned: Double, _ levelCompleted: String?, _ maxDailyPointsEarned: Bool) {
+        showWorkoutComplete(pointsEarned, levelCompleted, maxDailyPointsEarned)
     }
 }
 

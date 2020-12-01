@@ -132,6 +132,7 @@ class ProfileCoordinator: Coordinator {
         
         let presenter = WorkoutCompletePresenter(
             pointsEarned: pointsEarned,
+            maxDailyPointsEarned: false,
             with: viewController,
             delegate: self,
             levelCompleted: nil)

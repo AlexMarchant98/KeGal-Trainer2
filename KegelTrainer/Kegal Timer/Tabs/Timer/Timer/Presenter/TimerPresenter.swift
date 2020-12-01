@@ -11,7 +11,7 @@ import CoreData
 import UIKit
 
 protocol TimerPresenterDelegate {
-    func didCompleteWorkout(_ pointsEarned: Double, _ levelCompleted: String?)
+    func didCompleteWorkout(_ pointsEarned: Double, _ levelCompleted: String?, _ maxDailyPointsEarned: Bool)
 }
 
 protocol TimerPresenterView {
@@ -56,6 +56,8 @@ class TimerPresenter: TimerPresenterProtocol {
     
     func completeWorkout(_ repLength: Int, _ restLength: Int, _ reps: Int) {
         
+        var maxDailyPointsEarned = false
+        
         let today = Date()
         addWorkout(today, Int32(repLength), Int32(restLength), Int32(reps))
         completeLevel()
@@ -85,7 +87,11 @@ class TimerPresenter: TimerPresenterProtocol {
             
             pointsEarned = pointsEarned * streakMultiplier
             
-            if((currentUser.daily_points + Int(pointsEarned)) >= Constants.maxDailyPoints) {
+            if(currentUser.daily_points == Constants.maxDailyPoints) {
+                maxDailyPointsEarned = true
+                pointsEarned = 0
+            }
+            else if((currentUser.daily_points + Int(pointsEarned)) > Constants.maxDailyPoints) {
                 
                 let remainingDailyPoints = Constants.maxDailyPoints - currentUser.daily_points
                 
@@ -107,7 +113,7 @@ class TimerPresenter: TimerPresenterProtocol {
             CurrentUserService.shared.updateUser(currentUser)
         }
         
-        self.delegate.didCompleteWorkout(pointsEarned, _level)
+        self.delegate.didCompleteWorkout(pointsEarned, _level, maxDailyPointsEarned)
         
     }
     

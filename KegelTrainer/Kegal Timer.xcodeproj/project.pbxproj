@@ -204,6 +204,7 @@
 		D4D85AA525710051006C40E6 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D85AA425710051006C40E6 /* SettingsPresenter.swift */; };
 		D4D85AAB25710059006C40E6 /* SettingsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D85AAA25710059006C40E6 /* SettingsPresenterProtocol.swift */; };
 		D4D85AB1257101B5006C40E6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D85AB0257101B5006C40E6 /* Settings.storyboard */; };
+		D4DC3CA625766B0600F66203 /* TimerViewController-UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC3CA525766B0600F66203 /* TimerViewController-UITabBarControllerDelegate.swift */; };
 		D4DCC06A2567001300752F22 /* WorkoutCompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCC0692567001300752F22 /* WorkoutCompletePresenter.swift */; };
 		D4DCC0702567001C00752F22 /* WorkoutCompletePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCC06F2567001C00752F22 /* WorkoutCompletePresenterProtocol.swift */; };
 		D4DCC0842567C65F00752F22 /* KTSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCC0832567C65F00752F22 /* KTSecondaryButton.swift */; };
@@ -463,6 +464,7 @@
 		D4D85AA425710051006C40E6 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		D4D85AAA25710059006C40E6 /* SettingsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterProtocol.swift; sourceTree = "<group>"; };
 		D4D85AB0257101B5006C40E6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		D4DC3CA525766B0600F66203 /* TimerViewController-UITabBarControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerViewController-UITabBarControllerDelegate.swift"; sourceTree = "<group>"; };
 		D4DCC0692567001300752F22 /* WorkoutCompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenter.swift; sourceTree = "<group>"; };
 		D4DCC06F2567001C00752F22 /* WorkoutCompletePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompletePresenterProtocol.swift; sourceTree = "<group>"; };
 		D4DCC0832567C65F00752F22 /* KTSecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTSecondaryButton.swift; sourceTree = "<group>"; };
@@ -1613,6 +1615,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		D4DC3CA425766AD500F66203 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4DC3CA525766B0600F66203 /* TimerViewController-UITabBarControllerDelegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D4DCC07925672A3700752F22 /* Track */ = {
 			isa = PBXGroup;
 			children = (
@@ -1736,6 +1746,7 @@
 		D4F6EECF2565B52700EE032C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4DC3CA425766AD500F66203 /* Extensions */,
 				D4F6EEF72566800F00EE032C /* RepsDataSource */,
 				D4006455217FAF9F0077765D /* TimerViewController.swift */,
 				D4F6EEE025667E6400EE032C /* Timer.storyboard */,
@@ -2274,6 +2285,7 @@
 				D484CF2422A998390042802C /* RemindersCoordinator.swift in Sources */,
 				D40780E721E12C6600C3D2D1 /* KegalTimer.xcdatamodeld in Sources */,
 				D4418B82254ECE2D0029E100 /* WalkthroughPresenterProtocol.swift in Sources */,
+				D4DC3CA625766B0600F66203 /* TimerViewController-UITabBarControllerDelegate.swift in Sources */,
 				D49B76E6255FEE9F00B31D74 /* FIRStorageReference.swift in Sources */,
 				D4206FFE23774310003E38A7 /* AlertHandlerService.swift in Sources */,
 				D4D85AAB25710059006C40E6 /* SettingsPresenterProtocol.swift in Sources */,

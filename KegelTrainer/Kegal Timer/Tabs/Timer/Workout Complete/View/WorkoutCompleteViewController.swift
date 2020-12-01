@@ -58,7 +58,7 @@ class WorkoutCompleteViewController: UIViewController, Storyboarded {
 }
 
 extension WorkoutCompleteViewController: WorkoutCompletePresenterView {
-    func didLoadWorkoutStats(_ hasAnAccount: Bool, _ levelCompleted: String?, _ totalWorkouts: String?, _ pointsEarned: Double) {
+    func didLoadWorkoutStats(_ hasAnAccount: Bool, _ levelCompleted: String?, _ totalWorkouts: String?, _ pointsEarned: Double, _ maxDailyPointsEarned: Bool?) {
         
         if levelCompleted != nil && levelCompleted?.isEmpty == false {
             self.levelMessage.text = "Level \(levelCompleted!) completed!"
@@ -85,6 +85,13 @@ extension WorkoutCompleteViewController: WorkoutCompletePresenterView {
             } else {
                 self.pointsMessage.text = "You earned \(pointsEarned) points"
             }
+            
+            if let maxDailyPointsEarned = maxDailyPointsEarned {
+                if(maxDailyPointsEarned) {
+                    self.pointsMessage.text = "You have earned the maximum number of points in one day!"
+                }
+            }
+            
         } else {
             if(pointsEarned == 1) {
                 self.pointsMessage.text = "You could have earned \(pointsEarned) point for that workout"

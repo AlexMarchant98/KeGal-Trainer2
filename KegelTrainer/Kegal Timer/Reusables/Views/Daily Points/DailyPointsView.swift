@@ -62,12 +62,6 @@ class DailyPointsView: UIView {
         self.dailyPointsProgress.setProgress(0, animated: false)
         self.dailyPointsProgress.progressTintColor = UIColor.appGreen
         self.dailyPointsProgress.trackTintColor = UIColor.appGreen.withAlphaComponent(0.30)
-
-        let maskLayerPath = UIBezierPath(roundedRect: bounds, cornerRadius: self.dailyPointsProgress.frame.height / 2)
-        let maskLayer = CAShapeLayer()
-        maskLayer.frame = dailyPointsProgress.bounds
-        maskLayer.path = maskLayerPath.cgPath
-        dailyPointsProgress.layer.mask = maskLayer
     }
 
 }

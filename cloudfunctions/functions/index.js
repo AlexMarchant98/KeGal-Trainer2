@@ -14,8 +14,8 @@ exports.dailyReset = functions.pubsub.schedule('every day 00:00').onRun(async co
             const profile = profileData
             allProfiles.push({profile, doc})
         });
-
-        allProfiles = allProfiles.sort((a, b) => a.profile.total_points > b.profile.total_points);
+        
+        allProfiles.sort(function(a, b) { return b.profile.total_points - a.profile.total_points });
 
         allProfiles.forEach((data, i) => {
 
@@ -64,7 +64,7 @@ exports.dailyReset = functions.pubsub.schedule('every day 00:00').onRun(async co
                 lostStreak = 0;
                 daysLeftToReclaimStreak = 0;
             } else {
-                daysLeftToReclaimStreak -= 1;
+                daysLeftToReclaimStreak = daysLeftToReclaimStreak - 1;
             }
 
             promises.push(
@@ -75,7 +75,7 @@ exports.dailyReset = functions.pubsub.schedule('every day 00:00').onRun(async co
                     days_left_to_reclaim_streak: daysLeftToReclaimStreak,
                     has_exercised_today: false,
                     daily_points: 0,
-                    rank
+                    rank: rank
                 })
             );
 
@@ -103,10 +103,10 @@ exports.dailyResetManual = functions.https.onRequest((req, res) => {
         snapshot.forEach(doc => {
             const profileData = doc.data();
             const profile = profileData
-            allProfiles.push({profile, doc})
+            allProfiles.push({ profile, doc })
         });
-
-        allProfiles = allProfiles.sort((a, b) => a.profile.total_points > b.profile.total_points);
+        
+        allProfiles.sort(function(a, b) { return b.profile.total_points - a.profile.total_points });
 
         allProfiles.forEach((data, i) => {
 
@@ -155,7 +155,7 @@ exports.dailyResetManual = functions.https.onRequest((req, res) => {
                 lostStreak = 0;
                 daysLeftToReclaimStreak = 0;
             } else {
-                daysLeftToReclaimStreak -= 1;
+                daysLeftToReclaimStreak = daysLeftToReclaimStreak - 1;
             }
 
             promises.push(
@@ -166,7 +166,7 @@ exports.dailyResetManual = functions.https.onRequest((req, res) => {
                     days_left_to_reclaim_streak: daysLeftToReclaimStreak,
                     has_exercised_today: false,
                     daily_points: 0,
-                    rank
+                    rank: rank
                 })
             );
 

@@ -86,10 +86,11 @@ extension AdMobService: GADInterstitialDelegate {
         loadAds()
     }
     
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-        
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         self.delegate.didDismissInterstitial(AdService.adMob)
-        
+    }
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
         loadAds()
     }
 }

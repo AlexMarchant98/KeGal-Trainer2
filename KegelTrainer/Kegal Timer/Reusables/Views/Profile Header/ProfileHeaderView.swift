@@ -47,7 +47,6 @@ class ProfileHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupView()
     }
     
@@ -69,6 +68,14 @@ class ProfileHeaderView: UIView {
     }
     
     func setupView() {
+        if self.view.layer.sublayers != nil {
+            self.view.layer.sublayers!.forEach({
+                if($0 is CAGradientLayer) {
+                    $0.removeFromSuperlayer()
+                }
+            })
+        }
+        
         let gradient: CAGradientLayer = CAGradientLayer()
 
         gradient.colors = [UIColor.appLightPurple.cgColor, UIColor.appDarkPurple.cgColor]

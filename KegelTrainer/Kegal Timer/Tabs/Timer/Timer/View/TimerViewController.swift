@@ -60,6 +60,9 @@ class TimerViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTabBarDelegate()
+        registerForNotifications()
+        
         self.currentRepLabel.font = Fonts.headerFont
         self.currentRepLabel.textColor = .white
         
@@ -83,15 +86,10 @@ class TimerViewController: UIViewController, Storyboarded {
         super.viewWillAppear(animated)
         
         timerPresenter.getWorkoutInformation()
-        
-        workoutCompleted = false
-        
-        registerForNotifications()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        resetTimer()
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -169,8 +167,6 @@ class TimerViewController: UIViewController, Storyboarded {
                     if(self.workoutCompleted) {
                         self.completeWorkout()
                     }
-                } else {
-                    self.deregisterNotifications()
                 }
         }
         
@@ -187,8 +183,6 @@ class TimerViewController: UIViewController, Storyboarded {
                     if(self.workoutCompleted) {
                         self.completeWorkout()
                     }
-                } else {
-                    self.deregisterNotifications()
                 }
             }
     }
@@ -238,7 +232,7 @@ class TimerViewController: UIViewController, Storyboarded {
             
             self.timeLabel.text = self.timeString(time: TimeInterval(0), miliseconds: 0)
             
-            if(currentRep < self.repsPerSet - 1) {
+            if(self.repsDataSource!.currentRep <= self.repsPerSet - 1) {
                 
                 if(workoutCue.displayVisualCue() == true)
                 {
@@ -282,7 +276,7 @@ class TimerViewController: UIViewController, Storyboarded {
         DispatchQueue.main.asyncAfter(deadline: delayTime, execute: self.dispatchWorkItem)
     }
     
-    private func resetTimer()
+    internal func resetTimer()
     {
         repsDataSource?.resetReps()
         resetUI()
@@ -367,9 +361,6 @@ extension TimerViewController: RepsDataSourceDelegate {
         self.workoutCompleted = true
         
         workoutCue.playWorkoutCompleteSoundBite()
-        
-        resetTimer()
-        dispatchWorkItem.cancel()
         
         if(!adServer.areAdsDisabled) {
             adServer.displayInterstitialAd(viewController: self)

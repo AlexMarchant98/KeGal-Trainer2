@@ -34,6 +34,8 @@ class ProfileViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        registerForNotifications()
+        
         self.view.backgroundColor = .backgroundColour
         
         viewLeaderboardView.delegate = self
@@ -47,11 +49,12 @@ class ProfileViewController: UIViewController, Storyboarded {
         }
         
         scrollViewTopConstraint.constant = -statusHeight
+        
+        profileHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: profileHeaderView.bounds.height)
+        profileHeaderView.setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        registerForNotifications()
         
         profilePresenter.getServices()
         
@@ -87,8 +90,6 @@ class ProfileViewController: UIViewController, Storyboarded {
                 
                 if(self.tabBarController!.selectedIndex == 0) {
                     self.profilePresenter.didWatchAdvert()
-                } else {
-                    self.deregisterNotifications()
                 }
         }
         
@@ -103,8 +104,6 @@ class ProfileViewController: UIViewController, Storyboarded {
                 
                 if(self.tabBarController!.selectedIndex == 0) {
                     self.profilePresenter.didWatchAdvert()
-                } else {
-                    self.deregisterNotifications()
                 }
         }
         

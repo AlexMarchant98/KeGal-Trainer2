@@ -13,23 +13,26 @@ protocol WorkoutCompletePresenterDelegate {
 }
 
 protocol WorkoutCompletePresenterView {
-    func didLoadWorkoutStats(_ hasAnAccount: Bool, _ levelCompleted: String?, _ totalWorkouts: String?, _ pointsEarned: Double)
+    func didLoadWorkoutStats(_ hasAnAccount: Bool, _ levelCompleted: String?, _ totalWorkouts: String?, _ pointsEarned: Double, _ maxDailyPointsEarned: Bool?)
 }
 
 class WorkoutCompletePresenter: WorkoutCompletePresenterProtocol {
     
     let pointsEarned: Double
+    let maxDailyPointsEarned: Bool
     let levelCompleted: String?
     let delegate: WorkoutCompletePresenterDelegate
     let view: WorkoutCompletePresenterView
     
     init(
         pointsEarned: Double,
+        maxDailyPointsEarned: Bool,
         with view: WorkoutCompletePresenterView,
         delegate: WorkoutCompletePresenterDelegate,
         levelCompleted: String? = nil) {
         
         self.pointsEarned = pointsEarned
+        self.maxDailyPointsEarned = maxDailyPointsEarned
         self.delegate = delegate
         self.view = view
         self.levelCompleted = levelCompleted
@@ -38,9 +41,9 @@ class WorkoutCompletePresenter: WorkoutCompletePresenterProtocol {
     
     func loadWorkoutStats() {
         if let currentUser = CurrentUserService.shared.user {
-            self.view.didLoadWorkoutStats(true, levelCompleted, String(currentUser.total_workouts), pointsEarned)
+            self.view.didLoadWorkoutStats(true, levelCompleted, String(currentUser.total_workouts), pointsEarned, maxDailyPointsEarned)
         } else {
-            self.view.didLoadWorkoutStats(false, levelCompleted, nil, pointsEarned)
+            self.view.didLoadWorkoutStats(false, levelCompleted, nil, pointsEarned, nil)
         }
     }
     

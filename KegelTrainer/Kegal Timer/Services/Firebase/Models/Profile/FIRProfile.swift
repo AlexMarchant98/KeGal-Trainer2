@@ -18,7 +18,7 @@ struct FIRProfile: Equatable, Codable, FIRIdentifiable {
     
     var workout_days_streak: Int = 0
     var daily_points: Int = 0
-    var streak_protectors: Int = 0
+    var streak_protectors: Int = 1
     var rank: Int? = nil
     
     var total_points: Int64 = 0
@@ -27,8 +27,8 @@ struct FIRProfile: Equatable, Codable, FIRIdentifiable {
     var total_number_of_reps: Int64 = 0
     var total_rest_time: Int64 = 0
     
-    var lost_streak: Int? = nil
-    var days_left_to_reclaim_streak: Int? = nil
+    var lost_streak: Int = 0
+    var days_left_to_reclaim_streak: Int = 0
     
     var level: Int64 = 0
     var join_date: Date

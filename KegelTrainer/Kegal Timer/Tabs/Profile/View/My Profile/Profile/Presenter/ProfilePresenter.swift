@@ -57,20 +57,7 @@ class ProfilePresenter: ProfilePresenterProtocol {
         
         if var currentUser = CurrentUserService.shared.user {
             
-            if((currentUser.daily_points + Constants.pointsForWatchingAnAdvert) >= Constants.maxDailyPoints) {
-                
-                
-                let remainingDailyPoints = Constants.maxDailyPoints - Constants.pointsForWatchingAnAdvert
-                
-                currentUser.daily_points += remainingDailyPoints
-                currentUser.total_points += Int64(remainingDailyPoints)
-                
-            } else {
-                
-                currentUser.daily_points += Int(Constants.pointsForWatchingAnAdvert)
-                currentUser.total_points += Int64(Constants.pointsForWatchingAnAdvert)
-                
-            }
+            currentUser.total_points += Int64(Constants.pointsForWatchingAnAdvert)
             
             CurrentUserService.shared.updateUser(currentUser)
             
