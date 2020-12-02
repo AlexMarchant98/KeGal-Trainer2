@@ -16,7 +16,12 @@ protocol ProfilePresenterProtocol {
     func ratedApp()
     func reviewedApp()
     func showLeaderboard()
+    
     func getStreakProtectorIAPInformation()
     func purchaseStreakProtector()
     func addStreakProtector(add streakProtectors: Int)
+    
+    func getSaveStreakIAPInformation()
+    func purchaseSaveStreak()
+    func didSaveStreak()
 }

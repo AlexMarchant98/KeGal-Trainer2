@@ -10,7 +10,7 @@ import Foundation
 
 protocol ProfilePresenterView {
     func didGetServices(_ firebaseCloudStorageService: FirebaseCloudStorageServiceProtocol)
-    func didLoadIAPInformation(title: String, description: String, localPrice: String)
+    func didLoadIAPInformation(title: String, description: String, localPrice: String, product: String)
 }
 
 protocol ProfilePresenterDelegate {
@@ -106,7 +106,8 @@ class ProfilePresenter: ProfilePresenterProtocol {
             self.view.didLoadIAPInformation(
                 title: product.localizedTitle,
                 description: product.localizedDescription,
-                localPrice: "\(product.priceLocale.currencySymbol ?? "")\(product.price)")
+                localPrice: "\(product.priceLocale.currencySymbol ?? "")\(product.price)",
+                product: IAPProducts.streakProtector)
         } else {
             purchaseStreakProtector()
         }
@@ -122,5 +123,33 @@ class ProfilePresenter: ProfilePresenterProtocol {
         currentUser.streak_protectors += streakProtectors
         
         CurrentUserService.shared.updateUser(currentUser)
+    }
+    
+    func getSaveStreakIAPInformation() {
+        if let product = iAPService.getLoadedIAPProduct(with: IAPProducts.saveLostStreak) {
+            self.view.didLoadIAPInformation(
+                title: product.localizedTitle,
+                description: product.localizedDescription,
+                localPrice: "\(product.priceLocale.currencySymbol ?? "")\(product.price)",
+                product: IAPProducts.saveLostStreak)
+        } else {
+            purchaseSaveStreak()
+        }
+    }
+    
+    func purchaseSaveStreak() {
+        iAPService.purchaseStreakSaver()
+    }
+    
+    func didSaveStreak() {
+        if var currentUser = CurrentUserService.shared.user {
+            currentUser.workout_days_streak = currentUser.workout_days_streak + currentUser.lost_streak
+            currentUser.streak_protectors += 1
+            
+            currentUser.lost_streak = 0
+            currentUser.days_left_to_reclaim_streak = 0
+            
+            CurrentUserService.shared.updateUser(currentUser)
+        }
     }
 }

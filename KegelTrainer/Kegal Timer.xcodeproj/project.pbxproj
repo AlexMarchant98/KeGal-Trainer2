@@ -55,6 +55,9 @@
 		D443389C256D9EA000923DF9 /* UITextField-AddToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443389B256D9EA000923DF9 /* UITextField-AddToolbar.swift */; };
 		D44338B1256DA8FE00923DF9 /* MDCTextFieldInputControllerOutliend-SetupKTTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44338B0256DA8FE00923DF9 /* MDCTextFieldInputControllerOutliend-SetupKTTextFieldController.swift */; };
 		D44338BB256DAC1A00923DF9 /* KTPrimaryButtonInverted.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44338BA256DAC1A00923DF9 /* KTPrimaryButtonInverted.swift */; };
+		D4473EEA2577BB9000CCEAAF /* ReclaimStreakView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4473EE92577BB9000CCEAAF /* ReclaimStreakView.xib */; };
+		D4473EF02577BB9D00CCEAAF /* ReclaimStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4473EEF2577BB9D00CCEAAF /* ReclaimStreakView.swift */; };
+		D4473EFA2577BBFA00CCEAAF /* ReclaimStreakViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4473EF92577BBFA00CCEAAF /* ReclaimStreakViewModel.swift */; };
 		D44A595C22B5331C009A053D /* AdMobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobService.swift */; };
 		D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4505815221F23B7004CEEEF /* RequestReview.swift */; };
 		D45A490125600DD100B296B7 /* CurrentWorkoutStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A490025600DD100B296B7 /* CurrentWorkoutStreakView.swift */; };
@@ -313,6 +316,9 @@
 		D443389B256D9EA000923DF9 /* UITextField-AddToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField-AddToolbar.swift"; sourceTree = "<group>"; };
 		D44338B0256DA8FE00923DF9 /* MDCTextFieldInputControllerOutliend-SetupKTTextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MDCTextFieldInputControllerOutliend-SetupKTTextFieldController.swift"; sourceTree = "<group>"; };
 		D44338BA256DAC1A00923DF9 /* KTPrimaryButtonInverted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTPrimaryButtonInverted.swift; sourceTree = "<group>"; };
+		D4473EE92577BB9000CCEAAF /* ReclaimStreakView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReclaimStreakView.xib; sourceTree = "<group>"; };
+		D4473EEF2577BB9D00CCEAAF /* ReclaimStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReclaimStreakView.swift; sourceTree = "<group>"; };
+		D4473EF92577BBFA00CCEAAF /* ReclaimStreakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReclaimStreakViewModel.swift; sourceTree = "<group>"; };
 		D44A595B22B5331C009A053D /* AdMobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobService.swift; sourceTree = "<group>"; };
 		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D45A490025600DD100B296B7 /* CurrentWorkoutStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWorkoutStreakView.swift; sourceTree = "<group>"; };
@@ -763,6 +769,16 @@
 				D4433895256D9E1100923DF9 /* UITextField-ValidateText.swift */,
 			);
 			path = Validation;
+			sourceTree = "<group>";
+		};
+		D4473EE82577BB7500CCEAAF /* Reclaim Streak */ = {
+			isa = PBXGroup;
+			children = (
+				D4473EEF2577BB9D00CCEAAF /* ReclaimStreakView.swift */,
+				D4473EF92577BBFA00CCEAAF /* ReclaimStreakViewModel.swift */,
+				D4473EE92577BB9000CCEAAF /* ReclaimStreakView.xib */,
+			);
+			path = "Reclaim Streak";
 			sourceTree = "<group>";
 		};
 		D45A48FB25600D3700B296B7 /* Current Workout Streak */ = {
@@ -1430,6 +1446,7 @@
 		D49B772C255FF48200B31D74 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D4473EE82577BB7500CCEAAF /* Reclaim Streak */,
 				D46059DA25711F75002BE261 /* Table Header View */,
 				D4D85A8825702A33006C40E6 /* Loading View */,
 				D4433838256D27EA00923DF9 /* Collection View Cells */,
@@ -1984,6 +2001,7 @@
 				D48CFC5E21A74F6300AD6179 /* Begin.wav in Resources */,
 				D45A49B02560320E00B296B7 /* EarnPointsView.xib in Resources */,
 				D443380E256D204B00923DF9 /* ViewLeaderboard.storyboard in Resources */,
+				D4473EEA2577BB9000CCEAAF /* ReclaimStreakView.xib in Resources */,
 				D4F6EEF225667EC200EE032C /* WorkoutComplete.storyboard in Resources */,
 				D4F6EEE125667E6400EE032C /* Timer.storyboard in Resources */,
 				D45A499B25602D6800B296B7 /* ProfileInfoCardView.xib in Resources */,
@@ -2162,6 +2180,7 @@
 				D4C632A22561CE3E00B75E45 /* UIApplicationHelperService.swift in Sources */,
 				D474243B2405AAA100757B2A /* AdServiceDelegate.swift in Sources */,
 				D443382C256D22BD00923DF9 /* LeaderboardCell.swift in Sources */,
+				D4473EF02577BB9D00CCEAAF /* ReclaimStreakView.swift in Sources */,
 				D45A4926256011BF00B296B7 /* DailyPointsViewModel.swift in Sources */,
 				D4605A0E25712DB5002BE261 /* SettingsTableViewController-TableDataSourceAndDelegate.swift in Sources */,
 				D4605A14257281E3002BE261 /* WalkthroughViewController-ProfileWalkthrough.swift in Sources */,
@@ -2261,6 +2280,7 @@
 				D4DCC0F8256C3D2100752F22 /* ViewLeaderboardView.swift in Sources */,
 				D443387F256D9C5200923DF9 /* SignupPresenter.swift in Sources */,
 				D4C6328B2561CC8E00B75E45 /* EnablePhotoAccessPresenterProtocol.swift in Sources */,
+				D4473EFA2577BBFA00CCEAAF /* ReclaimStreakViewModel.swift in Sources */,
 				D4418B83254ECE2D0029E100 /* WalkthroughViewController.swift in Sources */,
 				D484CF2A22AD171B0042802C /* WorkoutCompleteViewController.swift in Sources */,
 				D45A49EA2560845800B296B7 /* LoginPresenter.swift in Sources */,

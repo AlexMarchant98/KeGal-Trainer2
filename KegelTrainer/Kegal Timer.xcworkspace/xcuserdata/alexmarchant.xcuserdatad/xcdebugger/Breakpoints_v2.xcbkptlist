@@ -744,8 +744,8 @@
             filePath = "Kegal Timer/Tabs/Profile/View/My Profile/Profile/Presenter/ProfilePresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "getStreakProtectorIAPInformation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -776,9 +776,9 @@
             filePath = "Kegal Timer/Tabs/Profile/View/My Profile/Profile/View/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "didLoadIAPInformation(title:description:localPrice:)"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
+            landmarkName = "didLoadIAPInformation(title:description:localPrice:product:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -792,8 +792,8 @@
             filePath = "Kegal Timer/Tabs/Profile/View/My Profile/Profile/Presenter/ProfilePresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "purchaseStreakProtector()"
             landmarkType = "7">
          </BreakpointContent>
@@ -824,8 +824,8 @@
             filePath = "Kegal Timer/Tabs/Profile/View/My Profile/Profile/View/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "registerForNotifications()"
             landmarkType = "7">
          </BreakpointContent>
@@ -843,7 +843,7 @@
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "registerForNotifications()"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -920,8 +920,8 @@
             filePath = "Kegal Timer/Tabs/Profile/View/My Profile/Profile/View/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "registerForNotifications()"
             landmarkType = "7">
          </BreakpointContent>
@@ -956,6 +956,22 @@
             endingLineNumber = "125"
             landmarkName = "didDismissInterstitial(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11B19328-1622-4095-957C-D4B6D1F748ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kegal Timer/Reusables/Views/Reclaim Streak/ReclaimStreakView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "model"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

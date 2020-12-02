@@ -82,10 +82,10 @@ class TimerPresenter: TimerPresenterProtocol {
             var streakMultiplier = 0.65
             
             if(currentUser.workout_days_streak > 0) {
-                streakMultiplier = round(0.65 * Double(currentUser.workout_days_streak))
+                streakMultiplier = ((0.65 * Double(currentUser.workout_days_streak)) * 100).rounded() / 100
             }
             
-            pointsEarned = pointsEarned * streakMultiplier
+            pointsEarned = (pointsEarned * streakMultiplier).rounded()
             
             if(currentUser.daily_points == Constants.maxDailyPoints) {
                 maxDailyPointsEarned = true

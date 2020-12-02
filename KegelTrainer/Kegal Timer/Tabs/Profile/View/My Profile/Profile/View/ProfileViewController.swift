@@ -12,16 +12,18 @@ class ProfileViewController: UIViewController, Storyboarded {
     
     let notificationCenter = NotificationCenter.default
     
-    weak var didDismissInterstitialObserver: NSObjectProtocol?
-    weak var didFailToLoadAdMobInterstitialObserver: NSObjectProtocol?
-    weak var iapStreakProtectorPurchaseNotificationObserver: NSObjectProtocol?
-    weak var iapErrorNotificationObserver: NSObjectProtocol?
+    var didDismissInterstitialObserver: NSObjectProtocol?
+    var didFailToLoadAdMobInterstitialObserver: NSObjectProtocol?
+    var iapStreakProtectorPurchaseNotificationObserver: NSObjectProtocol?
+    var iapSaveStreakPurchaseNotificationObserver: NSObjectProtocol?
+    var iapErrorNotificationObserver: NSObjectProtocol?
     
     var profilePresenter: ProfilePresenterProtocol!
     var adServer: AdServer!
     
     @IBOutlet weak var viewLeaderboardView: ViewLeaderboardView!
     @IBOutlet weak var profileHeaderView: ProfileHeaderView!
+    @IBOutlet weak var reclaimStreakView: ReclaimStreakView!
     @IBOutlet weak var dailyPointsView: DailyPointsView!
     @IBOutlet weak var currentWorkoutStreakView: CurrentWorkoutStreakView!
     @IBOutlet weak var profileTotalsView: ProfileTotalsView!
@@ -57,6 +59,20 @@ class ProfileViewController: UIViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         
         profilePresenter.getServices()
+        
+        if(CurrentUserService.shared.user!.lost_streak != 0) {
+            reclaimStreakView.model = ReclaimStreakViewModel(
+                hasStreakToReclaim: true,
+                lostStreak: CurrentUserService.shared.user!.lost_streak,
+                daysLeftToReclaimStreak: CurrentUserService.shared.user!.days_left_to_reclaim_streak,
+                delegate: self)
+            reclaimStreakView.isHidden = false
+        } else {
+            reclaimStreakView.model = ReclaimStreakViewModel(
+                hasStreakToReclaim: false,
+                delegate: self)
+            reclaimStreakView.isHidden = true
+        }
         
         dailyPointsView.model = DailyPointsViewModel(CurrentUserService.shared.user!.daily_points)
         
@@ -163,6 +179,56 @@ class ProfileViewController: UIViewController, Storyboarded {
                     }
                 }
         }
+        
+        iapSaveStreakPurchaseNotificationObserver = notificationCenter
+            .addObserver(forName: .iapSaveStreakPurchaseNotification,
+                         object: nil,
+                         queue: nil) { [weak self] (notification) in
+                
+                guard let self = self else {
+                    return
+                }
+                
+                self.setLoading(isLoading: false)
+                
+                if let iapNotification = notification.userInfo?[Constants.iapNotificationUserInfoKey] as? IAPNotification {
+                    
+                    if(iapNotification.successful) {
+                        self.profilePresenter.didSaveStreak()
+                        
+                        self.reclaimStreakView.isHidden = true
+                        
+                        self.reclaimStreakView.model = ReclaimStreakViewModel(
+                            hasStreakToReclaim: false,
+                            delegate: self)
+                        
+                        self.currentWorkoutStreakView.model = CurrentWorkoutStreakViewModel(
+                            CurrentUserService.shared.user!.workout_days_streak,
+                            CurrentUserService.shared.user!.streak_protectors,
+                            delegate: self)
+                        
+                        AlertHandlerService.shared.showCustomAlert(
+                            view: self,
+                            title: "Streak Saved!",
+                            message: "You have successfully saved your streak, also, we have given you a Streak Protector for free!",
+                            actionTitles: ["Perfect"],
+                            actions: [
+                                { (action: UIAlertAction!) in print("Do nothing") }
+                            ]
+                        )
+                    } else {
+                        AlertHandlerService.shared.showCustomAlert(
+                            view: self,
+                            title: "Purchase Failed",
+                            message: iapNotification.message,
+                            actionTitles: ["Ok"],
+                            actions: [
+                                { (action: UIAlertAction!) in print("Do nothing") }
+                            ]
+                        )
+                    }
+                }
+        }
     }
     
     private func deregisterNotifications() {
@@ -201,7 +267,7 @@ extension ProfileViewController: ProfilePresenterView {
             delegate: self)
     }
     
-    func didLoadIAPInformation(title: String, description: String, localPrice: String) {
+    func didLoadIAPInformation(title: String, description: String, localPrice: String, product: String) {
         AlertHandlerService.shared.showCustomAlert(
             view: self,
             title: "\(title) for \(localPrice)",
@@ -211,7 +277,13 @@ extension ProfileViewController: ProfilePresenterView {
                 { (action: UIAlertAction!) in
                     self.setLoading(isLoading: false)
                 },
-                { (action: UIAlertAction!) in self.profilePresenter.purchaseStreakProtector()
+                { (action: UIAlertAction!) in
+                    
+                    if(product == IAPProducts.saveLostStreak) {
+                        self.profilePresenter.purchaseSaveStreak()
+                    } else {
+                        self.profilePresenter.purchaseStreakProtector()
+                    }
                 }
             ]
         )
@@ -268,5 +340,12 @@ extension ProfileViewController: EarnPointsViewDelegate {
 extension ProfileViewController: ViewLeaderboardViewDelegate {
     func viewLeaderboard() {
         self.profilePresenter.showLeaderboard()
+    }
+}
+
+extension ProfileViewController: ReclaimStreakViewDelegate {
+    func reclaimStreak() {
+        profilePresenter.getSaveStreakIAPInformation()
+        self.setLoading(isLoading: true)
     }
 }

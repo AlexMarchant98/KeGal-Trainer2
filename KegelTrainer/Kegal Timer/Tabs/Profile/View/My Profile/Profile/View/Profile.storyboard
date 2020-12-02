@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,36 +29,48 @@
                                                     <constraint firstAttribute="height" constant="400" id="szq-ge-rmo"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X66-o6-qbd" customClass="DailyPointsView" customModule="Kegel_Trainer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="400" width="414" height="75"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="75" placeholder="YES" id="sHn-Hi-07A"/>
-                                                </constraints>
-                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CRj-hQ-Ucr">
+                                                <rect key="frame" x="0.0" y="400" width="414" height="150"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwe-Ge-bPs" customClass="ReclaimStreakView" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" placeholder="YES" id="Lon-oQ-DWT"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X66-o6-qbd" customClass="DailyPointsView" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="75" width="414" height="75"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" placeholder="YES" id="sHn-Hi-07A"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVq-Wp-41s" customClass="ViewLeaderboardView" customModule="Kegel_Trainer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="475" width="414" height="75"/>
+                                                <rect key="frame" x="0.0" y="550" width="414" height="75"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" placeholder="YES" id="GmH-BP-be5"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iE8-TQ-IKQ" customClass="CurrentWorkoutStreakView" customModule="Kegel_Trainer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="550" width="414" height="75"/>
+                                                <rect key="frame" x="0.0" y="625" width="414" height="75"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" placeholder="YES" id="UxD-cv-iTL"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tq-2k-aff" customClass="ProfileTotalsView" customModule="Kegel_Trainer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="625" width="414" height="75"/>
+                                                <rect key="frame" x="0.0" y="700" width="414" height="75"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" placeholder="YES" id="SGJ-j8-UR4"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgN-K7-r9Q" customClass="EarnPointsView" customModule="Kegel_Trainer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="700" width="414" height="196"/>
+                                                <rect key="frame" x="0.0" y="775" width="414" height="121"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -67,20 +79,20 @@
                                             <constraint firstAttribute="trailing" secondItem="iE8-TQ-IKQ" secondAttribute="trailing" id="1TR-HS-rrL"/>
                                             <constraint firstAttribute="trailing" secondItem="bbE-K1-YOZ" secondAttribute="trailing" id="3dV-sN-pBJ"/>
                                             <constraint firstItem="8tq-2k-aff" firstAttribute="top" secondItem="iE8-TQ-IKQ" secondAttribute="bottom" id="3pW-AR-KbP"/>
-                                            <constraint firstItem="X66-o6-qbd" firstAttribute="top" secondItem="bbE-K1-YOZ" secondAttribute="bottom" id="ANI-eU-ML1"/>
+                                            <constraint firstAttribute="trailing" secondItem="CRj-hQ-Ucr" secondAttribute="trailing" id="Cmt-7b-I7a"/>
                                             <constraint firstItem="pgN-K7-r9Q" firstAttribute="top" secondItem="8tq-2k-aff" secondAttribute="bottom" id="H5i-1g-3Bz"/>
                                             <constraint firstItem="pgN-K7-r9Q" firstAttribute="leading" secondItem="evc-a0-APX" secondAttribute="leading" id="IWy-Uh-PZ7"/>
                                             <constraint firstItem="iE8-TQ-IKQ" firstAttribute="leading" secondItem="evc-a0-APX" secondAttribute="leading" id="Sth-LI-YCr"/>
                                             <constraint firstAttribute="trailing" secondItem="pgN-K7-r9Q" secondAttribute="trailing" id="Vdu-x2-ml7"/>
                                             <constraint firstAttribute="trailing" secondItem="8tq-2k-aff" secondAttribute="trailing" id="XZx-mX-hoH"/>
                                             <constraint firstAttribute="trailing" secondItem="eVq-Wp-41s" secondAttribute="trailing" id="fAn-SD-tYr"/>
-                                            <constraint firstAttribute="trailing" secondItem="X66-o6-qbd" secondAttribute="trailing" id="fcH-1P-7qu"/>
+                                            <constraint firstItem="eVq-Wp-41s" firstAttribute="top" secondItem="CRj-hQ-Ucr" secondAttribute="bottom" id="g81-KA-LiO"/>
                                             <constraint firstAttribute="bottom" secondItem="pgN-K7-r9Q" secondAttribute="bottom" id="gVe-f3-3dv"/>
                                             <constraint firstItem="bbE-K1-YOZ" firstAttribute="leading" secondItem="evc-a0-APX" secondAttribute="leading" id="i2u-qd-Kyn"/>
                                             <constraint firstItem="8tq-2k-aff" firstAttribute="leading" secondItem="evc-a0-APX" secondAttribute="leading" id="kcK-ga-Xrs"/>
                                             <constraint firstItem="iE8-TQ-IKQ" firstAttribute="top" secondItem="eVq-Wp-41s" secondAttribute="bottom" id="nql-B2-bdn"/>
-                                            <constraint firstItem="eVq-Wp-41s" firstAttribute="top" secondItem="X66-o6-qbd" secondAttribute="bottom" id="rJl-Xn-aCU"/>
-                                            <constraint firstItem="X66-o6-qbd" firstAttribute="leading" secondItem="evc-a0-APX" secondAttribute="leading" id="tik-yc-Zif"/>
+                                            <constraint firstItem="CRj-hQ-Ucr" firstAttribute="top" secondItem="bbE-K1-YOZ" secondAttribute="bottom" id="s9Q-5p-WqA"/>
+                                            <constraint firstItem="CRj-hQ-Ucr" firstAttribute="leading" secondItem="evc-a0-APX" secondAttribute="leading" id="tpD-HE-xXz"/>
                                             <constraint firstItem="bbE-K1-YOZ" firstAttribute="top" secondItem="evc-a0-APX" secondAttribute="top" id="uOi-yo-Na0"/>
                                             <constraint firstItem="eVq-Wp-41s" firstAttribute="leading" secondItem="evc-a0-APX" secondAttribute="leading" id="wtC-b3-LMP"/>
                                         </constraints>
@@ -122,6 +134,7 @@
                         <outlet property="loadingView" destination="Bnm-s6-lVI" id="7jH-j5-UCC"/>
                         <outlet property="profileHeaderView" destination="bbE-K1-YOZ" id="cAv-h3-540"/>
                         <outlet property="profileTotalsView" destination="8tq-2k-aff" id="CWg-dd-DQa"/>
+                        <outlet property="reclaimStreakView" destination="Fwe-Ge-bPs" id="tl6-Px-ZNz"/>
                         <outlet property="scrollViewTopConstraint" destination="FKC-sc-pVh" id="wov-SF-1jl"/>
                         <outlet property="viewLeaderboardView" destination="eVq-Wp-41s" id="KWV-JH-nma"/>
                     </connections>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReclaimStreakView" customModule="Kegel_Trainer" customModuleProvider="target">
+            <connections>
+                <outlet property="reclaimStreakButton" destination="t38-oM-dsC" id="XDw-zt-O7v"/>
+                <outlet property="reclaimStreakDescription" destination="FIA-0S-3G1" id="pX0-cE-lje"/>
+                <outlet property="reclaimStreakHeader" destination="677-u5-xhx" id="Ekk-kC-IJU"/>
+                <outlet property="view" destination="5yu-pR-aVz" id="ERq-zR-aYg"/>
+                <outlet property="viewStack" destination="9U0-En-Xk4" id="XU6-4u-ftR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5yu-pR-aVz">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="9U0-En-Xk4">
+                    <rect key="frame" x="25" y="69" width="364" height="141"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save your streak" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="677-u5-xhx" customClass="KTSubTitle" customModule="Kegel_Trainer" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIA-0S-3G1" customClass="KTSubHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="45.5" width="364" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t38-oM-dsC" customClass="KTPrimaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="91" width="364" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="JCu-ED-KHe"/>
+                            </constraints>
+                            <state key="normal" title="Save My Streak"/>
+                            <connections>
+                                <action selector="reclaimStreakButtonTapped:" destination="-1" eventType="touchUpInside" id="Sdf-Je-I94"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="677-u5-xhx" firstAttribute="top" secondItem="9U0-En-Xk4" secondAttribute="top" id="DbG-3K-NUO"/>
+                        <constraint firstAttribute="trailing" secondItem="677-u5-xhx" secondAttribute="trailing" id="Sy0-tK-LvF"/>
+                        <constraint firstItem="FIA-0S-3G1" firstAttribute="leading" secondItem="9U0-En-Xk4" secondAttribute="leading" id="TNF-XV-f8U"/>
+                        <constraint firstAttribute="trailing" secondItem="FIA-0S-3G1" secondAttribute="trailing" id="VdO-wz-oYX"/>
+                        <constraint firstItem="t38-oM-dsC" firstAttribute="leading" secondItem="9U0-En-Xk4" secondAttribute="leading" id="Zoo-Ae-3Rx"/>
+                        <constraint firstAttribute="trailing" secondItem="t38-oM-dsC" secondAttribute="trailing" id="cXk-22-MNk"/>
+                        <constraint firstItem="677-u5-xhx" firstAttribute="leading" secondItem="9U0-En-Xk4" secondAttribute="leading" id="kAC-wv-YoS"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="y86-5s-63k"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9U0-En-Xk4" firstAttribute="top" secondItem="y86-5s-63k" secondAttribute="top" constant="25" id="WcY-bX-sUx"/>
+                <constraint firstItem="9U0-En-Xk4" firstAttribute="leading" secondItem="y86-5s-63k" secondAttribute="leading" constant="25" id="cef-Zw-u1u"/>
+                <constraint firstItem="y86-5s-63k" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9U0-En-Xk4" secondAttribute="bottom" id="dGA-Cp-mnE"/>
+                <constraint firstItem="y86-5s-63k" firstAttribute="trailing" secondItem="9U0-En-Xk4" secondAttribute="trailing" constant="25" id="sNE-no-b9y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="181" y="-64"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
