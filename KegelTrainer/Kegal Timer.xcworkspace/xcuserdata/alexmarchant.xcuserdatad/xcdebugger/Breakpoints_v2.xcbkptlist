@@ -568,8 +568,8 @@
             filePath = "Kegal Timer/Services/Advertisements/AdServer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "didDismissInterstitial(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -840,10 +840,10 @@
             filePath = "Kegal Timer/Services/Advertisements/AdServer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "registerForNotifications()"
-            landmarkType = "7">
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -952,8 +952,8 @@
             filePath = "Kegal Timer/Services/Advertisements/AdServer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "didDismissInterstitial(_:)"
             landmarkType = "7">
          </BreakpointContent>

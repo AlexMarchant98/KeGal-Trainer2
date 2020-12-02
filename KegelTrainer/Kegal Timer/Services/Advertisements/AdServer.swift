@@ -24,10 +24,8 @@ class AdServer {
     init() {
         self.areAdsDisabled = UserDefaults.standard.bool(forKey: Constants.adsDisabled)
         
-        if(!self.areAdsDisabled) {
-            self.adMobService = AdMobService(delegate: self)
-            self.audienceNetworkService = AudienceNetworkService(delegate: self)
-        }
+        self.adMobService = AdMobService(delegate: self)
+        self.audienceNetworkService = AudienceNetworkService(delegate: self)
         
         registerForNotifications()
     }
