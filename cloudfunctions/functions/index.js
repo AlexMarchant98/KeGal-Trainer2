@@ -32,7 +32,7 @@ exports.dailyReset = functions.pubsub.schedule('every day 00:00').onRun(async co
 
                 // If they own a streak protector, don't reset the streak, only -1 from streak_protectors
 
-                if(streakProtectors > 0) {
+                if(streakProtectors > 0 && profile.workout_days_streak >= 1) {
 
                     streakProtectors = profile.streak_protectors - 1
 
@@ -125,7 +125,7 @@ exports.dailyResetManual = functions.https.onRequest((req, res) => {
 
                 // If they own a streak protector, don't reset the streak, only -1 from streak_protectors
 
-                if(streakProtectors > 0) {
+                if(streakProtectors > 0 && profile.workout_days_streak >= 1) {
 
                     streakProtectors = profile.streak_protectors - 1
 
