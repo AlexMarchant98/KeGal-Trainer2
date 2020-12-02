@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer-->
+        <scene sceneID="vnA-43-aMq">
+            <objects>
+                <viewController storyboardIdentifier="TimerViewController" automaticallyAdjustsScrollViewInsets="NO" id="5Tj-Sz-mjb" customClass="TimerViewController" customModule="Kegel_Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LdI-7b-pfq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4H-Rr-7Pc" customClass="KTTitle" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="66.5" y="95" width="281" height="123"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-UltraLight" family="Avenir Next Condensed" pointSize="90"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-UltraLight" family="Avenir Next Condensed" pointSize="200"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Rep" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Od2-zQ-1rc" customClass="KTHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="142.5" y="234" width="129" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuG-Wu-kUZ" customClass="TimerButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="157" y="687" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Lf5-Rf-O1n"/>
+                                    <constraint firstAttribute="height" constant="100" id="NlI-R8-MV0"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="beginWorkoutButton:" destination="5Tj-Sz-mjb" eventType="touchUpInside" id="661-OK-aeJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIQ-Pl-pFS" userLabel="Back Button" customClass="BackButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="65" y="724.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="cU8-DG-riz"/>
+                                    <constraint firstAttribute="width" constant="25" id="hOn-UG-ITT"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="backButton:" destination="5Tj-Sz-mjb" eventType="touchUpInside" id="PY2-DY-mhS"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-Jt-4gv">
+                                <rect key="frame" x="0.0" y="269" width="414" height="77"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="n7e-8N-hWv"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="7Gg-1p-BzC">
+                                    <size key="itemSize" width="56.200000000000003" height="56.200000000000003"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RepCollectionViewCell" id="H6F-Q9-6J8" customClass="RepCollectionViewCell" customModule="Kegel_Trainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10.5" width="56.200000000000003" height="56.200000000000003"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="56.200000000000003" height="56.200000000000003"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83u-m1-s0Q" customClass="KTSubHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                                    <rect key="frame" x="22" y="11" width="12" height="34.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="83u-m1-s0Q" firstAttribute="centerX" secondItem="H6F-Q9-6J8" secondAttribute="centerX" id="gsh-p7-ZDn"/>
+                                            <constraint firstItem="83u-m1-s0Q" firstAttribute="centerY" secondItem="H6F-Q9-6J8" secondAttribute="centerY" id="zIw-E3-wkb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="repCount" destination="83u-m1-s0Q" id="j2B-IT-mss"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="5Tj-Sz-mjb" id="GAZ-yJ-TCh"/>
+                                    <outlet property="delegate" destination="5Tj-Sz-mjb" id="I7s-iu-9ob"/>
+                                </connections>
+                            </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSz-dG-EKJ">
+                                <rect key="frame" x="0.0" y="732" width="42" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="bcR-BH-oXh"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrD-2w-4yu">
+                                <rect key="frame" x="115" y="732" width="42" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Jho-ww-g0X"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y49-NH-fkO">
+                                <rect key="frame" x="257" y="732" width="42" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="kvi-uo-ceM"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shi-Cf-UTW">
+                                <rect key="frame" x="372.5" y="732" width="41.5" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="ofV-wM-lM5"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F32-AR-zJ5" userLabel="Stop Button" customClass="StopButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="323.5" y="724.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="31t-Ye-aYj"/>
+                                    <constraint firstAttribute="height" constant="25" id="rJW-9A-RJc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="stopWorkoutButton:" destination="5Tj-Sz-mjb" eventType="touchUpInside" id="zlO-27-VkH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Ukr-yo-XnN">
+                                <rect key="frame" x="47" y="44" width="320" height="50"/>
+                                <viewLayoutGuide key="safeArea" id="LqT-Rm-IRn"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MTV-Vk-WB8"/>
+                                    <constraint firstAttribute="width" constant="320" id="ref-Va-GdE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mD9-55-sg7"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="xSz-dG-EKJ" firstAttribute="centerY" secondItem="xuG-Wu-kUZ" secondAttribute="centerY" id="1CR-vZ-BxF"/>
+                            <constraint firstItem="xSz-dG-EKJ" firstAttribute="leading" secondItem="mD9-55-sg7" secondAttribute="leading" id="3sf-ta-1UM"/>
+                            <constraint firstItem="Ukr-yo-XnN" firstAttribute="centerX" secondItem="mD9-55-sg7" secondAttribute="centerX" id="6fp-P5-tcQ"/>
+                            <constraint firstItem="mD9-55-sg7" firstAttribute="trailing" secondItem="shi-Cf-UTW" secondAttribute="trailing" id="7vw-ai-YsT"/>
+                            <constraint firstItem="Ukr-yo-XnN" firstAttribute="top" secondItem="mD9-55-sg7" secondAttribute="top" id="CIt-4w-wDd"/>
+                            <constraint firstItem="b4z-Jt-4gv" firstAttribute="top" secondItem="Od2-zQ-1rc" secondAttribute="bottom" constant="5" id="Coh-Ru-RMY"/>
+                            <constraint firstItem="xuG-Wu-kUZ" firstAttribute="leading" secondItem="hrD-2w-4yu" secondAttribute="trailing" id="IPG-aK-fIh"/>
+                            <constraint firstItem="shi-Cf-UTW" firstAttribute="centerY" secondItem="xuG-Wu-kUZ" secondAttribute="centerY" id="Jbe-8L-8Xc"/>
+                            <constraint firstItem="F32-AR-zJ5" firstAttribute="centerY" secondItem="xuG-Wu-kUZ" secondAttribute="centerY" id="KNB-US-4V0"/>
+                            <constraint firstItem="shi-Cf-UTW" firstAttribute="leading" secondItem="F32-AR-zJ5" secondAttribute="trailing" constant="24" id="Ohh-Xo-zGW"/>
+                            <constraint firstItem="b4z-Jt-4gv" firstAttribute="centerX" secondItem="mD9-55-sg7" secondAttribute="centerX" id="PLP-85-9X9"/>
+                            <constraint firstItem="xuG-Wu-kUZ" firstAttribute="centerX" secondItem="mD9-55-sg7" secondAttribute="centerX" id="RZU-wj-Ikn"/>
+                            <constraint firstItem="shi-Cf-UTW" firstAttribute="width" secondItem="Y49-NH-fkO" secondAttribute="width" id="Yyu-0j-U5B"/>
+                            <constraint firstItem="MIQ-Pl-pFS" firstAttribute="centerY" secondItem="xuG-Wu-kUZ" secondAttribute="centerY" id="asE-yy-ak5"/>
+                            <constraint firstItem="P4H-Rr-7Pc" firstAttribute="top" secondItem="Ukr-yo-XnN" secondAttribute="bottom" constant="1" id="bJB-BX-KnR"/>
+                            <constraint firstItem="F32-AR-zJ5" firstAttribute="leading" secondItem="Y49-NH-fkO" secondAttribute="trailing" constant="24.5" id="bmi-dm-cjQ"/>
+                            <constraint firstItem="Od2-zQ-1rc" firstAttribute="centerX" secondItem="mD9-55-sg7" secondAttribute="centerX" id="cFC-9M-UPD"/>
+                            <constraint firstItem="mD9-55-sg7" firstAttribute="bottom" secondItem="xuG-Wu-kUZ" secondAttribute="bottom" constant="75" id="cZw-pc-ofQ"/>
+                            <constraint firstItem="xuG-Wu-kUZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="b4z-Jt-4gv" secondAttribute="bottom" constant="16" id="e2g-hj-qEN"/>
+                            <constraint firstItem="P4H-Rr-7Pc" firstAttribute="centerX" secondItem="mD9-55-sg7" secondAttribute="centerX" id="lfP-wf-aM5"/>
+                            <constraint firstItem="Od2-zQ-1rc" firstAttribute="top" secondItem="P4H-Rr-7Pc" secondAttribute="bottom" priority="250" constant="16" id="mCI-Qk-Srk"/>
+                            <constraint firstItem="MIQ-Pl-pFS" firstAttribute="leading" secondItem="xSz-dG-EKJ" secondAttribute="trailing" constant="23" id="mWk-vu-Yf6"/>
+                            <constraint firstItem="xSz-dG-EKJ" firstAttribute="width" secondItem="hrD-2w-4yu" secondAttribute="width" id="nzg-2J-Ytl"/>
+                            <constraint firstItem="hrD-2w-4yu" firstAttribute="leading" secondItem="MIQ-Pl-pFS" secondAttribute="trailing" constant="25" id="qGa-Cr-P3q"/>
+                            <constraint firstItem="Y49-NH-fkO" firstAttribute="centerY" secondItem="xuG-Wu-kUZ" secondAttribute="centerY" id="tkv-ch-lDv"/>
+                            <constraint firstItem="hrD-2w-4yu" firstAttribute="centerY" secondItem="xuG-Wu-kUZ" secondAttribute="centerY" id="uFN-II-FDR"/>
+                            <constraint firstItem="Y49-NH-fkO" firstAttribute="leading" secondItem="xuG-Wu-kUZ" secondAttribute="trailing" id="x19-tK-DSZ"/>
+                            <constraint firstItem="b4z-Jt-4gv" firstAttribute="width" secondItem="LdI-7b-pfq" secondAttribute="width" id="yLg-0y-kvH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timer" image="Timer" landscapeImage="Settings" largeContentSizeImage="Settings" selectedImage="Timer" id="3sK-eL-mKA"/>
+                    <connections>
+                        <outlet property="bannerAdContainerView" destination="Ukr-yo-XnN" id="LXC-yM-iRb"/>
+                        <outlet property="currentRepLabel" destination="Od2-zQ-1rc" id="UPP-RF-Egn"/>
+                        <outlet property="currentRepUICollectionView" destination="b4z-Jt-4gv" id="7Ig-xX-vAc"/>
+                        <outlet property="timeLabel" destination="P4H-Rr-7Pc" id="fNJ-56-s85"/>
+                        <outlet property="timerButton" destination="xuG-Wu-kUZ" id="xNA-Pa-CBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Pt-G0-PuP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.8550724637682" y="23.4375"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="MIQ-Pl-pFS">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="xuG-Wu-kUZ">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Settings" width="50" height="50"/>
+        <image name="Timer" width="50" height="50"/>
+    </resources>
+</document>

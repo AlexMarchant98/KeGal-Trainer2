@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EarnPointsView" customModule="Kegel_Trainer" customModuleProvider="target">
+            <connections>
+                <outlet property="earnPointsHeader" destination="xKH-Qj-ewW" id="6fS-xs-404"/>
+                <outlet property="loadingIndicator" destination="7Tn-1h-0KV" id="yPI-Zl-Yko"/>
+                <outlet property="rateAppButton" destination="0gc-WF-qA7" id="uGC-sG-oXk"/>
+                <outlet property="reviewAppButton" destination="J2q-C7-z9B" id="T8G-uo-Pnw"/>
+                <outlet property="view" destination="2J1-uz-izt" id="bx6-Lk-Z5a"/>
+                <outlet property="watchAdvertButton" destination="TBH-Kz-kP8" id="jtQ-Hq-p5D"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2J1-uz-izt">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-1h-0KV">
+                    <rect key="frame" x="197" y="117.5" width="20" height="20"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKH-Qj-ewW" customClass="KTHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                    <rect key="frame" x="25" y="44" width="86" height="16.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="zvC-te-C2q">
+                    <rect key="frame" x="25" y="75.5" width="364" height="104.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBH-Kz-kP8" customClass="KTSecondaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="104.5" height="104.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="TBH-Kz-kP8" secondAttribute="height" multiplier="1:1" id="TX6-hM-zfJ"/>
+                            </constraints>
+                            <connections>
+                                <action selector="watchAdvertButtonTapped:" destination="-1" eventType="touchUpInside" id="yzV-Sb-Tc0"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gc-WF-qA7" customClass="KTSecondaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                            <rect key="frame" x="129.5" y="0.0" width="105" height="104.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="rateAppButtonTapped:" destination="-1" eventType="touchUpInside" id="zPk-RO-fru"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2q-C7-z9B" customClass="KTSecondaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                            <rect key="frame" x="259.5" y="0.0" width="104.5" height="104.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <connections>
+                                <action selector="reviewAppButtonTapped:" destination="-1" eventType="touchUpInside" id="Gs4-GQ-P2g"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="0gc-WF-qA7" firstAttribute="width" secondItem="TBH-Kz-kP8" secondAttribute="width" id="V7c-8p-goM"/>
+                        <constraint firstItem="J2q-C7-z9B" firstAttribute="height" secondItem="TBH-Kz-kP8" secondAttribute="height" id="biB-GI-0Wc"/>
+                        <constraint firstItem="0gc-WF-qA7" firstAttribute="height" secondItem="TBH-Kz-kP8" secondAttribute="height" id="gwk-KP-PtR"/>
+                        <constraint firstItem="J2q-C7-z9B" firstAttribute="width" secondItem="TBH-Kz-kP8" secondAttribute="width" id="vbk-bj-bnK"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Z6k-hJ-J4d"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xKH-Qj-ewW" firstAttribute="leading" secondItem="Z6k-hJ-J4d" secondAttribute="leading" constant="25" id="1kh-eW-EUd"/>
+                <constraint firstItem="7Tn-1h-0KV" firstAttribute="centerX" secondItem="2J1-uz-izt" secondAttribute="centerX" id="3aY-f4-qdM"/>
+                <constraint firstItem="zvC-te-C2q" firstAttribute="top" secondItem="xKH-Qj-ewW" secondAttribute="bottom" constant="15" id="4EC-gq-hiF"/>
+                <constraint firstItem="Z6k-hJ-J4d" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zvC-te-C2q" secondAttribute="bottom" constant="50" id="BmU-bF-6nm"/>
+                <constraint firstItem="xKH-Qj-ewW" firstAttribute="top" secondItem="Z6k-hJ-J4d" secondAttribute="top" id="Hlu-0y-TQf"/>
+                <constraint firstItem="Z6k-hJ-J4d" firstAttribute="trailing" secondItem="zvC-te-C2q" secondAttribute="trailing" constant="25" id="Ywb-Lo-Vi7"/>
+                <constraint firstItem="zvC-te-C2q" firstAttribute="leading" secondItem="Z6k-hJ-J4d" secondAttribute="leading" constant="25" id="cmg-nu-tzV"/>
+                <constraint firstItem="7Tn-1h-0KV" firstAttribute="centerY" secondItem="zvC-te-C2q" secondAttribute="centerY" id="pN5-Mv-vgT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-1.4492753623188408" y="-158.03571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

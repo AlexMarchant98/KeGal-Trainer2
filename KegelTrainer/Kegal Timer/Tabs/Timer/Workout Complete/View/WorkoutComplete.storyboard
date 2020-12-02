@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workout Complete View Controller-->
+        <scene sceneID="2GL-mV-MAS">
+            <objects>
+                <viewController storyboardIdentifier="WorkoutCompleteViewController" id="hKK-jz-zTw" customClass="WorkoutCompleteViewController" customModule="Kegel_Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NYv-uB-av7" customClass="WelcomeView" customModule="Kegel_Trainer" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eF-2h-iuW" customClass="ShapeView" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="77" y="74" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="4Ef-xR-4OF"/>
+                                    <constraint firstAttribute="width" constant="250" id="WE3-KT-4Kg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Complete" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8A-MW-Zfp" customClass="KTTitle" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="66.5" y="324" width="281" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yR-FB-rqn" customClass="KTHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="417" width="364" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBk-fb-qIw" customClass="KTSubHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="462.5" width="364" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7n-SV-DMH">
+                                <rect key="frame" x="354" y="69" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="9Bg-4J-1pt"/>
+                                    <constraint firstAttribute="width" constant="35" id="LFS-Ok-UNI"/>
+                                </constraints>
+                                <state key="normal" image="close-icon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissPopup:" destination="hKK-jz-zTw" eventType="touchUpInside" id="IeJ-Db-SwM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qYC-Yu-r4w"/>
+                        <color key="backgroundColor" red="0.2274509804" green="0.81568627449999997" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="5eF-2h-iuW" firstAttribute="top" secondItem="qYC-Yu-r4w" secondAttribute="top" constant="30" id="2gI-Qc-SCK"/>
+                            <constraint firstItem="qYC-Yu-r4w" firstAttribute="trailing" secondItem="SBk-fb-qIw" secondAttribute="trailing" constant="25" id="4jv-Eq-ae9"/>
+                            <constraint firstItem="8yR-FB-rqn" firstAttribute="top" secondItem="k8A-MW-Zfp" secondAttribute="bottom" constant="50" id="FEH-UF-hIc"/>
+                            <constraint firstItem="qYC-Yu-r4w" firstAttribute="trailing" secondItem="r7n-SV-DMH" secondAttribute="trailing" constant="25" id="KjX-s0-6h1"/>
+                            <constraint firstItem="qYC-Yu-r4w" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="k8A-MW-Zfp" secondAttribute="trailing" constant="20" id="NrB-B4-rX0"/>
+                            <constraint firstItem="5eF-2h-iuW" firstAttribute="centerX" secondItem="qYC-Yu-r4w" secondAttribute="centerX" constant="-5" id="PHW-ze-R4w"/>
+                            <constraint firstItem="SBk-fb-qIw" firstAttribute="top" secondItem="8yR-FB-rqn" secondAttribute="bottom" constant="25" id="Pil-Yr-M2R"/>
+                            <constraint firstItem="qYC-Yu-r4w" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SBk-fb-qIw" secondAttribute="bottom" constant="25" id="TdD-NL-skt"/>
+                            <constraint firstItem="8yR-FB-rqn" firstAttribute="leading" secondItem="qYC-Yu-r4w" secondAttribute="leading" constant="25" id="ZcT-oy-fbJ"/>
+                            <constraint firstItem="k8A-MW-Zfp" firstAttribute="top" secondItem="5eF-2h-iuW" secondAttribute="bottom" id="cjy-OA-kQG"/>
+                            <constraint firstItem="k8A-MW-Zfp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qYC-Yu-r4w" secondAttribute="leading" constant="20" id="gTI-nz-xVy"/>
+                            <constraint firstItem="k8A-MW-Zfp" firstAttribute="centerX" secondItem="qYC-Yu-r4w" secondAttribute="centerX" id="hCc-Eo-gBj"/>
+                            <constraint firstItem="SBk-fb-qIw" firstAttribute="leading" secondItem="qYC-Yu-r4w" secondAttribute="leading" constant="25" id="jXH-1o-w7A"/>
+                            <constraint firstItem="r7n-SV-DMH" firstAttribute="top" secondItem="qYC-Yu-r4w" secondAttribute="top" constant="25" id="nsO-5V-ZaZ"/>
+                            <constraint firstItem="qYC-Yu-r4w" firstAttribute="trailing" secondItem="8yR-FB-rqn" secondAttribute="trailing" constant="25" id="psD-qv-Zf0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.035294117649999998" green="0.50196078430000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.050980392159999999" green="0.64446216820000002" blue="0.87984639409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="r7n-SV-DMH" id="ZnA-Kz-BE4"/>
+                        <outlet property="image" destination="5eF-2h-iuW" id="XVj-Fc-FIR"/>
+                        <outlet property="levelMessage" destination="8yR-FB-rqn" id="c3P-5g-eAD"/>
+                        <outlet property="pointsMessage" destination="SBk-fb-qIw" id="E9V-HU-yNM"/>
+                        <outlet property="workoutCompleteLabel" destination="k8A-MW-Zfp" id="b1m-h6-Zm1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezp-3q-jze" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="-708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close-icon" width="24" height="24"/>
+    </resources>
+</document>

@@ -16,32 +16,32 @@ protocol WalkthroughCoordinatorDelegate: AnyObject {
 class WalkthroughCoordinator: Coordinator {
     
     let navigationController: UINavigationController
-    let hasLaunchedBefore: Bool
+    let walkthroughType: WalkthroughType
     
     weak var delegate: WalkthroughCoordinatorDelegate?
     
     init(
         _ navigationController: UINavigationController,
-        _ hasLaunchedBefore: Bool) {
+        _ walkthroughType: WalkthroughType) {
         
         self.navigationController = navigationController
-        self.hasLaunchedBefore = hasLaunchedBefore
+        self.walkthroughType = walkthroughType
         
         self.navigationController.isNavigationBarHidden = true
     }
     
     override func start() {
-        showWalkthrough()
+        showWalkthrough(walkthroughType)
     }
     
-    func showWalkthrough() {
+    func showWalkthrough(_ walkthroughType: WalkthroughType) {
         let walkthroughViewController = WalkthroughViewController.instantiate(storyboard: "Walkthrough")
         
         let walkthroughPresenter = WalkthroughPresenter(
             with: walkthroughViewController,
             delegate: self)
         
-        walkthroughViewController.hasLaunchedBefore = hasLaunchedBefore
+        walkthroughViewController.walkthroughType = walkthroughType
         walkthroughViewController.walkthroughPresenter = walkthroughPresenter
         
         walkthroughViewController.modalPresentationStyle = .overFullScreen

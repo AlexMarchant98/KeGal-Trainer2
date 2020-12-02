@@ -38,6 +38,7 @@ class AdMobService: NSObject {
     func loadAds() {
         self.interstitialAdRequest = GADRequest()
         self.interstitial = GADInterstitial(adUnitID: Constants.generalInterstitialAdId)
+        self.interstitial.delegate = self
         self.interstitial.load(self.interstitialAdRequest)
     }
     
@@ -86,6 +87,10 @@ extension AdMobService: GADInterstitialDelegate {
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        self.delegate.didDismissInterstitial(AdService.adMob)
+    }
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
         loadAds()
     }
 }

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LeaderboardCell" id="gTV-IL-0wX" customClass="LeaderboardCell" customModule="Kegel_Trainer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-Xf-tig">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rv-0j-vys" customClass="KTSubTitle" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="30" width="52" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vn8-7b-p8x" customClass="KTProfilePicture" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="102" y="15" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dj8-6C-sVb"/>
+                                    <constraint firstAttribute="width" constant="50" id="sK5-hr-nzg"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ysd-ER-SSB">
+                                <rect key="frame" x="177" y="13.5" width="41.5" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4g-Vm-bcd" customClass="KTHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuy-fO-eLM" customClass="KTSubHeader" customModule="Kegel_Trainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="30" width="41.5" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Tuy-fO-eLM" firstAttribute="height" secondItem="w4g-Vm-bcd" secondAttribute="height" multiplier="0.911111" id="Gus-b6-jdr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2rv-0j-vys" firstAttribute="centerY" secondItem="HS1-Xf-tig" secondAttribute="centerY" id="266-eQ-yh0"/>
+                            <constraint firstItem="Ysd-ER-SSB" firstAttribute="centerY" secondItem="vn8-7b-p8x" secondAttribute="centerY" id="CKG-13-UEs"/>
+                            <constraint firstItem="vn8-7b-p8x" firstAttribute="top" secondItem="HS1-Xf-tig" secondAttribute="top" constant="15" id="Ns5-II-mmS"/>
+                            <constraint firstItem="Ysd-ER-SSB" firstAttribute="height" secondItem="vn8-7b-p8x" secondAttribute="height" multiplier="1.06" id="Qul-wV-8O6"/>
+                            <constraint firstItem="Ysd-ER-SSB" firstAttribute="leading" secondItem="vn8-7b-p8x" secondAttribute="trailing" constant="25" id="Vs4-DZ-P6p"/>
+                            <constraint firstItem="vn8-7b-p8x" firstAttribute="leading" secondItem="2rv-0j-vys" secondAttribute="trailing" constant="25" id="ZhQ-vm-qEm"/>
+                            <constraint firstItem="2rv-0j-vys" firstAttribute="leading" secondItem="HS1-Xf-tig" secondAttribute="leading" constant="25" id="hJZ-if-neh"/>
+                            <constraint firstAttribute="bottom" secondItem="vn8-7b-p8x" secondAttribute="bottom" constant="15" id="kSb-Fr-UBR"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ysd-ER-SSB" secondAttribute="trailing" constant="25" id="qs7-zw-kNs"/>
+                            <constraint firstItem="vn8-7b-p8x" firstAttribute="centerY" secondItem="HS1-Xf-tig" secondAttribute="centerY" id="wmv-cR-koc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HS1-Xf-tig" secondAttribute="bottom" id="RTV-xO-PZf"/>
+                <constraint firstAttribute="trailing" secondItem="HS1-Xf-tig" secondAttribute="trailing" id="XeA-qE-RG3"/>
+                <constraint firstItem="HS1-Xf-tig" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pwH-dc-Uaj"/>
+                <constraint firstItem="HS1-Xf-tig" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tcg-8L-pZo"/>
+            </constraints>
+            <size key="customSize" width="300" height="80"/>
+            <connections>
+                <outlet property="pointsLabel" destination="Tuy-fO-eLM" id="4rQ-uB-Jkk"/>
+                <outlet property="profilePictureView" destination="vn8-7b-p8x" id="sZA-9m-YhR"/>
+                <outlet property="rankLabel" destination="2rv-0j-vys" id="exY-ul-XSI"/>
+                <outlet property="usernameLabel" destination="w4g-Vm-bcd" id="WG0-Pw-VXr"/>
+                <outlet property="view" destination="HS1-Xf-tig" id="UT6-TH-vsT"/>
+            </connections>
+            <point key="canvasLocation" x="-73.913043478260875" y="71.651785714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>

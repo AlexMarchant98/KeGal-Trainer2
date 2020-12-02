@@ -8,11 +8,18 @@
 
 import UIKit
 
+enum WalkthroughType {
+    case firstLaunchAppWalkthrough
+    case appWalkthrough
+    case profileCreatedWalkthrough
+    case profileWalkthrough
+}
+
 class WalkthroughViewController: UIViewController, Storyboarded {
     
     var orderedWalkthroughSteps = [WalkthroughPageViewController]()
     
-    var hasLaunchedBefore: Bool = false
+    var walkthroughType: WalkthroughType!
     
     var pageViewController: UIPageViewController?
     var pageControl: UIPageControl?
@@ -22,14 +29,23 @@ class WalkthroughViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.75)
+        self.view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
         
         setupPageController()
         
-        setupWalkthroughViewControllers()
-        
-        if(!hasLaunchedBefore) {
+        switch walkthroughType {
+        case .firstLaunchAppWalkthrough:
+            setupWalkthroughViewControllers()
             addWelcomeViewController()
+        case .appWalkthrough:
+            setupWalkthroughViewControllers()
+        case .profileCreatedWalkthrough:
+            setupProfileWalkthroughViewControllers()
+            // Add welcome profile vc
+        case .profileWalkthrough:
+            setupProfileWalkthroughViewControllers()
+        case .none:
+            setupWalkthroughViewControllers()
         }
         
         if let firstViewController = orderedWalkthroughSteps.first {
@@ -61,7 +77,7 @@ class WalkthroughViewController: UIViewController, Storyboarded {
         
         self.pageViewController?.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        self.pageViewController?.view.layer.cornerRadius = 5
+        self.pageViewController?.view.layer.cornerRadius = Constants.cornerRadius
         self.pageViewController?.view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
         self.addChild(self.pageViewController!)

@@ -10,7 +10,9 @@ import UIKit
 
 class AlertHandlerService {
     
-    init() {}
+    static let shared = AlertHandlerService()
+    
+    private init() {}
     
     func showWarningAlert(view: UIViewController, message: String) {
         let alert = UIAlertController(
