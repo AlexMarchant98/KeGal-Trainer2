@@ -43,8 +43,10 @@ exports.dailyReset = functions.pubsub.schedule('every day 00:00').onRun(async co
                 } else {
 
                     if(lostStreak === 0) {
-                        lostStreak = profile.workout_days_streak;
-                        daysLeftToReclaimStreak = 3;
+                        if(profile.workout_days_streak >= 3) {
+                            lostStreak = profile.workout_days_streak;
+                            daysLeftToReclaimStreak = 3;
+                        }
                     } else {
                         lostStreak = lostStreak + profile.workout_days_streak;
                     }
@@ -103,7 +105,7 @@ exports.dailyResetManual = functions.https.onRequest((req, res) => {
         snapshot.forEach(doc => {
             const profileData = doc.data();
             const profile = profileData
-            allProfiles.push({ profile, doc })
+            allProfiles.push({profile, doc})
         });
         
         allProfiles.sort(function(a, b) { return b.profile.total_points - a.profile.total_points });
@@ -134,8 +136,10 @@ exports.dailyResetManual = functions.https.onRequest((req, res) => {
                 } else {
 
                     if(lostStreak === 0) {
-                        lostStreak = profile.workout_days_streak;
-                        daysLeftToReclaimStreak = 3;
+                        if(profile.workout_days_streak >= 3) {
+                            lostStreak = profile.workout_days_streak;
+                            daysLeftToReclaimStreak = 3;
+                        }
                     } else {
                         lostStreak = lostStreak + profile.workout_days_streak;
                     }
