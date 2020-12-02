@@ -196,16 +196,18 @@ class ProfileViewController: UIViewController, Storyboarded {
                     if(iapNotification.successful) {
                         self.profilePresenter.didSaveStreak()
                         
-                        self.reclaimStreakView.isHidden = true
-                        
-                        self.reclaimStreakView.model = ReclaimStreakViewModel(
-                            hasStreakToReclaim: false,
-                            delegate: self)
-                        
-                        self.currentWorkoutStreakView.model = CurrentWorkoutStreakViewModel(
-                            CurrentUserService.shared.user!.workout_days_streak,
-                            CurrentUserService.shared.user!.streak_protectors,
-                            delegate: self)
+                        DispatchQueue.main.async {
+                            self.reclaimStreakView.isHidden = true
+                            
+                            self.reclaimStreakView.model = ReclaimStreakViewModel(
+                                hasStreakToReclaim: false,
+                                delegate: self)
+                            
+                            self.currentWorkoutStreakView.model = CurrentWorkoutStreakViewModel(
+                                CurrentUserService.shared.user!.workout_days_streak,
+                                CurrentUserService.shared.user!.streak_protectors,
+                                delegate: self)
+                        }
                         
                         AlertHandlerService.shared.showCustomAlert(
                             view: self,

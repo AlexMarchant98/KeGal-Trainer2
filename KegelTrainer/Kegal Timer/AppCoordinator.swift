@@ -23,6 +23,8 @@ class AppCoordinator: Coordinator {
     let firebaseCrashlyticsService: FirebaseCrashlyticsServiceProtocol
     let firebaseAuthenticatorService: FirebaseAuthenticatorServiceProtocol
     
+    var networkManagerService: NetworkManagerService!
+    
     let userPreferences = UserDefaults.standard
     
     var adServer: AdServer!
@@ -46,6 +48,8 @@ class AppCoordinator: Coordinator {
         self.firestoreRepositoryService = FirestoreRepositoryService(firebaseCrashlyticsService)
         
         super.init()
+        
+        self.networkManagerService = NetworkManagerService(delegate: self)
         
         self.profileCoordinator = ProfileCoordinator(
             adServer,
@@ -155,4 +159,29 @@ extension AppCoordinator: SettingsCoordinatorDelegate {
 }
 
 extension AppCoordinator: ErrorScreensCoordinatorDelegate {
+}
+
+extension AppCoordinator: NetworkManagerServiceDelegate {
+    func connectionAvailable() {
+        DispatchQueue.main.async {
+            if(self.navigationController.topViewController is ConnectionRequiredViewController) {
+                DispatchQueue.main.async {
+                    self.navigationController.popViewController(animated: true)
+                
+                }
+            }
+        }
+    }
+    
+    func connectionUnavailable() {
+        DispatchQueue.main.async {
+            if let vc = self.navigationController.topViewController {
+                if (vc is ConnectionRequiredViewController == false) {
+                    ErrorScreensCoordinator.shared.showConnectionRequired(self.networkManagerService)
+                }
+            } else {
+                ErrorScreensCoordinator.shared.showConnectionRequired(self.networkManagerService)
+            }
+        }
+    }
 }

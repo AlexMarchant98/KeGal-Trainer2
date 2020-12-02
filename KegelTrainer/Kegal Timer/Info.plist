@@ -33,6 +33,8 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Kegel Trainer needs to access your photos so you can upload a profile picture, this image is displayed on your profile to other users.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Quicksand-Bold.ttf</string>
@@ -68,7 +70,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Kegel Trainer needs to access your photos so you can upload a profile picture, this image is displayed on your profile to other users.</string>
 </dict>
 </plist>

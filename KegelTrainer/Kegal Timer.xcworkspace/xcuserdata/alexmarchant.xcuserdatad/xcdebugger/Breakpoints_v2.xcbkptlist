@@ -776,8 +776,8 @@
             filePath = "Kegal Timer/Tabs/Profile/View/My Profile/Profile/View/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
             landmarkName = "didLoadIAPInformation(title:description:localPrice:product:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -811,22 +811,6 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "purchaseIAP(productId:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AE157B73-B82C-4C9A-A272-FEF8E8507C5E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kegal Timer/Tabs/Profile/View/My Profile/Profile/View/ProfileViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "registerForNotifications()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

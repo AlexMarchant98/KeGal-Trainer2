@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Connection Required View Controller-->
+        <scene sceneID="Dax-NZ-hUn">
+            <objects>
+                <viewController storyboardIdentifier="ConnectionRequiredViewController" id="CUI-LM-oBX" customClass="ConnectionRequiredViewController" customModule="Kegel_Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6JD-xi-kUt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfb-F0-UCp" customClass="KTPrimaryButton" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="762" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2ZI-Bu-sZY"/>
+                                </constraints>
+                                <state key="normal" title="Primary Button"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enable-photo-access" translatesAutoresizingMaskIntoConstraints="NO" id="hA1-dh-pR7">
+                                <rect key="frame" x="50" y="94" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hA1-dh-pR7" secondAttribute="height" multiplier="1:1" id="5ZZ-kK-thI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eI-a1-Vd3" customClass="KTTitle" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="433" width="364" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="lTI-af-trg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVR-kd-6FJ" customClass="KTBody" customModule="Kegel_Trainer" customModuleProvider="target">
+                                <rect key="frame" x="25" y="489" width="364" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="K8a-pe-NrV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuW-ps-C1a" customClass="MDCFloatingButton">
+                                <rect key="frame" x="339" y="69" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ooF-uF-ZKG"/>
+                                    <constraint firstAttribute="height" constant="50" id="ysN-RY-AnQ"/>
+                                </constraints>
+                                <state key="normal" image="close-icon"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yIB-Ny-hvh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UuW-ps-C1a" firstAttribute="top" secondItem="yIB-Ny-hvh" secondAttribute="top" constant="25" id="2NL-Tu-rUj"/>
+                            <constraint firstItem="yIB-Ny-hvh" firstAttribute="bottom" secondItem="Zfb-F0-UCp" secondAttribute="bottom" constant="50" id="Azg-YU-0Tj"/>
+                            <constraint firstItem="yIB-Ny-hvh" firstAttribute="trailing" secondItem="2eI-a1-Vd3" secondAttribute="trailing" constant="25" id="EUI-rv-aJw"/>
+                            <constraint firstItem="yIB-Ny-hvh" firstAttribute="trailing" secondItem="Zfb-F0-UCp" secondAttribute="trailing" constant="25" id="FTe-qU-aS3"/>
+                            <constraint firstItem="hA1-dh-pR7" firstAttribute="centerX" secondItem="yIB-Ny-hvh" secondAttribute="centerX" id="Jeu-eo-9j6"/>
+                            <constraint firstItem="Zfb-F0-UCp" firstAttribute="leading" secondItem="yIB-Ny-hvh" secondAttribute="leading" constant="25" id="MDH-QH-LAt"/>
+                            <constraint firstItem="Zfb-F0-UCp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rVR-kd-6FJ" secondAttribute="bottom" constant="25" id="RSd-OU-6Jv"/>
+                            <constraint firstItem="2eI-a1-Vd3" firstAttribute="leading" secondItem="yIB-Ny-hvh" secondAttribute="leading" constant="25" id="Rh3-WK-Dpr"/>
+                            <constraint firstItem="2eI-a1-Vd3" firstAttribute="top" secondItem="hA1-dh-pR7" secondAttribute="bottom" constant="25" id="ScG-mE-iiE"/>
+                            <constraint firstItem="rVR-kd-6FJ" firstAttribute="leading" secondItem="yIB-Ny-hvh" secondAttribute="leading" constant="25" id="Scy-hJ-NCW"/>
+                            <constraint firstItem="hA1-dh-pR7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yIB-Ny-hvh" secondAttribute="leading" constant="50" id="Tds-OF-rfa"/>
+                            <constraint firstItem="2eI-a1-Vd3" firstAttribute="centerX" secondItem="6JD-xi-kUt" secondAttribute="centerX" id="Tpt-nr-osG"/>
+                            <constraint firstItem="yIB-Ny-hvh" firstAttribute="trailing" secondItem="rVR-kd-6FJ" secondAttribute="trailing" constant="25" id="YO5-qX-XOP"/>
+                            <constraint firstItem="yIB-Ny-hvh" firstAttribute="trailing" secondItem="UuW-ps-C1a" secondAttribute="trailing" constant="25" id="gDr-9G-fAb"/>
+                            <constraint firstItem="rVR-kd-6FJ" firstAttribute="top" secondItem="2eI-a1-Vd3" secondAttribute="bottom" constant="16" id="qWJ-NK-And"/>
+                            <constraint firstItem="yIB-Ny-hvh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hA1-dh-pR7" secondAttribute="trailing" constant="50" id="sKN-bY-h5m"/>
+                            <constraint firstItem="hA1-dh-pR7" firstAttribute="top" secondItem="yIB-Ny-hvh" secondAttribute="top" constant="50" id="uOK-dk-9G3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="UuW-ps-C1a" id="02g-pt-l0c"/>
+                        <outlet property="primaryButton" destination="Zfb-F0-UCp" id="zai-jY-DaD"/>
+                        <outlet property="screenDescription" destination="rVR-kd-6FJ" id="m8U-Is-zAy"/>
+                        <outlet property="screenImage" destination="hA1-dh-pR7" id="lh1-BN-d38"/>
+                        <outlet property="screenTitle" destination="2eI-a1-Vd3" id="hbA-Z2-wHv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2XK-z3-GFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266.66666666666669" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close-icon" width="24" height="24"/>
+        <image name="enable-photo-access" width="2000" height="2000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

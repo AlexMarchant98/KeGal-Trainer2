@@ -58,6 +58,12 @@
 		D4473EEA2577BB9000CCEAAF /* ReclaimStreakView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4473EE92577BB9000CCEAAF /* ReclaimStreakView.xib */; };
 		D4473EF02577BB9D00CCEAAF /* ReclaimStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4473EEF2577BB9D00CCEAAF /* ReclaimStreakView.swift */; };
 		D4473EFA2577BBFA00CCEAAF /* ReclaimStreakViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4473EF92577BBFA00CCEAAF /* ReclaimStreakViewModel.swift */; };
+		D4473F072577DD1D00CCEAAF /* ConnectionRequiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4473F062577DD1D00CCEAAF /* ConnectionRequiredViewController.swift */; };
+		D4473F0D2577DD2A00CCEAAF /* ConnectionRequired.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4473F0C2577DD2A00CCEAAF /* ConnectionRequired.storyboard */; };
+		D4473F132577DD4D00CCEAAF /* ConnectionRequiredPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4473F122577DD4D00CCEAAF /* ConnectionRequiredPresenter.swift */; };
+		D4473F192577DD5500CCEAAF /* ConnectionRequiredPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4473F182577DD5500CCEAAF /* ConnectionRequiredPresenterProtocol.swift */; };
+		D4473F202577EC9F00CCEAAF /* NetworkManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4473F1F2577EC9F00CCEAAF /* NetworkManagerServiceProtocol.swift */; };
+		D4473F262577ECBE00CCEAAF /* NetworkManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4473F252577ECBE00CCEAAF /* NetworkManagerService.swift */; };
 		D44A595C22B5331C009A053D /* AdMobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A595B22B5331C009A053D /* AdMobService.swift */; };
 		D4505816221F23B7004CEEEF /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4505815221F23B7004CEEEF /* RequestReview.swift */; };
 		D45A490125600DD100B296B7 /* CurrentWorkoutStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A490025600DD100B296B7 /* CurrentWorkoutStreakView.swift */; };
@@ -319,6 +325,12 @@
 		D4473EE92577BB9000CCEAAF /* ReclaimStreakView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReclaimStreakView.xib; sourceTree = "<group>"; };
 		D4473EEF2577BB9D00CCEAAF /* ReclaimStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReclaimStreakView.swift; sourceTree = "<group>"; };
 		D4473EF92577BBFA00CCEAAF /* ReclaimStreakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReclaimStreakViewModel.swift; sourceTree = "<group>"; };
+		D4473F062577DD1D00CCEAAF /* ConnectionRequiredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRequiredViewController.swift; sourceTree = "<group>"; };
+		D4473F0C2577DD2A00CCEAAF /* ConnectionRequired.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConnectionRequired.storyboard; sourceTree = "<group>"; };
+		D4473F122577DD4D00CCEAAF /* ConnectionRequiredPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRequiredPresenter.swift; sourceTree = "<group>"; };
+		D4473F182577DD5500CCEAAF /* ConnectionRequiredPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRequiredPresenterProtocol.swift; sourceTree = "<group>"; };
+		D4473F1F2577EC9F00CCEAAF /* NetworkManagerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerServiceProtocol.swift; sourceTree = "<group>"; };
+		D4473F252577ECBE00CCEAAF /* NetworkManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerService.swift; sourceTree = "<group>"; };
 		D44A595B22B5331C009A053D /* AdMobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobService.swift; sourceTree = "<group>"; };
 		D4505815221F23B7004CEEEF /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		D45A490025600DD100B296B7 /* CurrentWorkoutStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWorkoutStreakView.swift; sourceTree = "<group>"; };
@@ -781,6 +793,42 @@
 			path = "Reclaim Streak";
 			sourceTree = "<group>";
 		};
+		D4473F032577DCAA00CCEAAF /* ConnectionRequired */ = {
+			isa = PBXGroup;
+			children = (
+				D4473F052577DCF200CCEAAF /* Presenter */,
+				D4473F042577DCEE00CCEAAF /* View */,
+			);
+			path = ConnectionRequired;
+			sourceTree = "<group>";
+		};
+		D4473F042577DCEE00CCEAAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4473F062577DD1D00CCEAAF /* ConnectionRequiredViewController.swift */,
+				D4473F0C2577DD2A00CCEAAF /* ConnectionRequired.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4473F052577DCF200CCEAAF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D4473F122577DD4D00CCEAAF /* ConnectionRequiredPresenter.swift */,
+				D4473F182577DD5500CCEAAF /* ConnectionRequiredPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D4473F1E2577EC8D00CCEAAF /* NetworkManagerService */ = {
+			isa = PBXGroup;
+			children = (
+				D4473F252577ECBE00CCEAAF /* NetworkManagerService.swift */,
+				D4473F1F2577EC9F00CCEAAF /* NetworkManagerServiceProtocol.swift */,
+			);
+			path = NetworkManagerService;
+			sourceTree = "<group>";
+		};
 		D45A48FB25600D3700B296B7 /* Current Workout Streak */ = {
 			isa = PBXGroup;
 			children = (
@@ -1201,6 +1249,7 @@
 		D49B75B5255F0E6300B31D74 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D4473F1E2577EC8D00CCEAAF /* NetworkManagerService */,
 				D4C6329E2561CE3E00B75E45 /* UIApplicationHelperService */,
 				D49B767E255FEAD600B31D74 /* CurrentUserService */,
 				D49B7639255F135200B31D74 /* Firebase */,
@@ -1536,6 +1585,7 @@
 		D4C6327C2561CBC500B75E45 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4473F032577DCAA00CCEAAF /* ConnectionRequired */,
 				D4C632842561CC8E00B75E45 /* EnablePhotoAccess */,
 			);
 			path = View;
@@ -2023,6 +2073,7 @@
 				D49B75DB255F0FB100B31D74 /* GoogleService-Info.plist in Resources */,
 				D4DCC0DB256835F000752F22 /* EditProfile.storyboard in Resources */,
 				D4418B8C254ECE2D0029E100 /* WalkthroughPage.storyboard in Resources */,
+				D4473F0D2577DD2A00CCEAAF /* ConnectionRequired.storyboard in Resources */,
 				D492BC122573D5F10049D1D1 /* ResetPasswordEmailSent.storyboard in Resources */,
 				D4D85A9425702A48006C40E6 /* LoadingView.xib in Resources */,
 				D4605A262572C0FA002BE261 /* TrackWorkouts.storyboard in Resources */,
@@ -2200,6 +2251,7 @@
 				D485DED922071AF7002E9DB1 /* RemindersTableViewController.swift in Sources */,
 				D49B7604255F129900B31D74 /* FirestoreDatabaseProtocol.swift in Sources */,
 				D484CF2C22AD19010042802C /* UIViewController-Alerts.swift in Sources */,
+				D4473F262577ECBE00CCEAAF /* NetworkManagerService.swift in Sources */,
 				D484CF3322AD19F30042802C /* Date-StripTime.swift in Sources */,
 				D4605A0825712CE6002BE261 /* SettingsTableViewController-HandleAdverts.swift in Sources */,
 				D410601521922DDC00089961 /* StopButton.swift in Sources */,
@@ -2227,6 +2279,7 @@
 				D45A49DA2560832300B296B7 /* LoginViewController.swift in Sources */,
 				D492BC182573D5FC0049D1D1 /* ResetPasswordEmailSentViewController.swift in Sources */,
 				D4006452217FAF9F0077765D /* AppDelegate.swift in Sources */,
+				D4473F192577DD5500CCEAAF /* ConnectionRequiredPresenterProtocol.swift in Sources */,
 				D46059DC25711F90002BE261 /* KTTableHeaderView.swift in Sources */,
 				D46059F725712C01002BE261 /* SettingsTableViewController-HandleNotifications.swift in Sources */,
 				D485DEDD220A28B2002E9DB1 /* UpdateReminderTableViewController.swift in Sources */,
@@ -2240,6 +2293,7 @@
 				D484CF2022A993600042802C /* StagesCoordinator.swift in Sources */,
 				D49B76B2255FEE0000B31D74 /* FIRCloudStorageResult.swift in Sources */,
 				D49B75D3255F0EAF00B31D74 /* FirestoreRepositoryServiceProtocol.swift in Sources */,
+				D4473F132577DD4D00CCEAAF /* ConnectionRequiredPresenter.swift in Sources */,
 				D44338B1256DA8FE00923DF9 /* MDCTextFieldInputControllerOutliend-SetupKTTextFieldController.swift in Sources */,
 				D4C6327F2561CC7500B75E45 /* ErrorScreensCoordinator.swift in Sources */,
 				D4E48D5621921960006366A7 /* TimerButton.swift in Sources */,
@@ -2297,6 +2351,7 @@
 				D49B7712255FF23700B31D74 /* ProfilePresenter.swift in Sources */,
 				D422E43423C080D6005853AB /* AdServer.swift in Sources */,
 				D45A49112560111600B296B7 /* CurrentWorkoutStreakViewModel.swift in Sources */,
+				D4473F202577EC9F00CCEAAF /* NetworkManagerServiceProtocol.swift in Sources */,
 				D4006454217FAF9F0077765D /* TrackWorkoutsViewController.swift in Sources */,
 				D49B7727255FF36100B31D74 /* ProfileCoordinator.swift in Sources */,
 				D49B7708255FF22400B31D74 /* ProfilePresenterProtocol.swift in Sources */,
@@ -2327,6 +2382,7 @@
 				D46059FE25712C3D002BE261 /* SettingsTableViewController-SetupTextFieldUI.swift in Sources */,
 				D492BC242573D6250049D1D1 /* ResetPasswordEmailSentPresenterProtocol.swift in Sources */,
 				D49B776F255FF91500B31D74 /* Fonts.swift in Sources */,
+				D4473F072577DD1D00CCEAAF /* ConnectionRequiredViewController.swift in Sources */,
 				D463C64E21C976E200F2A1BA /* RepCollectionViewCell.swift in Sources */,
 				D49B7751255FF86700B31D74 /* KTSubTitle.swift in Sources */,
 				D49B766F255F2BFA00B31D74 /* FirestoreRepositoryError.swift in Sources */,
@@ -2523,15 +2579,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
 				PRODUCT_NAME = "Kegel Trainer";
 				SWIFT_VERSION = 4.2;
@@ -2546,15 +2602,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Kegal Timer/Kegal Timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 5D6D89YR6P;
 				INFOPLIST_FILE = "Kegal Timer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Marchant.Kegal-Timer";
 				PRODUCT_NAME = "Kegel Trainer";
 				SWIFT_VERSION = 4.2;

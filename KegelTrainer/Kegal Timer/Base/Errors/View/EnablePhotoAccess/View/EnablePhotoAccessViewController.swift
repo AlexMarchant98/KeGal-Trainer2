@@ -23,7 +23,7 @@ class EnablePhotoAccessViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .workoutBackgroundColor
+        self.view.backgroundColor = .backgroundColour
         
         self.screenImage.image = UIImage(named: "enable-photo-access")!
         self.screenTitle.text = "Enable Photo Access"
