@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SettingsPresenterDelegate {
-    func showWalkthrough()
+    func showWalkthrough(_ walkthroughType: WalkthroughType)
 }
 
 protocol SettingsPresenterView {
@@ -45,8 +45,8 @@ class SettingsPresenter: SettingsPresenterProtocol {
         
     }
     
-    func showWalkthrough() {
-        self.delegate.showWalkthrough()
+    func showWalkthrough(walkthroughType: WalkthroughType) {
+        self.delegate.showWalkthrough(walkthroughType)
     }
     
     func getAdRemovalIAPInformation() {

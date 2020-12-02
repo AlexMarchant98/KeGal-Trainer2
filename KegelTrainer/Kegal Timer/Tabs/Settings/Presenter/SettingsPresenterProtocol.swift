@@ -11,7 +11,7 @@ import Foundation
 protocol SettingsPresenterProtocol {
     func getAdRemovalIAPInformation()
     func purchaseAdRemoval()
-    func showWalkthrough()
+    func showWalkthrough(walkthroughType: WalkthroughType)
     func restoreIAPPurchases()
     func getSettings()
     func saveSettings(

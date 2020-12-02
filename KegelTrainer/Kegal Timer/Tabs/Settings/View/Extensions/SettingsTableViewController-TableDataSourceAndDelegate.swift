@@ -53,7 +53,9 @@ extension SettingsTableViewController {
                 cell.accessoryType = .disclosureIndicator
                 cell.accessoryView = UIImageView(image: chevron!)
             }
-        } else if(indexPath == Constants.emailIndexPath || indexPath == Constants.appWalkthroughIndexPath) {
+        } else if(indexPath == Constants.emailIndexPath ||
+                    indexPath == Constants.appWalkthroughIndexPath ||
+                    indexPath == Constants.profileWalkthroughIndexPath) {
             let chevron = UIImage(named: "chevron-right")
             cell.accessoryType = .disclosureIndicator
             cell.accessoryView = UIImageView(image: chevron!)
@@ -65,7 +67,9 @@ extension SettingsTableViewController {
         case Constants.emailIndexPath:
             showEmail()
         case Constants.appWalkthroughIndexPath:
-            settingsPresenter.showWalkthrough()
+            settingsPresenter.showWalkthrough(walkthroughType: .appWalkthrough)
+        case Constants.profileWalkthroughIndexPath:
+            settingsPresenter.showWalkthrough(walkthroughType: .profileWalkthrough)
         case Constants.removeAdvertsIndexPath:
             settingsPresenter.getAdRemovalIAPInformation()
         default:

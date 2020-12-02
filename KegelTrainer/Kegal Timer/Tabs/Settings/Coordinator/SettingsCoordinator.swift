@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SettingsCoordinatorDelegate {
-    func showAppWalkthrough()
+    func showWalkthrough(_ walkthroughType: WalkthroughType)
 }
 
 class SettingsCoordinator: Coordinator {
@@ -54,7 +54,7 @@ class SettingsCoordinator: Coordinator {
 }
 
 extension SettingsCoordinator: SettingsPresenterDelegate {
-    func showWalkthrough() {
-        self.delegate.showAppWalkthrough()
+    func showWalkthrough(_ walkthroughType: WalkthroughType) {
+        self.delegate.showWalkthrough(walkthroughType)
     }
 }

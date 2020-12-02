@@ -41,7 +41,7 @@ class RepsDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSo
         let nextRep = self.currentRep + increment
         
         if(nextRep >= self.repsPerSet) {
-            self.currentRep = 0
+            self.currentRep = nextRep
             self.delegate.allRepsCompleted()
         } else {
             
@@ -52,9 +52,8 @@ class RepsDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSo
             } else {
                 self.currentRep = nextRep
             }
+            focusCollectionView()
         }
-        
-        focusCollectionView()
     }
     
     func resetReps() {

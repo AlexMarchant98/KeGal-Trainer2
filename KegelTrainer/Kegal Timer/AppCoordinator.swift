@@ -66,7 +66,18 @@ class AppCoordinator: Coordinator {
     override func start() {
         
         let tabBarController = UITabBarController()
-        tabBarController.tabBar.tintColor = UIColor.workoutBackgroundColor
+        
+        
+        if #available(iOS 12.0, *) {
+            if tabBarController.traitCollection.userInterfaceStyle == .dark {
+                tabBarController.tabBar.unselectedItemTintColor = .leaderboardGray
+                tabBarController.tabBar.tintColor = UIColor.white
+            } else {
+                tabBarController.tabBar.tintColor = UIColor.workoutBackgroundColor
+            }
+        } else {
+            tabBarController.tabBar.tintColor = UIColor.workoutBackgroundColor
+        }
         
         profileCoordinator.start()
         stagesCoordinator.start()
@@ -138,8 +149,8 @@ extension AppCoordinator: ProfileCoordinatorDelegate {
 }
 
 extension AppCoordinator: SettingsCoordinatorDelegate {
-    func showAppWalkthrough() {
-        self.showWalkthrough(walkthroughType: .appWalkthrough)
+    func showWalkthrough(_ walkthroughType: WalkthroughType) {
+        self.showWalkthrough(walkthroughType: walkthroughType)
     }
 }
 

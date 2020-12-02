@@ -106,6 +106,7 @@ class TimerViewController: UIViewController, Storyboarded {
     @IBAction func beginWorkoutButton(_ sender: Any) {
         if isTimerRunning == false
         {
+            workoutCompleted = false
             isTimerRunning = true
             UIApplication.shared.isIdleTimerDisabled = true
             if (isRestState) {
@@ -219,6 +220,11 @@ class TimerViewController: UIViewController, Storyboarded {
     }
     
     @objc func updateTimer() {
+        
+        if(workoutCompleted) {
+            return
+        }
+        
         miliseconds -= 1
         if(miliseconds == 0)
         {
@@ -248,6 +254,8 @@ class TimerViewController: UIViewController, Storyboarded {
                 
                 queueItems()
                 queueTimer.configAndStart(delayTime: TimeInterval(self.restLength))
+            } else {
+                workoutCompleted = true
             }
         } else {
             timeLabel.text = timeString(time: TimeInterval(secondsRemaining), miliseconds: miliseconds)
@@ -263,14 +271,22 @@ class TimerViewController: UIViewController, Storyboarded {
     }
     
     private func queueItems(delayTime: DispatchTime) {
+        if(workoutCompleted == true) {
+            print("Workout completed")
+            dispatchWorkItem.cancel()
+            return
+        }
+        
         dispatchWorkItem = DispatchWorkItem(qos: .userInteractive, block: {
-            self.secondsRemaining = self.repLength - 1
-            self.view.backgroundColor = UIColor.workoutBackgroundColor
-            self.runTimer()
-            self.timerButton.animateableTrackLayer.removeAnimation(forKey: Constants.strokeEndAnimation)
-            self.workoutCue.playBeginSoundBite()
-            self.workoutCue.vibrateDevice()
-            self.isRestState = false
+            if(self.workoutCompleted == false) {
+                self.secondsRemaining = self.repLength - 1
+                self.view.backgroundColor = UIColor.workoutBackgroundColor
+                self.runTimer()
+                self.timerButton.animateableTrackLayer.removeAnimation(forKey: Constants.strokeEndAnimation)
+                self.workoutCue.playBeginSoundBite()
+                self.workoutCue.vibrateDevice()
+                self.isRestState = false
+            }
         })
         
         DispatchQueue.main.asyncAfter(deadline: delayTime, execute: self.dispatchWorkItem)
@@ -278,8 +294,8 @@ class TimerViewController: UIViewController, Storyboarded {
     
     internal func resetTimer()
     {
-        repsDataSource?.resetReps()
         resetUI()
+        repsDataSource?.resetReps()
     }
     
     private func resetUI()
@@ -298,8 +314,6 @@ class TimerViewController: UIViewController, Storyboarded {
         
         timerButton.startTriangleShapeLayer()
         timerButton.animateableTrackLayer.removeAllAnimations()
-        
-        workoutCompleted = false
     }
     
     func setupWorkout() {
@@ -359,6 +373,12 @@ extension TimerViewController: RepsDataSourceDelegate {
     func allRepsCompleted() {
         
         self.workoutCompleted = true
+        
+        timer.invalidate()
+        isTimerRunning = false
+        isRestState = false
+        
+        dispatchWorkItem.cancel()
         
         workoutCue.playWorkoutCompleteSoundBite()
         

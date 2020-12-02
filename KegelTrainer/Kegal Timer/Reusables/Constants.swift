@@ -76,6 +76,7 @@ struct Constants {
     // Index Paths
     static let emailIndexPath = IndexPath(row: 0, section: 2)
     static let appWalkthroughIndexPath = IndexPath(row: 1, section: 2)
+    static let profileWalkthroughIndexPath = IndexPath(row: 2, section: 2)
     static let removeAdvertsIndexPath = IndexPath(row: 0, section: 3)
     
     static let websiteLink = "https://www.kegeltrainer.app"
