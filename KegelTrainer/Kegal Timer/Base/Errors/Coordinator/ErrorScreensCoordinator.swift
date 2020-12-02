@@ -50,19 +50,20 @@ class ErrorScreensCoordinator: Coordinator {
         }
     }
     
-    @available(iOS 12.0, *)
     func showConnectionRequired(_ networkManagerService: NetworkManagerService) {
-        let viewController = ConnectionRequiredViewController.instantiate(storyboard: "ConnectionRequired")
-        
-        let connectionRequiredPresenter = ConnectionRequiredPresenter(
-                networkManagerService,
-                with: viewController,
-                delegate: self)
+        if let _ = CurrentUserService.shared.user {
+            let viewController = ConnectionRequiredViewController.instantiate(storyboard: "ConnectionRequired")
+            
+            let connectionRequiredPresenter = ConnectionRequiredPresenter(
+                    networkManagerService,
+                    with: viewController,
+                    delegate: self)
 
-        viewController.connectionRequiredPresenter = connectionRequiredPresenter
-        
-        DispatchQueue.main.async {
-            self.navigationController.pushViewController(viewController, animated: true)
+            viewController.connectionRequiredPresenter = connectionRequiredPresenter
+            
+            DispatchQueue.main.async {
+                self.navigationController.pushViewController(viewController, animated: true)
+            }
         }
     }
     
