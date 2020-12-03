@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "Year"; ObjectID = "1fo-9C-n1g"; */
+"1fo-9C-n1g.text" = "El año";
+
+/* Class = "UILabel"; text = "Month"; ObjectID = "FfP-zG-cj8"; */
+"FfP-zG-cj8.text" = "El mes";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "GXw-Yw-Gug"; */
+"GXw-Yw-Gug.text" = "1";
+
+/* Class = "UILabel"; text = "Wed"; ObjectID = "O7D-DC-zMF"; */
+"O7D-DC-zMF.text" = "Míe";
+
+/* Class = "UILabel"; text = "Number of Workouts"; ObjectID = "Qq0-1c-b57"; */
+"Qq0-1c-b57.text" = "Numeró de sesiones de ejercicio";
+
+/* Class = "UILabel"; text = "Fri"; ObjectID = "VQN-2S-Out"; */
+"VQN-2S-Out.text" = "Vie";
+
+/* Class = "UILabel"; text = "Tue"; ObjectID = "WGg-mv-mND"; */
+"WGg-mv-mND.text" = "Mar";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "YN3-9n-a5y"; */
+"YN3-9n-a5y.text" = "2";
+
+/* Class = "UITabBarItem"; title = "Track"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Grabar";
+
+/* Class = "UILabel"; text = "Sat"; ObjectID = "bSV-rK-usr"; */
+"bSV-rK-usr.text" = "Sáb";
+
+/* Class = "UILabel"; text = "3+"; ObjectID = "dov-s6-m0I"; */
+"dov-s6-m0I.text" = "3+";
+
+/* Class = "UILabel"; text = "Last Month"; ObjectID = "i0d-1L-ren"; */
+"i0d-1L-ren.text" = "El último mes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jcl-0t-CS2"; */
+"jcl-0t-CS2.text" = "Label";
+
+/* Class = "UILabel"; text = "Thu"; ObjectID = "lWF-yG-Pxv"; */
+"lWF-yG-Pxv.text" = "Jue";
+
+/* Class = "UILabel"; text = "Next Month"; ObjectID = "s8Y-gt-itq"; */
+"s8Y-gt-itq.text" = "El próximo mes";
+
+/* Class = "UILabel"; text = "Sun"; ObjectID = "vFQ-al-RoT"; */
+"vFQ-al-RoT.text" = "Dom";
+
+/* Class = "UILabel"; text = "Mon"; ObjectID = "vKO-HC-EIh"; */
+"vKO-HC-EIh.text" = "Lun";

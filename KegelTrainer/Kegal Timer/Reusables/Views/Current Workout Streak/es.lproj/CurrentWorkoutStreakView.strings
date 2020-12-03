@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Get Streak Protector"; ObjectID = "2GG-Gz-iVl"; */
+"2GG-Gz-iVl.normalTitle" = "Get Streak Protector";
+
+/* Class = "UILabel"; text = "100 days"; ObjectID = "8Tr-rI-9Ke"; */
+"8Tr-rI-9Ke.text" = "100 days";
+
+/* Class = "UILabel"; text = "0 Streak Protectors Left"; ObjectID = "WHT-Qw-3JT"; */
+"WHT-Qw-3JT.text" = "0 Streak Protectors Left";
+
+/* Class = "UILabel"; text = "Current Workout Streak"; ObjectID = "mdD-E3-S5k"; */
+"mdD-E3-S5k.text" = "Current Workout Streak";
+
+/* Class = "UILabel"; text = "Streak Protectors ensure you don’t lose your current workout streak if you forget to exercise one day, meaning, you earn more points per workout!"; ObjectID = "spv-fb-tbk"; */
+"spv-fb-tbk.text" = "Streak Protectors ensure you don’t lose your current workout streak if you forget to exercise one day, meaning, you earn more points per workout!";

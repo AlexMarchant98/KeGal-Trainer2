@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "Terms & Conditions"; ObjectID = "4c1-in-qzJ"; */
+"4c1-in-qzJ.normalTitle" = "Términos y Condiciones";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "9io-j3-wXi"; */
+"9io-j3-wXi.placeholder" = "Confirmar la contraseña";
+
+/* Class = "UILabel"; text = "Sign Up"; ObjectID = "EAT-Ux-Xr5"; */
+"EAT-Ux-Xr5.text" = "Registrarse";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Iv4-v6-L4a"; */
+"Iv4-v6-L4a.normalTitle" = "Iniciar sesión";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Kwi-2J-6z1"; */
+"Kwi-2J-6z1.placeholder" = "Contraseña";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "eH5-pf-bOH"; */
+"eH5-pf-bOH.placeholder" = "Correo";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "gzf-yB-ja7"; */
+"gzf-yB-ja7.normalTitle" = "Registrarse";
+
+/* Class = "UILabel"; text = "If you would like to track your workouts, earn points to compete with other users, view the leaderboards and more you need to sign up."; ObjectID = "ijd-Hg-psU"; */
+"ijd-Hg-psU.text" = "Si te gustase grabar tuyo sesiones de ejercicio, gana puntos para competir con otros usuarios, ver las tablas de clasificaciones y más, necesita registrarse.";
+
+/* Class = "UIButton"; normalTitle = "Privacy Policy"; ObjectID = "mge-H7-7Iu"; */
+"mge-H7-7Iu.normalTitle" = "La política de privacidad";
+
+/* Class = "UIButton"; normalTitle = "Signup with Apple"; ObjectID = "oMy-ZA-Tgb"; */
+"oMy-ZA-Tgb.normalTitle" = "Registrarse con Apple";
+
+/* Class = "UILabel"; text = "Already have an account?"; ObjectID = "uUE-l0-XjU"; */
+"uUE-l0-XjU.text" = "¿Tiene una cuenta?";
+
+/* Class = "UILabel"; text = "Or"; ObjectID = "vX4-7D-Nsx"; */
+"vX4-7D-Nsx.text" = "O";

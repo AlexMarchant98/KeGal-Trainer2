@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "5uZ-e2-c66"; */
+"5uZ-e2-c66.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Primary Button"; ObjectID = "i60-8W-xtc"; */
+"i60-8W-xtc.normalTitle" = "Primary Button";
+
+/* Class = "UILabel"; text = "Error description"; ObjectID = "iEM-TW-lrR"; */
+"iEM-TW-lrR.text" = "Error description";

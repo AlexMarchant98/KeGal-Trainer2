@@ -57,10 +57,10 @@ class LoginPresenter: LoginPresenterProtocol {
             case .failure(let error as NSError):
                 switch error.code {
                 case AuthErrorCode.userNotFound.rawValue:
-                    self.view.invalidCredentials(error: "A user linked to your Apple ID could not be found, please signup.")
+                    self.view.invalidCredentials(error: localizedString(forKey: "user_does_not_exist_with_apple_id_error"))
                     break
                 default:
-                    self.view.invalidCredentials(error: "Failed to login with Apple ID, please try again.")
+                    self.view.invalidCredentials(error: localizedString(forKey: "failed_to_login_error"))
                 }
             }
         }
@@ -68,7 +68,7 @@ class LoginPresenter: LoginPresenterProtocol {
     
     internal func loginButtonTapped(_ email: String?, _ password: String?) {
         guard let email = email, let password = password else {
-            self.view.invalidCredentials(error: "Please enter valid inputs for email and password")
+            self.view.invalidCredentials(error: localizedString(forKey: "enter_valid_credentials_error"))
             return
         }
         
@@ -97,7 +97,7 @@ class LoginPresenter: LoginPresenterProtocol {
            case .success:
                 self.getAccountByOwnerId()
            case .failure(_):
-                self.view.invalidCredentials(error: "Email & Password combination is incorrect.")
+                self.view.invalidCredentials(error: localizedString(forKey: "email_password_combination_incorrect_error"))
            }
         }
     }
@@ -128,7 +128,7 @@ class LoginPresenter: LoginPresenterProtocol {
                 }
             }
         } catch {
-            self.view.invalidCredentials(error: "Something went wrong whilst logging you in, please try again")
+            self.view.invalidCredentials(error: localizedString(forKey: "general_error"))
         }
     }
 }

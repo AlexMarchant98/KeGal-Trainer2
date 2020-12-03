@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "2eI-a1-Vd3"; */
+"2eI-a1-Vd3.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Primary Button"; ObjectID = "Zfb-F0-UCp"; */
+"Zfb-F0-UCp.normalTitle" = "Primary Button";
+
+/* Class = "UILabel"; text = "Error description"; ObjectID = "rVR-kd-6FJ"; */
+"rVR-kd-6FJ.text" = "Error description";

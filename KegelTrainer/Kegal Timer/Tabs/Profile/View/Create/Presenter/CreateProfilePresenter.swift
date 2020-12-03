@@ -59,7 +59,7 @@ class CreateProfilePresenter: CreateProfilePresenterProtocol {
                         profile.profile_picture = returnedUrl
                         self?.createProfile(profile)
                     case false:
-                        self?.view.errorOccurred(message: "Failed to upload your profile picture, please try again.")
+                        self?.view.errorOccurred(message: localizedString(forKey: "failed_to_upload_profile_picture_error"))
                     }
                     
                 }
@@ -85,7 +85,7 @@ class CreateProfilePresenter: CreateProfilePresenterProtocol {
                     self?.firebaseCloudStorageService.delete(documentUrl: URL(string: url)!) { _ in }
                 }
                 
-                self?.view.errorOccurred(message: "Failed to create your profile, please try again.")
+                self?.view.errorOccurred(message: localizedString(forKey: "failed_to_create_profile_error"))
             
             case true:
                 uploadedProfile.id = docId

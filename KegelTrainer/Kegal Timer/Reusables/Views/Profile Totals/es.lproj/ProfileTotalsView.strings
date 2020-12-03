@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Workout Time"; ObjectID = "dzK-bD-g4k"; */
+"dzK-bD-g4k.text" = "Workout Time";
+
+/* Class = "UILabel"; text = "Your Totals"; ObjectID = "i3F-Wr-E8T"; */
+"i3F-Wr-E8T.text" = "Your Totals";
+
+/* Class = "UILabel"; text = "Workouts"; ObjectID = "mwz-lU-lbn"; */
+"mwz-lU-lbn.text" = "Workouts";
+
+/* Class = "UIButton"; normalTitle = "View Workout Tracker"; ObjectID = "w1n-Vr-aDu"; */
+"w1n-Vr-aDu.normalTitle" = "View Workout Tracker";

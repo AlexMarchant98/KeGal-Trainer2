@@ -53,12 +53,13 @@ class LoginViewController: UIViewController, Storyboarded {
 
         emailTextBoxController = MDCTextInputControllerOutlined(textInput: emailTextBox)
         emailTextBoxController.setupKTTextFieldController()
-        emailTextBoxController.placeholderText = "Email"
+        emailTextBoxController.placeholderText = localizedString(forKey: "email")
         emailTextBox.keyboardType = .emailAddress
         
         passwordTextBoxController = MDCTextInputControllerOutlined(textInput: passwordTextBox)
         passwordTextBoxController.setupKTTextFieldController()
-        passwordTextBoxController.placeholderText = "Password"
+        
+        passwordTextBoxController.placeholderText = localizedString(forKey: "password")
         passwordTextBox.isSecureTextEntry = true
         
         appleButtonLocation.isEnabled = false

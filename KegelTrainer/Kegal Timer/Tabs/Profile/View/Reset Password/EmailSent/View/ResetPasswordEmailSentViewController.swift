@@ -19,8 +19,7 @@ class ResetPasswordEmailSentViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         
         self.view.backgroundColor = .workoutBackgroundColor
-        
-        emailSentLabel.text = "A password reset email has been sent to your email.\n\nFollow the link in the email to reset your password.\n\nPlease check your spam/junk folders if you cannot find it in your normal inbox."
+        emailSentLabel.text = localizedString(forKey: "email_sent_description")
         emailSentLabel.numberOfLines = 0
         
         emailSentLabel.textAlignment = .center

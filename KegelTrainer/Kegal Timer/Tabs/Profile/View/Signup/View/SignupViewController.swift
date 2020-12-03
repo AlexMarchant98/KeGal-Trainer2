@@ -56,17 +56,17 @@ class SignupViewController: UIViewController, Storyboarded {
 
         emailTextBoxController = MDCTextInputControllerOutlined(textInput: emailTextBox)
         emailTextBoxController.setupKTTextFieldController()
-        emailTextBoxController.placeholderText = "Email"
+        emailTextBoxController.placeholderText = localizedString(forKey: "email")
         emailTextBox.keyboardType = .emailAddress
         
         passwordTextBoxController = MDCTextInputControllerOutlined(textInput: passwordTextBox)
         passwordTextBoxController.setupKTTextFieldController()
-        passwordTextBoxController.placeholderText = "Password"
+        passwordTextBoxController.placeholderText = localizedString(forKey: "password")
         passwordTextBox.isSecureTextEntry = true
         
         confirmPasswordTextBoxController = MDCTextInputControllerOutlined(textInput: confirmPasswordTextBox)
         confirmPasswordTextBoxController.setupKTTextFieldController()
-        confirmPasswordTextBoxController.placeholderText = "Confirm Password"
+        confirmPasswordTextBoxController.placeholderText = localizedString(forKey: "confirm_password")
         confirmPasswordTextBox.isSecureTextEntry = true
         
         appleButtonLocation.isEnabled = false

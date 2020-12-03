@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "99999"; ObjectID = "4y4-Cv-IOz"; */
+"4y4-Cv-IOz.text" = "99999";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "H8t-Cp-9x6"; */
+"H8t-Cp-9x6.text" = "Usuario";
+
+/* Class = "UILabel"; text = "Leaderboard"; ObjectID = "R6D-Sg-ZaB"; */
+"R6D-Sg-ZaB.text" = "Tabla de Clasificación";
+
+/* Class = "UILabel"; text = "Total Points"; ObjectID = "jtD-hT-1LS"; */
+"jtD-hT-1LS.text" = "Puntos totales";

@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "FKt-m9-UKe"; */
+"FKt-m9-UKe.normalTitle" = "Cancelar";
+
+/* Class = "UILabel"; text = "Update Your Profile"; ObjectID = "Qhw-3R-iAI"; */
+"Qhw-3R-iAI.text" = "Actualizar tu perfil";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "TcM-Ut-Mkj"; */
+"TcM-Ut-Mkj.normalTitle" = "Guardar";

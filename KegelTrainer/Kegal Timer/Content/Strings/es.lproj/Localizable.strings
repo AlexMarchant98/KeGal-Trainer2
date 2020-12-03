@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  Kegal Timer
+
+  Created by Alex Marchant on 02/12/2020.
+  Copyright © 2020 Alex Marchant. All rights reserved.
+*/
+
+// -- General Messages -- //
+"general_error" = "Algo salió mal, por favor volver a intentar"
+
+// -- ResetPasswordEmailSentViewController -- //
+"email_sent_description" = "Te hemos enviado un correo para que puede cambiar tu contraseña.\n\nSigue el enlace en el correo para cambiarla.\n\nPor favor, mira en tu carpeta basura si no has recibidolo.";
+
+// -- ResetPasswordViewController -- //
+"email" = "Correo";
+
+// -- LoginPresenter -- //
+"user_does_not_exist_with_apple_id_error" = "No podíamos encontrar una cuenta relacionado con tu Apple ID, por favor registrarse.";
+"failed_to_login_error" = "Login ha fallado, por favor volver a intentar";
+"enter_valid_credentials_error" = "Por favor introduce un correo y contraseña válida";
+"email_password_combination_incorrect_error" = "Correo y contraseña combinación está incorrecta";
+
+// -- LoginViewController -- //
+"password" = "Contraseña";
+
+// -- SignupPresenter -- //
+"apple_id_email_already_registered_error" = "Ya hay una cuenta conectó con el correo de tu Apple ID, por favor iniciar sesión con correo y contraseña";
+"passwords_dont_match_error" = "Las contraseñas no son las mismas";
+
+// -- SignupViewController -- //
+"confirm_password" = "Confirmar la contraseña";
+
+// -- CreateProfilePresenter -- //
+"failed_to_upload_profile_picture_error" = "Falló cargar tu foto de perfil, por favor volver a intentar";
+"failed_to_create_profile_error" = "Falló crear tu perfil, por favor volver a intentar";
+
+// -- CreateProfileViewController -- //
+"enter_your_username" = "Introducir tu nombre de usuario";
+"enter_a_username_error" = "Tiene que introducir un nombre de usuario";
+"enter_a_valid_username_error" = "Tiene que introducir un nombre de usuario válido";
+"max_length_reached_error" = "Ha llegado los caracteres máximos";
+"only_letters_and_numbers_error" = "Puede introducir solas letras y números";

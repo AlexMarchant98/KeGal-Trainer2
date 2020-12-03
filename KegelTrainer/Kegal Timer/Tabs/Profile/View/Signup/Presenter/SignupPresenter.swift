@@ -58,9 +58,9 @@ class SignupPresenter: SignupPresenterProtocol {
             case .failure(let error as NSError):
                 switch error.code {
                 case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
-                    self.view.errorOccurred(message: "An account already exists linked to your Apple ID email, please login with your email & password.")
+                    self.view.errorOccurred(message: localizedString(forKey: "apple_id_email_already_registered_error"))
                 default:
-                    self.view.errorOccurred(message: "Something went wrong whilst logging you in with Apple, please try again")
+                    self.view.errorOccurred(message: localizedString(forKey: "failed_to_login_error"))
                 }
            }
         }
@@ -79,7 +79,7 @@ class SignupPresenter: SignupPresenterProtocol {
             let _ = try confirmPassword.validateText(validationType: ValidatorType.requiredField(field: "Confirm Password"))
             
             if(!(password == confirmPassword)) {
-                self.view.errorOccurred(message: "Passwords do not match")
+                self.view.errorOccurred(message: localizedString(forKey: "passwords_dont_match_error"))
                 return false
             }
             
@@ -98,7 +98,7 @@ class SignupPresenter: SignupPresenterProtocol {
                case .success:
                     self.delegate.didSignup()
                case .failure(let error):
-                self.view.errorOccurred(message: "Something went wrong whilst signing up, pelase try again.")
+                self.view.errorOccurred(message: localizedString(forKey: "general_error"))
            }
         }
     }

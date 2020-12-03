@@ -34,7 +34,7 @@ class CreateProfileViewController: UIViewController, Storyboarded {
         
         usernameTextFieldController = MDCTextInputControllerOutlined(textInput: usernameTextField)
         usernameTextFieldController.activeColor = UIColor.appGreen
-        usernameTextFieldController.placeholderText = "Enter Your Username"
+        usernameTextFieldController.placeholderText = localizedString(forKey: "enter_your_username")
         usernameTextFieldController.normalColor = .white
         usernameTextFieldController.inlinePlaceholderColor = .white
         usernameTextFieldController.floatingPlaceholderActiveColor = .appGreen
@@ -52,7 +52,7 @@ class CreateProfileViewController: UIViewController, Storyboarded {
                 
                 if(username.isEmpty) {
                     usernameIsValid = false
-                    usernameTextFieldController.setErrorText("You must enter a username", errorAccessibilityValue: nil)
+                    usernameTextFieldController.setErrorText(localizedString(forKey: "enter_a_username_error"), errorAccessibilityValue: nil)
                     return
                 }
                 
@@ -62,8 +62,7 @@ class CreateProfileViewController: UIViewController, Storyboarded {
                 return
             }
         }
-        usernameTextFieldController.setErrorText(
-            "You must enter a valid username",
+        usernameTextFieldController.setErrorText(localizedString(forKey: "enter_a_valid_username_error"),
             errorAccessibilityValue: nil)
     }
     
@@ -112,12 +111,11 @@ extension CreateProfileViewController: UITextFieldDelegate {
             
             if(fullString.isEmpty) {
                 usernameIsValid = false
-                usernameTextFieldController.setErrorText("You must enter a username", errorAccessibilityValue: nil)
+                usernameTextFieldController.setErrorText(localizedString(forKey: "enter_a_username_error"), errorAccessibilityValue: nil)
             } else {
                 
                 if(fullString.count > 25) {
-                    usernameTextFieldController.setErrorText(
-                        "Max length reached",
+                    usernameTextFieldController.setErrorText(localizedString(forKey: "max_length_reached_error"),
                         errorAccessibilityValue: nil)
                     usernameIsValid = false
                     
@@ -130,7 +128,7 @@ extension CreateProfileViewController: UITextFieldDelegate {
                 
                 if range != nil {
                     usernameTextFieldController.setErrorText(
-                        "You can only enter letters and numbers",
+                        localizedString(forKey: "only_letters_and_numbers_error"),
                         errorAccessibilityValue: nil)
                     usernameIsValid = false
                     

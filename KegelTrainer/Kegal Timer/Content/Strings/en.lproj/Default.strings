@@ -1,0 +1,44 @@
+/* 
+  Default.strings
+  Kegal Timer
+
+  Created by Alex Marchant on 02/12/2020.
+  Copyright © 2020 Alex Marchant. All rights reserved.
+*/
+
+// -- General Messages -- //
+"general_error" = "Something went wrong, please try again"
+
+// -- ResetPasswordEmailSentViewController -- //
+"email_sent_description" = "A password reset email has been sent to your email.\n\nFollow the link in the email to reset your password.\n\nPlease check your spam/junk folders if you cannot find it in your normal inbox.";
+
+
+// -- ResetPasswordViewController -- //
+"email" = "Email";
+
+// -- LoginPresenter -- //
+"user_does_not_exist_with_apple_id_error" = "A user linked to your Apple ID could not be found, please signup.";
+"failed_to_login_error" = "Login failed, please try again.";
+"enter_valid_credentials_error" = "Please enter valid inputs for email and password";
+"email_password_combination_incorrect_error" = "Email & Password combination is incorrect";
+
+// -- LoginViewController -- //
+"password" = "Password";
+
+// -- SignupPresenter -- //
+"apple_id_email_already_registered_error" = "An account already exists linked to your Apple ID email, please login with your email & password.";
+"passwords_dont_match_error" = "Passwords do not match";
+
+// -- SignupViewController -- //
+"confirm_password" = "Confirm Password";
+
+// -- CreateProfilePresenter -- //
+"failed_to_upload_profile_picture_error" = "Failed to upload your profile picture, please try again";
+"failed_to_create_profile_error" = "Failed to create your profile, please try again";
+
+// -- CreateProfileViewController -- //
+"enter_your_username" = "Enter Your Username";
+"enter_a_username_error" = "You must enter a username";
+"enter_a_valid_username_error" = "You must enter a valid username";
+"max_length_reached_error" = "Max length reached";
+"only_letters_and_numbers_error" = "You can only enter letters and numbers";

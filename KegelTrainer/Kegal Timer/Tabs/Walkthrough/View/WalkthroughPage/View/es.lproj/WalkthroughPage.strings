@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "98o-3j-YWs"; */
+"98o-3j-YWs.text" = "La descripción";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "aGJ-LD-dx2"; */
+"aGJ-LD-dx2.normalTitle" = "Siguiente";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "h3I-8k-HOD"; */
+"h3I-8k-HOD.text" = "El título";

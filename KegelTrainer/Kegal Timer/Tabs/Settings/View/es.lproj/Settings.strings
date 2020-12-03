@@ -1,0 +1,42 @@
+
+/* Class = "UITableViewSection"; headerTitle = "Other"; ObjectID = "2hE-wg-t0J"; */
+"2hE-wg-t0J.headerTitle" = "Other";
+
+/* Class = "UITableViewSection"; headerTitle = "Cues"; ObjectID = "7Iv-mF-Yzo"; */
+"7Iv-mF-Yzo.headerTitle" = "Cues";
+
+/* Class = "UILabel"; text = "App Walkthrough"; ObjectID = "GFH-TR-OxM"; */
+"GFH-TR-OxM.text" = "App Walkthrough";
+
+/* Class = "UILabel"; text = "Profile Walkthrough"; ObjectID = "NOP-Us-PKr"; */
+"NOP-Us-PKr.text" = "Profile Walkthrough";
+
+/* Class = "UILabel"; text = "Sound"; ObjectID = "QaP-dN-Bp6"; */
+"QaP-dN-Bp6.text" = "Sound";
+
+/* Class = "UITableViewController"; title = "Settings"; ObjectID = "Tsz-KI-lF1"; */
+"Tsz-KI-lF1.title" = "Settings";
+
+/* Class = "UILabel"; text = "Email Support"; ObjectID = "X14-1p-hQC"; */
+"X14-1p-hQC.text" = "Email Support";
+
+/* Class = "UITableViewSection"; headerTitle = "Help"; ObjectID = "YOH-BT-xYB"; */
+"YOH-BT-xYB.headerTitle" = "Help";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "c5f-xT-zhS"; */
+"c5f-xT-zhS.title" = "Settings";
+
+/* Class = "UITableViewSection"; headerTitle = "Workout Settings"; ObjectID = "eNr-8g-p5t"; */
+"eNr-8g-p5t.headerTitle" = "Workout Settings";
+
+/* Class = "UILabel"; text = "Remove Adverts"; ObjectID = "jkO-rN-QAe"; */
+"jkO-rN-QAe.text" = "Remove Adverts";
+
+/* Class = "UILabel"; text = "Visual"; ObjectID = "s4q-QC-vbh"; */
+"s4q-QC-vbh.text" = "Visual";
+
+/* Class = "UILabel"; text = "Vibrate"; ObjectID = "txY-yp-YvB"; */
+"txY-yp-YvB.text" = "Vibrate";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "vkS-rN-G1Y"; */
+"vkS-rN-G1Y.title" = "Settings";

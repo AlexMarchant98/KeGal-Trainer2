@@ -31,7 +31,7 @@ class ResetPasswordViewController: UIViewController, Storyboarded {
 
         emailTextBoxController = MDCTextInputControllerOutlined(textInput: emailTextBox)
         emailTextBoxController.setupKTTextFieldController()
-        emailTextBoxController.placeholderText = "Email"
+        emailTextBoxController.placeholderText = localizedString(forKey: "email")
         emailTextBox.keyboardType = .emailAddress
     }
     
