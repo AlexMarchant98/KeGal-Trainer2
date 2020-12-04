@@ -7,22 +7,36 @@
 */
 
 // -- General Messages -- //
-"general_error" = "Algo salió mal, por favor volver a intentar"
+"general_error" = "Algo salió mal, por favor volver a intentar";
+"ok" = "Vale";
+"perfect" = "Perfecto";
+"purchase" = "Comprar";
+"cancel" = "Cancelar";
+"email" = "Correo";
+"password" = "Contraseña";
+"points" = "puntos";
+"unranked" = "Sin rango";
+"next" = "Siguiente";
+"yes" = "Sí";
+"no" = "No";
+"reminders" = "Notificaciones";
+"add" = "Añadir";
+"update" = "Actualizar";
+"settings" = "Ajustes";
+"save" = "Guardar";
+"continue" = "Continuar";
+"seconds" = "Segundos";
+"help" = "Ayuda";
+"other" = "Otro";
 
 // -- ResetPasswordEmailSentViewController -- //
 "email_sent_description" = "Te hemos enviado un correo para que puede cambiar tu contraseña.\n\nSigue el enlace en el correo para cambiarla.\n\nPor favor, mira en tu carpeta basura si no has recibidolo.";
-
-// -- ResetPasswordViewController -- //
-"email" = "Correo";
 
 // -- LoginPresenter -- //
 "user_does_not_exist_with_apple_id_error" = "No podíamos encontrar una cuenta relacionado con tu Apple ID, por favor registrarse.";
 "failed_to_login_error" = "Login ha fallado, por favor volver a intentar";
 "enter_valid_credentials_error" = "Por favor introduce un correo y contraseña válida";
 "email_password_combination_incorrect_error" = "Correo y contraseña combinación está incorrecta";
-
-// -- LoginViewController -- //
-"password" = "Contraseña";
 
 // -- SignupPresenter -- //
 "apple_id_email_already_registered_error" = "Ya hay una cuenta conectó con el correo de tu Apple ID, por favor iniciar sesión con correo y contraseña";
@@ -41,3 +55,93 @@
 "enter_a_valid_username_error" = "Tiene que introducir un nombre de usuario válido";
 "max_length_reached_error" = "Ha llegado los caracteres máximos";
 "only_letters_and_numbers_error" = "Puede introducir solas letras y números";
+
+// -- EditProfileViewController -- //
+"select_an_image_error" = "Por favor selecciona un foto para cargar";
+
+// -- TrackWorkoutsViewController -- //
+"track_my_workouts" = "Grabar mis sesiones";
+"workouts" = "Sesiones";
+"no_workouts_performed_message" = "No hizo ningún sesiones en este día";
+"one_workout_performed_message" = "Hizo una sesión en este día";
+"multiple_workouts_performed_message" = "Hizo %@ sesiones en este día";
+
+// -- ProfileViewController -- //
+"streak_protector_purchased_title" = "Ha comprado un protector de racha";
+"purchase_failed_title" = "Transacción falló";
+"streak_saved_title" = "¡Racha Salvó!";
+"streak_saved_message" = "Ha salvado tu racha, también, ¡hemos dado un protector de racha gratis!";
+"iap_did_load_information_title" = "%@ por %@";
+
+// -- ViewLeaderboardPresenter -- //
+"failed_to_load_profiles_error" = "Falló cargar los perfiles, por favor volver a intentar";
+
+// -- StageTableViewController -- //
+"stages" = "Fases";
+"stage" = "fase";
+"locked" = "Cerrado";
+"level" = "Nivel";
+"tackle_level_message" = "¿Quisiera intentar este nivel?";
+
+// -- LevelTableViewCell -- //
+"completed" = "Completó";
+
+// -- TimerPresenter -- //
+"failed_to_add_workout_to_tracker_error" = "Algo salió mal con grabar tu sesión";
+
+// -- WorkoutCompleteViewController -- //
+"workout_complete" = "Sesión completó";
+"points_earned" = "Ha ganado puntos";
+"level_completed_message" = "¡Ha completado nivel %@!";
+"login_to_track_your_workouts_message" = "Login para que pueda grabar tus sesiones";
+"total_workouts_completed_ends_with_1_message" = "That was your %@st workout!";
+"total_workouts_completed_ends_with_2_message" = "That was your %@nd workout!";
+"total_workouts_completed_ends_with_3_message" = "That was your %@rd workout!";
+"total_workouts_completed_ends_with_above_4_message" = "That was your %@th workout!";
+"earned_one_point" = "Ha ganado %@ punto";
+"earned_more_than_one_point" = "Ha ganado %@ puntos";
+"max_daily_points_earned_message" = "¡Ha ganado los puntos máximos por un día!";
+"could_have_earned_one_point_message" = "Podría ganar 1 punto por esa sesión";
+"could_have_earned_many_points_message" = "Podría ganar %@ puntos por esa sesión";
+
+// -- RemindersTableViewController -- //
+"your_reminders" = "Tus notificaciones";
+"notifications_are_disabled" = "Notificaciones no están activados";
+"enable_notifications_message" = "Pueda establecer notificaciones después de permitir notificaciones de Kegel Trainer en los ajustes";
+
+// -- AddReminderTableViewController -- //
+"add_reminder" = "Añada una notificación";
+"reminder_message" = "Mensaje de notificación";
+"time_of_reminder" = "Hora de la notificación";
+"configuration" = "Ajustes";
+"workout_notification_default_title" = "¡Hora del ejercicio!";
+"workout_notificaction_default_message" = "¡Necesita hacer este ejercicio!";
+
+// -- UpdateReminderTableViewController -- //
+"update_reminder" = "Actualizar la notificación";
+
+// -- SettingsTableViewController -- //
+"settings_saved" = "Ajustes guardó";
+"settings_saved_message" = "Tus ajustes han estado guardar";
+"restore_purchases" = "Restaurar las compras";
+"purchases_restored" = "Restauró las compras";
+"purchases_restored_message" = "Por favor reinicia la aplicación para que pueda experimentar los cambios";
+"cannot_send_email_error" = "Si quisiera enviar un correo a través de la aplicación, tiene que conectar un correo en la aplicación 'Correo' de Apple.\n\nCorreo de Apoyo:\n\%@";
+
+"unsaved_changes" = "No has guardado los cambios";
+"unsaved_changes_message" = "No has guardado los cambios, ¿querrías continuar?";
+
+"remove_adverts" = "Eliminar anuncios";
+"adverts_removed" = "Eliminaste los anuncios";
+"adverts_removed_message" = "¡Muchas gracias por comprar eliminar de los anuncios! Puedes que necesitar reiniciar la aplicación";
+
+"reps_per_set" = "Repeticiones por ejercicio";
+"rep_length" = "Duraciòn de repetición";
+"rest_length" = "Duraciòn de descanso";
+
+"workout_settings" = "Ajustes de ejercicios";
+"workout_cues" = "Las señales";
+
+// -- SettingsPresenter -- //
+"enter_value_for_all_workout_settings_error" = "Tienes que entrar un valor para todos los ajustes de ejercicios";
+"enter_a_number_greater_than_0_for_all_workout_settings" = "Tienes que entrar un valor más grande que 0 por todos los ajustes de ejercicios";

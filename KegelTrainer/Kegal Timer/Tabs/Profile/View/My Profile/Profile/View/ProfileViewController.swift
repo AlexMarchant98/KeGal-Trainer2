@@ -159,9 +159,9 @@ class ProfileViewController: UIViewController, Storyboarded {
                         
                         AlertHandlerService.shared.showCustomAlert(
                             view: self,
-                            title: "Streak Protector Purchased",
+                            title: localizedString(forKey: "streak_protector_purchased_title"),
                             message: iapNotification.message,
-                            actionTitles: ["Perfect"],
+                            actionTitles: [localizedString(forKey: "perfect")],
                             actions: [
                                 { (action: UIAlertAction!) in print("Do nothing") }
                             ]
@@ -169,9 +169,9 @@ class ProfileViewController: UIViewController, Storyboarded {
                     } else {
                         AlertHandlerService.shared.showCustomAlert(
                             view: self,
-                            title: "Purchase Failed",
+                            title: localizedString(forKey: "purchase_failed_title"),
                             message: iapNotification.message,
-                            actionTitles: ["Ok"],
+                            actionTitles: [localizedString(forKey: "ok")],
                             actions: [
                                 { (action: UIAlertAction!) in print("Do nothing") }
                             ]
@@ -211,9 +211,9 @@ class ProfileViewController: UIViewController, Storyboarded {
                         
                         AlertHandlerService.shared.showCustomAlert(
                             view: self,
-                            title: "Streak Saved!",
-                            message: "You have successfully saved your streak, also, we have given you a Streak Protector for free!",
-                            actionTitles: ["Perfect"],
+                            title: localizedString(forKey: "streak_saved_title"),
+                            message: localizedString(forKey: "streak_saved_message"),
+                            actionTitles: [localizedString(forKey: "perfect")],
                             actions: [
                                 { (action: UIAlertAction!) in print("Do nothing") }
                             ]
@@ -221,9 +221,9 @@ class ProfileViewController: UIViewController, Storyboarded {
                     } else {
                         AlertHandlerService.shared.showCustomAlert(
                             view: self,
-                            title: "Purchase Failed",
+                            title: localizedString(forKey: "purchase_failed_title"),
                             message: iapNotification.message,
-                            actionTitles: ["Ok"],
+                            actionTitles: [localizedString(forKey: "ok")],
                             actions: [
                                 { (action: UIAlertAction!) in print("Do nothing") }
                             ]
@@ -272,9 +272,9 @@ extension ProfileViewController: ProfilePresenterView {
     func didLoadIAPInformation(title: String, description: String, localPrice: String, product: String) {
         AlertHandlerService.shared.showCustomAlert(
             view: self,
-            title: "\(title) for \(localPrice)",
+            title: String(format: localizedString(forKey: "iap_did_load_information_title"), title, localPrice),
             message: description,
-            actionTitles: ["Cancel", "Purchase"],
+            actionTitles: [localizedString(forKey: "cancel"), localizedString(forKey: "purchase")],
             actions: [
                 { (action: UIAlertAction!) in
                     self.setLoading(isLoading: false)

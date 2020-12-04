@@ -25,10 +25,10 @@ class StagesCoordinator: Coordinator {
     
     func showStages() {
         
-        let viewController = StageTableViewController.instantiate()
+        let viewController = StageTableViewController.instantiate(storyboard: "Stages")
         
         viewController.adServer = self.adServer
-        viewController.tabBarItem = UITabBarItem(title: "Stages", image: UIImage(named: "Challenges"), tag: 0)
+        viewController.tabBarItem = UITabBarItem(title: localizedString(forKey: "stages"), image: UIImage(named: "Challenges"), tag: 0)
         viewController.coordinator = self
         
         self.navigationController.pushViewController(viewController, animated: true)

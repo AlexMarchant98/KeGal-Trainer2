@@ -30,14 +30,14 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Reminders"
+        title = localizedString(forKey: "reminders")
         
         self.view.backgroundColor = .workoutBackgroundColor
         self.tableView.backgroundColor = .workoutBackgroundColor
         self.tableView.separatorColor = .leaderboardGray
         self.tableView.sectionIndexColor = .white
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addReminder))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: localizedString(forKey: "add"), style: .plain, target: self, action: #selector(addReminder))
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.remindersTableViewCellReuseIdentifier)
         
@@ -66,9 +66,9 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
             if(!isEnabled) {
                 AlertHandlerService.shared.showCustomAlert(
                     view: self,
-                    title: "Notification are disabled",
-                    message: "To setup reminders, please enable notifications for Kegel Trainer.",
-                    actionTitles: ["OK"],
+                    title: localizedString(forKey: "notifications_are_disabled"),
+                    message: localizedString(forKey: "enable_notifications_message"),
+                    actionTitles: [localizedString(forKey: "ok")],
                     actions: [ { (action: UIAlertAction!) in
                             self.navigationController?.tabBarController?.selectedIndex = 1 }
                 ])
@@ -91,7 +91,7 @@ class RemindersTableViewController: UITableViewController, GADBannerViewDelegate
         
         switch section {
         case 0:
-            headerView.titleLabel.text = "Your Reminders"
+            headerView.titleLabel.text = localizedString(forKey: "your_reminders")
         default:
             headerView.titleLabel.text = ""
         }

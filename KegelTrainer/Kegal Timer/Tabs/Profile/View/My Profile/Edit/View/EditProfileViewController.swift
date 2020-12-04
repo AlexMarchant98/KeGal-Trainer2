@@ -29,7 +29,7 @@ class EditProfileViewController: UIViewController, Storyboarded {
         if let selectedImageUrl = editProfilePictureView.selectedProfilePictureUrl {
             editProfilePresenter.updateProfile(imageUrl: selectedImageUrl)
         } else {
-            AlertHandlerService.shared.showWarningAlert(view: self, message: "Please select an image to upload")
+            AlertHandlerService.shared.showWarningAlert(view: self, message: localizedString(forKey: "select_an_image_error"))
         }
     }
     

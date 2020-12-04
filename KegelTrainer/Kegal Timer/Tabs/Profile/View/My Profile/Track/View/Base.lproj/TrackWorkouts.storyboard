@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,6 @@
         <!--Track-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="TrackWorkoutsViewController" id="9pv-A4-QxB" customClass="TrackWorkoutsViewController" customModule="Kegel_Trainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n8O-A3-veC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -192,7 +191,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="wNc-Jh-Uha">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="wNc-Jh-Uha">
                                                         <rect key="frame" x="0.0" y="35.5" width="160.5" height="15"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zj2-kF-C58">
@@ -218,11 +217,6 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="GXw-Yw-Gug" secondAttribute="trailing" id="Nup-Rh-XPm"/>
-                                                                    <constraint firstItem="GXw-Yw-Gug" firstAttribute="top" secondItem="zj2-kF-C58" secondAttribute="top" id="OAF-xr-Xs3"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="GXw-Yw-Gug" secondAttribute="bottom" id="Png-Jc-SLN"/>
-                                                                </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eC9-8J-Uft">
                                                                 <rect key="frame" x="58" y="0.0" width="33" height="15"/>
@@ -321,6 +315,7 @@
                         <outlet property="year" destination="1fo-9C-n1g" id="sNQ-oY-g3f"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="489.85507246376818" y="22.767857142857142"/>
         </scene>

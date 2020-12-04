@@ -7,23 +7,36 @@
 */
 
 // -- General Messages -- //
-"general_error" = "Something went wrong, please try again"
+"general_error" = "Something went wrong, please try again";
+"ok" = "Ok";
+"perfect" = "Perfect";
+"purchase" = "Purchase";
+"cancel" = "Cancel";
+"email" = "Email";
+"password" = "Password";
+"points" = "points";
+"unranked" = "Unranked";
+"next" = "Next";
+"yes" = "Yes";
+"no" = "No";
+"reminders" = "Reminders";
+"add" = "Add";
+"update" = "Update";
+"settings" = "Settings";
+"save" = "Save";
+"continue" = "Continue";
+"seconds" = "Seconds";
+"help" = "Help";
+"other" = "Other";
 
 // -- ResetPasswordEmailSentViewController -- //
 "email_sent_description" = "A password reset email has been sent to your email.\n\nFollow the link in the email to reset your password.\n\nPlease check your spam/junk folders if you cannot find it in your normal inbox.";
-
-
-// -- ResetPasswordViewController -- //
-"email" = "Email";
 
 // -- LoginPresenter -- //
 "user_does_not_exist_with_apple_id_error" = "A user linked to your Apple ID could not be found, please signup.";
 "failed_to_login_error" = "Login failed, please try again.";
 "enter_valid_credentials_error" = "Please enter valid inputs for email and password";
 "email_password_combination_incorrect_error" = "Email & Password combination is incorrect";
-
-// -- LoginViewController -- //
-"password" = "Password";
 
 // -- SignupPresenter -- //
 "apple_id_email_already_registered_error" = "An account already exists linked to your Apple ID email, please login with your email & password.";
@@ -42,3 +55,93 @@
 "enter_a_valid_username_error" = "You must enter a valid username";
 "max_length_reached_error" = "Max length reached";
 "only_letters_and_numbers_error" = "You can only enter letters and numbers";
+
+// -- EditProfileViewController -- //
+"select_an_image_error" = "Please select an image to upload";
+
+// -- TrackWorkoutsViewController -- //
+"track_my_workouts" = "Track My Workouts";
+"workouts" = "Workouts";
+"no_workouts_performed_message" = "You performed no workouts on this day";
+"one_workout_performed_message" = "You performed 1 workout on this day";
+"multiple_workouts_performed_message" = "You performed %@ workouts on this day";
+
+// -- ProfileViewController -- //
+"streak_protector_purchased_title" = "Streak Protector Purchased";
+"purchase_failed_title" = "Purchase Failed";
+"streak_saved_title" = "Streak Saved!";
+"streak_saved_message" = "You have saved your streak, also, we have given you a free Streak Protector!";
+"iap_did_load_information_title" = "%@ for %@";
+
+// -- ViewLeaderboardPresenter -- //
+"failed_to_load_profiles_error" = "Failed to load profiles, please try again";
+
+// -- StageTableViewController -- //
+"stages" = "Stages";
+"stage" = "Stage";
+"locked" = "Locked";
+"level" = "Level";
+"tackle_level_message" = "Would you like to tackle this level?";
+
+// -- LevelTableViewCell -- //
+"completed" = "Completed";
+
+// -- TimerPresenter -- //
+"failed_to_add_workout_to_tracker_error" = "Something went wrong with recording your workout";
+
+// -- WorkoutCompleteViewController -- //
+"workout_complete" = "Workout Complete";
+"points_earned" = "Points Earned";
+"level_completed_message" = "Level %@ Completed!";
+"login_to_track_your_workouts_message" = "Login to track your workouts";
+"total_workouts_completed_ends_with_1_message" = "That was your %@st workout!";
+"total_workouts_completed_ends_with_2_message" = "That was your %@nd workout!";
+"total_workouts_completed_ends_with_3_message" = "That was your %@rd workout!";
+"total_workouts_completed_ends_with_above_4_message" = "That was your %@th workout!";
+"earned_one_point" = "You earned %@ point";
+"earned_more_than_one_point" = "You earned %@ points";
+"max_daily_points_earned_message" = "You have earned the maximum number of points in one day!";
+"could_have_earned_one_point_message" = "You could have earned 1 point for that workout";
+"could_have_earned_many_points_message" = "You could have earned %@ points for that workout";
+
+// -- RemindersTableViewController -- //
+"your_reminders" = "Your Reminders";
+"notifications_are_disabled" = "Notification are disabled";
+"enable_notifications_message" = "To setup reminders, please enable notifications for Kegel Trainer.";
+
+// -- AddReminderTableViewController -- //
+"add_reminder" = "Add Reminder";
+"reminder_message" = "Reminder Message";
+"time_of_reminder" = "Time Of Reminder";
+"configuration" = "Configuration";
+"workout_notification_default_title" = "Workout Time!";
+"workout_notification_default_message" = "Lets get this workout done!";
+
+// -- UpdateReminderTableViewController -- //
+"update_reminder" = "Update Reminder";
+
+// -- SettingsTableViewController -- //
+"settings_saved" = "Settings Saved";
+"settings_saved_message" = "Your settings have been saved";
+"restore_purchases" = "Restore Purchases";
+"purchases_restored" = "Purchases Restored";
+"purchases_restored_message" = "Please re-open the app for the restore to take effect!";
+"cannot_send_email_error" = "To send an email through the app, you must first connect an email to the mail app.\n\n Support Email:\n\%@";
+
+"unsaved_changes" = "Unsaved Changes";
+"unsaved_changes_message" = "You have unsaved changes, are you sure you want to navigate away?";
+
+"remove_adverts" = "Remove Adverts";
+"adverts_removed" = "Adverts Removed";
+"adverts_removed_message" = "Thank you for purchasing removal of adverts! You may need to restart the app for it to take affect.";
+
+"reps_per_set" = "Reps Per Set";
+"rep_length" = "Rep Length";
+"rest_length" = "Rest Legnth";
+
+"workout_settings" = "Workout Settings";
+"workout_cues" = "Workout Cues";
+
+// -- SettingsPresenter -- //
+"enter_value_for_all_workout_settings_error" = "Please enter a value for all workout settings";
+"enter_a_number_greater_than_0_for_all_workout_settings" = "Please enter a number greater than 0 for all workout settings";

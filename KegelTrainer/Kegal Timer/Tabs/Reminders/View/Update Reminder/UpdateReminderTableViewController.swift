@@ -29,7 +29,7 @@ class UpdateReminderTableViewController: UITableViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Update Reminder"
+        title = localizedString(forKey: "update_reminder")
         
         reminderDatePicker.setValue(UIColor.white, forKeyPath: "textColor")
         
@@ -45,9 +45,9 @@ class UpdateReminderTableViewController: UITableViewController, Storyboarded {
 
         messageTextBoxController = MDCTextInputControllerOutlined(textInput: messageTextBox)
         messageTextBoxController.setupKTTextFieldController()
-        messageTextBoxController.placeholderText = "Reminder Message"
+        messageTextBoxController.placeholderText = localizedString(forKey: "reminder_message")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Update", style: .plain, target: self, action: #selector(updateReminder))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: localizedString(forKey: "update"), style: .plain, target: self, action: #selector(updateReminder))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,9 +67,9 @@ class UpdateReminderTableViewController: UITableViewController, Storyboarded {
         
         switch section {
         case 0:
-            headerView.titleLabel.text = "Time Of Reminder"
+            headerView.titleLabel.text = localizedString(forKey: "time_of_reminder")
         case 1:
-            headerView.titleLabel.text = "Configuration"
+            headerView.titleLabel.text = localizedString(forKey: "configuration")
         default:
             headerView.titleLabel.text = ""
         }
@@ -93,8 +93,8 @@ class UpdateReminderTableViewController: UITableViewController, Storyboarded {
     
     func rescheduleNotification() {
         let content = UNMutableNotificationContent()
-        content.title = "Workout Time!"
-        content.body = messageTextBox.text ?? "Lets get this workout done!"
+        content.title = localizedString(forKey: "workout_notification_default_title")
+        content.body = messageTextBox.text ?? localizedString(forKey: "workout_notification_default_message")
         
         if(reminderSoundSwitch.isOn) {
             content.sound = UNNotificationSound.default

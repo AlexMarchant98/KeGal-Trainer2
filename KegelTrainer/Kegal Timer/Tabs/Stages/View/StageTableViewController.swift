@@ -34,7 +34,7 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
     }
     
     override func viewDidLoad() {
-        title = "Stages"
+        title = localizedString(forKey: "stages")
         
         self.view.backgroundColor = .workoutBackgroundColor
         self.tableView.backgroundColor = .workoutBackgroundColor
@@ -106,13 +106,13 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
         
         if(stage.completed) {
             headerView.backgroundColor = .appGreen
-            headerView.titleLabel.text = "Stage \(stages[section].stage)"
+            headerView.titleLabel.text = "\(localizedString(forKey: "stage")) \(stages[section].stage)"
         } else if(stage.unlocked) {
             headerView.backgroundColor = .workoutBackgroundColor
-            headerView.titleLabel.text = "Stage \(stages[section].stage)"
+            headerView.titleLabel.text = "\(localizedString(forKey: "stage")) \(stages[section].stage)"
         } else {
             headerView.backgroundColor = .leaderboardGray
-            headerView.titleLabel.text = "Stage \(stages[section].stage) Locked"
+            headerView.titleLabel.text = "\(localizedString(forKey: "stage")) \(stages[section].stage) \(localizedString(forKey: "locked"))"
         }
         
         return headerView
@@ -150,10 +150,13 @@ class StageTableViewController: UITableViewController, GADBannerViewDelegate, St
                 return
             }
         
-        let levelAlert = UIAlertController(title: "Level " + level.level.level!, message: "Would you like to tackle this level?", preferredStyle: coordinator?.getAlertStyle() ?? UIAlertController.Style.alert)
+        let levelAlert = UIAlertController(
+            title: "\(localizedString(forKey: "level")) " + level.level.level!,
+            message: localizedString(forKey: "tackle_level_message"),
+            preferredStyle: coordinator?.getAlertStyle() ?? UIAlertController.Style.alert)
         
-        levelAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (_) in self.setWorkoutSettings(level.level!); self.tabBarController!.selectedIndex = 2;}))
-        levelAlert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.destructive))
+        levelAlert.addAction(UIAlertAction(title: localizedString(forKey: "yes"), style: UIAlertAction.Style.default, handler: { (_) in self.setWorkoutSettings(level.level!); self.tabBarController!.selectedIndex = 2;}))
+        levelAlert.addAction(UIAlertAction(title: localizedString(forKey: "no"), style: UIAlertAction.Style.destructive))
         
         self.present(levelAlert, animated: true, completion: nil)
     }

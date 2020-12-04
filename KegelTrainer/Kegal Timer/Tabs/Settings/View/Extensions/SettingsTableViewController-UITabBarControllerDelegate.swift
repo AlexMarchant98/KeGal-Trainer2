@@ -20,9 +20,9 @@ extension SettingsTableViewController: UITabBarControllerDelegate {
             
             AlertHandlerService.shared.showCustomAlert(
                 view: self,
-                title: "Unsaved Changes",
-                message: "You have unsaved changes, are you sure you want to navigate away?",
-                actionTitles: ["Cancel", "Continue"],
+                title: localizedString(forKey: "unsaved_changes"),
+                message: localizedString(forKey: "unsaved_changes_message"),
+                actionTitles: [localizedString(forKey: "cancel"), localizedString(forKey: "continue")],
                 actions: [
                     { (action: UIAlertAction!) in
                         print("Do nothing")

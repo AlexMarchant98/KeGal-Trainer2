@@ -72,13 +72,8 @@ class ViewLeaderboardPresenter: ViewLeaderboardPresenterProtocol {
             }
             
         case false:
-            self.view.errorOccurred(message: "Failed to load profiles, please try again.")
+            self.view.errorOccurred(message: localizedString(forKey: "failed_to_load_profiles_error"))
         }
-    }
-    
-    func getMyRank() {
-        // I want to get my position in the leaderboard
-        // It should give me my position
     }
     
     func closeLeaderboard() {

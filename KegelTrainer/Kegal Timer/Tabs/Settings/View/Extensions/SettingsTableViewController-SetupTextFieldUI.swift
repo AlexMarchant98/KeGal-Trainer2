@@ -36,17 +36,17 @@ extension SettingsTableViewController {
 
         repsPerSetTextBoxController = MDCTextInputControllerOutlined(textInput: repsPerSetTextBox)
         repsPerSetTextBoxController.setupKTTextFieldController()
-        repsPerSetTextBoxController.placeholderText = "Reps Per Set"
+        repsPerSetTextBoxController.placeholderText = localizedString(forKey: "reps_per_set")
         repsPerSetTextBox.keyboardType = .numberPad
         
         repLengthTextBoxController = MDCTextInputControllerOutlined(textInput: repLengthTextBox)
         repLengthTextBoxController.setupKTTextFieldController()
-        repLengthTextBoxController.placeholderText = "Rep Length (Seconds)"
+        repLengthTextBoxController.placeholderText = "\(localizedString(forKey: "rep_length")) (\(localizedString(forKey: "seconds")))"
         repLengthTextBox.keyboardType = .numberPad
         
         restLengthTextBoxController = MDCTextInputControllerOutlined(textInput: restLengthTextBox)
         restLengthTextBoxController.setupKTTextFieldController()
-        restLengthTextBoxController.placeholderText = "Rest Length (Seconds)"
+        restLengthTextBoxController.placeholderText = "\(localizedString(forKey: "rest_length")) (\(localizedString(forKey: "seconds")))"
         restLengthTextBox.keyboardType = .numberPad
     }
 }

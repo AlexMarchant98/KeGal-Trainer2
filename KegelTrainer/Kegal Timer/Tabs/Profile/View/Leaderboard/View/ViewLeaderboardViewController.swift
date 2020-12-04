@@ -38,7 +38,6 @@ class ViewLeaderboardViewController: UIViewController, Storyboarded {
         self.leaderboardCollectionView.isScrollEnabled = true
         
         viewLeaderboardPresenter.getInitialLeaderboardSet()
-        viewLeaderboardPresenter.getMyRank()
         
         backButton.setBackgroundColor(UIColor.clear, for: .normal)
         backButton.setTitleFont(Fonts.buttonFont, for: .normal)
@@ -79,12 +78,12 @@ extension ViewLeaderboardViewController: ViewLeaderboardPresenterView {
         if let rank = CurrentUserService.shared.user!.rank {
             rankLabel.text = "\(rank)"
         } else {
-            rankLabel.text = "Unranked"
+            rankLabel.text = localizedString(forKey: "unranked")
         }
         
         usernameLabel.textColor = .white
         usernameLabel.text = "\(CurrentUserService.shared.user!.username)"
-        pointsLabel.text = "\(CurrentUserService.shared.user!.total_points) points"
+        pointsLabel.text = "\(CurrentUserService.shared.user!.total_points) \(localizedString(forKey: "points"))"
         
         if let url = CurrentUserService.shared.user!.profile_picture {
             let _ = firebaseCloudStorageService.read(documentUrl: URL(string: url)!, imageView: profilePictureView)

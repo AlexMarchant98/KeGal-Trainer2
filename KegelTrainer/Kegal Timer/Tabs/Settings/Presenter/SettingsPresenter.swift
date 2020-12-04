@@ -89,22 +89,22 @@ class SettingsPresenter: SettingsPresenterProtocol {
         guard let repsPerSet = repsPerSet,
               let repLength = repLength,
               let restLength = restLength else {
-            self.view.errorOccurred(message: "Please enter a value for all workout settings")
+            self.view.errorOccurred(message: localizedString(forKey: "enter_value_for_all_workout_settings_error"))
             return
         }
         
         if(!checkWorkoutValueIsValid(setting: repsPerSet)) {
-            self.view.errorOccurred(message: "Please enter a number greater than 0 for reps per set in a workout")
+            self.view.errorOccurred(message: localizedString(forKey: "enter_a_number_greater_than_0_for_all_workout_settings"))
             return
         }
         
         if(!checkWorkoutValueIsValid(setting: repLength)) {
-            self.view.errorOccurred(message: "Please enter a number greater than 0 for your workout rep length")
+            self.view.errorOccurred(message: localizedString(forKey: "enter_a_number_greater_than_0_for_all_workout_settings"))
             return
         }
         
         if(!checkWorkoutValueIsValid(setting: restLength)) {
-            self.view.errorOccurred(message: "Please enter a number greater than 0 for your workout rest length")
+            self.view.errorOccurred(message: localizedString(forKey: "enter_a_number_greater_than_0_for_all_workout_settings"))
             return
         }
         

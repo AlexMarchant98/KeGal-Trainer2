@@ -43,9 +43,9 @@ extension SettingsTableViewController {
                         
                         AlertHandlerService.shared.showCustomAlert(
                             view: self,
-                            title: "Adverts Removed",
-                            message: "Thank you for purchasing removal of adverts! You may need to restart the app for it to take affect.",
-                            actionTitles: ["Perfect"],
+                            title: localizedString(forKey: "adverts_removed"),
+                            message: localizedString(forKey: "adverts_removed_message"),
+                            actionTitles: [localizedString(forKey: "perfect")],
                             actions: [
                                 { (action: UIAlertAction!) in print("Do nothing") }
                             ]
@@ -56,9 +56,9 @@ extension SettingsTableViewController {
                     } else {
                         AlertHandlerService.shared.showCustomAlert(
                             view: self,
-                            title: "Purchase Failed",
+                            title: localizedString(forKey: "purchase_failed_title"),
                             message: iapNotification.message,
-                            actionTitles: ["Ok"],
+                            actionTitles: [localizedString(forKey: "ok")],
                             actions: [
                                 { (action: UIAlertAction!) in print("Do nothing") }
                             ]

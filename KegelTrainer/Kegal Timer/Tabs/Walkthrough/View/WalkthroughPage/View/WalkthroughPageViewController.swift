@@ -15,9 +15,9 @@ protocol WalkthroughPageViewControllerDelegate {
 class WalkthroughPageViewController: UIViewController, Storyboarded {
     
     private (set) var stepImage: UIImage = UIImage(named: "welcome")!
-    private (set) var stepTitle: String = "Title"
-    private (set) var stepDescription: String = "Description"
-    private (set) var buttonText: String = "Next"
+    private (set) var stepTitle: String = ""
+    private (set) var stepDescription: String = ""
+    private (set) var buttonText: String = localizedString(forKey: "next")
     
     var delegate: WalkthroughPageViewControllerDelegate?
     
@@ -65,7 +65,7 @@ class WalkthroughPageViewController: UIViewController, Storyboarded {
         imageName: String,
         stepTitle: String,
         stepDescription: String,
-        buttonText: String = "Next",
+        buttonText: String = localizedString(forKey: "next"),
         delegate: WalkthroughPageViewControllerDelegate) {
         
         self.stepImage = UIImage(named: imageName)!

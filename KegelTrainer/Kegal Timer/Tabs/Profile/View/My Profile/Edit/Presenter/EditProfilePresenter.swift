@@ -45,7 +45,7 @@ class EditProfilePresenter: EditProfilePresenterProtocol {
     func updateProfile(imageUrl: String) {
         
         guard let _ = CurrentUserService.shared.user else {
-            self.view.errorOccurred(message: "Something went wrong, please restart the app")
+            self.view.errorOccurred(message: localizedString(forKey: "general_error"))
             return
         }
         
@@ -77,7 +77,7 @@ class EditProfilePresenter: EditProfilePresenterProtocol {
                     self?.delegate.didFinishUpdatingProfile()
                 }
             case false:
-                self?.view.errorOccurred(message: "Failed to upload your profile picture, please try again.")
+                self?.view.errorOccurred(message: localizedString(forKey: "failed_to_upload_profile_picture_error"))
             }
         }
     }

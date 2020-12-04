@@ -16,10 +16,10 @@ class LevelTableViewCell: UITableViewCell {
             self.textLabel?.font = Fonts.subHeaderFont
             
             if(level.completed) {
-                self.textLabel!.text = "\(level.level!) Completed"
+                self.textLabel!.text = "\(level.level!) \(localizedString(forKey: "completed"))"
                 self.accessoryType = .none
             } else if(level.unlocked == false) {
-                self.textLabel!.text = "\(level.level!) Locked"
+                self.textLabel!.text = "\(level.level!) \(localizedString(forKey: "locked"))"
                 self.accessoryType = .none
             } else {
                 self.textLabel!.text = level.level

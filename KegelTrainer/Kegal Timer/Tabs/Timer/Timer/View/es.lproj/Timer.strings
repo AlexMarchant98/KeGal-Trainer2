@@ -1,12 +1,12 @@
 
 /* Class = "UITabBarItem"; title = "Timer"; ObjectID = "3sK-eL-mKA"; */
-"3sK-eL-mKA.title" = "Timer";
+"3sK-eL-mKA.title" = "Temporizador";
 
 /* Class = "UILabel"; text = "1"; ObjectID = "83u-m1-s0Q"; */
 "83u-m1-s0Q.text" = "1";
 
 /* Class = "UILabel"; text = "Current Rep"; ObjectID = "Od2-zQ-1rc"; */
-"Od2-zQ-1rc.text" = "Current Rep";
+"Od2-zQ-1rc.text" = "Repetición actual";
 
 /* Class = "UILabel"; text = "00:00:00"; ObjectID = "P4H-Rr-7Pc"; */
 "P4H-Rr-7Pc.text" = "00:00:00";

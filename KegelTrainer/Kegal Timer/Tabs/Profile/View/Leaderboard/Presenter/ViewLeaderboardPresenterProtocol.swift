@@ -11,6 +11,5 @@ import Foundation
 protocol ViewLeaderboardPresenterProtocol {
     func getInitialLeaderboardSet()
     func loadNextProfileSet()
-    func getMyRank()
     func closeLeaderboard()
 }

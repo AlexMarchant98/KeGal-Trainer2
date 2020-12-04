@@ -1,42 +1,42 @@
 
 /* Class = "UITableViewSection"; headerTitle = "Other"; ObjectID = "2hE-wg-t0J"; */
-"2hE-wg-t0J.headerTitle" = "Other";
+"2hE-wg-t0J.headerTitle" = "Otro";
 
 /* Class = "UITableViewSection"; headerTitle = "Cues"; ObjectID = "7Iv-mF-Yzo"; */
-"7Iv-mF-Yzo.headerTitle" = "Cues";
+"7Iv-mF-Yzo.headerTitle" = "Las señales";
 
 /* Class = "UILabel"; text = "App Walkthrough"; ObjectID = "GFH-TR-OxM"; */
-"GFH-TR-OxM.text" = "App Walkthrough";
+"GFH-TR-OxM.text" = "Tutorial de la app";
 
 /* Class = "UILabel"; text = "Profile Walkthrough"; ObjectID = "NOP-Us-PKr"; */
-"NOP-Us-PKr.text" = "Profile Walkthrough";
+"NOP-Us-PKr.text" = "Tutorial del perfil";
 
 /* Class = "UILabel"; text = "Sound"; ObjectID = "QaP-dN-Bp6"; */
-"QaP-dN-Bp6.text" = "Sound";
+"QaP-dN-Bp6.text" = "Sonido";
 
 /* Class = "UITableViewController"; title = "Settings"; ObjectID = "Tsz-KI-lF1"; */
-"Tsz-KI-lF1.title" = "Settings";
+"Tsz-KI-lF1.title" = "Ajustes";
 
 /* Class = "UILabel"; text = "Email Support"; ObjectID = "X14-1p-hQC"; */
-"X14-1p-hQC.text" = "Email Support";
+"X14-1p-hQC.text" = "Envié un correo a apoyo";
 
 /* Class = "UITableViewSection"; headerTitle = "Help"; ObjectID = "YOH-BT-xYB"; */
-"YOH-BT-xYB.headerTitle" = "Help";
+"YOH-BT-xYB.headerTitle" = "Ayuda";
 
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "c5f-xT-zhS"; */
-"c5f-xT-zhS.title" = "Settings";
+"c5f-xT-zhS.title" = "Ajustes";
 
 /* Class = "UITableViewSection"; headerTitle = "Workout Settings"; ObjectID = "eNr-8g-p5t"; */
-"eNr-8g-p5t.headerTitle" = "Workout Settings";
+"eNr-8g-p5t.headerTitle" = "Ajustes de ejercicios";
 
 /* Class = "UILabel"; text = "Remove Adverts"; ObjectID = "jkO-rN-QAe"; */
-"jkO-rN-QAe.text" = "Remove Adverts";
+"jkO-rN-QAe.text" = "Eliminar anuncios";
 
 /* Class = "UILabel"; text = "Visual"; ObjectID = "s4q-QC-vbh"; */
 "s4q-QC-vbh.text" = "Visual";
 
 /* Class = "UILabel"; text = "Vibrate"; ObjectID = "txY-yp-YvB"; */
-"txY-yp-YvB.text" = "Vibrate";
+"txY-yp-YvB.text" = "Hace vibrar";
 
 /* Class = "UITabBarItem"; title = "Settings"; ObjectID = "vkS-rN-G1Y"; */
-"vkS-rN-G1Y.title" = "Settings";
+"vkS-rN-G1Y.title" = "Ajustes";

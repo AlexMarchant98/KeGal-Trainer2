@@ -33,7 +33,7 @@ class TrackWorkoutsViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Track My Workouts"
+        self.title = localizedString(forKey: "track_my_workouts")
         self.view.backgroundColor = .workoutBackgroundColor
         
         lastMonth.textColor = .white
@@ -189,23 +189,23 @@ extension TrackWorkoutsViewController: JTAppleCalendarViewDelegate {
                 if let workoutDate = try WorkoutDate.getWorkoutDate(context, date)
                 {
                     if(workoutDate.workouts!.count == 1) {
-                        alertMessage = String(format: "You performed %@ workout on this day", String(workoutDate.workouts!.count))
+                        alertMessage = localizedString(forKey: "one_workout_performed_message")
                     } else {
-                        alertMessage = String(format: "You performed %@ workouts on this day", String(workoutDate.workouts!.count))
+                        alertMessage = String(format: localizedString(forKey: "multiple_workouts_performed_message"), String(workoutDate.workouts!.count))
                     }
                 } else {
-                    alertMessage = "You performed no workouts on this day"
+                    alertMessage = localizedString(forKey: "no_workouts_performed_message")
                 }
             } catch {
                 print("An error has occured when trying to access the WorkoutDate for \(date.description)")
             }
         }
         
-        let presetName = "Workouts"
+        let presetName = localizedString(forKey: "workouts")
         
         let selectPresetAlert = UIAlertController(title: presetName, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
         
-        selectPresetAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in selectPresetAlert.dismiss(animated: true, completion: nil)}))
+        selectPresetAlert.addAction(UIAlertAction(title: localizedString(forKey: "ok"), style: UIAlertAction.Style.default, handler: { (action) in selectPresetAlert.dismiss(animated: true, completion: nil)}))
         
         self.present(selectPresetAlert, animated: true, completion: nil)
     }

@@ -153,11 +153,11 @@ class TimerPresenter: TimerPresenterProtocol {
                     {
                         Workout.addWorkout(context, addedWorkoutDate, repCount, repLength, restLength)
                     } else {
-                        self.view.errorOccurred(message: "Something went wrong whilst adding your workout to the tracker, please close the app and try again.")
+                        self.view.errorOccurred(message: localizedString(forKey: "failed_to_add_workout_to_tracker_error"))
                     }
                 }
             } catch {
-                self.view.errorOccurred(message: "Something went wrong whilst adding your workout to the tracker, please close the app and try again.")
+                self.view.errorOccurred(message: localizedString(forKey: "failed_to_add_workout_to_tracker_error"))
             }
         }
     }

@@ -20,13 +20,13 @@ extension SettingsTableViewController {
         
         switch section {
         case 0:
-            headerView.titleLabel.text = "Workout Settings"
+            headerView.titleLabel.text = localizedString(forKey: "workout_settings")
         case 1:
-            headerView.titleLabel.text = "Workout Cues"
+            headerView.titleLabel.text = localizedString(forKey: "workout_cues")
         case 2:
-            headerView.titleLabel.text = "Help"
+            headerView.titleLabel.text = localizedString(forKey: "help")
         case 3:
-            headerView.titleLabel.text = "Other"
+            headerView.titleLabel.text = localizedString(forKey: "other")
         default:
             headerView.titleLabel.text = ""
         }
@@ -42,11 +42,11 @@ extension SettingsTableViewController {
         
         if(indexPath == Constants.removeAdvertsIndexPath) {
             if(adServer.areAdsDisabled) {
-                cell.textLabel?.text = "Adverts Removed"
+                cell.textLabel?.text = localizedString(forKey: "adverts_removed")
                 cell.accessoryType = .checkmark
                 cell.isUserInteractionEnabled = false
             } else {
-                cell.textLabel?.text = "Remove Adverts"
+                cell.textLabel?.text = localizedString(forKey: "remove_adverts")
                 cell.isUserInteractionEnabled = true
                 
                 let chevron = UIImage(named: "chevron-right")

@@ -50,7 +50,7 @@ class SettingsTableViewController : UITableViewController, GADBannerViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Settings"
+        title = localizedString(forKey: "settings")
         
         self.view.backgroundColor = .workoutBackgroundColor
         self.tableView.backgroundColor = .workoutBackgroundColor
@@ -59,9 +59,9 @@ class SettingsTableViewController : UITableViewController, GADBannerViewDelegate
         
         navigationItem.setLeftBarButton(nil, animated: false)
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Restore Purchases", style: .plain, target: self, action: #selector(restorePurchases))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: localizedString(forKey: "restore_purchases"), style: .plain, target: self, action: #selector(restorePurchases))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveChanges))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: localizedString(forKey: "save"), style: .plain, target: self, action: #selector(saveChanges))
         
         vibrateCueSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
         visualCueSwitch.addTarget(self, action: #selector(switchStateChanged), for: UIControl.Event.valueChanged)
@@ -103,9 +103,12 @@ class SettingsTableViewController : UITableViewController, GADBannerViewDelegate
         
         settingsPresenter.restoreIAPPurchases()
         
-        let saveSuccessfulAlert = UIAlertController(title: "Purchases Successfully Restored", message: "Please re-open the app for the restore to take effect!", preferredStyle: UIAlertController.Style.alert)
+        let saveSuccessfulAlert = UIAlertController(
+            title: localizedString(forKey: "purchases_restored"),
+            message: localizedString(forKey: "purchases_restored_message"),
+            preferredStyle: UIAlertController.Style.alert)
         
-        saveSuccessfulAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in saveSuccessfulAlert.dismiss(animated: true, completion: nil); self.tableView.reloadData()}))
+        saveSuccessfulAlert.addAction(UIAlertAction(title: localizedString(forKey: "ok"), style: UIAlertAction.Style.default, handler: { (action) in saveSuccessfulAlert.dismiss(animated: true, completion: nil); self.tableView.reloadData()}))
         
         self.present(saveSuccessfulAlert, animated: true, completion: nil)
     }
@@ -122,7 +125,7 @@ class SettingsTableViewController : UITableViewController, GADBannerViewDelegate
         } else {
             AlertHandlerService.shared.showWarningAlert(
                 view: self,
-                message: "In order to send an email through the app, you must first connect an email to the mail app. \n \n Support Email: \n \(Constants.supportEmail)")
+                message: String(format: localizedString(forKey: "cannot_send_email_error"), Constants.supportEmail))
         }
     }
     
@@ -157,9 +160,9 @@ extension SettingsTableViewController: SettingsPresenterView {
         
         AlertHandlerService.shared.showCustomAlert(
             view: self,
-            title: "Settings Saved",
-            message: "Your updated settings have been saved.",
-            actionTitles: ["Ok"],
+            title: localizedString(forKey: "settings_saved"),
+            message: localizedString(forKey: "settings_saved_message"),
+            actionTitles: [localizedString(forKey: "ok")],
             actions: [
                 { (action: UIAlertAction!) in print("Do nothing") }
             ]
@@ -170,9 +173,9 @@ extension SettingsTableViewController: SettingsPresenterView {
     func didLoadIAPInformation(title: String, description: String, localPrice: String) {
         AlertHandlerService.shared.showCustomAlert(
             view: self,
-            title: "\(title) for \(localPrice)",
+            title: String(format: localizedString(forKey: "iap_did_load_information_title"), title, localPrice),
             message: description,
-            actionTitles: ["Cancel", "Purchase"],
+            actionTitles: [localizedString(forKey: "cancel"), localizedString(forKey: "purchase")],
             actions: [
                 { (action: UIAlertAction!) in
                     self.setLoading(isLoading: false)

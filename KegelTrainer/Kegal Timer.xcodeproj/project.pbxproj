@@ -232,6 +232,7 @@
 		D4DCC0E7256836EE00752F22 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCC0E6256836EE00752F22 /* EditProfilePresenter.swift */; };
 		D4DCC0F125683A9C00752F22 /* KTDestructiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCC0F025683A9C00752F22 /* KTDestructiveButton.swift */; };
 		D4DCC0F8256C3D2100752F22 /* ViewLeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCC0F7256C3D2100752F22 /* ViewLeaderboardView.swift */; };
+		D4E244E62579A699009A0F84 /* Stages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E244E82579A699009A0F84 /* Stages.storyboard */; };
 		D4E48D5621921960006366A7 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E48D5521921960006366A7 /* TimerButton.swift */; };
 		D4F6EED12565B55700EE032C /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6EED02565B55700EE032C /* TimerPresenter.swift */; };
 		D4F6EEDB2565B58D00EE032C /* TimerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6EEDA2565B58D00EE032C /* TimerPresenterProtocol.swift */; };
@@ -536,6 +537,9 @@
 		D4DCC0E6256836EE00752F22 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
 		D4DCC0F025683A9C00752F22 /* KTDestructiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTDestructiveButton.swift; sourceTree = "<group>"; };
 		D4DCC0F7256C3D2100752F22 /* ViewLeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLeaderboardView.swift; sourceTree = "<group>"; };
+		D4E244E72579A699009A0F84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Stages.storyboard; sourceTree = "<group>"; };
+		D4E244EE2579A6BC009A0F84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Stages.strings; sourceTree = "<group>"; };
+		D4E244F02579A6C1009A0F84 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Stages.strings; sourceTree = "<group>"; };
 		D4E48D5521921960006366A7 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
 		D4F6EED02565B55700EE032C /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
 		D4F6EEDA2565B58D00EE032C /* TimerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -1105,10 +1109,8 @@
 		D484CF4622AD70220042802C /* Stages */ = {
 			isa = PBXGroup;
 			children = (
-				D4CF42C5229A68A700505A28 /* DataSeeder.swift */,
-				D49C41FE229EF8A7005F8FA1 /* LevelTableViewCell.swift */,
-				D484CF1F22A993600042802C /* StagesCoordinator.swift */,
-				D4CF42C3229A63A800505A28 /* StageTableViewController.swift */,
+				D4E244DA2579A607009A0F84 /* Coordinator */,
+				D4E244DB2579A610009A0F84 /* View */,
 			);
 			path = Stages;
 			sourceTree = "<group>";
@@ -1289,6 +1291,7 @@
 		D49B75B5255F0E6300B31D74 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D4E244E02579A66D009A0F84 /* DataSeederService */,
 				D4473F1E2577EC8D00CCEAAF /* NetworkManagerService */,
 				D4C6329E2561CE3E00B75E45 /* UIApplicationHelperService */,
 				D49B767E255FEAD600B31D74 /* CurrentUserService */,
@@ -1832,6 +1835,40 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		D4E244DA2579A607009A0F84 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D484CF1F22A993600042802C /* StagesCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4E244DB2579A610009A0F84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4E244E12579A682009A0F84 /* Level Cell */,
+				D4CF42C3229A63A800505A28 /* StageTableViewController.swift */,
+				D4E244E82579A699009A0F84 /* Stages.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4E244E02579A66D009A0F84 /* DataSeederService */ = {
+			isa = PBXGroup;
+			children = (
+				D4CF42C5229A68A700505A28 /* DataSeeder.swift */,
+			);
+			path = DataSeederService;
+			sourceTree = "<group>";
+		};
+		D4E244E12579A682009A0F84 /* Level Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D49C41FE229EF8A7005F8FA1 /* LevelTableViewCell.swift */,
+			);
+			path = "Level Cell";
+			sourceTree = "<group>";
+		};
 		D4E48D502190CFD4006366A7 /* Button Graphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -2130,6 +2167,7 @@
 				D4D85A9425702A48006C40E6 /* LoadingView.xib in Resources */,
 				D4AD30AE25785E9300C3472C /* TrackWorkouts.storyboard in Resources */,
 				D45A49C725604EDC00B296B7 /* Icons.xcassets in Resources */,
+				D4E244E62579A699009A0F84 /* Stages.storyboard in Resources */,
 				D4006459217FAF9F0077765D /* Main.storyboard in Resources */,
 				D4AD30E925785F4F00C3472C /* KTTableHeaderView.xib in Resources */,
 			);
@@ -2786,6 +2824,16 @@
 				D4AD313F2578613100C3472C /* en */,
 			);
 			name = Default.strings;
+			sourceTree = "<group>";
+		};
+		D4E244E82579A699009A0F84 /* Stages.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4E244E72579A699009A0F84 /* Base */,
+				D4E244EE2579A6BC009A0F84 /* en */,
+				D4E244F02579A6C1009A0F84 /* es */,
+			);
+			name = Stages.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
