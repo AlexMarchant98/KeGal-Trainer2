@@ -25,9 +25,17 @@
 "settings" = "Settings";
 "save" = "Save";
 "continue" = "Continue";
+"hours" = "Hours";
+"hour" = "Hour";
+"minutes" = "Minutes";
+"minute" = "Minute";
 "seconds" = "Seconds";
 "help" = "Help";
 "other" = "Other";
+"days" = "Days";
+"end_walkthrough" = "End Walkthrough";
+"profile" = "Profile";
+"timer" = "Timer";
 
 // -- ResetPasswordEmailSentViewController -- //
 "email_sent_description" = "A password reset email has been sent to your email.\n\nFollow the link in the email to reset your password.\n\nPlease check your spam/junk folders if you cannot find it in your normal inbox.";
@@ -145,3 +153,72 @@
 // -- SettingsPresenter -- //
 "enter_value_for_all_workout_settings_error" = "Please enter a value for all workout settings";
 "enter_a_number_greater_than_0_for_all_workout_settings" = "Please enter a number greater than 0 for all workout settings";
+
+// -- ReclaimStreakView -- //
+"lost_previous_streak_1" = "You lost your previous streak of 1 day!";
+"lost_previous_streak_greater_than_1" = "You lost your previous streak of %@ days!";
+
+"one_day_left_to_reclaim_streak" = "You have 1 day left to save this streak before you lose it forever and have to start again!";
+"more_than_one_day_left_to_reclaim_streak" = "You have %@ days left to save this streak before you lose it forever and have to start again!";
+
+"reclaim_streak_description" = "%@\n\n\%@\n\nThis streak would multiply the points you earn per workout by %@ times!\n\nSave it now!";
+
+// -- EditProfilePictureView -- //
+"failed_to_load_photo" = "Failed to load the selected photo, please try again.";
+
+// -- EarnPointsView -- //
+"app_rated" = "App Rated";
+"rate_the_app" = "Rate the app";
+
+"app_reviewed" = "Review Given";
+"review_the_app" = "Review the app";
+
+"watch_an_advert" = "Watch an advert";
+
+"sending_rating" = "Sending rating...";
+
+// -- CurrentWorkoutStreakView -- //
+"one_streak_protector_left" = "1 Streak Protector Left";
+"not_one_streak_protector_left" = "%@ Streak Protectors Left";
+
+// -- ProfileHeaderView -- //
+"joined" = "Joined";
+
+// -- WalkthroughViewController-WelcomeStep -- //
+"welcome_to_kegel_trainer" = "Welcome to Kegel Trainer";
+"welcome_to_kegel_trainer_message" = "Here is a quick overview of how to use the app.";
+
+// -- WalkthroughViewController-SetupWalkthroughViewControllers -- //
+"track_your_workouts_title" = "Track Your Workouts";
+"track_your_workouts_description" = "Every workout you perform is tracked in the app.\n\nYou can see your workout history by going to the 'Profile' tab and clicking the 'View Workout Tracker' button.\n\nHere you can see how many workouts you performed on a particular day.";
+
+"stages_and_levels_title" = "Stages & Levels";
+"stages_and_levels_description" = "You can find pre-made stages and levels on the 'Stages' tab, these start from easy and get progressively harder.\n\nTo complete a level, tap the level you want to attempt and follow the instructions from there. Once you complete a level, the next level is unlocked.\n\nYou must complete all the levels in a stage so that you can unlock the next stage.";
+
+"performing_workouts_title" = "Performing Workouts";
+"performing_workouts_description" = "To perform a workout, you can go to the 'Timer' tab; this is where you can begin a workout.\n\nThe rep count, rep length and reps left for the current workout will be shown to you.";
+
+"settings_up_reminders_title" = "Setting Up Reminders";
+"settings_up_reminders_description" = "If you want to keep yourself on track, you can add custom reminders at a specific time containing a message. These will be sent to you as notifications at the time you decide.\n\nYou can go to the 'Reminders' tab to manage all these reminders, including adding, editing and deleting existing ones.";
+
+"your_profile_title" = "Your Profile";
+"your_profile_description" = "You can create a profile to join the community!\n\nWith a profile, you can track your workouts, earn points to compete with other users, view the leaderboards and much more, giving you another reason to stay on track and keep progressing!";
+
+"settings_title" = "Set Your Settings";
+"settings_description" = "To create a completely custom workout, update your workout preferences, contact support and more, you can go to the settings tab.";
+
+// -- WalkthroughViewController-ProfileWalkthrough -- //
+"about_your_profile_title" = "Your Profile";
+"about_your_profile_description" = "Now you have a profile all your workouts are tracked and earn you points.\n\nYou can see all the information associated with your profile by clicking the profile tab and logging in.";
+
+"earning_points_title" = "Earning Points";
+"earning_points_description" = "You earn points by completing your kegel workouts in the app. Every workout will earn you points, which are added to your profile.\n\nYou can earn a maximum of 5000 points per day and you can see your progression to this number on your profile.\n\nUnder the 'Earn Points' section of your profile, you can find quick tasks that will earn you points without the need to complete a workout.";
+
+"maintaining_your_streak_title" = "Maintaining Your Streak";
+"maintaining_your_streak_description" = "You need to complete a workout every day so that you continue to build your strength, that's why you have a 'Current Workout Streak' on your profile.\n\nEvery day that you complete a workout, you increment your current workout streak by 1. If you do not complete a workout one day, you will lose your current workout streak and have to start again.\n\nBy increasing your workout streak, you will earn more points per workout,  resulting in higher rankings on the leaderboard.";
+
+"protecting_your_streak_title" = "Protecting Your Streak";
+"protecting_your_streak_description" = "To ensure you don't lose your workout streak if you forget to exercise one day, you can get a 'Streak Protector'.\n\nA 'Streak Protector' will protect your streak if you forget to workout on a day, so you can continue earning more points.\n\nA 'Streak Protector' will protect your streak one time, once it has been used you will have to get another one. The number of 'Streak Protectors' you have left can be seen on your profile page.";
+
+"the_leaderboards_title" = "The Leaderboards";
+"the_leaderboards_description" = "The leaderboard shows you how you rank in comparison to all other users on the app by the total number of points.\n\nYou can always see your profile at the bottom of the screen, alongside your rank.\n\nRanks are updated once a day, so, the points you earn will affect your rank for the next day.";

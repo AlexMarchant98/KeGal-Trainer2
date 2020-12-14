@@ -11,6 +11,7 @@ import UIKit
 
 protocol RepsDataSourceDelegate {
     func allRepsCompleted()
+    func repIncremented(_ currentRep: Int)
 }
 
 class RepsDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -43,16 +44,20 @@ class RepsDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSo
         if(nextRep >= self.repsPerSet) {
             self.currentRep = nextRep
             self.delegate.allRepsCompleted()
+            return
         } else {
             
-            if (increment < 0) {
-                if(currentRep > 0) {
-                    self.currentRep = nextRep
-                }
+            if(nextRep < 0) {
+                self.currentRep = 0
             } else {
                 self.currentRep = nextRep
             }
+            
             focusCollectionView()
+            
+            if(increment > 0) {
+                self.delegate.repIncremented(self.currentRep)
+            }
         }
     }
     

@@ -64,6 +64,8 @@ class LeaderboardDataSource: NSObject, UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.leaderboardCellIdentifier, for: indexPath) as! LeaderboardCell
         
+        cell.resetCellUI()
+        
         if indexPath.row < profiles.count {
             let profile = profiles[indexPath.row]
             let model = LeaderboardCellViewModel(

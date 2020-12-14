@@ -1,12 +1,12 @@
 
 /* Class = "UILabel"; text = "Workout Time"; ObjectID = "dzK-bD-g4k"; */
-"dzK-bD-g4k.text" = "Workout Time";
+"dzK-bD-g4k.text" = "Duración de ejercicio";
 
 /* Class = "UILabel"; text = "Your Totals"; ObjectID = "i3F-Wr-E8T"; */
-"i3F-Wr-E8T.text" = "Your Totals";
+"i3F-Wr-E8T.text" = "Tus Totales";
 
 /* Class = "UILabel"; text = "Workouts"; ObjectID = "mwz-lU-lbn"; */
-"mwz-lU-lbn.text" = "Workouts";
+"mwz-lU-lbn.text" = "Ejercicios";
 
 /* Class = "UIButton"; normalTitle = "View Workout Tracker"; ObjectID = "w1n-Vr-aDu"; */
-"w1n-Vr-aDu.normalTitle" = "View Workout Tracker";
+"w1n-Vr-aDu.normalTitle" = "Ver las grabaciones de ejercicios";

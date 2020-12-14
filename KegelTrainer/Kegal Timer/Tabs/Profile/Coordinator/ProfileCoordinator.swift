@@ -42,7 +42,7 @@ class ProfileCoordinator: Coordinator {
         self.delegate = delegate
         
         self.navigationController.isNavigationBarHidden = true
-        self.navigationController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile-icon"), tag: 0)
+        self.navigationController.tabBarItem = UITabBarItem(title: localizedString(forKey: "profile"), image: UIImage(named: "profile-icon"), tag: 0)
     }
     
     override func start() {

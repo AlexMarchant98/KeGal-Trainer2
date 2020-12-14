@@ -25,12 +25,20 @@
 "settings" = "Ajustes";
 "save" = "Guardar";
 "continue" = "Continuar";
+"hours" = "Horas";
+"hour" = "Hora";
+"minutes" = "Minutos";
+"minute" = "Minuto";
 "seconds" = "Segundos";
 "help" = "Ayuda";
 "other" = "Otro";
+"days" = "Días";
+"end_walkthrough" = "Completar tutorial";
+"profile" = "Perfil";
+"timer" = "Temporizador";
 
 // -- ResetPasswordEmailSentViewController -- //
-"email_sent_description" = "Te hemos enviado un correo para que puede cambiar tu contraseña.\n\nSigue el enlace en el correo para cambiarla.\n\nPor favor, mira en tu carpeta basura si no has recibidolo.";
+"email_sent_description" = "Te hemos enviado un correo para que puedas cambiar tu contraseña.\n\nSigue el enlace en el correo para cambiarla.\n\nPor favor, miras en tu carpeta basura si no has recibidolo.";
 
 // -- LoginPresenter -- //
 "user_does_not_exist_with_apple_id_error" = "No podíamos encontrar una cuenta relacionado con tu Apple ID, por favor registrarse.";
@@ -40,24 +48,24 @@
 
 // -- SignupPresenter -- //
 "apple_id_email_already_registered_error" = "Ya hay una cuenta conectó con el correo de tu Apple ID, por favor iniciar sesión con correo y contraseña";
-"passwords_dont_match_error" = "Las contraseñas no son las mismas";
+"passwords_dont_match_error" = "Las contraseñas no están las mismas";
 
 // -- SignupViewController -- //
-"confirm_password" = "Confirmar la contraseña";
+"confirm_password" = "Confirma contraseña";
 
 // -- CreateProfilePresenter -- //
 "failed_to_upload_profile_picture_error" = "Falló cargar tu foto de perfil, por favor volver a intentar";
 "failed_to_create_profile_error" = "Falló crear tu perfil, por favor volver a intentar";
 
 // -- CreateProfileViewController -- //
-"enter_your_username" = "Introducir tu nombre de usuario";
-"enter_a_username_error" = "Tiene que introducir un nombre de usuario";
-"enter_a_valid_username_error" = "Tiene que introducir un nombre de usuario válido";
-"max_length_reached_error" = "Ha llegado los caracteres máximos";
-"only_letters_and_numbers_error" = "Puede introducir solas letras y números";
+"enter_your_username" = "Introduce tu nombre de usuario";
+"enter_a_username_error" = "Introduce un nombre de usuario";
+"enter_a_valid_username_error" = "Introduce un nombre de usuario válido";
+"max_length_reached_error" = "Has llegado los caracteres máximos";
+"only_letters_and_numbers_error" = "Solo puedes introducir letras y números";
 
 // -- EditProfileViewController -- //
-"select_an_image_error" = "Por favor selecciona un foto para cargar";
+"select_an_image_error" = "Selecciona un foto para cargar";
 
 // -- TrackWorkoutsViewController -- //
 "track_my_workouts" = "Grabar mis sesiones";
@@ -67,10 +75,10 @@
 "multiple_workouts_performed_message" = "Hizo %@ sesiones en este día";
 
 // -- ProfileViewController -- //
-"streak_protector_purchased_title" = "Ha comprado un protector de racha";
+"streak_protector_purchased_title" = "Has comprado un protector de racha";
 "purchase_failed_title" = "Transacción falló";
 "streak_saved_title" = "¡Racha Salvó!";
-"streak_saved_message" = "Ha salvado tu racha, también, ¡hemos dado un protector de racha gratis!";
+"streak_saved_message" = "Has salvado tu racha, también, ¡te hemos dado un protectora de racha gratis!";
 "iap_did_load_information_title" = "%@ por %@";
 
 // -- ViewLeaderboardPresenter -- //
@@ -81,7 +89,7 @@
 "stage" = "fase";
 "locked" = "Cerrado";
 "level" = "Nivel";
-"tackle_level_message" = "¿Quisiera intentar este nivel?";
+"tackle_level_message" = "¿Quisieras intentar este nivel?";
 
 // -- LevelTableViewCell -- //
 "completed" = "Completó";
@@ -91,23 +99,23 @@
 
 // -- WorkoutCompleteViewController -- //
 "workout_complete" = "Sesión completó";
-"points_earned" = "Ha ganado puntos";
-"level_completed_message" = "¡Ha completado nivel %@!";
+"points_earned" = "Has ganado puntos";
+"level_completed_message" = "¡Has completado nivel %@!";
 "login_to_track_your_workouts_message" = "Login para que pueda grabar tus sesiones";
 "total_workouts_completed_ends_with_1_message" = "That was your %@st workout!";
 "total_workouts_completed_ends_with_2_message" = "That was your %@nd workout!";
 "total_workouts_completed_ends_with_3_message" = "That was your %@rd workout!";
 "total_workouts_completed_ends_with_above_4_message" = "That was your %@th workout!";
-"earned_one_point" = "Ha ganado %@ punto";
-"earned_more_than_one_point" = "Ha ganado %@ puntos";
-"max_daily_points_earned_message" = "¡Ha ganado los puntos máximos por un día!";
+"earned_one_point" = "Has ganado 1 punto";
+"earned_more_than_one_point" = "Has ganado %@ puntos";
+"max_daily_points_earned_message" = "¡Has ganado los puntos máximos por un día!";
 "could_have_earned_one_point_message" = "Podría ganar 1 punto por esa sesión";
 "could_have_earned_many_points_message" = "Podría ganar %@ puntos por esa sesión";
 
 // -- RemindersTableViewController -- //
 "your_reminders" = "Tus notificaciones";
 "notifications_are_disabled" = "Notificaciones no están activados";
-"enable_notifications_message" = "Pueda establecer notificaciones después de permitir notificaciones de Kegel Trainer en los ajustes";
+"enable_notifications_message" = "Puedes establecer notificaciones después de permitir notificaciones de Kegel Trainer en los ajustes";
 
 // -- AddReminderTableViewController -- //
 "add_reminder" = "Añada una notificación";
@@ -115,7 +123,7 @@
 "time_of_reminder" = "Hora de la notificación";
 "configuration" = "Ajustes";
 "workout_notification_default_title" = "¡Hora del ejercicio!";
-"workout_notificaction_default_message" = "¡Necesita hacer este ejercicio!";
+"workout_notification_default_message" = "¡Necesitas hacer este ejercicio!";
 
 // -- UpdateReminderTableViewController -- //
 "update_reminder" = "Actualizar la notificación";
@@ -125,8 +133,8 @@
 "settings_saved_message" = "Tus ajustes han estado guardar";
 "restore_purchases" = "Restaurar las compras";
 "purchases_restored" = "Restauró las compras";
-"purchases_restored_message" = "Por favor reinicia la aplicación para que pueda experimentar los cambios";
-"cannot_send_email_error" = "Si quisiera enviar un correo a través de la aplicación, tiene que conectar un correo en la aplicación 'Correo' de Apple.\n\nCorreo de Apoyo:\n\%@";
+"purchases_restored_message" = "Por favor reiniciar la aplicación para que pueda experimentar los cambios";
+"cannot_send_email_error" = "Si quisieras enviar un correo con la aplicación, tienes que conectar un correo en la aplicación 'Correo' de Apple.\n\nCorreo de Apoyo:\n\%@";
 
 "unsaved_changes" = "No has guardado los cambios";
 "unsaved_changes_message" = "No has guardado los cambios, ¿querrías continuar?";
@@ -144,4 +152,74 @@
 
 // -- SettingsPresenter -- //
 "enter_value_for_all_workout_settings_error" = "Tienes que entrar un valor para todos los ajustes de ejercicios";
-"enter_a_number_greater_than_0_for_all_workout_settings" = "Tienes que entrar un valor más grande que 0 por todos los ajustes de ejercicios";
+"enter_a_number_greater_than_0_for_all_workout_settings" = "Entra un valor más grande que 0 por todos los ajustes de ejercicios";
+
+// -- ReclaimStreakView -- //
+"lost_previous_streak_1" = "¡Has perdido tu racha de 1 día!";
+"lost_previous_streak_greater_than_1" = "¡Has perdido tu racha de %@ días!";
+
+"one_day_left_to_reclaim_streak" = "¡Tienes un día salvar esta racha antes de perderla para siempre y necesitarás empezar de nuevo!";
+"more_than_one_day_left_to_reclaim_streak" = "¡Tienes %@ días salvar esta racha antes de perderla para siempre y necesitarás empezar de nuevo!";
+
+"reclaim_streak_description" = "%@\n\n\%@\n\nEsta racha multiplicaría los puntos ganarás para un ejercicio por %@ veces!\n\n¡Salvarla ahora!";
+
+// -- EditProfilePictureView -- //
+"failed_to_load_photo" = "Falló cargar la foto seleccionaste, por favor volver a intentar";
+
+// -- EarnPointsView -- //
+"app_rated" = "Clasificaste la aplicación";
+"rate_the_app" = "Evaluar la aplicación";
+
+"app_reviewed" = "Reseñaste la aplicación";
+"review_the_app" = "Reseñar la aplicación";
+
+"watch_an_advert" = "Ver un anuncio";
+
+"sending_rating" = "Enviando tu valoración...";
+
+// -- CurrentWorkoutStreakView -- //
+"one_streak_protector_left" = "1 protectora de racha restante";
+"not_one_streak_protector_left" = "%@ protectoras de rachas restantes";
+
+// -- ProfileHeaderView -- //
+"joined" = "Te uniste";
+
+// -- WalkthroughViewController-WelcomeStep -- //
+"welcome_to_kegel_trainer" = "Bienvenido a Kegel Trainer";
+"welcome_to_kegel_trainer_message" = "Esto es un resume rápido sobre cómo usar la aplicación.";
+
+// -- WalkthroughViewController-SetupWalkthroughViewControllers -- //
+"track_your_workouts_title" = "Grabes tus ejercicios";
+"track_your_workouts_description" = "La aplicación grabará cada ejercicio que haces.\n\nPuedes ver las grabaciones de tus ejercicios en la pestaña se llama 'Perfil'.\n\nAllí, puedas ver los números de ejercicios has completado por día.";
+
+"stages_and_levels_title" = "Fases y Niveles";
+"stages_and_levels_description" = "Puedes encontrar preconstruían fases y niveles en la pestaña se llama ‘Fases’. Comienzan desde fácil y cada nivel es  más difícil que la pasada.\n\nCompletar un nivel, seleccionas el nivel que quisieras intentar y consigues las instrucciones. Después de completar un nivel, el próximo nivel habrá desbloqueado. Tienes que completar todos los niveles de una fase para desbloquear la próxima fase.";
+
+"performing_workouts_title" = "Completando ejercicios";
+"performing_workouts_description" = "Realizar un ejercicio, puedes ir al la pestaña se llama 'Temporizador'. Allí, puedes comenzar un ejercicio.\n\nLas repeticiones por ejercicio, duración de repetición y las repeticiones restantes te sea mostrado.";
+
+"settings_up_reminders_title" = "Programar las notificaciones";
+"settings_up_reminders_description" = "Si te gustase asegurar de que haces ejercicio cada día, puedes programar notificaciones por cualquier hora con cualquier mensaje. Estas estarán enviado para ti por la hora que decidiste.\n\nPuedes cambiarlas en la pestaña se llama 'Notificaciones', incluyendo añadir, editar y eliminar.";
+
+"your_profile_title" = "Tu perfil";
+"your_profile_description" = "¡Puedes crear un perfil para unirte la comunidad!\n\nCon un perfil, puedes grabar tus ejercicios, ganar puntos para competir con otros usuarios, ver las tablas de clasificaciones y mucho más para que tengas otra razón hacer ejercicio y continuar progresando.";
+
+"settings_title" = "Programar tus ajustes";
+"settings_description" = "Crear completamente acostumbrado ejercicios, actualizar tus preferencias, contactar apoyo y más, visitar la pestaña se llama 'Ajustes'.";
+
+// -- WalkthroughViewController-ProfileWalkthrough -- //
+"about_your_profile_title" = "Tu perfil";
+"about_your_profile_description" = "Ahora tienes un perfil, todos tus ejercicios serán grabados y ganarás puntos.\n\nPuedes ver toda la información sobre tu perfil en la pestaña de perfil";
+
+"earning_points_title" = "Ganar puntos";
+"earning_points_description" = "Ganas puntos para completar ejercicios en la aplicación. Cada ejercicio te ganará puntos que estarán añadidos a tu perfil.\n\nPuedes ganar un máximo de 5000 puntos por día y puedes ver tu progresión para esto en tu perfil.\n\nAbajo la sección se llama 'Ganar puntos', puedes encontrar tareas que te ganarán puntos adicionales.";
+
+"maintaining_your_streak_title" = "Mantener tu racha";
+"maintaining_your_streak_description" = "Necesitas completar un ejercicio cada día para hacer progresar tu fuerte, por lo tanto, tienes una 'Racha de ejercicio actual' en tu perfil.\n\nCada día que completas un ejercicio, añadirás 1 a tu racha. Si no haces un ejercicio en un día, perderás tu racha actual y necesitarás reiniciar la racha.\n\nGanarás más puntos con una racha más grande, por lo tanto, tendrás un rango más alto de las tablas de clasificaciones.";
+
+"protecting_your_streak_title" = "Proteger tu racha";
+"protecting_your_streak_description" = "Asegurar no perderás tu racha si olvidas de hacer un ejercicio un día, puedes conseguir una 'protectora de racha'.\n\nUna 'Protectora de Racha' protegerá tu racha actual si olvidas de hacer ejercicio en un día, para ganar más puntos.\n\nUna 'Protectora de Racha' protegerá tu racha una vez, después de utilizarla, necesitarás conseguir otro. Puedes ver el numeró de 'Protectoras de Rachas' que tienes en tu perfil.";
+
+"the_leaderboards_title" = "Las tablas de clasificaciones";
+"the_leaderboards_description" = "Las tablas de clasificaciones te muestran tu rango en comparación con otros usuarios por el total número de puntos.\n\n Siempre puedes ver tu perfil y rango al abaja de la pantalla.\n\nLos rangos actualizarán cada día, por lo tanto, los puntos ganas cambiarán tu rango en el próximo día.";
+

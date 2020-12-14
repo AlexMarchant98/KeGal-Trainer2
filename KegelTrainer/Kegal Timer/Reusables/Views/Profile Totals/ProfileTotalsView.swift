@@ -40,10 +40,10 @@ class ProfileTotalsView: UIView {
             if(minutes < 60) {
                 let remainingSeconds: Int64 = model.totalWorkoutTime - (60 * minutes)
                 
-                if(minutes == 0) {
-                    totalWorkoutTimeCard.label.text = "\(minutes) minute \(remainingSeconds) seconds"
+                if(minutes == 1) {
+                    totalWorkoutTimeCard.label.text = "\(minutes) \(localizedString(forKey: "minute")) \(remainingSeconds) \(localizedString(forKey: "seconds"))"
                 } else {
-                    totalWorkoutTimeCard.label.text = "\(minutes) minutes \(remainingSeconds) seconds"
+                    totalWorkoutTimeCard.label.text = "\(minutes) \(localizedString(forKey: "minutes")) \(remainingSeconds) \(localizedString(forKey: "seconds"))"
                 }
                 
             } else {
@@ -52,9 +52,9 @@ class ProfileTotalsView: UIView {
                 let remainingMinutes: Int64 = (model.totalWorkoutTime - (60 * 60 * hours)) / 60
                 
                 if(hours == 1) {
-                    totalWorkoutTimeCard.label.text = "\(hours) hour \(remainingMinutes) minutes"
+                    totalWorkoutTimeCard.label.text = "\(hours) \(localizedString(forKey: "hour")) \(remainingMinutes) \(localizedString(forKey: "minutes"))"
                 } else {
-                    totalWorkoutTimeCard.label.text = "\(hours) hours \(remainingMinutes) minutes"
+                    totalWorkoutTimeCard.label.text = "\(hours) \(localizedString(forKey: "hours")) \(remainingMinutes) \(localizedString(forKey: "minutes"))"
                 }
             }
             

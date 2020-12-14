@@ -83,9 +83,9 @@ extension WorkoutCompleteViewController: WorkoutCompletePresenterView {
             
         if(hasAnAccount) {
             if(pointsEarned == 1) {
-                self.pointsMessage.text = String(format: localizedString(forKey: "earned_one_point"), pointsEarned)
+                self.pointsMessage.text = localizedString(forKey: "earned_one_point")
             } else {
-                self.pointsMessage.text = String(format: localizedString(forKey: "earned_more_than_one_point"), pointsEarned)
+                self.pointsMessage.text = String(format: localizedString(forKey: "earned_more_than_one_point"), "\(pointsEarned)")
             }
             
             if let maxDailyPointsEarned = maxDailyPointsEarned {
@@ -98,7 +98,7 @@ extension WorkoutCompleteViewController: WorkoutCompletePresenterView {
             if(pointsEarned == 1) {
                 self.pointsMessage.text = localizedString(forKey: "could_have_earned_one_point_message")
             } else {
-                self.pointsMessage.text = String(format: localizedString(forKey: "could_have_earned_many_points_message"), pointsEarned)
+                self.pointsMessage.text = String(format: localizedString(forKey: "could_have_earned_many_points_message"), "\(pointsEarned)")
             }
         }
     }

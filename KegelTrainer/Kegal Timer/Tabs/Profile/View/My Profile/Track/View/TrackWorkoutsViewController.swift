@@ -191,7 +191,7 @@ extension TrackWorkoutsViewController: JTAppleCalendarViewDelegate {
                     if(workoutDate.workouts!.count == 1) {
                         alertMessage = localizedString(forKey: "one_workout_performed_message")
                     } else {
-                        alertMessage = String(format: localizedString(forKey: "multiple_workouts_performed_message"), String(workoutDate.workouts!.count))
+                        alertMessage = String(format: localizedString(forKey: "multiple_workouts_performed_message"), "\(String(workoutDate.workouts!.count))")
                     }
                 } else {
                     alertMessage = localizedString(forKey: "no_workouts_performed_message")

@@ -17,8 +17,8 @@ extension WalkthroughViewController {
         
         welcomeVc.setupScreenInformation(
             imageName: "welcome-inverted",
-            stepTitle: "Welcome to Kegel Trainer",
-            stepDescription: "Here is a quick overview of how to use the app.",
+            stepTitle: localizedString(forKey: "welcome_to_kegel_trainer"),
+            stepDescription: localizedString(forKey: "welcome_to_kegel_trainer_message"),
             delegate: self)
         
         orderedWalkthroughSteps.insert(welcomeVc, at: 0)

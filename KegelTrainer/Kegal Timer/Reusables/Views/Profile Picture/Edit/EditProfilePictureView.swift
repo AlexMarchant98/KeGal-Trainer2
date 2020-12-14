@@ -122,7 +122,7 @@ extension EditProfilePictureView: UIImagePickerControllerDelegate, UINavigationC
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         self.parentViewController?.dismiss(animated: true) {
             guard let selectedImageUrl = info[UIImagePickerController.InfoKey.imageURL] as? NSURL else {
-                AlertHandlerService.shared.showWarningAlert(view: self.parentViewController!, message: "Failed to load the selected photo, please try again.")
+                AlertHandlerService.shared.showWarningAlert(view: self.parentViewController!, message: localizedString(forKey: "failed_to_load_photo"))
                 return
             }
             
@@ -131,7 +131,7 @@ extension EditProfilePictureView: UIImagePickerControllerDelegate, UINavigationC
             if let data = NSData(contentsOf: selectedImageUrl.absoluteURL!) {
                 self.profilePicture.image = UIImage(data: data as Data)
             } else {
-                AlertHandlerService.shared.showWarningAlert(view: self.parentViewController!, message: "Failed to load the selected photo, please try again.")
+                AlertHandlerService.shared.showWarningAlert(view: self.parentViewController!, message: localizedString(forKey: "failed_to_load_photo"))
             }
         }
     }

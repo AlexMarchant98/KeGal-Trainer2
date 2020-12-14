@@ -35,7 +35,6 @@ class TimerViewController: UIViewController, Storyboarded {
     var adBannerView: GADBannerView!
     var audienceNetworkBannerView: FBAdView!
     
-    let dispatchQueue = DispatchQueue(label: Constants.dispatchQueueLabel)
     let workoutCue = WorkoutCue()
     let queueTimer = QueueTimer()
     
@@ -238,25 +237,6 @@ class TimerViewController: UIViewController, Storyboarded {
             
             self.timeLabel.text = self.timeString(time: TimeInterval(0), miliseconds: 0)
             
-            if(self.repsDataSource!.currentRep <= self.repsPerSet - 1) {
-                
-                if(workoutCue.displayVisualCue() == true)
-                {
-                    self.view.backgroundColor = UIColor.restBackgroundColor
-                }
-                
-                workoutCue.playRestSoundBite()
-                workoutCue.vibrateDevice()
-                
-                isRestState = true
-                
-                timerButton.animateCircle()
-                
-                queueItems()
-                queueTimer.configAndStart(delayTime: TimeInterval(self.restLength))
-            } else {
-                workoutCompleted = true
-            }
         } else {
             timeLabel.text = timeString(time: TimeInterval(secondsRemaining), miliseconds: miliseconds)
         }
@@ -272,21 +252,17 @@ class TimerViewController: UIViewController, Storyboarded {
     
     private func queueItems(delayTime: DispatchTime) {
         if(workoutCompleted == true) {
-            print("Workout completed")
-            dispatchWorkItem.cancel()
             return
         }
         
         dispatchWorkItem = DispatchWorkItem(qos: .userInteractive, block: {
-            if(self.workoutCompleted == false) {
-                self.secondsRemaining = self.repLength - 1
-                self.view.backgroundColor = UIColor.workoutBackgroundColor
-                self.runTimer()
-                self.timerButton.animateableTrackLayer.removeAnimation(forKey: Constants.strokeEndAnimation)
-                self.workoutCue.playBeginSoundBite()
-                self.workoutCue.vibrateDevice()
-                self.isRestState = false
-            }
+            self.secondsRemaining = self.repLength - 1
+            self.view.backgroundColor = UIColor.workoutBackgroundColor
+            self.runTimer()
+            self.timerButton.animateableTrackLayer.removeAnimation(forKey: Constants.strokeEndAnimation)
+            self.workoutCue.playBeginSoundBite()
+            self.workoutCue.vibrateDevice()
+            self.isRestState = false
         })
         
         DispatchQueue.main.asyncAfter(deadline: delayTime, execute: self.dispatchWorkItem)
@@ -340,6 +316,11 @@ class TimerViewController: UIViewController, Storyboarded {
 
         resetTimer()
     }
+    
+    func cancelDispatchQueueItems() {
+        dispatchWorkItem.cancel()
+        dispatchWorkItem = DispatchWorkItem(block: {})
+    }
 }
 
 extension TimerViewController: TimerPresenterView {
@@ -370,17 +351,37 @@ extension TimerViewController: TimerPresenterView {
 }
 
 extension TimerViewController: RepsDataSourceDelegate {
+    
+    func repIncremented(_ currentRep: Int) {
+        
+        if(currentRep < self.repsDataSource!.repsPerSet) {
+            
+            if(workoutCue.displayVisualCue() == true)
+            {
+                self.view.backgroundColor = UIColor.restBackgroundColor
+            }
+            
+            workoutCue.playRestSoundBite()
+            workoutCue.vibrateDevice()
+            
+            isRestState = true
+            
+            timerButton.animateCircle()
+            
+            queueItems()
+            queueTimer.configAndStart(delayTime: TimeInterval(self.restLength))
+        }
+    }
+    
     func allRepsCompleted() {
         
-        self.workoutCompleted = true
-        
-        timer.invalidate()
+        workoutCompleted = true
         isTimerRunning = false
         isRestState = false
         
-        dispatchWorkItem.cancel()
-        
+        cancelDispatchQueueItems()
         workoutCue.playWorkoutCompleteSoundBite()
+        resetTimer()
         
         if(!adServer.areAdsDisabled) {
             adServer.displayInterstitialAd(viewController: self)

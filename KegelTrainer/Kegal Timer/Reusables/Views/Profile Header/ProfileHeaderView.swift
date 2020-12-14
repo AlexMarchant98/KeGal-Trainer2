@@ -35,8 +35,8 @@ class ProfileHeaderView: UIView {
             
             self.delegate = model.delegate
             self.username.text = model.username
-            self.totalPointsLabel.text = "\(model.totalPoints) points"
-            self.joinDateLabel.text = "Joined: \(model.joinDate)"
+            self.totalPointsLabel.text = "\(model.totalPoints) \(localizedString(forKey: "points"))"
+            self.joinDateLabel.text = "\(localizedString(forKey: "joined")): \(model.joinDate)"
             
             if let url = model.profilePictureUrl {
                 let _ = model.firebaseCloudStorageService.read(documentUrl: url, imageView: profilePicture)

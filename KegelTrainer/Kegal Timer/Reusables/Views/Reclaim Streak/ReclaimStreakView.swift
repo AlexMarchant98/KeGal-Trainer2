@@ -42,21 +42,21 @@ class ReclaimStreakView: UIView {
                     var daysLeftToReclaimText: String = ""
                     
                     if(lostStreak == 1) {
-                        streakLostText = "You lost your previous streak of \(lostStreak) day!"
+                        streakLostText = localizedString(forKey: "lost_previous_streak_1")
                     } else {
-                        streakLostText = "You lost your previous streak of \(lostStreak) days!"
+                        streakLostText = String(format: localizedString(forKey: "lost_previous_streak_greater_than_1"), lostStreak)
                     }
                     
                     if(daysLeft == 1) {
-                        daysLeftToReclaimText = "You have \(daysLeft) day left to save this streak before you lose it forever and have to start again!"
+                        daysLeftToReclaimText = localizedString(forKey: "one_day_left_to_reclaim_streak")
                     } else {
-                        daysLeftToReclaimText = "You have \(daysLeft) days left to save this streak before you lose it forever and have to start again!"
+                        daysLeftToReclaimText = String(format: localizedString(forKey: "more_than_one_day_left_to_reclaim_streak"), lostStreak)
                     }
                     // Handle if the streak or days left is 1
                     
                     let streakMultiplier = ((0.65 * Double(lostStreak)) * 100).rounded() / 100
                     
-                    reclaimStreakDescription.text = "\(streakLostText)\n\n\(daysLeftToReclaimText)\n\nThis streak would multiply the points you earn per workout by \(streakMultiplier) times!\n\nSave it now!"
+                    reclaimStreakDescription.text = String(format: localizedString(forKey: "reclaim_streak_description"), streakLostText, daysLeftToReclaimText, streakMultiplier)
                     
                     viewStack.isHidden = false
                     viewStack.isUserInteractionEnabled = true

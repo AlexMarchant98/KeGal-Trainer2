@@ -16,7 +16,11 @@ class WorkoutCue {
     
     init() {
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+            try AVAudioSession.sharedInstance().setCategory(
+                AVAudioSession.Category.ambient,
+                mode: AVAudioSession.Mode.default,
+                options: AVAudioSession.CategoryOptions.duckOthers)
+            
             try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print(error)

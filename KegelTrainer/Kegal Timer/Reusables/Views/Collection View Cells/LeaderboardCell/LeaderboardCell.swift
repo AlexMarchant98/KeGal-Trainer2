@@ -72,5 +72,12 @@ class LeaderboardCell: UICollectionViewCell {
         self.pointsLabel.text = "0 points"
         self.pointsLabel.textColor = .white
     }
+    
+    func resetCellUI() {
+        self.rankLabel.text = "0000"
+        self.profilePictureView.image = UIImage(named: "profile-placeholder")
+        self.usernameLabel.text = "username"
+        self.pointsLabel.text = "0 points"
+    }
 
 }

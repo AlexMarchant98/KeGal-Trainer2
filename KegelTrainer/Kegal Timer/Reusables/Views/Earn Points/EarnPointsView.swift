@@ -43,14 +43,14 @@ class EarnPointsView: UIView {
             loadingIndicator.stopAnimating()
             
             if(model.hasRatedApp) {
-                self.rateAppButton.setTitle("App Rated", for: .normal)
+                self.rateAppButton.setTitle(localizedString(forKey: "app_rated"), for: .normal)
                 self.rateAppButton.setBackgroundColor(.appGreen)
                 self.rateAppButton.isUserInteractionEnabled = false
                 self.rateAppButton.setTitleColor(.backgroundColour, for: .normal)
             }
             
             if(model.hasReviewedApp) {
-                self.reviewAppButton.setTitle("Review Given", for: .normal)
+                self.reviewAppButton.setTitle(localizedString(forKey: "app_reviewed"), for: .normal)
                 self.reviewAppButton.setBackgroundColor(.appGreen)
                 self.reviewAppButton.isUserInteractionEnabled = false
                 self.reviewAppButton.setTitleColor(.backgroundColour, for: .normal)
@@ -89,9 +89,9 @@ class EarnPointsView: UIView {
         self.rateAppButton.titleLabel?.numberOfLines = 0
         self.reviewAppButton.titleLabel?.numberOfLines = 0
         
-        self.watchAdvertButton.setTitle("Watch an Advert", for: .normal)
-        self.rateAppButton.setTitle("Rate the app", for: .normal)
-        self.reviewAppButton.setTitle("Review the app", for: .normal)
+        self.watchAdvertButton.setTitle(localizedString(forKey: "watch_an_advert"), for: .normal)
+        self.rateAppButton.setTitle(localizedString(forKey: "rate_the_app"), for: .normal)
+        self.reviewAppButton.setTitle(localizedString(forKey: "review_the_app"), for: .normal)
         
         self.watchAdvertButton.titleLabel?.textAlignment = .center
         self.rateAppButton.titleLabel?.textAlignment = .center
@@ -107,7 +107,7 @@ class EarnPointsView: UIView {
     }
     
     func showRatingLoading() {
-        self.rateAppButton.setTitle("Sending Rating...", for: .normal)
+        self.rateAppButton.setTitle(localizedString(forKey: "sending_rating"), for: .normal)
         self.rateAppButton.isEnabled = false
         
         self.watchAdvertButton.isEnabled = false

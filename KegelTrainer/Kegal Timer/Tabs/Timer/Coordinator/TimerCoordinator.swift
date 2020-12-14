@@ -31,7 +31,7 @@ class TimerCoordinator: Coordinator {
         let timerPresenter = TimerPresenter(with: viewController, delegate: self)
         
         viewController.adServer = self.adServer
-        viewController.tabBarItem = UITabBarItem(title: "Timer", image: UIImage(named: "Timer"), tag: 0)
+        viewController.tabBarItem = UITabBarItem(title: localizedString(forKey: "timer"), image: UIImage(named: "Timer"), tag: 0)
         viewController.timerPresenter = timerPresenter
         
         self.navigationController.pushViewController(viewController, animated: true)

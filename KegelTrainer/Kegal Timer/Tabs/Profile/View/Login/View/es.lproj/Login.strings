@@ -1,6 +1,6 @@
 
 /* Class = "UIButton"; normalTitle = "Forgot password"; ObjectID = "6tI-pG-Pur"; */
-"6tI-pG-Pur.normalTitle" = "He olvidado contraseña";
+"6tI-pG-Pur.normalTitle" = "¿Has olvidado contraseña?";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "aeO-qO-6PH"; */
 "aeO-qO-6PH.normalTitle" = "Iniciar sesión";
@@ -9,7 +9,7 @@
 "hqU-dn-2mL.normalTitle" = "Iniciar sesión con Apple";
 
 /* Class = "UILabel"; text = "Not a member yet?"; ObjectID = "l3I-iV-lz4"; */
-"l3I-iV-lz4.text" = "¿No tiene una cuenta?";
+"l3I-iV-lz4.text" = "¿No tienes una cuenta?";
 
 /* Class = "UILabel"; text = "Login"; ObjectID = "mbX-Po-rIp"; */
 "mbX-Po-rIp.text" = "Iniciar sesión";
@@ -18,7 +18,7 @@
 "nij-0N-pz6.normalTitle" = "Registrarse";
 
 /* Class = "UILabel"; text = "Login to view your profile, workout data, leaderboards and much more"; ObjectID = "ri6-YC-cgz"; */
-"ri6-YC-cgz.text" = "Inicia sesión para ver tu perfil, dato de la sesión de ejercicio, las tablas de clasificaciones y mucho más";
+"ri6-YC-cgz.text" = "Inicias sesión para ver tu perfil, dato de la sesión de ejercicio, las tablas de clasificaciones y mucho más";
 
 /* Class = "UILabel"; text = "Or"; ObjectID = "xdG-4y-4Kg"; */
 "xdG-4y-4Kg.text" = "O";

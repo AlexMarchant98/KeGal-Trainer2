@@ -3,7 +3,7 @@
 "4c1-in-qzJ.normalTitle" = "Términos y Condiciones";
 
 /* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "9io-j3-wXi"; */
-"9io-j3-wXi.placeholder" = "Confirmar la contraseña";
+"9io-j3-wXi.placeholder" = "Confirma contraseña";
 
 /* Class = "UILabel"; text = "Sign Up"; ObjectID = "EAT-Ux-Xr5"; */
 "EAT-Ux-Xr5.text" = "Registrarse";
@@ -21,7 +21,7 @@
 "gzf-yB-ja7.normalTitle" = "Registrarse";
 
 /* Class = "UILabel"; text = "If you would like to track your workouts, earn points to compete with other users, view the leaderboards and more you need to sign up."; ObjectID = "ijd-Hg-psU"; */
-"ijd-Hg-psU.text" = "Si te gustase grabar tuyo sesiones de ejercicio, gana puntos para competir con otros usuarios, ver las tablas de clasificaciones y más, necesita registrarse.";
+"ijd-Hg-psU.text" = "Si te gustase grabar tuyo sesiones de ejercicio, ganar puntos para competir con otros usuarios, ver las tablas de clasificaciones y más, necesitas registrarse.";
 
 /* Class = "UIButton"; normalTitle = "Privacy Policy"; ObjectID = "mge-H7-7Iu"; */
 "mge-H7-7Iu.normalTitle" = "La política de privacidad";
@@ -30,7 +30,7 @@
 "oMy-ZA-Tgb.normalTitle" = "Registrarse con Apple";
 
 /* Class = "UILabel"; text = "Already have an account?"; ObjectID = "uUE-l0-XjU"; */
-"uUE-l0-XjU.text" = "¿Tiene una cuenta?";
+"uUE-l0-XjU.text" = "¿Tienes una cuenta?";
 
 /* Class = "UILabel"; text = "Or"; ObjectID = "vX4-7D-Nsx"; */
 "vX4-7D-Nsx.text" = "O";

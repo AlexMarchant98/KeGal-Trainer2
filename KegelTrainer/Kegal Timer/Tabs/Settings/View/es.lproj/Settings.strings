@@ -18,7 +18,7 @@
 "Tsz-KI-lF1.title" = "Ajustes";
 
 /* Class = "UILabel"; text = "Email Support"; ObjectID = "X14-1p-hQC"; */
-"X14-1p-hQC.text" = "Envié un correo a apoyo";
+"X14-1p-hQC.text" = "Enviar un correo a apoyo";
 
 /* Class = "UITableViewSection"; headerTitle = "Help"; ObjectID = "YOH-BT-xYB"; */
 "YOH-BT-xYB.headerTitle" = "Ayuda";

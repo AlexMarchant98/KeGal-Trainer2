@@ -1,9 +1,9 @@
 
 /* Class = "UILabel"; text = "Save your streak"; ObjectID = "677-u5-xhx"; */
-"677-u5-xhx.text" = "Save your streak";
+"677-u5-xhx.text" = "¡Salvar tu racha!";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "FIA-0S-3G1"; */
 "FIA-0S-3G1.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "Save My Streak"; ObjectID = "t38-oM-dsC"; */
-"t38-oM-dsC.normalTitle" = "Save My Streak";
+"t38-oM-dsC.normalTitle" = "¡Salvar mi racha!";

@@ -33,12 +33,12 @@ class CurrentWorkoutStreakView: UIView {
             
             self.delegate = model.delegate
             
-            self.currentStreakLabel.text = "\(model.streak) days"
+            self.currentStreakLabel.text = "\(model.streak) \(localizedString(forKey: "days"))"
             
             if(model.streakProtectors == 1) {
-                streakProtectorsLeftLabel.text = "\(model.streakProtectors) Streak Protector Left"
+                streakProtectorsLeftLabel.text = localizedString(forKey: "one_streak_protector_left")
             } else {
-                streakProtectorsLeftLabel.text = "\(model.streakProtectors) Streak Protectors Left"
+                streakProtectorsLeftLabel.text = String(format: localizedString(forKey: "not_one_streak_protector_left"), model.streakProtectors)
             }
             
             if(model.streakProtectors <= 1) {

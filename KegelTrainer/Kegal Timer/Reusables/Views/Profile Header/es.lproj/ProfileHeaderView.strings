@@ -1,12 +1,12 @@
 
 /* Class = "UILabel"; text = "Username"; ObjectID = "6ng-gP-R0Q"; */
-"6ng-gP-R0Q.text" = "Username";
+"6ng-gP-R0Q.text" = "Nombre de usuario";
 
 /* Class = "UILabel"; text = "1000000 points"; ObjectID = "c5G-n1-IyD"; */
-"c5G-n1-IyD.text" = "1000000 points";
+"c5G-n1-IyD.text" = "1000000 puntos";
 
 /* Class = "UILabel"; text = "Joined: 05/10/1998"; ObjectID = "eJ6-x9-D1a"; */
-"eJ6-x9-D1a.text" = "Joined: 05/10/1998";
+"eJ6-x9-D1a.text" = "Te uniste: 05/10/1998";
 
 /* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "kDB-QK-SDC"; */
-"kDB-QK-SDC.normalTitle" = "Edit";
+"kDB-QK-SDC.normalTitle" = "Editar";
