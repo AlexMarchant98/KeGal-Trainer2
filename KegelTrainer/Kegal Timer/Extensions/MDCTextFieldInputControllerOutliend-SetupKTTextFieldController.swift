@@ -10,6 +10,7 @@ import UIKit
 import MaterialComponents.MaterialTextFields
 
 extension MDCTextInputControllerOutlined {
+    
     func setupKTTextFieldController() {
         self.activeColor = UIColor.appGreen
         self.normalColor = .white
